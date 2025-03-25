@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """
 This experiment was created using PsychoPy3 Experiment Builder (v2024.2.4),
-    on március 24, 2025, at 12:23
+    on März 25, 2025, at 14:15
 If you publish work using this script the most relevant publication is:
 
     Peirce J, Gray JR, Simpson S, MacAskill M, Höchenberger R, Sogo H, Kastman E, Lindeløv JK. (2019) 
@@ -61,7 +61,7 @@ or run the experiment with `--pilot` as an argument. To change what pilot
 PILOTING = core.setPilotModeFromArgs()
 # start off with values from experiment settings
 _fullScr = True
-_winSize = [1440, 900]
+_winSize = [1024, 768]
 # if in pilot mode, apply overrides according to preferences
 if PILOTING:
     # force windowed mode
@@ -127,7 +127,7 @@ def setupData(expInfo, dataDir=None):
     thisExp = data.ExperimentHandler(
         name=expName, version='',
         extraInfo=expInfo, runtimeInfo=None,
-        originPath='C:\\Users\\Asus\\Documents\\pretest_fmri\\Guess_fMRI\\part1_part2_lastrun.py',
+        originPath='C:\\Users\\Nemecz\\Documents\\Guess_fMRI-main\\part1_part2_lastrun.py',
         savePickle=True, saveWideText=True,
         dataFileName=dataDir + os.sep + filename, sortColumns='time'
     )
@@ -194,7 +194,7 @@ def setupWindow(expInfo=None, win=None):
     if win is None:
         # if not given a window to setup, make one
         win = visual.Window(
-            size=_winSize, fullscr=_fullScr, screen=0,
+            size=_winSize, fullscr=_fullScr, screen=1,
             winType='pyglet', allowGUI=False, allowStencil=False,
             monitor='testMonitor', color=[0,0,0], colorSpace='rgb',
             backgroundImage='', backgroundFit='none',
@@ -494,9 +494,9 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     # import random for letter randomization
     import random as rnd
     
-    #from psychopy.hardware.parallel import ParallelPort
-    #triggers = ParallelPort(address = 0x2FE8) #Change this address to match the address of the Parallel Port that the device is connected to
-    pinNumber = 1 #Change to match the pin that is receiving the pulse value sent by your scanner. Set this to None to scan all pins
+    from psychopy import parallel
+    port = parallel.ParallelPort(address = 0x2FE8) 
+    pinNumber = 10 #Change to match the pin that is receiving the pulse value sent by your scanner. Set this to None to scan all pins
     
     # --- Initialize components for Routine "load_guess_conditions" ---
     # Run 'Begin Experiment' code from load_guess_list
@@ -3848,10 +3848,8 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
             # update params
             pass
         # Run 'Each Frame' code from catch_trigger
-        #if frameN > 1: #To allow the 'Waiting for Scanner' screen to display
-        #    trig = triggers.waitTriggers(triggers = [pinNumber], direction = 1, maxWait = 100)
-        #    if trig is not None:
-        #        continueRoutine = False #A trigger was detected, so move on
+        if port.readPin(pinNumber) > 0:
+            continueRoutine = False #A trigger was detected, so move on
         
         # *skip_trigger* updates
         waitOnFlip = False
@@ -5598,10 +5596,8 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
                 # update params
                 pass
             # Run 'Each Frame' code from catch_trigger
-            #if frameN > 1: #To allow the 'Waiting for Scanner' screen to display
-            #    trig = triggers.waitTriggers(triggers = [pinNumber], direction = 1, maxWait = 100)
-            #    if trig is not None:
-            #        continueRoutine = False #A trigger was detected, so move on
+            if port.readPin(pinNumber) > 0:
+                continueRoutine = False #A trigger was detected, so move on
             
             # *skip_trigger* updates
             waitOnFlip = False
@@ -5753,7 +5749,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
             win.callOnFlip(end_part1_key.clock.reset)  # t=0 on next screen flip
             win.callOnFlip(end_part1_key.clearEvents, eventType='keyboard')  # clear events on next screen flip
         if end_part1_key.status == STARTED and not waitOnFlip:
-            theseKeys = end_part1_key.getKeys(keyList=['space'], ignoreKeys=["escape"], waitRelease=False)
+            theseKeys = end_part1_key.getKeys(keyList=['space','1','2','3','4','5'], ignoreKeys=["escape"], waitRelease=False)
             _end_part1_key_allKeys.extend(theseKeys)
             if len(_end_part1_key_allKeys):
                 end_part1_key.keys = _end_part1_key_allKeys[-1].name  # just the last key pressed
@@ -7890,10 +7886,8 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
             # update params
             pass
         # Run 'Each Frame' code from catch_trigger
-        #if frameN > 1: #To allow the 'Waiting for Scanner' screen to display
-        #    trig = triggers.waitTriggers(triggers = [pinNumber], direction = 1, maxWait = 100)
-        #    if trig is not None:
-        #        continueRoutine = False #A trigger was detected, so move on
+        if port.readPin(pinNumber) > 0:
+            continueRoutine = False #A trigger was detected, so move on
         
         # *skip_trigger* updates
         waitOnFlip = False
@@ -9564,10 +9558,8 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
                 # update params
                 pass
             # Run 'Each Frame' code from catch_trigger
-            #if frameN > 1: #To allow the 'Waiting for Scanner' screen to display
-            #    trig = triggers.waitTriggers(triggers = [pinNumber], direction = 1, maxWait = 100)
-            #    if trig is not None:
-            #        continueRoutine = False #A trigger was detected, so move on
+            if port.readPin(pinNumber) > 0:
+                continueRoutine = False #A trigger was detected, so move on
             
             # *skip_trigger* updates
             waitOnFlip = False
