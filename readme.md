@@ -4,4 +4,4 @@ This repository contains the experimental task of the Guess fMRI project.
 
 Institute for Psychology
 Faculty of Humanities
-Universit√§t Regensburg
+Universit‰t Regensburg
