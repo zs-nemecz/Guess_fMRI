@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """
 This experiment was created using PsychoPy3 Experiment Builder (v2024.2.4),
-    on április 01, 2025, at 18:15
+    on April 02, 2025, at 13:07
 If you publish work using this script the most relevant publication is:
 
     Peirce J, Gray JR, Simpson S, MacAskill M, Höchenberger R, Sogo H, Kastman E, Lindeløv JK. (2019) 
@@ -61,7 +61,7 @@ or run the experiment with `--pilot` as an argument. To change what pilot
 PILOTING = core.setPilotModeFromArgs()
 # start off with values from experiment settings
 _fullScr = True
-_winSize = [1440, 900]
+_winSize = [1024, 768]
 # if in pilot mode, apply overrides according to preferences
 if PILOTING:
     # force windowed mode
@@ -127,7 +127,7 @@ def setupData(expInfo, dataDir=None):
     thisExp = data.ExperimentHandler(
         name=expName, version='',
         extraInfo=expInfo, runtimeInfo=None,
-        originPath='C:\\Users\\Asus\\Documents\\pretest_fmri\\Guess_fMRI\\part3_lastrun.py',
+        originPath='C:\\Users\\Nemecz\\Documents\\Guess_fMRI-main\\part3_lastrun.py',
         savePickle=True, saveWideText=True,
         dataFileName=dataDir + os.sep + filename, sortColumns='time'
     )
@@ -194,7 +194,7 @@ def setupWindow(expInfo=None, win=None):
     if win is None:
         # if not given a window to setup, make one
         win = visual.Window(
-            size=_winSize, fullscr=_fullScr, screen=0,
+            size=_winSize, fullscr=_fullScr, screen=1,
             winType='pyglet', allowGUI=False, allowStencil=False,
             monitor='testMonitor', color=[0,0,0], colorSpace='rgb',
             backgroundImage='', backgroundFit='none',
@@ -272,6 +272,18 @@ def setupDevices(expInfo, thisExp, win):
         sm_instructions2_key = deviceManager.addDevice(
             deviceClass='keyboard',
             deviceName='sm_instructions2_key',
+        )
+    if deviceManager.getDevice('scanner_ready_press') is None:
+        # initialise scanner_ready_press
+        scanner_ready_press = deviceManager.addDevice(
+            deviceClass='keyboard',
+            deviceName='scanner_ready_press',
+        )
+    if deviceManager.getDevice('skip_trigger') is None:
+        # initialise skip_trigger
+        skip_trigger = deviceManager.addDevice(
+            deviceClass='keyboard',
+            deviceName='skip_trigger',
         )
     if deviceManager.getDevice('living_nonliving') is None:
         # initialise living_nonliving
@@ -398,9 +410,13 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     # import random for letter randomization
     import random as rnd
     
+    from psychopy import parallel
+    port = parallel.ParallelPort(address = 0x2FE8) 
+    pinNumber = 10 #Change to match the pin that is receiving the pulse value sent by your scanner. Set this to None to scan all pins
+    
     # --- Initialize components for Routine "instructions_semantic_mapping1" ---
     sm_instructions1_text = visual.TextStim(win=win, name='sm_instructions1_text',
-        text='Im letzten Teil des Experiments wird Ihnen eine Liste von Wörtern jeweils einzeln auf dem Bildschirm präsentiert. Sie müssen entscheiden, ob das Wort etwas Lebendiges oder Nicht-Lebendiges bezeichnet.\n\nDrücken Sie die LEERTASTE, um fortzufahren.\n',
+        text='Im letzten Teil des Experiments wird Ihnen eine Liste von Wörtern jeweils einzeln auf dem Bildschirm präsentiert. Sie müssen entscheiden, ob das Wort etwas Lebendiges oder Nicht-Lebendiges bezeichnet.\n\nDrücken Sie eine Taste, um fortzufahren.\n',
         font='Arial',
         pos=(0, 0), draggable=False, height=0.05, wrapWidth=1.2, ori=0.0, 
         color='white', colorSpace='rgb', opacity=None, 
@@ -410,7 +426,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     
     # --- Initialize components for Routine "instructions_semantic_mapping2" ---
     sm_instructions2_text = visual.TextStim(win=win, name='sm_instructions2_text',
-        text='Bei manchen Wörtern ist es schwieriger, diese Entscheidung zu treffen als bei anderen. Es gibt nicht immer eine richtige oder falsche Antwort. Verlassen Sie sich auf Ihre Intuition, die Entscheidung liegt bei Ihnen!\n\nGeben Sie Ihre Antwort mit den Tasten F / G an.\n\nDrücken Sie die LEERTASTE, um die Aufgabe zu starten.\n',
+        text='Bei manchen Wörtern ist es schwieriger, diese Entscheidung zu treffen als bei anderen. Es gibt nicht immer eine richtige oder falsche Antwort. Verlassen Sie sich auf Ihre Intuition, die Entscheidung liegt bei Ihnen!\n\nGeben Sie Ihre Antwort mit den Tasten 1 / 2 an.\n\nDrücken Sie eine Taste, um die Aufgabe zu starten.\n',
         font='Arial',
         pos=(0, 0), draggable=False, height=0.05, wrapWidth=1.2, ori=0.0, 
         color='white', colorSpace='rgb', opacity=None, 
@@ -428,6 +444,26 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     # Run 'Begin Experiment' code from run_setup
     my_runs = []
     
+    # --- Initialize components for Routine "prep_scanner" ---
+    scanner_ready_press = keyboard.Keyboard(deviceName='scanner_ready_press')
+    ready_set_text = visual.TextStim(win=win, name='ready_set_text',
+        text='Der Scanner wird vorbereitet.',
+        font='Arial',
+        pos=(0, 0), draggable=False, height=0.05, wrapWidth=None, ori=0.0, 
+        color='white', colorSpace='rgb', opacity=None, 
+        languageStyle='LTR',
+        depth=-1.0);
+    
+    # --- Initialize components for Routine "wait_for_trigger" ---
+    starting_soon = visual.TextStim(win=win, name='starting_soon',
+        text='fMRT startet gleich...',
+        font='Arial',
+        pos=(0, 0), draggable=False, height=0.05, wrapWidth=None, ori=0.0, 
+        color='white', colorSpace='rgb', opacity=None, 
+        languageStyle='LTR',
+        depth=0.0);
+    skip_trigger = keyboard.Keyboard(deviceName='skip_trigger')
+    
     # --- Initialize components for Routine "iti" ---
     iti_blank = visual.TextStim(win=win, name='iti_blank',
         text=None,
@@ -443,7 +479,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     living_nonliving = keyboard.Keyboard(deviceName='living_nonliving')
     end_mapping = keyboard.Keyboard(deviceName='end_mapping')
     living_nonliving_text = visual.TextStim(win=win, name='living_nonliving_text',
-        text='F) Lebendig        G) Nicht lebendig',
+        text='1) Lebendig        2) Nicht lebendig',
         font='Arial',
         pos=(0, -0.3), draggable=False, height=0.05, wrapWidth=None, ori=0.0, 
         color='white', colorSpace='rgb', opacity=None, 
@@ -697,7 +733,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
             win.callOnFlip(sm_instructions1_key.clock.reset)  # t=0 on next screen flip
             win.callOnFlip(sm_instructions1_key.clearEvents, eventType='keyboard')  # clear events on next screen flip
         if sm_instructions1_key.status == STARTED and not waitOnFlip:
-            theseKeys = sm_instructions1_key.getKeys(keyList=['space'], ignoreKeys=["escape"], waitRelease=False)
+            theseKeys = sm_instructions1_key.getKeys(keyList=['space', 1, 2], ignoreKeys=["escape"], waitRelease=False)
             _sm_instructions1_key_allKeys.extend(theseKeys)
             if len(_sm_instructions1_key_allKeys):
                 sm_instructions1_key.keys = _sm_instructions1_key_allKeys[-1].name  # just the last key pressed
@@ -838,7 +874,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
             win.callOnFlip(sm_instructions2_key.clock.reset)  # t=0 on next screen flip
             win.callOnFlip(sm_instructions2_key.clearEvents, eventType='keyboard')  # clear events on next screen flip
         if sm_instructions2_key.status == STARTED and not waitOnFlip:
-            theseKeys = sm_instructions2_key.getKeys(keyList=['space'], ignoreKeys=["escape"], waitRelease=False)
+            theseKeys = sm_instructions2_key.getKeys(keyList=['space',1,2], ignoreKeys=["escape"], waitRelease=False)
             _sm_instructions2_key_allKeys.extend(theseKeys)
             if len(_sm_instructions2_key_allKeys):
                 sm_instructions2_key.keys = _sm_instructions2_key_allKeys[-1].name  # just the last key pressed
@@ -1378,11 +1414,300 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
                 for paramName in thisRun:
                     globals()[paramName] = thisRun[paramName]
             
+            # --- Prepare to start Routine "prep_scanner" ---
+            # create an object to store info about Routine prep_scanner
+            prep_scanner = data.Routine(
+                name='prep_scanner',
+                components=[scanner_ready_press, ready_set_text],
+            )
+            prep_scanner.status = NOT_STARTED
+            continueRoutine = True
+            # update component parameters for each repeat
+            # create starting attributes for scanner_ready_press
+            scanner_ready_press.keys = []
+            scanner_ready_press.rt = []
+            _scanner_ready_press_allKeys = []
+            # store start times for prep_scanner
+            prep_scanner.tStartRefresh = win.getFutureFlipTime(clock=globalClock)
+            prep_scanner.tStart = globalClock.getTime(format='float')
+            prep_scanner.status = STARTED
+            thisExp.addData('prep_scanner.started', prep_scanner.tStart)
+            prep_scanner.maxDuration = None
+            # keep track of which components have finished
+            prep_scannerComponents = prep_scanner.components
+            for thisComponent in prep_scanner.components:
+                thisComponent.tStart = None
+                thisComponent.tStop = None
+                thisComponent.tStartRefresh = None
+                thisComponent.tStopRefresh = None
+                if hasattr(thisComponent, 'status'):
+                    thisComponent.status = NOT_STARTED
+            # reset timers
+            t = 0
+            _timeToFirstFrame = win.getFutureFlipTime(clock="now")
+            frameN = -1
+            
+            # --- Run Routine "prep_scanner" ---
+            # if trial has changed, end Routine now
+            if isinstance(runs, data.TrialHandler2) and thisRun.thisN != runs.thisTrial.thisN:
+                continueRoutine = False
+            prep_scanner.forceEnded = routineForceEnded = not continueRoutine
+            while continueRoutine:
+                # get current time
+                t = routineTimer.getTime()
+                tThisFlip = win.getFutureFlipTime(clock=routineTimer)
+                tThisFlipGlobal = win.getFutureFlipTime(clock=None)
+                frameN = frameN + 1  # number of completed frames (so 0 is the first frame)
+                # update/draw components on each frame
+                
+                # *scanner_ready_press* updates
+                waitOnFlip = False
+                
+                # if scanner_ready_press is starting this frame...
+                if scanner_ready_press.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+                    # keep track of start time/frame for later
+                    scanner_ready_press.frameNStart = frameN  # exact frame index
+                    scanner_ready_press.tStart = t  # local t and not account for scr refresh
+                    scanner_ready_press.tStartRefresh = tThisFlipGlobal  # on global time
+                    win.timeOnFlip(scanner_ready_press, 'tStartRefresh')  # time at next scr refresh
+                    # add timestamp to datafile
+                    thisExp.timestampOnFlip(win, 'scanner_ready_press.started')
+                    # update status
+                    scanner_ready_press.status = STARTED
+                    # keyboard checking is just starting
+                    waitOnFlip = True
+                    win.callOnFlip(scanner_ready_press.clock.reset)  # t=0 on next screen flip
+                    win.callOnFlip(scanner_ready_press.clearEvents, eventType='keyboard')  # clear events on next screen flip
+                if scanner_ready_press.status == STARTED and not waitOnFlip:
+                    theseKeys = scanner_ready_press.getKeys(keyList=['space'], ignoreKeys=["escape"], waitRelease=False)
+                    _scanner_ready_press_allKeys.extend(theseKeys)
+                    if len(_scanner_ready_press_allKeys):
+                        scanner_ready_press.keys = _scanner_ready_press_allKeys[-1].name  # just the last key pressed
+                        scanner_ready_press.rt = _scanner_ready_press_allKeys[-1].rt
+                        scanner_ready_press.duration = _scanner_ready_press_allKeys[-1].duration
+                        # a response ends the routine
+                        continueRoutine = False
+                
+                # *ready_set_text* updates
+                
+                # if ready_set_text is starting this frame...
+                if ready_set_text.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+                    # keep track of start time/frame for later
+                    ready_set_text.frameNStart = frameN  # exact frame index
+                    ready_set_text.tStart = t  # local t and not account for scr refresh
+                    ready_set_text.tStartRefresh = tThisFlipGlobal  # on global time
+                    win.timeOnFlip(ready_set_text, 'tStartRefresh')  # time at next scr refresh
+                    # add timestamp to datafile
+                    thisExp.timestampOnFlip(win, 'ready_set_text.started')
+                    # update status
+                    ready_set_text.status = STARTED
+                    ready_set_text.setAutoDraw(True)
+                
+                # if ready_set_text is active this frame...
+                if ready_set_text.status == STARTED:
+                    # update params
+                    pass
+                
+                # check for quit (typically the Esc key)
+                if defaultKeyboard.getKeys(keyList=["escape"]):
+                    thisExp.status = FINISHED
+                if thisExp.status == FINISHED or endExpNow:
+                    endExperiment(thisExp, win=win)
+                    return
+                # pause experiment here if requested
+                if thisExp.status == PAUSED:
+                    pauseExperiment(
+                        thisExp=thisExp, 
+                        win=win, 
+                        timers=[routineTimer], 
+                        playbackComponents=[]
+                    )
+                    # skip the frame we paused on
+                    continue
+                
+                # check if all components have finished
+                if not continueRoutine:  # a component has requested a forced-end of Routine
+                    prep_scanner.forceEnded = routineForceEnded = True
+                    break
+                continueRoutine = False  # will revert to True if at least one component still running
+                for thisComponent in prep_scanner.components:
+                    if hasattr(thisComponent, "status") and thisComponent.status != FINISHED:
+                        continueRoutine = True
+                        break  # at least one component has not yet finished
+                
+                # refresh the screen
+                if continueRoutine:  # don't flip if this routine is over or we'll get a blank screen
+                    win.flip()
+            
+            # --- Ending Routine "prep_scanner" ---
+            for thisComponent in prep_scanner.components:
+                if hasattr(thisComponent, "setAutoDraw"):
+                    thisComponent.setAutoDraw(False)
+            # store stop times for prep_scanner
+            prep_scanner.tStop = globalClock.getTime(format='float')
+            prep_scanner.tStopRefresh = tThisFlipGlobal
+            thisExp.addData('prep_scanner.stopped', prep_scanner.tStop)
+            # check responses
+            if scanner_ready_press.keys in ['', [], None]:  # No response was made
+                scanner_ready_press.keys = None
+            runs.addData('scanner_ready_press.keys',scanner_ready_press.keys)
+            if scanner_ready_press.keys != None:  # we had a response
+                runs.addData('scanner_ready_press.rt', scanner_ready_press.rt)
+                runs.addData('scanner_ready_press.duration', scanner_ready_press.duration)
+            # the Routine "prep_scanner" was not non-slip safe, so reset the non-slip timer
+            routineTimer.reset()
+            
+            # --- Prepare to start Routine "wait_for_trigger" ---
+            # create an object to store info about Routine wait_for_trigger
+            wait_for_trigger = data.Routine(
+                name='wait_for_trigger',
+                components=[starting_soon, skip_trigger],
+            )
+            wait_for_trigger.status = NOT_STARTED
+            continueRoutine = True
+            # update component parameters for each repeat
+            # create starting attributes for skip_trigger
+            skip_trigger.keys = []
+            skip_trigger.rt = []
+            _skip_trigger_allKeys = []
+            # store start times for wait_for_trigger
+            wait_for_trigger.tStartRefresh = win.getFutureFlipTime(clock=globalClock)
+            wait_for_trigger.tStart = globalClock.getTime(format='float')
+            wait_for_trigger.status = STARTED
+            thisExp.addData('wait_for_trigger.started', wait_for_trigger.tStart)
+            wait_for_trigger.maxDuration = None
+            # keep track of which components have finished
+            wait_for_triggerComponents = wait_for_trigger.components
+            for thisComponent in wait_for_trigger.components:
+                thisComponent.tStart = None
+                thisComponent.tStop = None
+                thisComponent.tStartRefresh = None
+                thisComponent.tStopRefresh = None
+                if hasattr(thisComponent, 'status'):
+                    thisComponent.status = NOT_STARTED
+            # reset timers
+            t = 0
+            _timeToFirstFrame = win.getFutureFlipTime(clock="now")
+            frameN = -1
+            
+            # --- Run Routine "wait_for_trigger" ---
+            # if trial has changed, end Routine now
+            if isinstance(runs, data.TrialHandler2) and thisRun.thisN != runs.thisTrial.thisN:
+                continueRoutine = False
+            wait_for_trigger.forceEnded = routineForceEnded = not continueRoutine
+            while continueRoutine:
+                # get current time
+                t = routineTimer.getTime()
+                tThisFlip = win.getFutureFlipTime(clock=routineTimer)
+                tThisFlipGlobal = win.getFutureFlipTime(clock=None)
+                frameN = frameN + 1  # number of completed frames (so 0 is the first frame)
+                # update/draw components on each frame
+                
+                # *starting_soon* updates
+                
+                # if starting_soon is starting this frame...
+                if starting_soon.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+                    # keep track of start time/frame for later
+                    starting_soon.frameNStart = frameN  # exact frame index
+                    starting_soon.tStart = t  # local t and not account for scr refresh
+                    starting_soon.tStartRefresh = tThisFlipGlobal  # on global time
+                    win.timeOnFlip(starting_soon, 'tStartRefresh')  # time at next scr refresh
+                    # add timestamp to datafile
+                    thisExp.timestampOnFlip(win, 'starting_soon.started')
+                    # update status
+                    starting_soon.status = STARTED
+                    starting_soon.setAutoDraw(True)
+                
+                # if starting_soon is active this frame...
+                if starting_soon.status == STARTED:
+                    # update params
+                    pass
+                # Run 'Each Frame' code from catch_trigger
+                #if port.readPin(pinNumber) > 0:
+                #    continueRoutine = False #A trigger was detected, so move on
+                
+                # *skip_trigger* updates
+                waitOnFlip = False
+                
+                # if skip_trigger is starting this frame...
+                if skip_trigger.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+                    # keep track of start time/frame for later
+                    skip_trigger.frameNStart = frameN  # exact frame index
+                    skip_trigger.tStart = t  # local t and not account for scr refresh
+                    skip_trigger.tStartRefresh = tThisFlipGlobal  # on global time
+                    win.timeOnFlip(skip_trigger, 'tStartRefresh')  # time at next scr refresh
+                    # add timestamp to datafile
+                    thisExp.timestampOnFlip(win, 'skip_trigger.started')
+                    # update status
+                    skip_trigger.status = STARTED
+                    # keyboard checking is just starting
+                    waitOnFlip = True
+                    win.callOnFlip(skip_trigger.clock.reset)  # t=0 on next screen flip
+                    win.callOnFlip(skip_trigger.clearEvents, eventType='keyboard')  # clear events on next screen flip
+                if skip_trigger.status == STARTED and not waitOnFlip:
+                    theseKeys = skip_trigger.getKeys(keyList=['p'], ignoreKeys=["escape"], waitRelease=False)
+                    _skip_trigger_allKeys.extend(theseKeys)
+                    if len(_skip_trigger_allKeys):
+                        skip_trigger.keys = _skip_trigger_allKeys[-1].name  # just the last key pressed
+                        skip_trigger.rt = _skip_trigger_allKeys[-1].rt
+                        skip_trigger.duration = _skip_trigger_allKeys[-1].duration
+                        # a response ends the routine
+                        continueRoutine = False
+                
+                # check for quit (typically the Esc key)
+                if defaultKeyboard.getKeys(keyList=["escape"]):
+                    thisExp.status = FINISHED
+                if thisExp.status == FINISHED or endExpNow:
+                    endExperiment(thisExp, win=win)
+                    return
+                # pause experiment here if requested
+                if thisExp.status == PAUSED:
+                    pauseExperiment(
+                        thisExp=thisExp, 
+                        win=win, 
+                        timers=[routineTimer], 
+                        playbackComponents=[]
+                    )
+                    # skip the frame we paused on
+                    continue
+                
+                # check if all components have finished
+                if not continueRoutine:  # a component has requested a forced-end of Routine
+                    wait_for_trigger.forceEnded = routineForceEnded = True
+                    break
+                continueRoutine = False  # will revert to True if at least one component still running
+                for thisComponent in wait_for_trigger.components:
+                    if hasattr(thisComponent, "status") and thisComponent.status != FINISHED:
+                        continueRoutine = True
+                        break  # at least one component has not yet finished
+                
+                # refresh the screen
+                if continueRoutine:  # don't flip if this routine is over or we'll get a blank screen
+                    win.flip()
+            
+            # --- Ending Routine "wait_for_trigger" ---
+            for thisComponent in wait_for_trigger.components:
+                if hasattr(thisComponent, "setAutoDraw"):
+                    thisComponent.setAutoDraw(False)
+            # store stop times for wait_for_trigger
+            wait_for_trigger.tStop = globalClock.getTime(format='float')
+            wait_for_trigger.tStopRefresh = tThisFlipGlobal
+            thisExp.addData('wait_for_trigger.stopped', wait_for_trigger.tStop)
+            # check responses
+            if skip_trigger.keys in ['', [], None]:  # No response was made
+                skip_trigger.keys = None
+            runs.addData('skip_trigger.keys',skip_trigger.keys)
+            if skip_trigger.keys != None:  # we had a response
+                runs.addData('skip_trigger.rt', skip_trigger.rt)
+                runs.addData('skip_trigger.duration', skip_trigger.duration)
+            # the Routine "wait_for_trigger" was not non-slip safe, so reset the non-slip timer
+            routineTimer.reset()
+            
             # set up handler to look after randomisation of conditions etc
             semantic_mapping_run = data.TrialHandler2(
                 name='semantic_mapping_run',
                 nReps=1.0, 
-                method='sequential', 
+                method='random', 
                 extraInfo=expInfo, 
                 originPath=-1, 
                 trialList=data.importConditions(this_sheet), 
@@ -1621,7 +1946,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
                             living_nonliving.status = FINISHED
                             living_nonliving.status = FINISHED
                     if living_nonliving.status == STARTED and not waitOnFlip:
-                        theseKeys = living_nonliving.getKeys(keyList=['f','g'], ignoreKeys=["escape"], waitRelease=False)
+                        theseKeys = living_nonliving.getKeys(keyList=['1','2'], ignoreKeys=["escape"], waitRelease=False)
                         _living_nonliving_allKeys.extend(theseKeys)
                         if len(_living_nonliving_allKeys):
                             living_nonliving.keys = _living_nonliving_allKeys[-1].name  # just the last key pressed
