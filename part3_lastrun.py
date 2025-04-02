@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """
 This experiment was created using PsychoPy3 Experiment Builder (v2024.2.4),
-    on April 01, 2025, at 12:32
+    on április 01, 2025, at 18:15
 If you publish work using this script the most relevant publication is:
 
     Peirce J, Gray JR, Simpson S, MacAskill M, Höchenberger R, Sogo H, Kastman E, Lindeløv JK. (2019) 
@@ -127,7 +127,7 @@ def setupData(expInfo, dataDir=None):
     thisExp = data.ExperimentHandler(
         name=expName, version='',
         extraInfo=expInfo, runtimeInfo=None,
-        originPath='C:\\Users\\LocalAdmin\\Documents\\GUESS\\Guess_fMRI\\part3_lastrun.py',
+        originPath='C:\\Users\\Asus\\Documents\\pretest_fmri\\Guess_fMRI\\part3_lastrun.py',
         savePickle=True, saveWideText=True,
         dataFileName=dataDir + os.sep + filename, sortColumns='time'
     )
@@ -420,14 +420,13 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     
     # --- Initialize components for Routine "load_iti" ---
     
+    # --- Initialize components for Routine "reset_run" ---
+    
     # --- Initialize components for Routine "shuffle_items" ---
-    # Run 'Begin Experiment' code from shuffle_lists
-    run1 = []
-    run2 = []
-    run3 = []
-    run4 = []
     
     # --- Initialize components for Routine "set_up_runs" ---
+    # Run 'Begin Experiment' code from run_setup
+    my_runs = []
     
     # --- Initialize components for Routine "iti" ---
     iti_blank = visual.TextStim(win=win, name='iti_blank',
@@ -1045,10 +1044,99 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
             # if running in a Session with a Liaison client, send data up to now
             thisSession.sendExperimentData()
         
+        # --- Prepare to start Routine "reset_run" ---
+        # create an object to store info about Routine reset_run
+        reset_run = data.Routine(
+            name='reset_run',
+            components=[],
+        )
+        reset_run.status = NOT_STARTED
+        continueRoutine = True
+        # update component parameters for each repeat
+        # Run 'Begin Routine' code from create_runs
+        run1 = []
+        run2 = []
+        run3 = []
+        run4 = []
+        # store start times for reset_run
+        reset_run.tStartRefresh = win.getFutureFlipTime(clock=globalClock)
+        reset_run.tStart = globalClock.getTime(format='float')
+        reset_run.status = STARTED
+        thisExp.addData('reset_run.started', reset_run.tStart)
+        reset_run.maxDuration = None
+        # keep track of which components have finished
+        reset_runComponents = reset_run.components
+        for thisComponent in reset_run.components:
+            thisComponent.tStart = None
+            thisComponent.tStop = None
+            thisComponent.tStartRefresh = None
+            thisComponent.tStopRefresh = None
+            if hasattr(thisComponent, 'status'):
+                thisComponent.status = NOT_STARTED
+        # reset timers
+        t = 0
+        _timeToFirstFrame = win.getFutureFlipTime(clock="now")
+        frameN = -1
+        
+        # --- Run Routine "reset_run" ---
+        # if trial has changed, end Routine now
+        if isinstance(blocks, data.TrialHandler2) and thisBlock.thisN != blocks.thisTrial.thisN:
+            continueRoutine = False
+        reset_run.forceEnded = routineForceEnded = not continueRoutine
+        while continueRoutine:
+            # get current time
+            t = routineTimer.getTime()
+            tThisFlip = win.getFutureFlipTime(clock=routineTimer)
+            tThisFlipGlobal = win.getFutureFlipTime(clock=None)
+            frameN = frameN + 1  # number of completed frames (so 0 is the first frame)
+            # update/draw components on each frame
+            
+            # check for quit (typically the Esc key)
+            if defaultKeyboard.getKeys(keyList=["escape"]):
+                thisExp.status = FINISHED
+            if thisExp.status == FINISHED or endExpNow:
+                endExperiment(thisExp, win=win)
+                return
+            # pause experiment here if requested
+            if thisExp.status == PAUSED:
+                pauseExperiment(
+                    thisExp=thisExp, 
+                    win=win, 
+                    timers=[routineTimer], 
+                    playbackComponents=[]
+                )
+                # skip the frame we paused on
+                continue
+            
+            # check if all components have finished
+            if not continueRoutine:  # a component has requested a forced-end of Routine
+                reset_run.forceEnded = routineForceEnded = True
+                break
+            continueRoutine = False  # will revert to True if at least one component still running
+            for thisComponent in reset_run.components:
+                if hasattr(thisComponent, "status") and thisComponent.status != FINISHED:
+                    continueRoutine = True
+                    break  # at least one component has not yet finished
+            
+            # refresh the screen
+            if continueRoutine:  # don't flip if this routine is over or we'll get a blank screen
+                win.flip()
+        
+        # --- Ending Routine "reset_run" ---
+        for thisComponent in reset_run.components:
+            if hasattr(thisComponent, "setAutoDraw"):
+                thisComponent.setAutoDraw(False)
+        # store stop times for reset_run
+        reset_run.tStop = globalClock.getTime(format='float')
+        reset_run.tStopRefresh = tThisFlipGlobal
+        thisExp.addData('reset_run.stopped', reset_run.tStop)
+        # the Routine "reset_run" was not non-slip safe, so reset the non-slip timer
+        routineTimer.reset()
+        
         # set up handler to look after randomisation of conditions etc
         load_and_shuffle = data.TrialHandler2(
             name='load_and_shuffle',
-            nReps=2.0, 
+            nReps=1.0, 
             method='random', 
             extraInfo=expInfo, 
             originPath=-1, 
@@ -1163,7 +1251,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
             thisExp.addData('shuffle_items.stopped', shuffle_items.tStop)
             # the Routine "shuffle_items" was not non-slip safe, so reset the non-slip timer
             routineTimer.reset()
-        # completed 2.0 repeats of 'load_and_shuffle'
+        # completed 1.0 repeats of 'load_and_shuffle'
         
         
         # --- Prepare to start Routine "set_up_runs" ---
@@ -1176,9 +1264,19 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         continueRoutine = True
         # update component parameters for each repeat
         # Run 'Begin Routine' code from run_setup
-        my_runs = list(zip(run1, run2, run3, run4))
-        rnd.shuffle(my_runs)
-        run1, run2, run3, run4 = zip(*my_runs)
+        print(len(run1))
+        print(len(run2))
+        print(len(run3))
+        print(len(run4))
+        
+        rnd.shuffle(run1)
+        rnd.shuffle(run2)
+        rnd.shuffle(run3)
+        rnd.shuffle(run4)
+        
+        my_runs = [run1, run2, run3, run4]
+        
+        print(my_runs)
         
         # store start times for set_up_runs
         set_up_runs.tStartRefresh = win.getFutureFlipTime(clock=globalClock)
@@ -1252,441 +1350,463 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         set_up_runs.tStop = globalClock.getTime(format='float')
         set_up_runs.tStopRefresh = tThisFlipGlobal
         thisExp.addData('set_up_runs.stopped', set_up_runs.tStop)
-        # Run 'End Routine' code from run_setup
-        print(run1)
-        print(run2)
-        print(run3)
-        print(run4)
         # the Routine "set_up_runs" was not non-slip safe, so reset the non-slip timer
         routineTimer.reset()
         
         # set up handler to look after randomisation of conditions etc
-        semantic_mapping_run1 = data.TrialHandler2(
-            name='semantic_mapping_run1',
+        runs = data.TrialHandler2(
+            name='runs',
             nReps=1.0, 
-            method='sequential', 
+            method='random', 
             extraInfo=expInfo, 
             originPath=-1, 
-            trialList=data.importConditions('run1_sheet.xlsx'), 
+            trialList=data.importConditions('run_sheets.xlsx'), 
             seed=None, 
         )
-        thisExp.addLoop(semantic_mapping_run1)  # add the loop to the experiment
-        thisSemantic_mapping_run1 = semantic_mapping_run1.trialList[0]  # so we can initialise stimuli with some values
-        # abbreviate parameter names if possible (e.g. rgb = thisSemantic_mapping_run1.rgb)
-        if thisSemantic_mapping_run1 != None:
-            for paramName in thisSemantic_mapping_run1:
-                globals()[paramName] = thisSemantic_mapping_run1[paramName]
-        if thisSession is not None:
-            # if running in a Session with a Liaison client, send data up to now
-            thisSession.sendExperimentData()
+        thisExp.addLoop(runs)  # add the loop to the experiment
+        thisRun = runs.trialList[0]  # so we can initialise stimuli with some values
+        # abbreviate parameter names if possible (e.g. rgb = thisRun.rgb)
+        if thisRun != None:
+            for paramName in thisRun:
+                globals()[paramName] = thisRun[paramName]
         
-        for thisSemantic_mapping_run1 in semantic_mapping_run1:
-            currentLoop = semantic_mapping_run1
+        for thisRun in runs:
+            currentLoop = runs
             thisExp.timestampOnFlip(win, 'thisRow.t', format=globalClock.format)
+            # abbreviate parameter names if possible (e.g. rgb = thisRun.rgb)
+            if thisRun != None:
+                for paramName in thisRun:
+                    globals()[paramName] = thisRun[paramName]
+            
+            # set up handler to look after randomisation of conditions etc
+            semantic_mapping_run = data.TrialHandler2(
+                name='semantic_mapping_run',
+                nReps=1.0, 
+                method='sequential', 
+                extraInfo=expInfo, 
+                originPath=-1, 
+                trialList=data.importConditions(this_sheet), 
+                seed=None, 
+            )
+            thisExp.addLoop(semantic_mapping_run)  # add the loop to the experiment
+            thisSemantic_mapping_run = semantic_mapping_run.trialList[0]  # so we can initialise stimuli with some values
+            # abbreviate parameter names if possible (e.g. rgb = thisSemantic_mapping_run.rgb)
+            if thisSemantic_mapping_run != None:
+                for paramName in thisSemantic_mapping_run:
+                    globals()[paramName] = thisSemantic_mapping_run[paramName]
             if thisSession is not None:
                 # if running in a Session with a Liaison client, send data up to now
                 thisSession.sendExperimentData()
-            # abbreviate parameter names if possible (e.g. rgb = thisSemantic_mapping_run1.rgb)
-            if thisSemantic_mapping_run1 != None:
-                for paramName in thisSemantic_mapping_run1:
-                    globals()[paramName] = thisSemantic_mapping_run1[paramName]
             
-            # --- Prepare to start Routine "iti" ---
-            # create an object to store info about Routine iti
-            iti = data.Routine(
-                name='iti',
-                components=[iti_blank],
-            )
-            iti.status = NOT_STARTED
-            continueRoutine = True
-            # update component parameters for each repeat
-            # store start times for iti
-            iti.tStartRefresh = win.getFutureFlipTime(clock=globalClock)
-            iti.tStart = globalClock.getTime(format='float')
-            iti.status = STARTED
-            thisExp.addData('iti.started', iti.tStart)
-            iti.maxDuration = None
-            # keep track of which components have finished
-            itiComponents = iti.components
-            for thisComponent in iti.components:
-                thisComponent.tStart = None
-                thisComponent.tStop = None
-                thisComponent.tStartRefresh = None
-                thisComponent.tStopRefresh = None
-                if hasattr(thisComponent, 'status'):
-                    thisComponent.status = NOT_STARTED
-            # reset timers
-            t = 0
-            _timeToFirstFrame = win.getFutureFlipTime(clock="now")
-            frameN = -1
-            
-            # --- Run Routine "iti" ---
-            # if trial has changed, end Routine now
-            if isinstance(semantic_mapping_run1, data.TrialHandler2) and thisSemantic_mapping_run1.thisN != semantic_mapping_run1.thisTrial.thisN:
-                continueRoutine = False
-            iti.forceEnded = routineForceEnded = not continueRoutine
-            while continueRoutine and routineTimer.getTime() < 4.0:
-                # get current time
-                t = routineTimer.getTime()
-                tThisFlip = win.getFutureFlipTime(clock=routineTimer)
-                tThisFlipGlobal = win.getFutureFlipTime(clock=None)
-                frameN = frameN + 1  # number of completed frames (so 0 is the first frame)
-                # update/draw components on each frame
+            for thisSemantic_mapping_run in semantic_mapping_run:
+                currentLoop = semantic_mapping_run
+                thisExp.timestampOnFlip(win, 'thisRow.t', format=globalClock.format)
+                if thisSession is not None:
+                    # if running in a Session with a Liaison client, send data up to now
+                    thisSession.sendExperimentData()
+                # abbreviate parameter names if possible (e.g. rgb = thisSemantic_mapping_run.rgb)
+                if thisSemantic_mapping_run != None:
+                    for paramName in thisSemantic_mapping_run:
+                        globals()[paramName] = thisSemantic_mapping_run[paramName]
                 
-                # *iti_blank* updates
-                
-                # if iti_blank is starting this frame...
-                if iti_blank.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
-                    # keep track of start time/frame for later
-                    iti_blank.frameNStart = frameN  # exact frame index
-                    iti_blank.tStart = t  # local t and not account for scr refresh
-                    iti_blank.tStartRefresh = tThisFlipGlobal  # on global time
-                    win.timeOnFlip(iti_blank, 'tStartRefresh')  # time at next scr refresh
-                    # add timestamp to datafile
-                    thisExp.timestampOnFlip(win, 'iti_blank.started')
-                    # update status
-                    iti_blank.status = STARTED
-                    iti_blank.setAutoDraw(True)
-                
-                # if iti_blank is active this frame...
-                if iti_blank.status == STARTED:
-                    # update params
-                    pass
-                
-                # if iti_blank is stopping this frame...
-                if iti_blank.status == STARTED:
-                    # is it time to stop? (based on global clock, using actual start)
-                    if tThisFlipGlobal > iti_blank.tStartRefresh + 4.0-frameTolerance:
-                        # keep track of stop time/frame for later
-                        iti_blank.tStop = t  # not accounting for scr refresh
-                        iti_blank.tStopRefresh = tThisFlipGlobal  # on global time
-                        iti_blank.frameNStop = frameN  # exact frame index
-                        # add timestamp to datafile
-                        thisExp.timestampOnFlip(win, 'iti_blank.stopped')
-                        # update status
-                        iti_blank.status = FINISHED
-                        iti_blank.setAutoDraw(False)
-                
-                # check for quit (typically the Esc key)
-                if defaultKeyboard.getKeys(keyList=["escape"]):
-                    thisExp.status = FINISHED
-                if thisExp.status == FINISHED or endExpNow:
-                    endExperiment(thisExp, win=win)
-                    return
-                # pause experiment here if requested
-                if thisExp.status == PAUSED:
-                    pauseExperiment(
-                        thisExp=thisExp, 
-                        win=win, 
-                        timers=[routineTimer], 
-                        playbackComponents=[]
-                    )
-                    # skip the frame we paused on
-                    continue
-                
-                # check if all components have finished
-                if not continueRoutine:  # a component has requested a forced-end of Routine
-                    iti.forceEnded = routineForceEnded = True
-                    break
-                continueRoutine = False  # will revert to True if at least one component still running
+                # --- Prepare to start Routine "iti" ---
+                # create an object to store info about Routine iti
+                iti = data.Routine(
+                    name='iti',
+                    components=[iti_blank],
+                )
+                iti.status = NOT_STARTED
+                continueRoutine = True
+                # update component parameters for each repeat
+                # store start times for iti
+                iti.tStartRefresh = win.getFutureFlipTime(clock=globalClock)
+                iti.tStart = globalClock.getTime(format='float')
+                iti.status = STARTED
+                thisExp.addData('iti.started', iti.tStart)
+                iti.maxDuration = None
+                # keep track of which components have finished
+                itiComponents = iti.components
                 for thisComponent in iti.components:
-                    if hasattr(thisComponent, "status") and thisComponent.status != FINISHED:
-                        continueRoutine = True
-                        break  # at least one component has not yet finished
+                    thisComponent.tStart = None
+                    thisComponent.tStop = None
+                    thisComponent.tStartRefresh = None
+                    thisComponent.tStopRefresh = None
+                    if hasattr(thisComponent, 'status'):
+                        thisComponent.status = NOT_STARTED
+                # reset timers
+                t = 0
+                _timeToFirstFrame = win.getFutureFlipTime(clock="now")
+                frameN = -1
                 
-                # refresh the screen
-                if continueRoutine:  # don't flip if this routine is over or we'll get a blank screen
-                    win.flip()
-            
-            # --- Ending Routine "iti" ---
-            for thisComponent in iti.components:
-                if hasattr(thisComponent, "setAutoDraw"):
-                    thisComponent.setAutoDraw(False)
-            # store stop times for iti
-            iti.tStop = globalClock.getTime(format='float')
-            iti.tStopRefresh = tThisFlipGlobal
-            thisExp.addData('iti.stopped', iti.tStop)
-            # using non-slip timing so subtract the expected duration of this Routine (unless ended on request)
-            if iti.maxDurationReached:
-                routineTimer.addTime(-iti.maxDuration)
-            elif iti.forceEnded:
-                routineTimer.reset()
-            else:
-                routineTimer.addTime(-4.000000)
-            
-            # --- Prepare to start Routine "item" ---
-            # create an object to store info about Routine item
-            item = data.Routine(
-                name='item',
-                components=[living_nonliving, end_mapping, living_nonliving_text, semantic_map_item],
-            )
-            item.status = NOT_STARTED
-            continueRoutine = True
-            # update component parameters for each repeat
-            # Run 'Begin Routine' code from set_item
-            this_list = int(thisList)
-            this_run = my_runs[this_list]
-            this_item = int(thisIndex)
-            list_item = this_run[this_item]
-            # create starting attributes for living_nonliving
-            living_nonliving.keys = []
-            living_nonliving.rt = []
-            _living_nonliving_allKeys = []
-            # create starting attributes for end_mapping
-            end_mapping.keys = []
-            end_mapping.rt = []
-            _end_mapping_allKeys = []
-            semantic_map_item.setText(list_item)
-            # store start times for item
-            item.tStartRefresh = win.getFutureFlipTime(clock=globalClock)
-            item.tStart = globalClock.getTime(format='float')
-            item.status = STARTED
-            thisExp.addData('item.started', item.tStart)
-            item.maxDuration = None
-            # keep track of which components have finished
-            itemComponents = item.components
-            for thisComponent in item.components:
-                thisComponent.tStart = None
-                thisComponent.tStop = None
-                thisComponent.tStartRefresh = None
-                thisComponent.tStopRefresh = None
-                if hasattr(thisComponent, 'status'):
-                    thisComponent.status = NOT_STARTED
-            # reset timers
-            t = 0
-            _timeToFirstFrame = win.getFutureFlipTime(clock="now")
-            frameN = -1
-            
-            # --- Run Routine "item" ---
-            # if trial has changed, end Routine now
-            if isinstance(semantic_mapping_run1, data.TrialHandler2) and thisSemantic_mapping_run1.thisN != semantic_mapping_run1.thisTrial.thisN:
-                continueRoutine = False
-            item.forceEnded = routineForceEnded = not continueRoutine
-            while continueRoutine and routineTimer.getTime() < 1.5:
-                # get current time
-                t = routineTimer.getTime()
-                tThisFlip = win.getFutureFlipTime(clock=routineTimer)
-                tThisFlipGlobal = win.getFutureFlipTime(clock=None)
-                frameN = frameN + 1  # number of completed frames (so 0 is the first frame)
-                # update/draw components on each frame
-                
-                # *living_nonliving* updates
-                waitOnFlip = False
-                
-                # if living_nonliving is starting this frame...
-                if living_nonliving.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
-                    # keep track of start time/frame for later
-                    living_nonliving.frameNStart = frameN  # exact frame index
-                    living_nonliving.tStart = t  # local t and not account for scr refresh
-                    living_nonliving.tStartRefresh = tThisFlipGlobal  # on global time
-                    win.timeOnFlip(living_nonliving, 'tStartRefresh')  # time at next scr refresh
-                    # add timestamp to datafile
-                    thisExp.timestampOnFlip(win, 'living_nonliving.started')
-                    # update status
-                    living_nonliving.status = STARTED
-                    # keyboard checking is just starting
-                    waitOnFlip = True
-                    win.callOnFlip(living_nonliving.clock.reset)  # t=0 on next screen flip
-                    win.callOnFlip(living_nonliving.clearEvents, eventType='keyboard')  # clear events on next screen flip
-                
-                # if living_nonliving is stopping this frame...
-                if living_nonliving.status == STARTED:
-                    # is it time to stop? (based on global clock, using actual start)
-                    if tThisFlipGlobal > living_nonliving.tStartRefresh + 1.5-frameTolerance:
-                        # keep track of stop time/frame for later
-                        living_nonliving.tStop = t  # not accounting for scr refresh
-                        living_nonliving.tStopRefresh = tThisFlipGlobal  # on global time
-                        living_nonliving.frameNStop = frameN  # exact frame index
+                # --- Run Routine "iti" ---
+                # if trial has changed, end Routine now
+                if isinstance(semantic_mapping_run, data.TrialHandler2) and thisSemantic_mapping_run.thisN != semantic_mapping_run.thisTrial.thisN:
+                    continueRoutine = False
+                iti.forceEnded = routineForceEnded = not continueRoutine
+                while continueRoutine and routineTimer.getTime() < 4.0:
+                    # get current time
+                    t = routineTimer.getTime()
+                    tThisFlip = win.getFutureFlipTime(clock=routineTimer)
+                    tThisFlipGlobal = win.getFutureFlipTime(clock=None)
+                    frameN = frameN + 1  # number of completed frames (so 0 is the first frame)
+                    # update/draw components on each frame
+                    
+                    # *iti_blank* updates
+                    
+                    # if iti_blank is starting this frame...
+                    if iti_blank.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+                        # keep track of start time/frame for later
+                        iti_blank.frameNStart = frameN  # exact frame index
+                        iti_blank.tStart = t  # local t and not account for scr refresh
+                        iti_blank.tStartRefresh = tThisFlipGlobal  # on global time
+                        win.timeOnFlip(iti_blank, 'tStartRefresh')  # time at next scr refresh
                         # add timestamp to datafile
-                        thisExp.timestampOnFlip(win, 'living_nonliving.stopped')
+                        thisExp.timestampOnFlip(win, 'iti_blank.started')
                         # update status
-                        living_nonliving.status = FINISHED
-                        living_nonliving.status = FINISHED
-                if living_nonliving.status == STARTED and not waitOnFlip:
-                    theseKeys = living_nonliving.getKeys(keyList=['f','g'], ignoreKeys=["escape"], waitRelease=False)
-                    _living_nonliving_allKeys.extend(theseKeys)
-                    if len(_living_nonliving_allKeys):
-                        living_nonliving.keys = _living_nonliving_allKeys[-1].name  # just the last key pressed
-                        living_nonliving.rt = _living_nonliving_allKeys[-1].rt
-                        living_nonliving.duration = _living_nonliving_allKeys[-1].duration
+                        iti_blank.status = STARTED
+                        iti_blank.setAutoDraw(True)
+                    
+                    # if iti_blank is active this frame...
+                    if iti_blank.status == STARTED:
+                        # update params
+                        pass
+                    
+                    # if iti_blank is stopping this frame...
+                    if iti_blank.status == STARTED:
+                        # is it time to stop? (based on global clock, using actual start)
+                        if tThisFlipGlobal > iti_blank.tStartRefresh + 4.0-frameTolerance:
+                            # keep track of stop time/frame for later
+                            iti_blank.tStop = t  # not accounting for scr refresh
+                            iti_blank.tStopRefresh = tThisFlipGlobal  # on global time
+                            iti_blank.frameNStop = frameN  # exact frame index
+                            # add timestamp to datafile
+                            thisExp.timestampOnFlip(win, 'iti_blank.stopped')
+                            # update status
+                            iti_blank.status = FINISHED
+                            iti_blank.setAutoDraw(False)
+                    
+                    # check for quit (typically the Esc key)
+                    if defaultKeyboard.getKeys(keyList=["escape"]):
+                        thisExp.status = FINISHED
+                    if thisExp.status == FINISHED or endExpNow:
+                        endExperiment(thisExp, win=win)
+                        return
+                    # pause experiment here if requested
+                    if thisExp.status == PAUSED:
+                        pauseExperiment(
+                            thisExp=thisExp, 
+                            win=win, 
+                            timers=[routineTimer], 
+                            playbackComponents=[]
+                        )
+                        # skip the frame we paused on
+                        continue
+                    
+                    # check if all components have finished
+                    if not continueRoutine:  # a component has requested a forced-end of Routine
+                        iti.forceEnded = routineForceEnded = True
+                        break
+                    continueRoutine = False  # will revert to True if at least one component still running
+                    for thisComponent in iti.components:
+                        if hasattr(thisComponent, "status") and thisComponent.status != FINISHED:
+                            continueRoutine = True
+                            break  # at least one component has not yet finished
+                    
+                    # refresh the screen
+                    if continueRoutine:  # don't flip if this routine is over or we'll get a blank screen
+                        win.flip()
                 
-                # *end_mapping* updates
-                waitOnFlip = False
+                # --- Ending Routine "iti" ---
+                for thisComponent in iti.components:
+                    if hasattr(thisComponent, "setAutoDraw"):
+                        thisComponent.setAutoDraw(False)
+                # store stop times for iti
+                iti.tStop = globalClock.getTime(format='float')
+                iti.tStopRefresh = tThisFlipGlobal
+                thisExp.addData('iti.stopped', iti.tStop)
+                # using non-slip timing so subtract the expected duration of this Routine (unless ended on request)
+                if iti.maxDurationReached:
+                    routineTimer.addTime(-iti.maxDuration)
+                elif iti.forceEnded:
+                    routineTimer.reset()
+                else:
+                    routineTimer.addTime(-4.000000)
                 
-                # if end_mapping is starting this frame...
-                if end_mapping.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
-                    # keep track of start time/frame for later
-                    end_mapping.frameNStart = frameN  # exact frame index
-                    end_mapping.tStart = t  # local t and not account for scr refresh
-                    end_mapping.tStartRefresh = tThisFlipGlobal  # on global time
-                    win.timeOnFlip(end_mapping, 'tStartRefresh')  # time at next scr refresh
-                    # add timestamp to datafile
-                    thisExp.timestampOnFlip(win, 'end_mapping.started')
-                    # update status
-                    end_mapping.status = STARTED
-                    # keyboard checking is just starting
-                    waitOnFlip = True
-                    win.callOnFlip(end_mapping.clock.reset)  # t=0 on next screen flip
-                    win.callOnFlip(end_mapping.clearEvents, eventType='keyboard')  # clear events on next screen flip
-                
-                # if end_mapping is stopping this frame...
-                if end_mapping.status == STARTED:
-                    # is it time to stop? (based on global clock, using actual start)
-                    if tThisFlipGlobal > end_mapping.tStartRefresh + 1.5-frameTolerance:
-                        # keep track of stop time/frame for later
-                        end_mapping.tStop = t  # not accounting for scr refresh
-                        end_mapping.tStopRefresh = tThisFlipGlobal  # on global time
-                        end_mapping.frameNStop = frameN  # exact frame index
-                        # add timestamp to datafile
-                        thisExp.timestampOnFlip(win, 'end_mapping.stopped')
-                        # update status
-                        end_mapping.status = FINISHED
-                        end_mapping.status = FINISHED
-                if end_mapping.status == STARTED and not waitOnFlip:
-                    theseKeys = end_mapping.getKeys(keyList=['p'], ignoreKeys=["escape"], waitRelease=False)
-                    _end_mapping_allKeys.extend(theseKeys)
-                    if len(_end_mapping_allKeys):
-                        end_mapping.keys = _end_mapping_allKeys[-1].name  # just the last key pressed
-                        end_mapping.rt = _end_mapping_allKeys[-1].rt
-                        end_mapping.duration = _end_mapping_allKeys[-1].duration
-                        # a response ends the routine
-                        continueRoutine = False
-                
-                # *living_nonliving_text* updates
-                
-                # if living_nonliving_text is starting this frame...
-                if living_nonliving_text.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
-                    # keep track of start time/frame for later
-                    living_nonliving_text.frameNStart = frameN  # exact frame index
-                    living_nonliving_text.tStart = t  # local t and not account for scr refresh
-                    living_nonliving_text.tStartRefresh = tThisFlipGlobal  # on global time
-                    win.timeOnFlip(living_nonliving_text, 'tStartRefresh')  # time at next scr refresh
-                    # add timestamp to datafile
-                    thisExp.timestampOnFlip(win, 'living_nonliving_text.started')
-                    # update status
-                    living_nonliving_text.status = STARTED
-                    living_nonliving_text.setAutoDraw(True)
-                
-                # if living_nonliving_text is active this frame...
-                if living_nonliving_text.status == STARTED:
-                    # update params
-                    pass
-                
-                # if living_nonliving_text is stopping this frame...
-                if living_nonliving_text.status == STARTED:
-                    # is it time to stop? (based on global clock, using actual start)
-                    if tThisFlipGlobal > living_nonliving_text.tStartRefresh + 1.5-frameTolerance:
-                        # keep track of stop time/frame for later
-                        living_nonliving_text.tStop = t  # not accounting for scr refresh
-                        living_nonliving_text.tStopRefresh = tThisFlipGlobal  # on global time
-                        living_nonliving_text.frameNStop = frameN  # exact frame index
-                        # add timestamp to datafile
-                        thisExp.timestampOnFlip(win, 'living_nonliving_text.stopped')
-                        # update status
-                        living_nonliving_text.status = FINISHED
-                        living_nonliving_text.setAutoDraw(False)
-                
-                # *semantic_map_item* updates
-                
-                # if semantic_map_item is starting this frame...
-                if semantic_map_item.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
-                    # keep track of start time/frame for later
-                    semantic_map_item.frameNStart = frameN  # exact frame index
-                    semantic_map_item.tStart = t  # local t and not account for scr refresh
-                    semantic_map_item.tStartRefresh = tThisFlipGlobal  # on global time
-                    win.timeOnFlip(semantic_map_item, 'tStartRefresh')  # time at next scr refresh
-                    # add timestamp to datafile
-                    thisExp.timestampOnFlip(win, 'semantic_map_item.started')
-                    # update status
-                    semantic_map_item.status = STARTED
-                    semantic_map_item.setAutoDraw(True)
-                
-                # if semantic_map_item is active this frame...
-                if semantic_map_item.status == STARTED:
-                    # update params
-                    pass
-                
-                # if semantic_map_item is stopping this frame...
-                if semantic_map_item.status == STARTED:
-                    # is it time to stop? (based on global clock, using actual start)
-                    if tThisFlipGlobal > semantic_map_item.tStartRefresh + 1.5-frameTolerance:
-                        # keep track of stop time/frame for later
-                        semantic_map_item.tStop = t  # not accounting for scr refresh
-                        semantic_map_item.tStopRefresh = tThisFlipGlobal  # on global time
-                        semantic_map_item.frameNStop = frameN  # exact frame index
-                        # add timestamp to datafile
-                        thisExp.timestampOnFlip(win, 'semantic_map_item.stopped')
-                        # update status
-                        semantic_map_item.status = FINISHED
-                        semantic_map_item.setAutoDraw(False)
-                
-                # check for quit (typically the Esc key)
-                if defaultKeyboard.getKeys(keyList=["escape"]):
-                    thisExp.status = FINISHED
-                if thisExp.status == FINISHED or endExpNow:
-                    endExperiment(thisExp, win=win)
-                    return
-                # pause experiment here if requested
-                if thisExp.status == PAUSED:
-                    pauseExperiment(
-                        thisExp=thisExp, 
-                        win=win, 
-                        timers=[routineTimer], 
-                        playbackComponents=[]
-                    )
-                    # skip the frame we paused on
-                    continue
-                
-                # check if all components have finished
-                if not continueRoutine:  # a component has requested a forced-end of Routine
-                    item.forceEnded = routineForceEnded = True
-                    break
-                continueRoutine = False  # will revert to True if at least one component still running
+                # --- Prepare to start Routine "item" ---
+                # create an object to store info about Routine item
+                item = data.Routine(
+                    name='item',
+                    components=[living_nonliving, end_mapping, living_nonliving_text, semantic_map_item],
+                )
+                item.status = NOT_STARTED
+                continueRoutine = True
+                # update component parameters for each repeat
+                # Run 'Begin Routine' code from set_item
+                this_list = int(thisList)
+                this_run = my_runs[this_list]
+                this_item = int(thisIndex)
+                list_item = this_run[this_item]
+                # create starting attributes for living_nonliving
+                living_nonliving.keys = []
+                living_nonliving.rt = []
+                _living_nonliving_allKeys = []
+                # create starting attributes for end_mapping
+                end_mapping.keys = []
+                end_mapping.rt = []
+                _end_mapping_allKeys = []
+                semantic_map_item.setText(list_item)
+                # store start times for item
+                item.tStartRefresh = win.getFutureFlipTime(clock=globalClock)
+                item.tStart = globalClock.getTime(format='float')
+                item.status = STARTED
+                thisExp.addData('item.started', item.tStart)
+                item.maxDuration = None
+                # keep track of which components have finished
+                itemComponents = item.components
                 for thisComponent in item.components:
-                    if hasattr(thisComponent, "status") and thisComponent.status != FINISHED:
-                        continueRoutine = True
-                        break  # at least one component has not yet finished
+                    thisComponent.tStart = None
+                    thisComponent.tStop = None
+                    thisComponent.tStartRefresh = None
+                    thisComponent.tStopRefresh = None
+                    if hasattr(thisComponent, 'status'):
+                        thisComponent.status = NOT_STARTED
+                # reset timers
+                t = 0
+                _timeToFirstFrame = win.getFutureFlipTime(clock="now")
+                frameN = -1
                 
-                # refresh the screen
-                if continueRoutine:  # don't flip if this routine is over or we'll get a blank screen
-                    win.flip()
+                # --- Run Routine "item" ---
+                # if trial has changed, end Routine now
+                if isinstance(semantic_mapping_run, data.TrialHandler2) and thisSemantic_mapping_run.thisN != semantic_mapping_run.thisTrial.thisN:
+                    continueRoutine = False
+                item.forceEnded = routineForceEnded = not continueRoutine
+                while continueRoutine and routineTimer.getTime() < 1.5:
+                    # get current time
+                    t = routineTimer.getTime()
+                    tThisFlip = win.getFutureFlipTime(clock=routineTimer)
+                    tThisFlipGlobal = win.getFutureFlipTime(clock=None)
+                    frameN = frameN + 1  # number of completed frames (so 0 is the first frame)
+                    # update/draw components on each frame
+                    
+                    # *living_nonliving* updates
+                    waitOnFlip = False
+                    
+                    # if living_nonliving is starting this frame...
+                    if living_nonliving.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+                        # keep track of start time/frame for later
+                        living_nonliving.frameNStart = frameN  # exact frame index
+                        living_nonliving.tStart = t  # local t and not account for scr refresh
+                        living_nonliving.tStartRefresh = tThisFlipGlobal  # on global time
+                        win.timeOnFlip(living_nonliving, 'tStartRefresh')  # time at next scr refresh
+                        # add timestamp to datafile
+                        thisExp.timestampOnFlip(win, 'living_nonliving.started')
+                        # update status
+                        living_nonliving.status = STARTED
+                        # keyboard checking is just starting
+                        waitOnFlip = True
+                        win.callOnFlip(living_nonliving.clock.reset)  # t=0 on next screen flip
+                        win.callOnFlip(living_nonliving.clearEvents, eventType='keyboard')  # clear events on next screen flip
+                    
+                    # if living_nonliving is stopping this frame...
+                    if living_nonliving.status == STARTED:
+                        # is it time to stop? (based on global clock, using actual start)
+                        if tThisFlipGlobal > living_nonliving.tStartRefresh + 1.5-frameTolerance:
+                            # keep track of stop time/frame for later
+                            living_nonliving.tStop = t  # not accounting for scr refresh
+                            living_nonliving.tStopRefresh = tThisFlipGlobal  # on global time
+                            living_nonliving.frameNStop = frameN  # exact frame index
+                            # add timestamp to datafile
+                            thisExp.timestampOnFlip(win, 'living_nonliving.stopped')
+                            # update status
+                            living_nonliving.status = FINISHED
+                            living_nonliving.status = FINISHED
+                    if living_nonliving.status == STARTED and not waitOnFlip:
+                        theseKeys = living_nonliving.getKeys(keyList=['f','g'], ignoreKeys=["escape"], waitRelease=False)
+                        _living_nonliving_allKeys.extend(theseKeys)
+                        if len(_living_nonliving_allKeys):
+                            living_nonliving.keys = _living_nonliving_allKeys[-1].name  # just the last key pressed
+                            living_nonliving.rt = _living_nonliving_allKeys[-1].rt
+                            living_nonliving.duration = _living_nonliving_allKeys[-1].duration
+                    
+                    # *end_mapping* updates
+                    waitOnFlip = False
+                    
+                    # if end_mapping is starting this frame...
+                    if end_mapping.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+                        # keep track of start time/frame for later
+                        end_mapping.frameNStart = frameN  # exact frame index
+                        end_mapping.tStart = t  # local t and not account for scr refresh
+                        end_mapping.tStartRefresh = tThisFlipGlobal  # on global time
+                        win.timeOnFlip(end_mapping, 'tStartRefresh')  # time at next scr refresh
+                        # add timestamp to datafile
+                        thisExp.timestampOnFlip(win, 'end_mapping.started')
+                        # update status
+                        end_mapping.status = STARTED
+                        # keyboard checking is just starting
+                        waitOnFlip = True
+                        win.callOnFlip(end_mapping.clock.reset)  # t=0 on next screen flip
+                        win.callOnFlip(end_mapping.clearEvents, eventType='keyboard')  # clear events on next screen flip
+                    
+                    # if end_mapping is stopping this frame...
+                    if end_mapping.status == STARTED:
+                        # is it time to stop? (based on global clock, using actual start)
+                        if tThisFlipGlobal > end_mapping.tStartRefresh + 1.5-frameTolerance:
+                            # keep track of stop time/frame for later
+                            end_mapping.tStop = t  # not accounting for scr refresh
+                            end_mapping.tStopRefresh = tThisFlipGlobal  # on global time
+                            end_mapping.frameNStop = frameN  # exact frame index
+                            # add timestamp to datafile
+                            thisExp.timestampOnFlip(win, 'end_mapping.stopped')
+                            # update status
+                            end_mapping.status = FINISHED
+                            end_mapping.status = FINISHED
+                    if end_mapping.status == STARTED and not waitOnFlip:
+                        theseKeys = end_mapping.getKeys(keyList=['p'], ignoreKeys=["escape"], waitRelease=False)
+                        _end_mapping_allKeys.extend(theseKeys)
+                        if len(_end_mapping_allKeys):
+                            end_mapping.keys = _end_mapping_allKeys[-1].name  # just the last key pressed
+                            end_mapping.rt = _end_mapping_allKeys[-1].rt
+                            end_mapping.duration = _end_mapping_allKeys[-1].duration
+                            # a response ends the routine
+                            continueRoutine = False
+                    
+                    # *living_nonliving_text* updates
+                    
+                    # if living_nonliving_text is starting this frame...
+                    if living_nonliving_text.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+                        # keep track of start time/frame for later
+                        living_nonliving_text.frameNStart = frameN  # exact frame index
+                        living_nonliving_text.tStart = t  # local t and not account for scr refresh
+                        living_nonliving_text.tStartRefresh = tThisFlipGlobal  # on global time
+                        win.timeOnFlip(living_nonliving_text, 'tStartRefresh')  # time at next scr refresh
+                        # add timestamp to datafile
+                        thisExp.timestampOnFlip(win, 'living_nonliving_text.started')
+                        # update status
+                        living_nonliving_text.status = STARTED
+                        living_nonliving_text.setAutoDraw(True)
+                    
+                    # if living_nonliving_text is active this frame...
+                    if living_nonliving_text.status == STARTED:
+                        # update params
+                        pass
+                    
+                    # if living_nonliving_text is stopping this frame...
+                    if living_nonliving_text.status == STARTED:
+                        # is it time to stop? (based on global clock, using actual start)
+                        if tThisFlipGlobal > living_nonliving_text.tStartRefresh + 1.5-frameTolerance:
+                            # keep track of stop time/frame for later
+                            living_nonliving_text.tStop = t  # not accounting for scr refresh
+                            living_nonliving_text.tStopRefresh = tThisFlipGlobal  # on global time
+                            living_nonliving_text.frameNStop = frameN  # exact frame index
+                            # add timestamp to datafile
+                            thisExp.timestampOnFlip(win, 'living_nonliving_text.stopped')
+                            # update status
+                            living_nonliving_text.status = FINISHED
+                            living_nonliving_text.setAutoDraw(False)
+                    
+                    # *semantic_map_item* updates
+                    
+                    # if semantic_map_item is starting this frame...
+                    if semantic_map_item.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+                        # keep track of start time/frame for later
+                        semantic_map_item.frameNStart = frameN  # exact frame index
+                        semantic_map_item.tStart = t  # local t and not account for scr refresh
+                        semantic_map_item.tStartRefresh = tThisFlipGlobal  # on global time
+                        win.timeOnFlip(semantic_map_item, 'tStartRefresh')  # time at next scr refresh
+                        # add timestamp to datafile
+                        thisExp.timestampOnFlip(win, 'semantic_map_item.started')
+                        # update status
+                        semantic_map_item.status = STARTED
+                        semantic_map_item.setAutoDraw(True)
+                    
+                    # if semantic_map_item is active this frame...
+                    if semantic_map_item.status == STARTED:
+                        # update params
+                        pass
+                    
+                    # if semantic_map_item is stopping this frame...
+                    if semantic_map_item.status == STARTED:
+                        # is it time to stop? (based on global clock, using actual start)
+                        if tThisFlipGlobal > semantic_map_item.tStartRefresh + 1.5-frameTolerance:
+                            # keep track of stop time/frame for later
+                            semantic_map_item.tStop = t  # not accounting for scr refresh
+                            semantic_map_item.tStopRefresh = tThisFlipGlobal  # on global time
+                            semantic_map_item.frameNStop = frameN  # exact frame index
+                            # add timestamp to datafile
+                            thisExp.timestampOnFlip(win, 'semantic_map_item.stopped')
+                            # update status
+                            semantic_map_item.status = FINISHED
+                            semantic_map_item.setAutoDraw(False)
+                    
+                    # check for quit (typically the Esc key)
+                    if defaultKeyboard.getKeys(keyList=["escape"]):
+                        thisExp.status = FINISHED
+                    if thisExp.status == FINISHED or endExpNow:
+                        endExperiment(thisExp, win=win)
+                        return
+                    # pause experiment here if requested
+                    if thisExp.status == PAUSED:
+                        pauseExperiment(
+                            thisExp=thisExp, 
+                            win=win, 
+                            timers=[routineTimer], 
+                            playbackComponents=[]
+                        )
+                        # skip the frame we paused on
+                        continue
+                    
+                    # check if all components have finished
+                    if not continueRoutine:  # a component has requested a forced-end of Routine
+                        item.forceEnded = routineForceEnded = True
+                        break
+                    continueRoutine = False  # will revert to True if at least one component still running
+                    for thisComponent in item.components:
+                        if hasattr(thisComponent, "status") and thisComponent.status != FINISHED:
+                            continueRoutine = True
+                            break  # at least one component has not yet finished
+                    
+                    # refresh the screen
+                    if continueRoutine:  # don't flip if this routine is over or we'll get a blank screen
+                        win.flip()
+                
+                # --- Ending Routine "item" ---
+                for thisComponent in item.components:
+                    if hasattr(thisComponent, "setAutoDraw"):
+                        thisComponent.setAutoDraw(False)
+                # store stop times for item
+                item.tStop = globalClock.getTime(format='float')
+                item.tStopRefresh = tThisFlipGlobal
+                thisExp.addData('item.stopped', item.tStop)
+                # check responses
+                if living_nonliving.keys in ['', [], None]:  # No response was made
+                    living_nonliving.keys = None
+                semantic_mapping_run.addData('living_nonliving.keys',living_nonliving.keys)
+                if living_nonliving.keys != None:  # we had a response
+                    semantic_mapping_run.addData('living_nonliving.rt', living_nonliving.rt)
+                    semantic_mapping_run.addData('living_nonliving.duration', living_nonliving.duration)
+                # check responses
+                if end_mapping.keys in ['', [], None]:  # No response was made
+                    end_mapping.keys = None
+                semantic_mapping_run.addData('end_mapping.keys',end_mapping.keys)
+                if end_mapping.keys != None:  # we had a response
+                    semantic_mapping_run.addData('end_mapping.rt', end_mapping.rt)
+                    semantic_mapping_run.addData('end_mapping.duration', end_mapping.duration)
+                # using non-slip timing so subtract the expected duration of this Routine (unless ended on request)
+                if item.maxDurationReached:
+                    routineTimer.addTime(-item.maxDuration)
+                elif item.forceEnded:
+                    routineTimer.reset()
+                else:
+                    routineTimer.addTime(-1.500000)
+                thisExp.nextEntry()
+                
+            # completed 1.0 repeats of 'semantic_mapping_run'
             
-            # --- Ending Routine "item" ---
-            for thisComponent in item.components:
-                if hasattr(thisComponent, "setAutoDraw"):
-                    thisComponent.setAutoDraw(False)
-            # store stop times for item
-            item.tStop = globalClock.getTime(format='float')
-            item.tStopRefresh = tThisFlipGlobal
-            thisExp.addData('item.stopped', item.tStop)
-            # check responses
-            if living_nonliving.keys in ['', [], None]:  # No response was made
-                living_nonliving.keys = None
-            semantic_mapping_run1.addData('living_nonliving.keys',living_nonliving.keys)
-            if living_nonliving.keys != None:  # we had a response
-                semantic_mapping_run1.addData('living_nonliving.rt', living_nonliving.rt)
-                semantic_mapping_run1.addData('living_nonliving.duration', living_nonliving.duration)
-            # check responses
-            if end_mapping.keys in ['', [], None]:  # No response was made
-                end_mapping.keys = None
-            semantic_mapping_run1.addData('end_mapping.keys',end_mapping.keys)
-            if end_mapping.keys != None:  # we had a response
-                semantic_mapping_run1.addData('end_mapping.rt', end_mapping.rt)
-                semantic_mapping_run1.addData('end_mapping.duration', end_mapping.duration)
-            # using non-slip timing so subtract the expected duration of this Routine (unless ended on request)
-            if item.maxDurationReached:
-                routineTimer.addTime(-item.maxDuration)
-            elif item.forceEnded:
-                routineTimer.reset()
-            else:
-                routineTimer.addTime(-1.500000)
-            thisExp.nextEntry()
-            
-        # completed 1.0 repeats of 'semantic_mapping_run1'
+            if thisSession is not None:
+                # if running in a Session with a Liaison client, send data up to now
+                thisSession.sendExperimentData()
+        # completed 1.0 repeats of 'runs'
         
-        if thisSession is not None:
-            # if running in a Session with a Liaison client, send data up to now
-            thisSession.sendExperimentData()
     # completed 2.0 repeats of 'blocks'
     
     

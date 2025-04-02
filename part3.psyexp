@@ -291,6 +291,22 @@
       </KeyboardComponent>
     </Routine>
     <Routine name="item">
+      <RoutineSettingsComponent name="item" plugin="None">
+        <Param val="none" valType="str" updates="None" name="backgroundFit"/>
+        <Param val="" valType="str" updates="None" name="backgroundImg"/>
+        <Param val="$[0,0,0]" valType="color" updates="None" name="color"/>
+        <Param val="rgb" valType="str" updates="None" name="colorSpace"/>
+        <Param val="" valType="str" updates="constant" name="desc"/>
+        <Param val="False" valType="bool" updates="None" name="disabled"/>
+        <Param val="" valType="code" updates="None" name="durationEstim"/>
+        <Param val="False" valType="code" updates="None" name="forceNonSlip"/>
+        <Param val="item" valType="code" updates="None" name="name"/>
+        <Param val="True" valType="bool" updates="None" name="saveStartStop"/>
+        <Param val="" valType="code" updates="constant" name="skipIf"/>
+        <Param val="duration (s)" valType="str" updates="None" name="stopType"/>
+        <Param val="" valType="code" updates="constant" name="stopVal"/>
+        <Param val="False" valType="bool" updates="None" name="useWindowParams"/>
+      </RoutineSettingsComponent>
       <CodeComponent name="set_item" plugin="None">
         <Param val="" valType="extendedCode" updates="constant" name="Before Experiment"/>
         <Param val="" valType="extendedCode" updates="constant" name="Before JS Experiment"/>
@@ -308,22 +324,6 @@
         <Param val="False" valType="bool" updates="None" name="disabled"/>
         <Param val="set_item" valType="code" updates="None" name="name"/>
       </CodeComponent>
-      <RoutineSettingsComponent name="item" plugin="None">
-        <Param val="none" valType="str" updates="None" name="backgroundFit"/>
-        <Param val="" valType="str" updates="None" name="backgroundImg"/>
-        <Param val="$[0,0,0]" valType="color" updates="None" name="color"/>
-        <Param val="rgb" valType="str" updates="None" name="colorSpace"/>
-        <Param val="" valType="str" updates="constant" name="desc"/>
-        <Param val="False" valType="bool" updates="None" name="disabled"/>
-        <Param val="" valType="code" updates="None" name="durationEstim"/>
-        <Param val="False" valType="code" updates="None" name="forceNonSlip"/>
-        <Param val="item" valType="code" updates="None" name="name"/>
-        <Param val="True" valType="bool" updates="None" name="saveStartStop"/>
-        <Param val="" valType="code" updates="constant" name="skipIf"/>
-        <Param val="duration (s)" valType="str" updates="None" name="stopType"/>
-        <Param val="" valType="code" updates="constant" name="stopVal"/>
-        <Param val="False" valType="bool" updates="None" name="useWindowParams"/>
-      </RoutineSettingsComponent>
       <KeyboardComponent name="living_nonliving" plugin="None">
         <Param val="'f','g'" valType="list" updates="constant" name="allowedKeys"/>
         <Param val="" valType="str" updates="constant" name="correctAns"/>
@@ -775,8 +775,8 @@
       <CodeComponent name="shuffle_lists" plugin="None">
         <Param val="" valType="extendedCode" updates="constant" name="Before Experiment"/>
         <Param val="" valType="extendedCode" updates="constant" name="Before JS Experiment"/>
-        <Param val="run1 = []&amp;#10;run2 = []&amp;#10;run3 = []&amp;#10;run4 = []" valType="extendedCode" updates="constant" name="Begin Experiment"/>
-        <Param val="run1 = [];&amp;#10;run2 = [];&amp;#10;run3 = [];&amp;#10;run4 = [];&amp;#10;" valType="extendedCode" updates="constant" name="Begin JS Experiment"/>
+        <Param val="" valType="extendedCode" updates="constant" name="Begin Experiment"/>
+        <Param val="" valType="extendedCode" updates="constant" name="Begin JS Experiment"/>
         <Param val="these_items = [Cue, Target, Mediator1, Mediator2];&amp;#10;rnd.shuffle(these_items);&amp;#10;run1.push(these_items[0]);&amp;#10;run2.push(these_items[1]);&amp;#10;run3.push(these_items[2]);&amp;#10;run4.push(these_items[3]);&amp;#10;" valType="extendedCode" updates="constant" name="Begin JS Routine"/>
         <Param val="these_items = [Cue, Target, Mediator1, Mediator2] # assign elements from this row&amp;#10;rnd.shuffle(these_items) # shuffle order&amp;#10;&amp;#10;# append to separate runs&amp;#10;run1.append(these_items[0])&amp;#10;run2.append(these_items[1])&amp;#10;run3.append(these_items[2])&amp;#10;run4.append(these_items[3])&amp;#10;" valType="extendedCode" updates="constant" name="Begin Routine"/>
         <Param val="Auto-&gt;JS" valType="str" updates="None" name="Code Type"/>
@@ -810,19 +810,54 @@
       <CodeComponent name="run_setup" plugin="None">
         <Param val="" valType="extendedCode" updates="constant" name="Before Experiment"/>
         <Param val="" valType="extendedCode" updates="constant" name="Before JS Experiment"/>
-        <Param val="" valType="extendedCode" updates="constant" name="Begin Experiment"/>
-        <Param val="" valType="extendedCode" updates="constant" name="Begin JS Experiment"/>
-        <Param val="&amp;#10;        // add-on: list(s: string): string[]&amp;#10;        function list(s) {&amp;#10;            // if s is a string, we return a list of its characters&amp;#10;            if (typeof s === 'string')&amp;#10;                return s.split('');&amp;#10;            else&amp;#10;                // otherwise we return s:&amp;#10;                return s;&amp;#10;        }&amp;#10;&amp;#10;        my_runs = list(zip(run1, run2, run3, run4));&amp;#10;rnd.shuffle(my_runs);&amp;#10;[run1, run2, run3, run4] = zip(...my_runs);&amp;#10;" valType="extendedCode" updates="constant" name="Begin JS Routine"/>
-        <Param val="my_runs = list(zip(run1, run2, run3, run4))&amp;#10;rnd.shuffle(my_runs)&amp;#10;run1, run2, run3, run4 = zip(*my_runs)&amp;#10;" valType="extendedCode" updates="constant" name="Begin Routine"/>
+        <Param val="my_runs = []" valType="extendedCode" updates="constant" name="Begin Experiment"/>
+        <Param val="my_runs = [];&amp;#10;" valType="extendedCode" updates="constant" name="Begin JS Experiment"/>
+        <Param val="console.log(run1.length);&amp;#10;console.log(run2.length);&amp;#10;console.log(run3.length);&amp;#10;console.log(run4.length);&amp;#10;rnd.shuffle(run1);&amp;#10;rnd.shuffle(run2);&amp;#10;rnd.shuffle(run3);&amp;#10;rnd.shuffle(run4);&amp;#10;my_runs = [run1, run2, run3, run4];&amp;#10;console.log(my_runs);&amp;#10;" valType="extendedCode" updates="constant" name="Begin JS Routine"/>
+        <Param val="print(len(run1))&amp;#10;print(len(run2))&amp;#10;print(len(run3))&amp;#10;print(len(run4))&amp;#10;&amp;#10;rnd.shuffle(run1)&amp;#10;rnd.shuffle(run2)&amp;#10;rnd.shuffle(run3)&amp;#10;rnd.shuffle(run4)&amp;#10;&amp;#10;my_runs = [run1, run2, run3, run4]&amp;#10;&amp;#10;print(my_runs)&amp;#10;" valType="extendedCode" updates="constant" name="Begin Routine"/>
         <Param val="Auto-&gt;JS" valType="str" updates="None" name="Code Type"/>
         <Param val="" valType="extendedCode" updates="constant" name="Each Frame"/>
         <Param val="" valType="extendedCode" updates="constant" name="Each JS Frame"/>
         <Param val="" valType="extendedCode" updates="constant" name="End Experiment"/>
         <Param val="" valType="extendedCode" updates="constant" name="End JS Experiment"/>
-        <Param val="console.log(run1);&amp;#10;console.log(run2);&amp;#10;console.log(run3);&amp;#10;console.log(run4);&amp;#10;" valType="extendedCode" updates="constant" name="End JS Routine"/>
-        <Param val="print(run1)&amp;#10;print(run2)&amp;#10;print(run3)&amp;#10;print(run4)" valType="extendedCode" updates="constant" name="End Routine"/>
+        <Param val="" valType="extendedCode" updates="constant" name="End JS Routine"/>
+        <Param val="" valType="extendedCode" updates="constant" name="End Routine"/>
         <Param val="False" valType="bool" updates="None" name="disabled"/>
         <Param val="run_setup" valType="code" updates="None" name="name"/>
+      </CodeComponent>
+    </Routine>
+    <Routine name="reset_run">
+      <RoutineSettingsComponent name="reset_run" plugin="None">
+        <Param val="none" valType="str" updates="None" name="backgroundFit"/>
+        <Param val="" valType="str" updates="None" name="backgroundImg"/>
+        <Param val="$[0,0,0]" valType="color" updates="None" name="color"/>
+        <Param val="rgb" valType="str" updates="None" name="colorSpace"/>
+        <Param val="" valType="str" updates="constant" name="desc"/>
+        <Param val="False" valType="bool" updates="None" name="disabled"/>
+        <Param val="" valType="code" updates="None" name="durationEstim"/>
+        <Param val="False" valType="code" updates="None" name="forceNonSlip"/>
+        <Param val="reset_run" valType="code" updates="None" name="name"/>
+        <Param val="True" valType="bool" updates="None" name="saveStartStop"/>
+        <Param val="" valType="code" updates="constant" name="skipIf"/>
+        <Param val="duration (s)" valType="str" updates="None" name="stopType"/>
+        <Param val="" valType="code" updates="constant" name="stopVal"/>
+        <Param val="False" valType="bool" updates="None" name="useWindowParams"/>
+      </RoutineSettingsComponent>
+      <CodeComponent name="create_runs" plugin="None">
+        <Param val="" valType="extendedCode" updates="constant" name="Before Experiment"/>
+        <Param val="" valType="extendedCode" updates="constant" name="Before JS Experiment"/>
+        <Param val="" valType="extendedCode" updates="constant" name="Begin Experiment"/>
+        <Param val="" valType="extendedCode" updates="constant" name="Begin JS Experiment"/>
+        <Param val="run1 = [];&amp;#10;run2 = [];&amp;#10;run3 = [];&amp;#10;run4 = [];&amp;#10;" valType="extendedCode" updates="constant" name="Begin JS Routine"/>
+        <Param val="run1 = []&amp;#10;run2 = []&amp;#10;run3 = []&amp;#10;run4 = []" valType="extendedCode" updates="constant" name="Begin Routine"/>
+        <Param val="Auto-&gt;JS" valType="str" updates="None" name="Code Type"/>
+        <Param val="" valType="extendedCode" updates="constant" name="Each Frame"/>
+        <Param val="" valType="extendedCode" updates="constant" name="Each JS Frame"/>
+        <Param val="" valType="extendedCode" updates="constant" name="End Experiment"/>
+        <Param val="" valType="extendedCode" updates="constant" name="End JS Experiment"/>
+        <Param val="" valType="extendedCode" updates="constant" name="End JS Routine"/>
+        <Param val="" valType="extendedCode" updates="constant" name="End Routine"/>
+        <Param val="False" valType="bool" updates="None" name="disabled"/>
+        <Param val="create_runs" valType="code" updates="None" name="name"/>
       </CodeComponent>
     </Routine>
   </Routines>
@@ -843,7 +878,7 @@
     </LoopInitiator>
     <LoopInitiator loopType="TrialHandler" name="sm_itis">
       <Param name="Selected rows" updates="None" val="" valType="str"/>
-      <Param name="conditions" updates="None" val="[{'iti': 4.5}, {'iti': 6}, {'iti': 7.5}, {'iti': 9}, {'iti': 4.5}, {'iti': 6}, {'iti': 7.5}, {'iti': 9}, {'iti': 4.5}, {'iti': 6}, {'iti': 7.5}, {'iti': 9}, {'iti': 4.5}, {'iti': 6}, {'iti': 7.5}, {'iti': 9}, {'iti': 4.5}, {'iti': 6}, {'iti': 7.5}, {'iti': 9}, {'iti': 4.5}, {'iti': 6}, {'iti': 7.5}, {'iti': 9}, {'iti': 4.5}, {'iti': 6}, {'iti': 7.5}, {'iti': 9}, {'iti': 4.5}, {'iti': 6}, {'iti': 7.5}, {'iti': 9}, {'iti': 4.5}, {'iti': 6}, {'iti': 7.5}, {'iti': 9}, {'iti': 4.5}, {'iti': 6}, {'iti': 7.5}, {'iti': 9}, {'iti': 4.5}, {'iti': 6}, {'iti': 7.5}, {'iti': 9}, {'iti': 4.5}, {'iti': 6}, {'iti': 7.5}, {'iti': 9}, {'iti': 4.5}, {'iti': 6}, {'iti': 7.5}, {'iti': 9}, {'iti': 4.5}, {'iti': 6}, {'iti': 7.5}, {'iti': 9}, {'iti': 4.5}, {'iti': 6}, {'iti': 7.5}, {'iti': 9}, {'iti': 4.5}, {'iti': 6}, {'iti': 7.5}, {'iti': 9}, {'iti': 4.5}, {'iti': 6}, {'iti': 7.5}, {'iti': 9}, {'iti': 4.5}, {'iti': 6}, {'iti': 7.5}, {'iti': 9}, {'iti': 4.5}, {'iti': 6}, {'iti': 7.5}, {'iti': 9}, {'iti': 4.5}, {'iti': 6}, {'iti': 7.5}, {'iti': 9}]" valType="str"/>
+      <Param name="conditions" updates="None" val="[{'iti': 3}, {'iti': 3}, {'iti': 4.5}, {'iti': 6}, {'iti': 3}, {'iti': 3}, {'iti': 4.5}, {'iti': 6}, {'iti': 3}, {'iti': 3}, {'iti': 4.5}, {'iti': 6}, {'iti': 3}, {'iti': 3}, {'iti': 4.5}, {'iti': 6}, {'iti': 3}, {'iti': 3}, {'iti': 4.5}, {'iti': 6}, {'iti': 3}, {'iti': 3}, {'iti': 4.5}, {'iti': 6}, {'iti': 3}, {'iti': 3}, {'iti': 4.5}, {'iti': 6}, {'iti': 3}, {'iti': 3}, {'iti': 4.5}, {'iti': 6}, {'iti': 3}, {'iti': 3}, {'iti': 4.5}, {'iti': 6}, {'iti': 3}, {'iti': 3}, {'iti': 4.5}, {'iti': 6}, {'iti': 3}, {'iti': 3}, {'iti': 4.5}, {'iti': 6}, {'iti': 3}, {'iti': 3}, {'iti': 4.5}, {'iti': 6}, {'iti': 3}, {'iti': 3}, {'iti': 4.5}, {'iti': 6}, {'iti': 3}, {'iti': 3}, {'iti': 4.5}, {'iti': 6}, {'iti': 3}, {'iti': 3}, {'iti': 4.5}, {'iti': 6}]" valType="str"/>
       <Param name="conditionsFile" updates="None" val="sm_iti_randomization.xlsx" valType="file"/>
       <Param name="endPoints" updates="None" val="[0, 1]" valType="num"/>
       <Param name="isTrials" updates="None" val="True" valType="bool"/>
@@ -854,34 +889,47 @@
     </LoopInitiator>
     <Routine name="load_iti"/>
     <LoopTerminator name="sm_itis"/>
+    <Routine name="reset_run"/>
     <LoopInitiator loopType="TrialHandler" name="load_and_shuffle">
       <Param name="Selected rows" updates="None" val="" valType="str"/>
-      <Param name="conditions" updates="None" val="[{'Cue': 'Akrobatin', 'Target': 'Seil', 'Mediator1': 'Turnerin', 'Mediator2': 'Zirkus'}, {'Cue': 'Chips', 'Target': 'Salz', 'Mediator1': 'Kartoffel', 'Mediator2': 'Dip'}, {'Cue': 'Definition', 'Target': 'Begriff', 'Mediator1': 'Erklärung', 'Mediator2': 'Bedeutung'}, {'Cue': 'Experiment', 'Target': 'Versuch', 'Mediator1': 'Test', 'Mediator2': 'Labor'}, {'Cue': 'Fakt', 'Target': 'Wissen', 'Mediator1': 'Wahrheit', 'Mediator2': 'Fiktion'}, {'Cue': 'Leistung', 'Target': 'Ehre', 'Mediator1': 'Ziel', 'Mediator2': 'Erfolg'}, {'Cue': 'Rauch', 'Target': 'Nebel', 'Mediator1': 'Zigarette', 'Mediator2': 'Feuer'}, {'Cue': 'Scheidung', 'Target': 'Anwalt', 'Mediator1': 'Ehe', 'Mediator2': 'Trennung'}, {'Cue': 'Service', 'Target': 'Kunde', 'Mediator1': 'Hilfe', 'Mediator2': 'Station'}, {'Cue': 'Shampoo', 'Target': 'Seife', 'Mediator1': 'Conditioner', 'Mediator2': 'Haare'}, {'Cue': 'Soldat', 'Target': 'Kämpfer', 'Mediator1': 'Krieg', 'Mediator2': 'Armee'}, {'Cue': 'Zeichnung', 'Target': 'Bleistift', 'Mediator1': 'Bild', 'Mediator2': 'Kunst'}, {'Cue': 'Anführer', 'Target': 'Boss', 'Mediator1': 'Anhänger', 'Mediator2': 'Präsident'}, {'Cue': 'Beutel', 'Target': 'Sack', 'Mediator1': 'Tasche', 'Mediator2': 'Känguru'}, {'Cue': 'Gast', 'Target': 'Zimmer', 'Mediator1': 'Freund', 'Mediator2': 'Besucher'}, {'Cue': 'Geburtstag', 'Target': 'Kerze', 'Mediator1': 'Kuchen ', 'Mediator2': 'Feier'}, {'Cue': 'Geschwister', 'Target': 'Eltern', 'Mediator1': 'Bruder', 'Mediator2': 'Schwester'}, {'Cue': 'Golf', 'Target': 'Loch', 'Mediator1': 'Ball', 'Mediator2': 'Schläger'}, {'Cue': 'Küche', 'Target': 'Tisch', 'Mediator1': 'Koch', 'Mediator2': 'Waschbecken'}, {'Cue': 'Rasen', 'Target': 'Pflege', 'Mediator1': 'Mäher', 'Mediator2': 'Gras'}, {'Cue': 'Safari', 'Target': 'Ausflug', 'Mediator1': 'Afrika', 'Mediator2': 'Dschungel'}, {'Cue': 'Sitzgurt', 'Target': 'Gesetz', 'Mediator1': 'Auto', 'Mediator2': 'Sicherheit'}, {'Cue': 'Vampir', 'Target': 'Geist', 'Mediator1': 'Blut', 'Mediator2': 'Fledermaus'}, {'Cue': 'Vergangenheit', 'Target': 'Erinnerungen', 'Mediator1': 'Zukunft', 'Mediator2': 'Gegenwart'}, {'Cue': 'Agent', 'Target': 'Reise', 'Mediator1': None, 'Mediator2': None}, {'Cue': 'Brise', 'Target': 'Luft', 'Mediator1': None, 'Mediator2': None}, {'Cue': 'Decke', 'Target': 'Kissen', 'Mediator1': None, 'Mediator2': None}, {'Cue': 'Diskussion', 'Target': 'Vorlesung', 'Mediator1': None, 'Mediator2': None}, {'Cue': 'Eingeweide', 'Target': 'Organ', 'Mediator1': None, 'Mediator2': None}, {'Cue': 'Floh', 'Target': 'Käfer', 'Mediator1': None, 'Mediator2': None}, {'Cue': 'Frieden', 'Target': 'Harmonie', 'Mediator1': None, 'Mediator2': None}, {'Cue': 'Garage', 'Target': 'Haus', 'Mediator1': None, 'Mediator2': None}, {'Cue': 'Gegenstand', 'Target': 'Artikel', 'Mediator1': None, 'Mediator2': None}, {'Cue': 'Humor', 'Target': 'Komödie', 'Mediator1': None, 'Mediator2': None}, {'Cue': 'Insel', 'Target': 'Meer', 'Mediator1': None, 'Mediator2': None}, {'Cue': 'Karneval', 'Target': 'Festival', 'Mediator1': None, 'Mediator2': None}, {'Cue': 'Mappe', 'Target': 'Buch', 'Mediator1': None, 'Mediator2': None}, {'Cue': 'Publikum', 'Target': 'Applaus', 'Mediator1': None, 'Mediator2': None}, {'Cue': 'Pumpe', 'Target': 'Reifen', 'Mediator1': None, 'Mediator2': None}, {'Cue': 'Raum', 'Target': 'Platz', 'Mediator1': None, 'Mediator2': None}, {'Cue': 'Schlüssel', 'Target': 'Ring', 'Mediator1': None, 'Mediator2': None}, {'Cue': 'Statue', 'Target': 'Monument', 'Mediator1': None, 'Mediator2': None}, {'Cue': 'Tänzer', 'Target': 'Musik', 'Mediator1': None, 'Mediator2': None}, {'Cue': 'Teleskop', 'Target': 'Mikroskop', 'Mediator1': None, 'Mediator2': None}, {'Cue': 'Teller', 'Target': 'Gabel', 'Mediator1': None, 'Mediator2': None}, {'Cue': 'Tradition', 'Target': 'Weihnachten', 'Mediator1': None, 'Mediator2': None}, {'Cue': 'Vers', 'Target': 'Poesie', 'Mediator1': None, 'Mediator2': None}, {'Cue': 'Vogel', 'Target': 'Feder', 'Mediator1': None, 'Mediator2': None}, {'Cue': 'Zug', 'Target': 'Flugzeug', 'Mediator1': None, 'Mediator2': None}, {'Cue': 'Zunge', 'Target': 'Backe', 'Mediator1': None, 'Mediator2': None}, {'Cue': 'Bad', 'Target': 'Handtuch', 'Mediator1': None, 'Mediator2': None}, {'Cue': 'Bar', 'Target': 'Alkohol', 'Mediator1': None, 'Mediator2': None}, {'Cue': 'Beweis', 'Target': 'Gericht', 'Mediator1': None, 'Mediator2': None}, {'Cue': 'Blumen', 'Target': 'Bouquet', 'Mediator1': None, 'Mediator2': None}, {'Cue': 'Flotte', 'Target': 'Boot', 'Mediator1': None, 'Mediator2': None}, {'Cue': 'Häftling', 'Target': 'Verurteilter', 'Mediator1': None, 'Mediator2': None}, {'Cue': 'Helm', 'Target': 'Kopf', 'Mediator1': None, 'Mediator2': None}, {'Cue': 'Juwel', 'Target': 'Gold', 'Mediator1': None, 'Mediator2': None}, {'Cue': 'Kamin', 'Target': 'Ziegel', 'Mediator1': None, 'Mediator2': None}, {'Cue': 'Kante', 'Target': 'Messer', 'Mediator1': None, 'Mediator2': None}, {'Cue': 'Kind', 'Target': 'Junge', 'Mediator1': None, 'Mediator2': None}, {'Cue': 'Kino', 'Target': 'Theater', 'Mediator1': None, 'Mediator2': None}, {'Cue': 'Klebstoff', 'Target': 'Papier', 'Mediator1': None, 'Mediator2': None}, {'Cue': 'Königreich', 'Target': 'Schloss', 'Mediator1': None, 'Mediator2': None}, {'Cue': 'Mauer', 'Target': 'Straße', 'Mediator1': None, 'Mediator2': None}, {'Cue': 'Rose', 'Target': 'Dorne', 'Mediator1': None, 'Mediator2': None}, {'Cue': 'Schauspielerin', 'Target': 'Frau', 'Mediator1': None, 'Mediator2': None}, {'Cue': 'Schnorchel', 'Target': 'Flossen', 'Mediator1': None, 'Mediator2': None}, {'Cue': 'Schuh', 'Target': 'Stiefel', 'Mediator1': None, 'Mediator2': None}, {'Cue': 'Schwan', 'Target': 'Taube', 'Mediator1': None, 'Mediator2': None}, {'Cue': 'Streifen', 'Target': 'Shirt', 'Mediator1': None, 'Mediator2': None}, {'Cue': 'Tee', 'Target': 'Blätter', 'Mediator1': None, 'Mediator2': None}, {'Cue': 'Traube', 'Target': 'Rosine', 'Mediator1': None, 'Mediator2': None}, {'Cue': 'Wasserfall', 'Target': 'Felsen', 'Mediator1': None, 'Mediator2': None}, {'Cue': 'Wein', 'Target': 'Abendessen', 'Mediator1': None, 'Mediator2': None}, {'Cue': 'Winkel', 'Target': 'Kurve', 'Mediator1': None, 'Mediator2': None}, {'Cue': 'Zahnpasta', 'Target': 'Minze', 'Mediator1': None, 'Mediator2': None}, {'Cue': 'Zimt', 'Target': 'Rolle', 'Mediator1': None, 'Mediator2': None}, {'Cue': 'Wand', 'Target': 'Fenster', 'Mediator1': None, 'Mediator2': None}, {'Cue': 'Frühstück', 'Target': 'Brot', 'Mediator1': None, 'Mediator2': None}, {'Cue': 'Hund', 'Target': 'Pfote', 'Mediator1': None, 'Mediator2': None}, {'Cue': 'Park', 'Target': 'Baum', 'Mediator1': None, 'Mediator2': None}]" valType="str"/>
+      <Param name="conditions" updates="None" val="[{'Cue': 'Akrobatin', 'Target': 'Seil', 'Mediator1': 'Turnerin', 'Mediator2': 'Zirkus'}, {'Cue': 'Chips', 'Target': 'Salz', 'Mediator1': 'Kartoffel', 'Mediator2': 'Dip'}, {'Cue': 'Definition', 'Target': 'Begriff', 'Mediator1': 'Erklärung', 'Mediator2': 'Bedeutung'}, {'Cue': 'Experiment', 'Target': 'Versuch', 'Mediator1': 'Test', 'Mediator2': 'Labor'}, {'Cue': 'Fakt', 'Target': 'Wissen', 'Mediator1': 'Wahrheit', 'Mediator2': 'Fiktion'}, {'Cue': 'Leistung', 'Target': 'Ehre', 'Mediator1': 'Ziel', 'Mediator2': 'Erfolg'}, {'Cue': 'Rauch', 'Target': 'Nebel', 'Mediator1': 'Zigarette', 'Mediator2': 'Feuer'}, {'Cue': 'Scheidung', 'Target': 'Anwalt', 'Mediator1': 'Ehe', 'Mediator2': 'Trennung'}, {'Cue': 'Service', 'Target': 'Kunde', 'Mediator1': 'Hilfe', 'Mediator2': 'Station'}, {'Cue': 'Shampoo', 'Target': 'Seife', 'Mediator1': 'Conditioner', 'Mediator2': 'Haare'}, {'Cue': 'Soldat', 'Target': 'Kämpfer', 'Mediator1': 'Krieg', 'Mediator2': 'Armee'}, {'Cue': 'Zeichnung', 'Target': 'Bleistift', 'Mediator1': 'Bild', 'Mediator2': 'Kunst'}, {'Cue': 'Anführer', 'Target': 'Boss', 'Mediator1': 'Anhänger', 'Mediator2': 'Präsident'}, {'Cue': 'Beutel', 'Target': 'Sack', 'Mediator1': 'Tasche', 'Mediator2': 'Känguru'}, {'Cue': 'Gast', 'Target': 'Zimmer', 'Mediator1': 'Freund', 'Mediator2': 'Besucher'}, {'Cue': 'Geburtstag', 'Target': 'Kerze', 'Mediator1': 'Kuchen ', 'Mediator2': 'Feier'}, {'Cue': 'Geschwister', 'Target': 'Eltern', 'Mediator1': 'Bruder', 'Mediator2': 'Schwester'}, {'Cue': 'Golf', 'Target': 'Loch', 'Mediator1': 'Ball', 'Mediator2': 'Schläger'}, {'Cue': 'Küche', 'Target': 'Tisch', 'Mediator1': 'Koch', 'Mediator2': 'Waschbecken'}, {'Cue': 'Rasen', 'Target': 'Pflege', 'Mediator1': 'Mäher', 'Mediator2': 'Gras'}, {'Cue': 'Safari', 'Target': 'Ausflug', 'Mediator1': 'Afrika', 'Mediator2': 'Dschungel'}, {'Cue': 'Sitzgurt', 'Target': 'Gesetz', 'Mediator1': 'Auto', 'Mediator2': 'Sicherheit'}, {'Cue': 'Vampir', 'Target': 'Geist', 'Mediator1': 'Blut', 'Mediator2': 'Fledermaus'}, {'Cue': 'Vergangenheit', 'Target': 'Erinnerungen', 'Mediator1': 'Zukunft', 'Mediator2': 'Gegenwart'}, {'Cue': 'Agent', 'Target': 'Reise', 'Mediator1': 'PLACEHOLDER', 'Mediator2': 'PLACEHOLDER'}, {'Cue': 'Brise', 'Target': 'Luft', 'Mediator1': 'PLACEHOLDER', 'Mediator2': 'PLACEHOLDER'}, {'Cue': 'Decke', 'Target': 'Kissen', 'Mediator1': 'PLACEHOLDER', 'Mediator2': 'PLACEHOLDER'}, {'Cue': 'Diskussion', 'Target': 'Vorlesung', 'Mediator1': 'PLACEHOLDER', 'Mediator2': 'PLACEHOLDER'}, {'Cue': 'Eingeweide', 'Target': 'Organ', 'Mediator1': 'PLACEHOLDER', 'Mediator2': 'PLACEHOLDER'}, {'Cue': 'Floh', 'Target': 'Käfer', 'Mediator1': 'PLACEHOLDER', 'Mediator2': 'PLACEHOLDER'}, {'Cue': 'Frieden', 'Target': 'Harmonie', 'Mediator1': 'PLACEHOLDER', 'Mediator2': 'PLACEHOLDER'}, {'Cue': 'Garage', 'Target': 'Haus', 'Mediator1': 'PLACEHOLDER', 'Mediator2': 'PLACEHOLDER'}, {'Cue': 'Gegenstand', 'Target': 'Artikel', 'Mediator1': 'PLACEHOLDER', 'Mediator2': 'PLACEHOLDER'}, {'Cue': 'Humor', 'Target': 'Komödie', 'Mediator1': 'PLACEHOLDER', 'Mediator2': 'PLACEHOLDER'}, {'Cue': 'Insel', 'Target': 'Meer', 'Mediator1': 'PLACEHOLDER', 'Mediator2': 'PLACEHOLDER'}, {'Cue': 'Karneval', 'Target': 'Festival', 'Mediator1': 'PLACEHOLDER', 'Mediator2': 'PLACEHOLDER'}, {'Cue': 'Mappe', 'Target': 'Buch', 'Mediator1': 'PLACEHOLDER', 'Mediator2': 'PLACEHOLDER'}, {'Cue': 'Publikum', 'Target': 'Applaus', 'Mediator1': 'PLACEHOLDER', 'Mediator2': 'PLACEHOLDER'}, {'Cue': 'Pumpe', 'Target': 'Reifen', 'Mediator1': 'PLACEHOLDER', 'Mediator2': 'PLACEHOLDER'}, {'Cue': 'Raum', 'Target': 'Platz', 'Mediator1': 'PLACEHOLDER', 'Mediator2': 'PLACEHOLDER'}, {'Cue': 'Schlüssel', 'Target': 'Ring', 'Mediator1': 'PLACEHOLDER', 'Mediator2': 'PLACEHOLDER'}, {'Cue': 'Statue', 'Target': 'Monument', 'Mediator1': 'PLACEHOLDER', 'Mediator2': 'PLACEHOLDER'}, {'Cue': 'Tänzer', 'Target': 'Musik', 'Mediator1': 'PLACEHOLDER', 'Mediator2': 'PLACEHOLDER'}, {'Cue': 'Teleskop', 'Target': 'Mikroskop', 'Mediator1': 'PLACEHOLDER', 'Mediator2': 'PLACEHOLDER'}, {'Cue': 'Teller', 'Target': 'Gabel', 'Mediator1': 'PLACEHOLDER', 'Mediator2': 'PLACEHOLDER'}, {'Cue': 'Tradition', 'Target': 'Weihnachten', 'Mediator1': 'PLACEHOLDER', 'Mediator2': 'PLACEHOLDER'}, {'Cue': 'Vers', 'Target': 'Poesie', 'Mediator1': 'PLACEHOLDER', 'Mediator2': 'PLACEHOLDER'}, {'Cue': 'Vogel', 'Target': 'Feder', 'Mediator1': 'PLACEHOLDER', 'Mediator2': 'PLACEHOLDER'}, {'Cue': 'Zug', 'Target': 'Flugzeug', 'Mediator1': 'PLACEHOLDER', 'Mediator2': 'PLACEHOLDER'}, {'Cue': 'Zunge', 'Target': 'Backe', 'Mediator1': 'PLACEHOLDER', 'Mediator2': 'PLACEHOLDER'}, {'Cue': 'Bad', 'Target': 'Handtuch', 'Mediator1': 'PLACEHOLDER', 'Mediator2': 'PLACEHOLDER'}, {'Cue': 'Bar', 'Target': 'Alkohol', 'Mediator1': 'PLACEHOLDER', 'Mediator2': 'PLACEHOLDER'}, {'Cue': 'Beweis', 'Target': 'Gericht', 'Mediator1': 'PLACEHOLDER', 'Mediator2': 'PLACEHOLDER'}, {'Cue': 'Blumen', 'Target': 'Bouquet', 'Mediator1': 'PLACEHOLDER', 'Mediator2': 'PLACEHOLDER'}, {'Cue': 'Flotte', 'Target': 'Boot', 'Mediator1': 'PLACEHOLDER', 'Mediator2': 'PLACEHOLDER'}, {'Cue': 'Häftling', 'Target': 'Verurteilter', 'Mediator1': 'PLACEHOLDER', 'Mediator2': 'PLACEHOLDER'}, {'Cue': 'Helm', 'Target': 'Kopf', 'Mediator1': 'PLACEHOLDER', 'Mediator2': 'PLACEHOLDER'}, {'Cue': 'Juwel', 'Target': 'Gold', 'Mediator1': 'PLACEHOLDER', 'Mediator2': 'PLACEHOLDER'}, {'Cue': 'Kamin', 'Target': 'Ziegel', 'Mediator1': 'PLACEHOLDER', 'Mediator2': 'PLACEHOLDER'}, {'Cue': 'Kante', 'Target': 'Messer', 'Mediator1': 'PLACEHOLDER', 'Mediator2': 'PLACEHOLDER'}, {'Cue': 'Kind', 'Target': 'Junge', 'Mediator1': 'PLACEHOLDER', 'Mediator2': 'PLACEHOLDER'}, {'Cue': 'Kino', 'Target': 'Theater', 'Mediator1': 'PLACEHOLDER', 'Mediator2': 'PLACEHOLDER'}, {'Cue': 'Klebstoff', 'Target': 'Papier', 'Mediator1': 'PLACEHOLDER', 'Mediator2': 'PLACEHOLDER'}, {'Cue': 'Königreich', 'Target': 'Schloss', 'Mediator1': 'PLACEHOLDER', 'Mediator2': 'PLACEHOLDER'}, {'Cue': 'Mauer', 'Target': 'Straße', 'Mediator1': 'PLACEHOLDER', 'Mediator2': 'PLACEHOLDER'}, {'Cue': 'Rose', 'Target': 'Dorne', 'Mediator1': 'PLACEHOLDER', 'Mediator2': 'PLACEHOLDER'}, {'Cue': 'Schauspielerin', 'Target': 'Frau', 'Mediator1': 'PLACEHOLDER', 'Mediator2': 'PLACEHOLDER'}, {'Cue': 'Schnorchel', 'Target': 'Flossen', 'Mediator1': 'PLACEHOLDER', 'Mediator2': 'PLACEHOLDER'}, {'Cue': 'Schuh', 'Target': 'Stiefel', 'Mediator1': 'PLACEHOLDER', 'Mediator2': 'PLACEHOLDER'}, {'Cue': 'Schwan', 'Target': 'Taube', 'Mediator1': 'PLACEHOLDER', 'Mediator2': 'PLACEHOLDER'}, {'Cue': 'Streifen', 'Target': 'Shirt', 'Mediator1': 'PLACEHOLDER', 'Mediator2': 'PLACEHOLDER'}, {'Cue': 'Tee', 'Target': 'Blätter', 'Mediator1': 'PLACEHOLDER', 'Mediator2': 'PLACEHOLDER'}, {'Cue': 'Traube', 'Target': 'Rosine', 'Mediator1': 'PLACEHOLDER', 'Mediator2': 'PLACEHOLDER'}, {'Cue': 'Wasserfall', 'Target': 'Felsen', 'Mediator1': 'PLACEHOLDER', 'Mediator2': 'PLACEHOLDER'}, {'Cue': 'Wein', 'Target': 'Abendessen', 'Mediator1': 'PLACEHOLDER', 'Mediator2': 'PLACEHOLDER'}, {'Cue': 'Winkel', 'Target': 'Kurve', 'Mediator1': 'PLACEHOLDER', 'Mediator2': 'PLACEHOLDER'}, {'Cue': 'Zahnpasta', 'Target': 'Minze', 'Mediator1': 'PLACEHOLDER', 'Mediator2': 'PLACEHOLDER'}, {'Cue': 'Zimt', 'Target': 'Rolle', 'Mediator1': 'PLACEHOLDER', 'Mediator2': 'PLACEHOLDER'}, {'Cue': 'Wand', 'Target': 'Fenster', 'Mediator1': 'PLACEHOLDER', 'Mediator2': 'PLACEHOLDER'}, {'Cue': 'Frühstück', 'Target': 'Brot', 'Mediator1': 'PLACEHOLDER', 'Mediator2': 'PLACEHOLDER'}, {'Cue': 'Hund', 'Target': 'Pfote', 'Mediator1': 'PLACEHOLDER', 'Mediator2': 'PLACEHOLDER'}, {'Cue': 'Park', 'Target': 'Baum', 'Mediator1': 'PLACEHOLDER', 'Mediator2': 'PLACEHOLDER'}]" valType="str"/>
       <Param name="conditionsFile" updates="None" val="sm_items.xlsx" valType="file"/>
       <Param name="endPoints" updates="None" val="[0, 1]" valType="num"/>
       <Param name="isTrials" updates="None" val="False" valType="bool"/>
       <Param name="loopType" updates="None" val="random" valType="str"/>
-      <Param name="nReps" updates="None" val="2" valType="num"/>
+      <Param name="nReps" updates="None" val="1" valType="num"/>
       <Param name="name" updates="None" val="load_and_shuffle" valType="code"/>
       <Param name="random seed" updates="None" val="" valType="code"/>
     </LoopInitiator>
     <Routine name="shuffle_items"/>
     <LoopTerminator name="load_and_shuffle"/>
     <Routine name="set_up_runs"/>
-    <LoopInitiator loopType="TrialHandler" name="semantic_mapping_run1">
+    <LoopInitiator loopType="TrialHandler" name="runs">
+      <Param name="Selected rows" updates="None" val="" valType="str"/>
+      <Param name="conditions" updates="None" val="[{'this_sheet': 'run1_sheet.xlsx'}, {'this_sheet': 'run2_sheet.xlsx'}, {'this_sheet': 'run3_sheet.xlsx'}, {'this_sheet': 'run4_sheet.xlsx'}]" valType="str"/>
+      <Param name="conditionsFile" updates="None" val="run_sheets.xlsx" valType="file"/>
+      <Param name="endPoints" updates="None" val="[0, 1]" valType="num"/>
+      <Param name="isTrials" updates="None" val="False" valType="bool"/>
+      <Param name="loopType" updates="None" val="random" valType="str"/>
+      <Param name="nReps" updates="None" val="1" valType="num"/>
+      <Param name="name" updates="None" val="runs" valType="code"/>
+      <Param name="random seed" updates="None" val="" valType="code"/>
+    </LoopInitiator>
+    <LoopInitiator loopType="TrialHandler" name="semantic_mapping_run">
       <Param name="Selected rows" updates="None" val="" valType="str"/>
       <Param name="conditions" updates="None" val="[{'thisList': 0, 'thisIndex': 0}, {'thisList': 0, 'thisIndex': 1}, {'thisList': 0, 'thisIndex': 2}, {'thisList': 0, 'thisIndex': 3}, {'thisList': 0, 'thisIndex': 4}]" valType="str"/>
-      <Param name="conditionsFile" updates="None" val="run1_sheet.xlsx" valType="file"/>
+      <Param name="conditionsFile" updates="None" val="$this_sheet" valType="file"/>
       <Param name="endPoints" updates="None" val="[0, 1]" valType="num"/>
       <Param name="isTrials" updates="None" val="True" valType="bool"/>
-      <Param name="loopType" updates="None" val="sequential" valType="str"/>
+      <Param name="loopType" updates="None" val="random" valType="str"/>
       <Param name="nReps" updates="None" val="1" valType="num"/>
-      <Param name="name" updates="None" val="semantic_mapping_run1" valType="code"/>
+      <Param name="name" updates="None" val="semantic_mapping_run" valType="code"/>
       <Param name="random seed" updates="None" val="" valType="code"/>
     </LoopInitiator>
     <Routine name="iti"/>
     <Routine name="item"/>
-    <LoopTerminator name="semantic_mapping_run1"/>
+    <LoopTerminator name="semantic_mapping_run"/>
+    <LoopTerminator name="runs"/>
     <LoopTerminator name="blocks"/>
     <Routine name="thanks"/>
   </Flow>
