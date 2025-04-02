@@ -1,0 +1,1080 @@
+7.7841 	DEBUG 	Fullscreen settings ignored as running in pilot mode.
+7.7848 	INFO 	Loaded monitor calibration from ['2025_03_24 15:28']
+7.9053 	EXP 	Created window1 = Window(allowGUI=False, allowStencil=False, autoLog=True, backendConf=UNKNOWN, backgroundFit=<method-wrapper '__getattribute__' of attributeSetter object at 0x00000149F580AAD0>, backgroundImage=<method-wrapper '__getattribute__' of attributeSetter object at 0x00000149F580AB30>, bitsMode=UNKNOWN, blendMode='avg', bpc=(8, 8, 8), color=array([0, 0, 0]), colorSpace='rgb', depthBits=8, fullscr=False, gamma=None, gammaErrorPolicy='raise', infoMsg=UNKNOWN, lms=UNKNOWN, monitor=<psychopy.monitors.calibTools.Monitor object at 0x00000149F58C67A0>, multiSample=False, name='window1', numSamples=2, pos=[560.0, 240.0], screen=1, size=array([800, 600]), stencilBits=0, stereo=False, title='PsychoPy', units='height', useFBO=True, useRetina=False, viewOri=0.0, viewPos=None, viewScale=None, waitBlanking=True, winType='pyglet')
+7.9054 	EXP 	window1: backgroundImage = ''
+7.9054 	EXP 	window1: backgroundFit = 'none'
+7.9094 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+7.9098 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+7.9102 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+7.9107 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+7.9112 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+7.9115 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+7.9119 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+7.9123 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+7.9125 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+7.9127 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+7.9131 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+7.9135 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+7.9138 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+7.9142 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+7.9145 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+7.9149 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+7.9153 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+7.9155 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+7.9158 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+7.9162 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+7.9165 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+7.9167 	DEBUG 	Uploading Texture Font fontname to graphics card
+7.9195 	DEBUG 	Upload of Texture Font fontname complete
+7.9227 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+7.9233 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+7.9238 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+7.9239 	DEBUG 	Uploading Texture Font fontname to graphics card
+7.9256 	DEBUG 	Upload of Texture Font fontname complete
+7.9266 	EXP 	window1: Attempting to measure frame rate of screen (1) ...
+7.9266 	EXP 	window1: recordFrameIntervals = False
+8.0910 	EXP 	window1: recordFrameIntervals = True
+8.2745 	EXP 	Screen (1) actual frame rate measured at 60.08Hz
+8.2745 	EXP 	window1: recordFrameIntervals = False
+8.2811 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+8.2815 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+8.2820 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+8.2826 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+8.2831 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+8.2836 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+8.2839 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+8.2844 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+8.2849 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+8.2853 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+8.2855 	DEBUG 	Uploading Texture Font fontname to graphics card
+8.2859 	DEBUG 	Upload of Texture Font fontname complete
+8.2923 	WARNING 	launchHubServer: If using the iohub mouse or eyetracker devices, fullScr should be True.
+9.6443 	INFO 	keyboard.Keyboard is using iohub backend.
+9.6443 	INFO 	keyboard.Keyboard is using iohub backend.
+9.6443 	INFO 	keyboard.Keyboard is using iohub backend.
+9.6444 	INFO 	keyboard.Keyboard is using iohub backend.
+9.6444 	INFO 	keyboard.Keyboard is using iohub backend.
+9.6444 	INFO 	keyboard.Keyboard is using iohub backend.
+9.6444 	INFO 	keyboard.Keyboard is using iohub backend.
+9.6444 	INFO 	keyboard.Keyboard is using iohub backend.
+9.6444 	INFO 	keyboard.Keyboard is using iohub backend.
+9.6444 	INFO 	keyboard.Keyboard is using iohub backend.
+9.6445 	INFO 	keyboard.Keyboard is using iohub backend.
+9.6445 	INFO 	keyboard.Keyboard is using iohub backend.
+9.6445 	INFO 	keyboard.Keyboard is using iohub backend.
+9.6445 	INFO 	keyboard.Keyboard is using iohub backend.
+9.6445 	INFO 	keyboard.Keyboard is using iohub backend.
+9.6445 	INFO 	keyboard.Keyboard is using iohub backend.
+9.6445 	INFO 	keyboard.Keyboard is using iohub backend.
+9.6445 	INFO 	keyboard.Keyboard is using iohub backend.
+9.6446 	INFO 	keyboard.Keyboard is using iohub backend.
+9.6446 	INFO 	keyboard.Keyboard is using iohub backend.
+9.6446 	INFO 	keyboard.Keyboard is using iohub backend.
+9.6446 	EXP 	guess: status = STARTED
+9.6880 	EXP 	Created welcome_text = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=0.0, draggable=False, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.05, italic=False, languageStyle='LTR', name='welcome_text', opacity=1, ori=0.0, pos=array([0., 0.]), rgb=UNKNOWN, text='Willkommen zum Ratespiel Experiment!', units='height', win=Window(...), wrapWidth=1)
+9.6968 	EXP 	Created instructions1_text = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=0.0, draggable=False, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.05, italic=False, languageStyle='LTR', name='instructions1_text', opacity=1, ori=0.0, pos=array([0., 0.]), rgb=UNKNOWN, text=str(...), units='height', win=Window(...), wrapWidth=1.2)
+9.7009 	EXP 	Created instructions2_text = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=0.0, draggable=False, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.05, italic=False, languageStyle='LTR', name='instructions2_text', opacity=1, ori=0.0, pos=array([0., 0.]), rgb=UNKNOWN, text=str(...), units='height', win=Window(...), wrapWidth=1.2)
+9.7064 	EXP 	Created instructions3_text = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=0.0, draggable=False, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.05, italic=False, languageStyle='LTR', name='instructions3_text', opacity=1, ori=0.0, pos=array([0., 0.]), rgb=UNKNOWN, text=str(...), units='height', win=Window(...), wrapWidth=1.2)
+9.7124 	EXP 	Created instructions4_text = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=0.0, draggable=False, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.05, italic=False, languageStyle='LTR', name='instructions4_text', opacity=1, ori=0.0, pos=array([0., 0.]), rgb=UNKNOWN, text=str(...), units='height', win=Window(...), wrapWidth=1.2)
+9.7185 	EXP 	Created instructions5_text = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=0.0, draggable=False, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.05, italic=False, languageStyle='LTR', name='instructions5_text', opacity=1, ori=0.0, pos=array([0., 0.]), rgb=UNKNOWN, text=str(...), units='height', win=Window(...), wrapWidth=1.2)
+9.7199 	EXP 	Created iti_practice_blank = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-1.0, draggable=False, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.05, italic=False, languageStyle='LTR', name='iti_practice_blank', opacity=1, ori=0.0, pos=array([0., 0.]), rgb=UNKNOWN, text='+', units='height', win=Window(...), wrapWidth=1)
+9.7208 	EXP 	Created dash_stim_guessing = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-1.0, draggable=False, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.05, italic=False, languageStyle='LTR', name='dash_stim_guessing', opacity=1, ori=0.0, pos=array([0., 0.]), rgb=UNKNOWN, text='-', units='height', win=Window(...), wrapWidth=1)
+9.7211 	EXP 	Created cue_stim_guessing = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-2.0, draggable=False, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.05, italic=False, languageStyle='LTR', name='cue_stim_guessing', opacity=1, ori=0.0, pos=array([-0.2,  0. ]), rgb=UNKNOWN, text='', units='height', win=Window(...), wrapWidth=1)
+9.7221 	EXP 	Created guess_stim = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-3.0, draggable=False, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.05, italic=False, languageStyle='LTR', name='guess_stim', opacity=1, ori=0.0, pos=array([0.2, 0. ]), rgb=UNKNOWN, text='?', units='height', win=Window(...), wrapWidth=1)
+9.7232 	EXP 	Created dash_stim_guessing_resp = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-1.0, draggable=False, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.05, italic=False, languageStyle='LTR', name='dash_stim_guessing_resp', opacity=1, ori=0.0, pos=array([0., 0.]), rgb=UNKNOWN, text='-', units='height', win=Window(...), wrapWidth=1)
+9.7235 	EXP 	Created cue_stim_guessing_resp = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-2.0, draggable=False, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.05, italic=False, languageStyle='LTR', name='cue_stim_guessing_resp', opacity=1, ori=0.0, pos=array([-0.2,  0. ]), rgb=UNKNOWN, text='', units='height', win=Window(...), wrapWidth=1)
+9.7244 	EXP 	Created guess_stim_resp = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-3.0, draggable=False, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.05, italic=False, languageStyle='LTR', name='guess_stim_resp', opacity=1, ori=0.0, pos=array([0.2, 0. ]), rgb=UNKNOWN, text='?', units='height', win=Window(...), wrapWidth=1)
+9.7268 	EXP 	Created guess_question = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-4.0, draggable=False, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.05, italic=False, languageStyle='LTR', name='guess_question', opacity=1, ori=0.0, pos=array([ 0. , -0.3]), rgb=UNKNOWN, text='\n\n1) Ja        H) Nein', units='height', win=Window(...), wrapWidth=1)
+9.7272 	EXP 	Created no_response_feedback = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-2.0, draggable=False, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.05, italic=False, languageStyle='LTR', name='no_response_feedback', opacity=1, ori=0.0, pos=array([0., 0.]), rgb=UNKNOWN, text='', units='height', win=Window(...), wrapWidth=1)
+9.7280 	EXP 	Created guess_delay_cross = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-1.0, draggable=False, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.05, italic=False, languageStyle='LTR', name='guess_delay_cross', opacity=1, ori=0.0, pos=array([0., 0.]), rgb=UNKNOWN, text='+', units='height', win=Window(...), wrapWidth=1)
+9.7289 	EXP 	Created dash_stim_learning = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=0.0, draggable=False, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.05, italic=False, languageStyle='LTR', name='dash_stim_learning', opacity=1, ori=0.0, pos=array([0., 0.]), rgb=UNKNOWN, text='-', units='height', win=Window(...), wrapWidth=1)
+9.7293 	EXP 	Created cue_stim_learning = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-1.0, draggable=False, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.05, italic=False, languageStyle='LTR', name='cue_stim_learning', opacity=1, ori=0.0, pos=array([-0.2,  0. ]), rgb=UNKNOWN, text='', units='height', win=Window(...), wrapWidth=1)
+9.7296 	EXP 	Created target_stim = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-2.0, draggable=False, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.05, italic=False, languageStyle='LTR', name='target_stim', opacity=1, ori=0.0, pos=array([0.2, 0. ]), rgb=UNKNOWN, text='', units='height', win=Window(...), wrapWidth=1)
+9.7319 	EXP 	Created start_task_text = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=0.0, draggable=False, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.05, italic=False, languageStyle='LTR', name='start_task_text', opacity=1, ori=0.0, pos=array([0., 0.]), rgb=UNKNOWN, text=str(...), units='height', win=Window(...), wrapWidth=1)
+9.7334 	EXP 	Created ready_set_text = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-1.0, draggable=False, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.05, italic=False, languageStyle='LTR', name='ready_set_text', opacity=1, ori=0.0, pos=array([0., 0.]), rgb=UNKNOWN, text='Der Scanner wird vorbereitet.', units='height', win=Window(...), wrapWidth=1)
+9.7347 	EXP 	Created starting_soon = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=0.0, draggable=False, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.05, italic=False, languageStyle='LTR', name='starting_soon', opacity=1, ori=0.0, pos=array([0., 0.]), rgb=UNKNOWN, text='fMRT startet gleich...', units='height', win=Window(...), wrapWidth=1)
+9.7356 	EXP 	Created begin_run_cross = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=0.0, draggable=False, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.05, italic=False, languageStyle='LTR', name='begin_run_cross', opacity=1, ori=0.0, pos=array([0., 0.]), rgb=UNKNOWN, text='+', units='height', win=Window(...), wrapWidth=1)
+9.7365 	EXP 	Created dash_stim_guessing = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-1.0, draggable=False, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.05, italic=False, languageStyle='LTR', name='dash_stim_guessing', opacity=1, ori=0.0, pos=array([0., 0.]), rgb=UNKNOWN, text='-', units='height', win=Window(...), wrapWidth=1)
+9.7369 	EXP 	Created cue_stim_guessing = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-2.0, draggable=False, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.05, italic=False, languageStyle='LTR', name='cue_stim_guessing', opacity=1, ori=0.0, pos=array([-0.2,  0. ]), rgb=UNKNOWN, text='', units='height', win=Window(...), wrapWidth=1)
+9.7379 	EXP 	Created guess_stim = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-3.0, draggable=False, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.05, italic=False, languageStyle='LTR', name='guess_stim', opacity=1, ori=0.0, pos=array([0.2, 0. ]), rgb=UNKNOWN, text='?', units='height', win=Window(...), wrapWidth=1)
+9.7389 	EXP 	Created dash_stim_guessing_resp = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-1.0, draggable=False, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.05, italic=False, languageStyle='LTR', name='dash_stim_guessing_resp', opacity=1, ori=0.0, pos=array([0., 0.]), rgb=UNKNOWN, text='-', units='height', win=Window(...), wrapWidth=1)
+9.7394 	EXP 	Created cue_stim_guessing_resp = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-2.0, draggable=False, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.05, italic=False, languageStyle='LTR', name='cue_stim_guessing_resp', opacity=1, ori=0.0, pos=array([-0.2,  0. ]), rgb=UNKNOWN, text='', units='height', win=Window(...), wrapWidth=1)
+9.7403 	EXP 	Created guess_stim_resp = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-3.0, draggable=False, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.05, italic=False, languageStyle='LTR', name='guess_stim_resp', opacity=1, ori=0.0, pos=array([0.2, 0. ]), rgb=UNKNOWN, text='?', units='height', win=Window(...), wrapWidth=1)
+9.7417 	EXP 	Created guess_question = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-4.0, draggable=False, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.05, italic=False, languageStyle='LTR', name='guess_question', opacity=1, ori=0.0, pos=array([ 0. , -0.3]), rgb=UNKNOWN, text='\n\n1) Ja        H) Nein', units='height', win=Window(...), wrapWidth=1)
+9.7426 	EXP 	Created guess_delay_cross = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-1.0, draggable=False, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.05, italic=False, languageStyle='LTR', name='guess_delay_cross', opacity=1, ori=0.0, pos=array([0., 0.]), rgb=UNKNOWN, text='+', units='height', win=Window(...), wrapWidth=1)
+9.7435 	EXP 	Created dash_stim_learning = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=0.0, draggable=False, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.05, italic=False, languageStyle='LTR', name='dash_stim_learning', opacity=1, ori=0.0, pos=array([0., 0.]), rgb=UNKNOWN, text='-', units='height', win=Window(...), wrapWidth=1)
+9.7438 	EXP 	Created cue_stim_learning = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-1.0, draggable=False, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.05, italic=False, languageStyle='LTR', name='cue_stim_learning', opacity=1, ori=0.0, pos=array([-0.2,  0. ]), rgb=UNKNOWN, text='', units='height', win=Window(...), wrapWidth=1)
+9.7442 	EXP 	Created target_stim = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-2.0, draggable=False, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.05, italic=False, languageStyle='LTR', name='target_stim', opacity=1, ori=0.0, pos=array([0.2, 0. ]), rgb=UNKNOWN, text='', units='height', win=Window(...), wrapWidth=1)
+9.7450 	EXP 	Created iti_cross = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=0.0, draggable=False, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.05, italic=False, languageStyle='LTR', name='iti_cross', opacity=1, ori=0.0, pos=array([0., 0.]), rgb=UNKNOWN, text='+', units='height', win=Window(...), wrapWidth=1)
+9.7471 	EXP 	Created task_break_text = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=0.0, draggable=False, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.05, italic=False, languageStyle='LTR', name='task_break_text', opacity=1, ori=0.0, pos=array([0., 0.]), rgb=UNKNOWN, text=str(...), units='height', win=Window(...), wrapWidth=1)
+9.7481 	EXP 	Created end_run_cross = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-3.0, draggable=False, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.05, italic=False, languageStyle='LTR', name='end_run_cross', opacity=1, ori=0.0, pos=array([0., 0.]), rgb=UNKNOWN, text='+', units='height', win=Window(...), wrapWidth=1)
+9.7494 	EXP 	Created ready_set_text = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-1.0, draggable=False, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.05, italic=False, languageStyle='LTR', name='ready_set_text', opacity=1, ori=0.0, pos=array([0., 0.]), rgb=UNKNOWN, text='Der Scanner wird vorbereitet.', units='height', win=Window(...), wrapWidth=1)
+9.7508 	EXP 	Created starting_soon = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=0.0, draggable=False, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.05, italic=False, languageStyle='LTR', name='starting_soon', opacity=1, ori=0.0, pos=array([0., 0.]), rgb=UNKNOWN, text='fMRT startet gleich...', units='height', win=Window(...), wrapWidth=1)
+9.7529 	EXP 	Created end_part1_text = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-1.0, draggable=False, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.05, italic=False, languageStyle='LTR', name='end_part1_text', opacity=1, ori=0.0, pos=array([0., 0.]), rgb=UNKNOWN, text=str(...), units='height', win=Window(...), wrapWidth=1)
+9.7581 	EXP 	Created recall_instructions1_text = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=0.0, draggable=False, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.05, italic=False, languageStyle='LTR', name='recall_instructions1_text', opacity=1, ori=0.0, pos=array([0., 0.]), rgb=UNKNOWN, text=str(...), units='height', win=Window(...), wrapWidth=1.2)
+9.7623 	EXP 	Created recall_instructions1_text_2 = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=0.0, draggable=False, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.05, italic=False, languageStyle='LTR', name='recall_instructions1_text_2', opacity=1, ori=0.0, pos=array([0., 0.]), rgb=UNKNOWN, text=str(...), units='height', win=Window(...), wrapWidth=1.2)
+9.7633 	EXP 	Created iti_recall_practice_cross = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=0.0, draggable=False, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.05, italic=False, languageStyle='LTR', name='iti_recall_practice_cross', opacity=1, ori=0.0, pos=array([0., 0.]), rgb=UNKNOWN, text='+', units='height', win=Window(...), wrapWidth=1)
+9.7636 	EXP 	Created cue_stim_recall = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=0.0, draggable=False, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.05, italic=False, languageStyle='LTR', name='cue_stim_recall', opacity=1, ori=0.0, pos=array([-0.2,  0. ]), rgb=UNKNOWN, text='', units='height', win=Window(...), wrapWidth=1)
+9.7645 	EXP 	Created dash_stim_recall = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-1.0, draggable=False, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.05, italic=False, languageStyle='LTR', name='dash_stim_recall', opacity=1, ori=0.0, pos=array([0., 0.]), rgb=UNKNOWN, text='-', units='height', win=Window(...), wrapWidth=1)
+9.7655 	EXP 	Created qmark_target = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-2.0, draggable=False, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.05, italic=False, languageStyle='LTR', name='qmark_target', opacity=1, ori=0.0, pos=array([0.2, 0. ]), rgb=UNKNOWN, text='?', units='height', win=Window(...), wrapWidth=1)
+9.7664 	EXP 	Created dash_stim_recall_resp = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=0.0, draggable=False, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.05, italic=False, languageStyle='LTR', name='dash_stim_recall_resp', opacity=1, ori=0.0, pos=array([0., 0.]), rgb=UNKNOWN, text='-', units='height', win=Window(...), wrapWidth=1)
+9.7668 	EXP 	Created cue_stim_recall_resp = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-1.0, draggable=False, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.05, italic=False, languageStyle='LTR', name='cue_stim_recall_resp', opacity=1, ori=0.0, pos=array([-0.2,  0. ]), rgb=UNKNOWN, text='', units='height', win=Window(...), wrapWidth=1)
+9.7677 	EXP 	Created recall_stim_resp = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-2.0, draggable=False, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.05, italic=False, languageStyle='LTR', name='recall_stim_resp', opacity=1, ori=0.0, pos=array([0.2, 0. ]), rgb=UNKNOWN, text='?', units='height', win=Window(...), wrapWidth=1)
+9.7694 	EXP 	Created recall_question = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-3.0, draggable=False, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.05, italic=False, languageStyle='LTR', name='recall_question', opacity=1, ori=0.0, pos=array([ 0. , -0.3]), rgb=UNKNOWN, text=str(...), units='height', win=Window(...), wrapWidth=1)
+9.7703 	EXP 	Created dash_stim_recall_select = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-1.0, draggable=False, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.05, italic=False, languageStyle='LTR', name='dash_stim_recall_select', opacity=1, ori=0.0, pos=array([0., 0.]), rgb=UNKNOWN, text='-', units='height', win=Window(...), wrapWidth=1)
+9.7707 	EXP 	Created cue_stim_recall_select = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-2.0, draggable=False, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.05, italic=False, languageStyle='LTR', name='cue_stim_recall_select', opacity=1, ori=0.0, pos=array([-0.2,  0. ]), rgb=UNKNOWN, text='', units='height', win=Window(...), wrapWidth=1)
+9.7716 	EXP 	Created recall_stim_select = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-3.0, draggable=False, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.05, italic=False, languageStyle='LTR', name='recall_stim_select', opacity=1, ori=0.0, pos=array([0.2, 0. ]), rgb=UNKNOWN, text='?', units='height', win=Window(...), wrapWidth=1)
+9.7719 	EXP 	Created recall_question_select = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-4.0, draggable=False, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.05, italic=False, languageStyle='LTR', name='recall_question_select', opacity=1, ori=0.0, pos=array([ 0. , -0.3]), rgb=UNKNOWN, text='', units='height', win=Window(...), wrapWidth=1)
+9.7730 	EXP 	Created dash_stim_feedback = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=0.0, draggable=False, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.05, italic=False, languageStyle='LTR', name='dash_stim_feedback', opacity=1, ori=0.0, pos=array([0., 0.]), rgb=UNKNOWN, text='-', units='height', win=Window(...), wrapWidth=1)
+9.7734 	EXP 	Created cue_stim_feedback = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-1.0, draggable=False, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.05, italic=False, languageStyle='LTR', name='cue_stim_feedback', opacity=1, ori=0.0, pos=array([-0.2,  0. ]), rgb=UNKNOWN, text='', units='height', win=Window(...), wrapWidth=1)
+9.7737 	EXP 	Created target_stim_feedback = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-2.0, draggable=False, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.05, italic=False, languageStyle='LTR', name='target_stim_feedback', opacity=1, ori=0.0, pos=array([0.2, 0. ]), rgb=UNKNOWN, text='', units='height', win=Window(...), wrapWidth=1)
+9.7751 	EXP 	Created recall_feedback1 = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-5.0, draggable=False, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.05, italic=False, languageStyle='LTR', name='recall_feedback1', opacity=1, ori=0.0, pos=array([-0.3, -0.3]), rgb=UNKNOWN, text='Der letzte Buchstabe:', units='height', win=Window(...), wrapWidth=1)
+9.7755 	EXP 	Created recall_feedback2 = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-6.0, draggable=False, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.05, italic=False, languageStyle='LTR', name='recall_feedback2', opacity=1, ori=0.0, pos=array([ 0. , -0.3]), rgb=UNKNOWN, text='', units='height', win=Window(...), wrapWidth=1)
+9.7776 	EXP 	Created start_task_text = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=0.0, draggable=False, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.05, italic=False, languageStyle='LTR', name='start_task_text', opacity=1, ori=0.0, pos=array([0., 0.]), rgb=UNKNOWN, text=str(...), units='height', win=Window(...), wrapWidth=1)
+9.7789 	EXP 	Created ready_set_text = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-1.0, draggable=False, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.05, italic=False, languageStyle='LTR', name='ready_set_text', opacity=1, ori=0.0, pos=array([0., 0.]), rgb=UNKNOWN, text='Der Scanner wird vorbereitet.', units='height', win=Window(...), wrapWidth=1)
+9.7803 	EXP 	Created starting_soon = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=0.0, draggable=False, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.05, italic=False, languageStyle='LTR', name='starting_soon', opacity=1, ori=0.0, pos=array([0., 0.]), rgb=UNKNOWN, text='fMRT startet gleich...', units='height', win=Window(...), wrapWidth=1)
+9.7823 	EXP 	Created begin_run_cross = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=0.0, draggable=False, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.05, italic=False, languageStyle='LTR', name='begin_run_cross', opacity=1, ori=0.0, pos=array([0., 0.]), rgb=UNKNOWN, text='+', units='height', win=Window(...), wrapWidth=1)
+9.7826 	EXP 	Created cue_stim_recall = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=0.0, draggable=False, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.05, italic=False, languageStyle='LTR', name='cue_stim_recall', opacity=1, ori=0.0, pos=array([-0.2,  0. ]), rgb=UNKNOWN, text='', units='height', win=Window(...), wrapWidth=1)
+9.7835 	EXP 	Created dash_stim_recall = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-1.0, draggable=False, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.05, italic=False, languageStyle='LTR', name='dash_stim_recall', opacity=1, ori=0.0, pos=array([0., 0.]), rgb=UNKNOWN, text='-', units='height', win=Window(...), wrapWidth=1)
+9.7844 	EXP 	Created qmark_target = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-2.0, draggable=False, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.05, italic=False, languageStyle='LTR', name='qmark_target', opacity=1, ori=0.0, pos=array([0.2, 0. ]), rgb=UNKNOWN, text='?', units='height', win=Window(...), wrapWidth=1)
+9.7854 	EXP 	Created dash_stim_recall_resp = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=0.0, draggable=False, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.05, italic=False, languageStyle='LTR', name='dash_stim_recall_resp', opacity=1, ori=0.0, pos=array([0., 0.]), rgb=UNKNOWN, text='-', units='height', win=Window(...), wrapWidth=1)
+9.7857 	EXP 	Created cue_stim_recall_resp = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-1.0, draggable=False, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.05, italic=False, languageStyle='LTR', name='cue_stim_recall_resp', opacity=1, ori=0.0, pos=array([-0.2,  0. ]), rgb=UNKNOWN, text='', units='height', win=Window(...), wrapWidth=1)
+9.7866 	EXP 	Created recall_stim_resp = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-2.0, draggable=False, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.05, italic=False, languageStyle='LTR', name='recall_stim_resp', opacity=1, ori=0.0, pos=array([0.2, 0. ]), rgb=UNKNOWN, text='?', units='height', win=Window(...), wrapWidth=1)
+9.7883 	EXP 	Created recall_question = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-3.0, draggable=False, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.05, italic=False, languageStyle='LTR', name='recall_question', opacity=1, ori=0.0, pos=array([ 0. , -0.3]), rgb=UNKNOWN, text=str(...), units='height', win=Window(...), wrapWidth=1)
+9.7892 	EXP 	Created dash_stim_recall_select = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-1.0, draggable=False, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.05, italic=False, languageStyle='LTR', name='dash_stim_recall_select', opacity=1, ori=0.0, pos=array([0., 0.]), rgb=UNKNOWN, text='-', units='height', win=Window(...), wrapWidth=1)
+9.7896 	EXP 	Created cue_stim_recall_select = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-2.0, draggable=False, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.05, italic=False, languageStyle='LTR', name='cue_stim_recall_select', opacity=1, ori=0.0, pos=array([-0.2,  0. ]), rgb=UNKNOWN, text='', units='height', win=Window(...), wrapWidth=1)
+9.7905 	EXP 	Created recall_stim_select = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-3.0, draggable=False, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.05, italic=False, languageStyle='LTR', name='recall_stim_select', opacity=1, ori=0.0, pos=array([0.2, 0. ]), rgb=UNKNOWN, text='?', units='height', win=Window(...), wrapWidth=1)
+9.7909 	EXP 	Created recall_question_select = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-4.0, draggable=False, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.05, italic=False, languageStyle='LTR', name='recall_question_select', opacity=1, ori=0.0, pos=array([ 0. , -0.3]), rgb=UNKNOWN, text='', units='height', win=Window(...), wrapWidth=1)
+9.7917 	EXP 	Created iti_cross = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=0.0, draggable=False, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.05, italic=False, languageStyle='LTR', name='iti_cross', opacity=1, ori=0.0, pos=array([0., 0.]), rgb=UNKNOWN, text='+', units='height', win=Window(...), wrapWidth=1)
+9.7931 	EXP 	Created task_break_text = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=0.0, draggable=False, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.05, italic=False, languageStyle='LTR', name='task_break_text', opacity=1, ori=0.0, pos=array([0., 0.]), rgb=UNKNOWN, text=str(...), units='height', win=Window(...), wrapWidth=1)
+9.7941 	EXP 	Created end_run_cross = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-3.0, draggable=False, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.05, italic=False, languageStyle='LTR', name='end_run_cross', opacity=1, ori=0.0, pos=array([0., 0.]), rgb=UNKNOWN, text='+', units='height', win=Window(...), wrapWidth=1)
+9.7954 	EXP 	Created ready_set_text = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-1.0, draggable=False, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.05, italic=False, languageStyle='LTR', name='ready_set_text', opacity=1, ori=0.0, pos=array([0., 0.]), rgb=UNKNOWN, text='Der Scanner wird vorbereitet.', units='height', win=Window(...), wrapWidth=1)
+9.7966 	EXP 	Created starting_soon = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=0.0, draggable=False, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.05, italic=False, languageStyle='LTR', name='starting_soon', opacity=1, ori=0.0, pos=array([0., 0.]), rgb=UNKNOWN, text='fMRT startet gleich...', units='height', win=Window(...), wrapWidth=1)
+9.8001 	EXP 	Created end_part2_text = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-1.0, draggable=False, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.05, italic=False, languageStyle='LTR', name='end_part2_text', opacity=1, ori=0.0, pos=array([0., 0.]), rgb=UNKNOWN, text=str(...), units='height', win=Window(...), wrapWidth=1)
+0.0234 	EXP 	welcome_text: autoDraw = True
+3.0132 	DEBUG 	Read excel file with openpyxl: guess_condition_randomization.xlsx
+3.0139 	EXP 	Imported guess_condition_randomization.xlsx as conditions, 80 conditions, 1 params
+3.0143 	EXP 	New trial (rep=0, index=0): <Trial 0 (0 in rep 0) data={'guess_condition': 'Guess', 'thisN': 0, 'thisTrialN': 0, 'thisRepN': 0}>
+3.0145 	EXP 	New trial (rep=0, index=1): <Trial 1 (1 in rep 0) data={'guess_condition': 'Guess', 'thisN': 1, 'thisTrialN': 1, 'thisRepN': 0}>
+3.0146 	EXP 	New trial (rep=0, index=2): <Trial 2 (2 in rep 0) data={'guess_condition': 'Read', 'thisN': 2, 'thisTrialN': 2, 'thisRepN': 0}>
+3.0147 	EXP 	New trial (rep=0, index=3): <Trial 3 (3 in rep 0) data={'guess_condition': 'Guess', 'thisN': 3, 'thisTrialN': 3, 'thisRepN': 0}>
+3.0148 	EXP 	New trial (rep=0, index=4): <Trial 4 (4 in rep 0) data={'guess_condition': 'Read', 'thisN': 4, 'thisTrialN': 4, 'thisRepN': 0}>
+3.0149 	EXP 	New trial (rep=0, index=5): <Trial 5 (5 in rep 0) data={'guess_condition': 'Guess', 'thisN': 5, 'thisTrialN': 5, 'thisRepN': 0}>
+3.0150 	EXP 	New trial (rep=0, index=6): <Trial 6 (6 in rep 0) data={'guess_condition': 'Read', 'thisN': 6, 'thisTrialN': 6, 'thisRepN': 0}>
+3.0151 	EXP 	New trial (rep=0, index=7): <Trial 7 (7 in rep 0) data={'guess_condition': 'Guess', 'thisN': 7, 'thisTrialN': 7, 'thisRepN': 0}>
+3.0152 	EXP 	New trial (rep=0, index=8): <Trial 8 (8 in rep 0) data={'guess_condition': 'Guess', 'thisN': 8, 'thisTrialN': 8, 'thisRepN': 0}>
+3.0153 	EXP 	New trial (rep=0, index=9): <Trial 9 (9 in rep 0) data={'guess_condition': 'Read', 'thisN': 9, 'thisTrialN': 9, 'thisRepN': 0}>
+3.0153 	EXP 	New trial (rep=0, index=10): <Trial 10 (10 in rep 0) data={'guess_condition': 'Guess', 'thisN': 10, 'thisTrialN': 10, 'thisRepN': 0}>
+3.0154 	EXP 	New trial (rep=0, index=11): <Trial 11 (11 in rep 0) data={'guess_condition': 'Guess', 'thisN': 11, 'thisTrialN': 11, 'thisRepN': 0}>
+3.0155 	EXP 	New trial (rep=0, index=12): <Trial 12 (12 in rep 0) data={'guess_condition': 'Guess', 'thisN': 12, 'thisTrialN': 12, 'thisRepN': 0}>
+3.0156 	EXP 	New trial (rep=0, index=13): <Trial 13 (13 in rep 0) data={'guess_condition': 'Guess', 'thisN': 13, 'thisTrialN': 13, 'thisRepN': 0}>
+3.0157 	EXP 	New trial (rep=0, index=14): <Trial 14 (14 in rep 0) data={'guess_condition': 'Guess', 'thisN': 14, 'thisTrialN': 14, 'thisRepN': 0}>
+3.0158 	EXP 	New trial (rep=0, index=15): <Trial 15 (15 in rep 0) data={'guess_condition': 'Read', 'thisN': 15, 'thisTrialN': 15, 'thisRepN': 0}>
+3.0159 	EXP 	New trial (rep=0, index=16): <Trial 16 (16 in rep 0) data={'guess_condition': 'Guess', 'thisN': 16, 'thisTrialN': 16, 'thisRepN': 0}>
+3.0159 	EXP 	New trial (rep=0, index=17): <Trial 17 (17 in rep 0) data={'guess_condition': 'Read', 'thisN': 17, 'thisTrialN': 17, 'thisRepN': 0}>
+3.0160 	EXP 	New trial (rep=0, index=18): <Trial 18 (18 in rep 0) data={'guess_condition': 'Guess', 'thisN': 18, 'thisTrialN': 18, 'thisRepN': 0}>
+3.0161 	EXP 	New trial (rep=0, index=19): <Trial 19 (19 in rep 0) data={'guess_condition': 'Guess', 'thisN': 19, 'thisTrialN': 19, 'thisRepN': 0}>
+3.0162 	EXP 	New trial (rep=0, index=20): <Trial 20 (20 in rep 0) data={'guess_condition': 'Guess', 'thisN': 20, 'thisTrialN': 20, 'thisRepN': 0}>
+3.0163 	EXP 	New trial (rep=0, index=21): <Trial 21 (21 in rep 0) data={'guess_condition': 'Read', 'thisN': 21, 'thisTrialN': 21, 'thisRepN': 0}>
+3.0164 	EXP 	New trial (rep=0, index=22): <Trial 22 (22 in rep 0) data={'guess_condition': 'Read', 'thisN': 22, 'thisTrialN': 22, 'thisRepN': 0}>
+3.0165 	EXP 	New trial (rep=0, index=23): <Trial 23 (23 in rep 0) data={'guess_condition': 'Read', 'thisN': 23, 'thisTrialN': 23, 'thisRepN': 0}>
+3.0165 	EXP 	New trial (rep=0, index=24): <Trial 24 (24 in rep 0) data={'guess_condition': 'Read', 'thisN': 24, 'thisTrialN': 24, 'thisRepN': 0}>
+3.0166 	EXP 	New trial (rep=0, index=25): <Trial 25 (25 in rep 0) data={'guess_condition': 'Guess', 'thisN': 25, 'thisTrialN': 25, 'thisRepN': 0}>
+3.0167 	EXP 	New trial (rep=0, index=26): <Trial 26 (26 in rep 0) data={'guess_condition': 'Guess', 'thisN': 26, 'thisTrialN': 26, 'thisRepN': 0}>
+3.0168 	EXP 	New trial (rep=0, index=27): <Trial 27 (27 in rep 0) data={'guess_condition': 'Guess', 'thisN': 27, 'thisTrialN': 27, 'thisRepN': 0}>
+3.0169 	EXP 	New trial (rep=0, index=28): <Trial 28 (28 in rep 0) data={'guess_condition': 'Read', 'thisN': 28, 'thisTrialN': 28, 'thisRepN': 0}>
+3.0170 	EXP 	New trial (rep=0, index=29): <Trial 29 (29 in rep 0) data={'guess_condition': 'Guess', 'thisN': 29, 'thisTrialN': 29, 'thisRepN': 0}>
+3.0171 	EXP 	New trial (rep=0, index=30): <Trial 30 (30 in rep 0) data={'guess_condition': 'Read', 'thisN': 30, 'thisTrialN': 30, 'thisRepN': 0}>
+3.0172 	EXP 	New trial (rep=0, index=31): <Trial 31 (31 in rep 0) data={'guess_condition': 'Read', 'thisN': 31, 'thisTrialN': 31, 'thisRepN': 0}>
+3.0172 	EXP 	New trial (rep=0, index=32): <Trial 32 (32 in rep 0) data={'guess_condition': 'Read', 'thisN': 32, 'thisTrialN': 32, 'thisRepN': 0}>
+3.0173 	EXP 	New trial (rep=0, index=33): <Trial 33 (33 in rep 0) data={'guess_condition': 'Guess', 'thisN': 33, 'thisTrialN': 33, 'thisRepN': 0}>
+3.0174 	EXP 	New trial (rep=0, index=34): <Trial 34 (34 in rep 0) data={'guess_condition': 'Read', 'thisN': 34, 'thisTrialN': 34, 'thisRepN': 0}>
+3.0175 	EXP 	New trial (rep=0, index=35): <Trial 35 (35 in rep 0) data={'guess_condition': 'Guess', 'thisN': 35, 'thisTrialN': 35, 'thisRepN': 0}>
+3.0176 	EXP 	New trial (rep=0, index=36): <Trial 36 (36 in rep 0) data={'guess_condition': 'Read', 'thisN': 36, 'thisTrialN': 36, 'thisRepN': 0}>
+3.0177 	EXP 	New trial (rep=0, index=37): <Trial 37 (37 in rep 0) data={'guess_condition': 'Read', 'thisN': 37, 'thisTrialN': 37, 'thisRepN': 0}>
+3.0178 	EXP 	New trial (rep=0, index=38): <Trial 38 (38 in rep 0) data={'guess_condition': 'Read', 'thisN': 38, 'thisTrialN': 38, 'thisRepN': 0}>
+3.0178 	EXP 	New trial (rep=0, index=39): <Trial 39 (39 in rep 0) data={'guess_condition': 'Guess', 'thisN': 39, 'thisTrialN': 39, 'thisRepN': 0}>
+3.0179 	EXP 	New trial (rep=0, index=40): <Trial 40 (40 in rep 0) data={'guess_condition': 'Guess', 'thisN': 40, 'thisTrialN': 40, 'thisRepN': 0}>
+3.0180 	EXP 	New trial (rep=0, index=41): <Trial 41 (41 in rep 0) data={'guess_condition': 'Read', 'thisN': 41, 'thisTrialN': 41, 'thisRepN': 0}>
+3.0181 	EXP 	New trial (rep=0, index=42): <Trial 42 (42 in rep 0) data={'guess_condition': 'Read', 'thisN': 42, 'thisTrialN': 42, 'thisRepN': 0}>
+3.0182 	EXP 	New trial (rep=0, index=43): <Trial 43 (43 in rep 0) data={'guess_condition': 'Guess', 'thisN': 43, 'thisTrialN': 43, 'thisRepN': 0}>
+3.0183 	EXP 	New trial (rep=0, index=44): <Trial 44 (44 in rep 0) data={'guess_condition': 'Read', 'thisN': 44, 'thisTrialN': 44, 'thisRepN': 0}>
+3.0184 	EXP 	New trial (rep=0, index=45): <Trial 45 (45 in rep 0) data={'guess_condition': 'Guess', 'thisN': 45, 'thisTrialN': 45, 'thisRepN': 0}>
+3.0185 	EXP 	New trial (rep=0, index=46): <Trial 46 (46 in rep 0) data={'guess_condition': 'Guess', 'thisN': 46, 'thisTrialN': 46, 'thisRepN': 0}>
+3.0186 	EXP 	New trial (rep=0, index=47): <Trial 47 (47 in rep 0) data={'guess_condition': 'Guess', 'thisN': 47, 'thisTrialN': 47, 'thisRepN': 0}>
+3.0186 	EXP 	New trial (rep=0, index=48): <Trial 48 (48 in rep 0) data={'guess_condition': 'Read', 'thisN': 48, 'thisTrialN': 48, 'thisRepN': 0}>
+3.0187 	EXP 	New trial (rep=0, index=49): <Trial 49 (49 in rep 0) data={'guess_condition': 'Guess', 'thisN': 49, 'thisTrialN': 49, 'thisRepN': 0}>
+3.0188 	EXP 	New trial (rep=0, index=50): <Trial 50 (50 in rep 0) data={'guess_condition': 'Read', 'thisN': 50, 'thisTrialN': 50, 'thisRepN': 0}>
+3.0189 	EXP 	New trial (rep=0, index=51): <Trial 51 (51 in rep 0) data={'guess_condition': 'Read', 'thisN': 51, 'thisTrialN': 51, 'thisRepN': 0}>
+3.0190 	EXP 	New trial (rep=0, index=52): <Trial 52 (52 in rep 0) data={'guess_condition': 'Read', 'thisN': 52, 'thisTrialN': 52, 'thisRepN': 0}>
+3.0191 	EXP 	New trial (rep=0, index=53): <Trial 53 (53 in rep 0) data={'guess_condition': 'Guess', 'thisN': 53, 'thisTrialN': 53, 'thisRepN': 0}>
+3.0192 	EXP 	New trial (rep=0, index=54): <Trial 54 (54 in rep 0) data={'guess_condition': 'Read', 'thisN': 54, 'thisTrialN': 54, 'thisRepN': 0}>
+3.0193 	EXP 	New trial (rep=0, index=55): <Trial 55 (55 in rep 0) data={'guess_condition': 'Read', 'thisN': 55, 'thisTrialN': 55, 'thisRepN': 0}>
+3.0194 	EXP 	New trial (rep=0, index=56): <Trial 56 (56 in rep 0) data={'guess_condition': 'Guess', 'thisN': 56, 'thisTrialN': 56, 'thisRepN': 0}>
+3.0195 	EXP 	New trial (rep=0, index=57): <Trial 57 (57 in rep 0) data={'guess_condition': 'Read', 'thisN': 57, 'thisTrialN': 57, 'thisRepN': 0}>
+3.0195 	EXP 	New trial (rep=0, index=58): <Trial 58 (58 in rep 0) data={'guess_condition': 'Guess', 'thisN': 58, 'thisTrialN': 58, 'thisRepN': 0}>
+3.0196 	EXP 	New trial (rep=0, index=59): <Trial 59 (59 in rep 0) data={'guess_condition': 'Read', 'thisN': 59, 'thisTrialN': 59, 'thisRepN': 0}>
+3.0197 	EXP 	New trial (rep=0, index=60): <Trial 60 (60 in rep 0) data={'guess_condition': 'Read', 'thisN': 60, 'thisTrialN': 60, 'thisRepN': 0}>
+3.0198 	EXP 	New trial (rep=0, index=61): <Trial 61 (61 in rep 0) data={'guess_condition': 'Guess', 'thisN': 61, 'thisTrialN': 61, 'thisRepN': 0}>
+3.0199 	EXP 	New trial (rep=0, index=62): <Trial 62 (62 in rep 0) data={'guess_condition': 'Read', 'thisN': 62, 'thisTrialN': 62, 'thisRepN': 0}>
+3.0200 	EXP 	New trial (rep=0, index=63): <Trial 63 (63 in rep 0) data={'guess_condition': 'Guess', 'thisN': 63, 'thisTrialN': 63, 'thisRepN': 0}>
+3.0201 	EXP 	New trial (rep=0, index=64): <Trial 64 (64 in rep 0) data={'guess_condition': 'Read', 'thisN': 64, 'thisTrialN': 64, 'thisRepN': 0}>
+3.0201 	EXP 	New trial (rep=0, index=65): <Trial 65 (65 in rep 0) data={'guess_condition': 'Guess', 'thisN': 65, 'thisTrialN': 65, 'thisRepN': 0}>
+3.0202 	EXP 	New trial (rep=0, index=66): <Trial 66 (66 in rep 0) data={'guess_condition': 'Read', 'thisN': 66, 'thisTrialN': 66, 'thisRepN': 0}>
+3.0203 	EXP 	New trial (rep=0, index=67): <Trial 67 (67 in rep 0) data={'guess_condition': 'Read', 'thisN': 67, 'thisTrialN': 67, 'thisRepN': 0}>
+3.0204 	EXP 	New trial (rep=0, index=68): <Trial 68 (68 in rep 0) data={'guess_condition': 'Guess', 'thisN': 68, 'thisTrialN': 68, 'thisRepN': 0}>
+3.0205 	EXP 	New trial (rep=0, index=69): <Trial 69 (69 in rep 0) data={'guess_condition': 'Read', 'thisN': 69, 'thisTrialN': 69, 'thisRepN': 0}>
+3.0206 	EXP 	New trial (rep=0, index=70): <Trial 70 (70 in rep 0) data={'guess_condition': 'Read', 'thisN': 70, 'thisTrialN': 70, 'thisRepN': 0}>
+3.0207 	EXP 	New trial (rep=0, index=71): <Trial 71 (71 in rep 0) data={'guess_condition': 'Guess', 'thisN': 71, 'thisTrialN': 71, 'thisRepN': 0}>
+3.0208 	EXP 	New trial (rep=0, index=72): <Trial 72 (72 in rep 0) data={'guess_condition': 'Read', 'thisN': 72, 'thisTrialN': 72, 'thisRepN': 0}>
+3.0210 	EXP 	New trial (rep=0, index=73): <Trial 73 (73 in rep 0) data={'guess_condition': 'Guess', 'thisN': 73, 'thisTrialN': 73, 'thisRepN': 0}>
+3.0211 	EXP 	New trial (rep=0, index=74): <Trial 74 (74 in rep 0) data={'guess_condition': 'Guess', 'thisN': 74, 'thisTrialN': 74, 'thisRepN': 0}>
+3.0212 	EXP 	New trial (rep=0, index=75): <Trial 75 (75 in rep 0) data={'guess_condition': 'Guess', 'thisN': 75, 'thisTrialN': 75, 'thisRepN': 0}>
+3.0214 	EXP 	New trial (rep=0, index=76): <Trial 76 (76 in rep 0) data={'guess_condition': 'Read', 'thisN': 76, 'thisTrialN': 76, 'thisRepN': 0}>
+3.0215 	EXP 	New trial (rep=0, index=77): <Trial 77 (77 in rep 0) data={'guess_condition': 'Guess', 'thisN': 77, 'thisTrialN': 77, 'thisRepN': 0}>
+3.0217 	EXP 	New trial (rep=0, index=78): <Trial 78 (78 in rep 0) data={'guess_condition': 'Read', 'thisN': 78, 'thisTrialN': 78, 'thisRepN': 0}>
+3.0217 	EXP 	New trial (rep=0, index=79): <Trial 79 (79 in rep 0) data={'guess_condition': 'Read', 'thisN': 79, 'thisTrialN': 79, 'thisRepN': 0}>
+3.0246 	DEBUG 	Read excel file with openpyxl: iti_randomization.xlsx
+3.0251 	EXP 	Imported iti_randomization.xlsx as conditions, 80 conditions, 1 params
+3.0255 	EXP 	New trial (rep=0, index=0): <Trial 0 (0 in rep 0) data={'iti': 4.5, 'thisN': 0, 'thisTrialN': 0, 'thisRepN': 0}>
+3.0257 	EXP 	New trial (rep=0, index=1): <Trial 1 (1 in rep 0) data={'iti': 7.5, 'thisN': 1, 'thisTrialN': 1, 'thisRepN': 0}>
+3.0258 	EXP 	New trial (rep=0, index=2): <Trial 2 (2 in rep 0) data={'iti': 6, 'thisN': 2, 'thisTrialN': 2, 'thisRepN': 0}>
+3.0259 	EXP 	New trial (rep=0, index=3): <Trial 3 (3 in rep 0) data={'iti': 9, 'thisN': 3, 'thisTrialN': 3, 'thisRepN': 0}>
+3.0259 	EXP 	New trial (rep=0, index=4): <Trial 4 (4 in rep 0) data={'iti': 7.5, 'thisN': 4, 'thisTrialN': 4, 'thisRepN': 0}>
+3.0260 	EXP 	New trial (rep=0, index=5): <Trial 5 (5 in rep 0) data={'iti': 4.5, 'thisN': 5, 'thisTrialN': 5, 'thisRepN': 0}>
+3.0262 	EXP 	New trial (rep=0, index=6): <Trial 6 (6 in rep 0) data={'iti': 6, 'thisN': 6, 'thisTrialN': 6, 'thisRepN': 0}>
+3.0262 	EXP 	New trial (rep=0, index=7): <Trial 7 (7 in rep 0) data={'iti': 7.5, 'thisN': 7, 'thisTrialN': 7, 'thisRepN': 0}>
+3.0263 	EXP 	New trial (rep=0, index=8): <Trial 8 (8 in rep 0) data={'iti': 7.5, 'thisN': 8, 'thisTrialN': 8, 'thisRepN': 0}>
+3.0264 	EXP 	New trial (rep=0, index=9): <Trial 9 (9 in rep 0) data={'iti': 7.5, 'thisN': 9, 'thisTrialN': 9, 'thisRepN': 0}>
+3.0265 	EXP 	New trial (rep=0, index=10): <Trial 10 (10 in rep 0) data={'iti': 4.5, 'thisN': 10, 'thisTrialN': 10, 'thisRepN': 0}>
+3.0266 	EXP 	New trial (rep=0, index=11): <Trial 11 (11 in rep 0) data={'iti': 9, 'thisN': 11, 'thisTrialN': 11, 'thisRepN': 0}>
+3.0267 	EXP 	New trial (rep=0, index=12): <Trial 12 (12 in rep 0) data={'iti': 4.5, 'thisN': 12, 'thisTrialN': 12, 'thisRepN': 0}>
+3.0268 	EXP 	New trial (rep=0, index=13): <Trial 13 (13 in rep 0) data={'iti': 9, 'thisN': 13, 'thisTrialN': 13, 'thisRepN': 0}>
+3.0269 	EXP 	New trial (rep=0, index=14): <Trial 14 (14 in rep 0) data={'iti': 7.5, 'thisN': 14, 'thisTrialN': 14, 'thisRepN': 0}>
+3.0270 	EXP 	New trial (rep=0, index=15): <Trial 15 (15 in rep 0) data={'iti': 6, 'thisN': 15, 'thisTrialN': 15, 'thisRepN': 0}>
+3.0271 	EXP 	New trial (rep=0, index=16): <Trial 16 (16 in rep 0) data={'iti': 7.5, 'thisN': 16, 'thisTrialN': 16, 'thisRepN': 0}>
+3.0272 	EXP 	New trial (rep=0, index=17): <Trial 17 (17 in rep 0) data={'iti': 9, 'thisN': 17, 'thisTrialN': 17, 'thisRepN': 0}>
+3.0273 	EXP 	New trial (rep=0, index=18): <Trial 18 (18 in rep 0) data={'iti': 9, 'thisN': 18, 'thisTrialN': 18, 'thisRepN': 0}>
+3.0274 	EXP 	New trial (rep=0, index=19): <Trial 19 (19 in rep 0) data={'iti': 4.5, 'thisN': 19, 'thisTrialN': 19, 'thisRepN': 0}>
+3.0274 	EXP 	New trial (rep=0, index=20): <Trial 20 (20 in rep 0) data={'iti': 4.5, 'thisN': 20, 'thisTrialN': 20, 'thisRepN': 0}>
+3.0275 	EXP 	New trial (rep=0, index=21): <Trial 21 (21 in rep 0) data={'iti': 4.5, 'thisN': 21, 'thisTrialN': 21, 'thisRepN': 0}>
+3.0276 	EXP 	New trial (rep=0, index=22): <Trial 22 (22 in rep 0) data={'iti': 4.5, 'thisN': 22, 'thisTrialN': 22, 'thisRepN': 0}>
+3.0277 	EXP 	New trial (rep=0, index=23): <Trial 23 (23 in rep 0) data={'iti': 9, 'thisN': 23, 'thisTrialN': 23, 'thisRepN': 0}>
+3.0278 	EXP 	New trial (rep=0, index=24): <Trial 24 (24 in rep 0) data={'iti': 9, 'thisN': 24, 'thisTrialN': 24, 'thisRepN': 0}>
+3.0279 	EXP 	New trial (rep=0, index=25): <Trial 25 (25 in rep 0) data={'iti': 7.5, 'thisN': 25, 'thisTrialN': 25, 'thisRepN': 0}>
+3.0280 	EXP 	New trial (rep=0, index=26): <Trial 26 (26 in rep 0) data={'iti': 7.5, 'thisN': 26, 'thisTrialN': 26, 'thisRepN': 0}>
+3.0281 	EXP 	New trial (rep=0, index=27): <Trial 27 (27 in rep 0) data={'iti': 6, 'thisN': 27, 'thisTrialN': 27, 'thisRepN': 0}>
+3.0281 	EXP 	New trial (rep=0, index=28): <Trial 28 (28 in rep 0) data={'iti': 4.5, 'thisN': 28, 'thisTrialN': 28, 'thisRepN': 0}>
+3.0282 	EXP 	New trial (rep=0, index=29): <Trial 29 (29 in rep 0) data={'iti': 9, 'thisN': 29, 'thisTrialN': 29, 'thisRepN': 0}>
+3.0283 	EXP 	New trial (rep=0, index=30): <Trial 30 (30 in rep 0) data={'iti': 4.5, 'thisN': 30, 'thisTrialN': 30, 'thisRepN': 0}>
+3.0284 	EXP 	New trial (rep=0, index=31): <Trial 31 (31 in rep 0) data={'iti': 6, 'thisN': 31, 'thisTrialN': 31, 'thisRepN': 0}>
+3.0285 	EXP 	New trial (rep=0, index=32): <Trial 32 (32 in rep 0) data={'iti': 9, 'thisN': 32, 'thisTrialN': 32, 'thisRepN': 0}>
+3.0286 	EXP 	New trial (rep=0, index=33): <Trial 33 (33 in rep 0) data={'iti': 6, 'thisN': 33, 'thisTrialN': 33, 'thisRepN': 0}>
+3.0287 	EXP 	New trial (rep=0, index=34): <Trial 34 (34 in rep 0) data={'iti': 4.5, 'thisN': 34, 'thisTrialN': 34, 'thisRepN': 0}>
+3.0287 	EXP 	New trial (rep=0, index=35): <Trial 35 (35 in rep 0) data={'iti': 6, 'thisN': 35, 'thisTrialN': 35, 'thisRepN': 0}>
+3.0288 	EXP 	New trial (rep=0, index=36): <Trial 36 (36 in rep 0) data={'iti': 4.5, 'thisN': 36, 'thisTrialN': 36, 'thisRepN': 0}>
+3.0289 	EXP 	New trial (rep=0, index=37): <Trial 37 (37 in rep 0) data={'iti': 6, 'thisN': 37, 'thisTrialN': 37, 'thisRepN': 0}>
+3.0290 	EXP 	New trial (rep=0, index=38): <Trial 38 (38 in rep 0) data={'iti': 6, 'thisN': 38, 'thisTrialN': 38, 'thisRepN': 0}>
+3.0291 	EXP 	New trial (rep=0, index=39): <Trial 39 (39 in rep 0) data={'iti': 6, 'thisN': 39, 'thisTrialN': 39, 'thisRepN': 0}>
+3.0292 	EXP 	New trial (rep=0, index=40): <Trial 40 (40 in rep 0) data={'iti': 9, 'thisN': 40, 'thisTrialN': 40, 'thisRepN': 0}>
+3.0293 	EXP 	New trial (rep=0, index=41): <Trial 41 (41 in rep 0) data={'iti': 6, 'thisN': 41, 'thisTrialN': 41, 'thisRepN': 0}>
+3.0294 	EXP 	New trial (rep=0, index=42): <Trial 42 (42 in rep 0) data={'iti': 9, 'thisN': 42, 'thisTrialN': 42, 'thisRepN': 0}>
+3.0294 	EXP 	New trial (rep=0, index=43): <Trial 43 (43 in rep 0) data={'iti': 7.5, 'thisN': 43, 'thisTrialN': 43, 'thisRepN': 0}>
+3.0295 	EXP 	New trial (rep=0, index=44): <Trial 44 (44 in rep 0) data={'iti': 4.5, 'thisN': 44, 'thisTrialN': 44, 'thisRepN': 0}>
+3.0296 	EXP 	New trial (rep=0, index=45): <Trial 45 (45 in rep 0) data={'iti': 7.5, 'thisN': 45, 'thisTrialN': 45, 'thisRepN': 0}>
+3.0297 	EXP 	New trial (rep=0, index=46): <Trial 46 (46 in rep 0) data={'iti': 4.5, 'thisN': 46, 'thisTrialN': 46, 'thisRepN': 0}>
+3.0298 	EXP 	New trial (rep=0, index=47): <Trial 47 (47 in rep 0) data={'iti': 6, 'thisN': 47, 'thisTrialN': 47, 'thisRepN': 0}>
+3.0299 	EXP 	New trial (rep=0, index=48): <Trial 48 (48 in rep 0) data={'iti': 7.5, 'thisN': 48, 'thisTrialN': 48, 'thisRepN': 0}>
+3.0300 	EXP 	New trial (rep=0, index=49): <Trial 49 (49 in rep 0) data={'iti': 6, 'thisN': 49, 'thisTrialN': 49, 'thisRepN': 0}>
+3.0301 	EXP 	New trial (rep=0, index=50): <Trial 50 (50 in rep 0) data={'iti': 9, 'thisN': 50, 'thisTrialN': 50, 'thisRepN': 0}>
+3.0302 	EXP 	New trial (rep=0, index=51): <Trial 51 (51 in rep 0) data={'iti': 9, 'thisN': 51, 'thisTrialN': 51, 'thisRepN': 0}>
+3.0302 	EXP 	New trial (rep=0, index=52): <Trial 52 (52 in rep 0) data={'iti': 4.5, 'thisN': 52, 'thisTrialN': 52, 'thisRepN': 0}>
+3.0303 	EXP 	New trial (rep=0, index=53): <Trial 53 (53 in rep 0) data={'iti': 7.5, 'thisN': 53, 'thisTrialN': 53, 'thisRepN': 0}>
+3.0304 	EXP 	New trial (rep=0, index=54): <Trial 54 (54 in rep 0) data={'iti': 4.5, 'thisN': 54, 'thisTrialN': 54, 'thisRepN': 0}>
+3.0305 	EXP 	New trial (rep=0, index=55): <Trial 55 (55 in rep 0) data={'iti': 6, 'thisN': 55, 'thisTrialN': 55, 'thisRepN': 0}>
+3.0306 	EXP 	New trial (rep=0, index=56): <Trial 56 (56 in rep 0) data={'iti': 9, 'thisN': 56, 'thisTrialN': 56, 'thisRepN': 0}>
+3.0307 	EXP 	New trial (rep=0, index=57): <Trial 57 (57 in rep 0) data={'iti': 9, 'thisN': 57, 'thisTrialN': 57, 'thisRepN': 0}>
+3.0308 	EXP 	New trial (rep=0, index=58): <Trial 58 (58 in rep 0) data={'iti': 4.5, 'thisN': 58, 'thisTrialN': 58, 'thisRepN': 0}>
+3.0309 	EXP 	New trial (rep=0, index=59): <Trial 59 (59 in rep 0) data={'iti': 6, 'thisN': 59, 'thisTrialN': 59, 'thisRepN': 0}>
+3.0310 	EXP 	New trial (rep=0, index=60): <Trial 60 (60 in rep 0) data={'iti': 4.5, 'thisN': 60, 'thisTrialN': 60, 'thisRepN': 0}>
+3.0310 	EXP 	New trial (rep=0, index=61): <Trial 61 (61 in rep 0) data={'iti': 7.5, 'thisN': 61, 'thisTrialN': 61, 'thisRepN': 0}>
+3.0311 	EXP 	New trial (rep=0, index=62): <Trial 62 (62 in rep 0) data={'iti': 9, 'thisN': 62, 'thisTrialN': 62, 'thisRepN': 0}>
+3.0312 	EXP 	New trial (rep=0, index=63): <Trial 63 (63 in rep 0) data={'iti': 4.5, 'thisN': 63, 'thisTrialN': 63, 'thisRepN': 0}>
+3.0313 	EXP 	New trial (rep=0, index=64): <Trial 64 (64 in rep 0) data={'iti': 7.5, 'thisN': 64, 'thisTrialN': 64, 'thisRepN': 0}>
+3.0314 	EXP 	New trial (rep=0, index=65): <Trial 65 (65 in rep 0) data={'iti': 6, 'thisN': 65, 'thisTrialN': 65, 'thisRepN': 0}>
+3.0315 	EXP 	New trial (rep=0, index=66): <Trial 66 (66 in rep 0) data={'iti': 6, 'thisN': 66, 'thisTrialN': 66, 'thisRepN': 0}>
+3.0316 	EXP 	New trial (rep=0, index=67): <Trial 67 (67 in rep 0) data={'iti': 6, 'thisN': 67, 'thisTrialN': 67, 'thisRepN': 0}>
+3.0316 	EXP 	New trial (rep=0, index=68): <Trial 68 (68 in rep 0) data={'iti': 9, 'thisN': 68, 'thisTrialN': 68, 'thisRepN': 0}>
+3.0317 	EXP 	New trial (rep=0, index=69): <Trial 69 (69 in rep 0) data={'iti': 6, 'thisN': 69, 'thisTrialN': 69, 'thisRepN': 0}>
+3.0318 	EXP 	New trial (rep=0, index=70): <Trial 70 (70 in rep 0) data={'iti': 7.5, 'thisN': 70, 'thisTrialN': 70, 'thisRepN': 0}>
+3.0319 	EXP 	New trial (rep=0, index=71): <Trial 71 (71 in rep 0) data={'iti': 9, 'thisN': 71, 'thisTrialN': 71, 'thisRepN': 0}>
+3.0320 	EXP 	New trial (rep=0, index=72): <Trial 72 (72 in rep 0) data={'iti': 7.5, 'thisN': 72, 'thisTrialN': 72, 'thisRepN': 0}>
+3.0321 	EXP 	New trial (rep=0, index=73): <Trial 73 (73 in rep 0) data={'iti': 7.5, 'thisN': 73, 'thisTrialN': 73, 'thisRepN': 0}>
+3.0322 	EXP 	New trial (rep=0, index=74): <Trial 74 (74 in rep 0) data={'iti': 7.5, 'thisN': 74, 'thisTrialN': 74, 'thisRepN': 0}>
+3.0323 	EXP 	New trial (rep=0, index=75): <Trial 75 (75 in rep 0) data={'iti': 9, 'thisN': 75, 'thisTrialN': 75, 'thisRepN': 0}>
+3.0323 	EXP 	New trial (rep=0, index=76): <Trial 76 (76 in rep 0) data={'iti': 9, 'thisN': 76, 'thisTrialN': 76, 'thisRepN': 0}>
+3.0324 	EXP 	New trial (rep=0, index=77): <Trial 77 (77 in rep 0) data={'iti': 7.5, 'thisN': 77, 'thisTrialN': 77, 'thisRepN': 0}>
+3.0325 	EXP 	New trial (rep=0, index=78): <Trial 78 (78 in rep 0) data={'iti': 6, 'thisN': 78, 'thisTrialN': 78, 'thisRepN': 0}>
+3.0326 	EXP 	New trial (rep=0, index=79): <Trial 79 (79 in rep 0) data={'iti': 4.5, 'thisN': 79, 'thisTrialN': 79, 'thisRepN': 0}>
+3.0402 	INFO 	Keyboard events cleared
+3.0400 	EXP 	welcome_text: autoDraw = False
+3.0400 	EXP 	instructions1_text: autoDraw = True
+12.6805 	DATA 	Keypress: space
+12.6909 	INFO 	Keyboard events cleared
+12.6907 	EXP 	instructions1_text: autoDraw = False
+12.6907 	EXP 	instructions2_text: autoDraw = True
+14.1467 	DATA 	Keypress: space
+14.1576 	INFO 	Keyboard events cleared
+14.1572 	EXP 	instructions2_text: autoDraw = False
+14.1572 	EXP 	instructions3_text: autoDraw = True
+17.6635 	DATA 	Keypress: 1
+17.6742 	INFO 	Keyboard events cleared
+17.6739 	EXP 	instructions3_text: autoDraw = False
+17.6739 	EXP 	instructions4_text: autoDraw = True
+19.6795 	DATA 	Keypress: 1
+19.6910 	INFO 	Keyboard events cleared
+19.6907 	EXP 	instructions4_text: autoDraw = False
+19.6907 	EXP 	instructions5_text: autoDraw = True
+21.1333 	DEBUG 	Read excel file with openpyxl: practice.xlsx
+21.1334 	EXP 	Imported practice.xlsx as conditions, 4 conditions, 2 params
+21.1336 	EXP 	New trial (rep=0, index=0): <Trial 0 (0 in rep 0) data={'cue': 'Frühstück', 'target': 'Brot', 'thisN': 0, 'thisTrialN': 0, 'thisRepN': 0}>
+21.1345 	DATA 	Keypress: 1
+21.1401 	EXP 	instructions5_text: autoDraw = False
+21.1401 	EXP 	iti_practice_blank: autoDraw = True
+23.1401 	EXP 	iti_practice_blank: autoDraw = False
+23.1401 	EXP 	iti_practice_blank: autoDraw = False
+23.1401 	EXP 	cue_stim_guessing: height = 0.05
+23.1401 	EXP 	cue_stim_guessing: height = 0.05
+23.1401 	EXP 	cue_stim_guessing: height = 0.05
+23.1401 	EXP 	cue_stim_guessing: text = 'Frühstück'
+23.1401 	EXP 	dash_stim_guessing: autoDraw = False
+23.1401 	EXP 	cue_stim_guessing: autoDraw = False
+23.1401 	EXP 	guess_stim: autoDraw = False
+23.1401 	EXP 	cue_stim_guessing_resp: height = 0.05
+23.1401 	EXP 	cue_stim_guessing_resp: height = 0.05
+23.1401 	EXP 	cue_stim_guessing_resp: height = 0.05
+23.1401 	EXP 	cue_stim_guessing_resp: text = 'Frühstück'
+23.1401 	EXP 	dash_stim_guessing_resp: autoDraw = False
+23.1401 	EXP 	cue_stim_guessing_resp: autoDraw = False
+23.1401 	EXP 	guess_stim_resp: autoDraw = False
+23.1401 	EXP 	guess_question: autoDraw = False
+23.1401 	EXP 	no_response_feedback: height = 0.05
+23.1401 	EXP 	no_response_feedback: height = 0.05
+23.1401 	EXP 	no_response_feedback: height = 0.05
+23.1401 	EXP 	no_response_feedback: text = 'Ihre Antwort: \nKeine Antwort gegeben.'
+23.1401 	EXP 	no_response_feedback: autoDraw = True
+23.1571 	INFO 	Keyboard events cleared
+23.1569 	EXP 	no_response_feedback: autoDraw = False
+23.1569 	EXP 	no_response_feedback: autoDraw = False
+23.1569 	EXP 	guess_delay_cross: autoDraw = False
+23.1569 	EXP 	cue_stim_learning: height = 0.05
+23.1569 	EXP 	cue_stim_learning: height = 0.05
+23.1569 	EXP 	cue_stim_learning: height = 0.05
+23.1569 	EXP 	cue_stim_learning: text = 'Frühstück'
+23.1569 	EXP 	target_stim: height = 0.05
+23.1569 	EXP 	target_stim: height = 0.05
+23.1569 	EXP 	target_stim: height = 0.05
+23.1569 	EXP 	target_stim: text = 'Brot'
+23.1569 	EXP 	dash_stim_learning: autoDraw = True
+23.1569 	EXP 	cue_stim_learning: autoDraw = True
+23.1569 	EXP 	target_stim: autoDraw = True
+26.1435 	EXP 	New trial (rep=0, index=1): <Trial 1 (1 in rep 0) data={'cue': 'Wand', 'target': 'Fenster', 'thisN': 1, 'thisTrialN': 1, 'thisRepN': 0}>
+26.1581 	EXP 	dash_stim_learning: autoDraw = False
+26.1581 	EXP 	cue_stim_learning: autoDraw = False
+26.1581 	EXP 	target_stim: autoDraw = False
+26.1581 	EXP 	iti_practice_blank: autoDraw = True
+28.1579 	INFO 	Keyboard events cleared
+28.1577 	EXP 	iti_practice_blank: autoDraw = False
+28.1577 	EXP 	cue_stim_guessing: height = 0.05
+28.1577 	EXP 	cue_stim_guessing: height = 0.05
+28.1577 	EXP 	cue_stim_guessing: height = 0.05
+28.1577 	EXP 	cue_stim_guessing: text = 'Wand'
+28.1577 	EXP 	dash_stim_guessing: autoDraw = True
+28.1577 	EXP 	cue_stim_guessing: autoDraw = True
+28.1577 	EXP 	guess_stim: autoDraw = True
+31.1577 	INFO 	Keyboard events cleared
+31.1574 	EXP 	dash_stim_guessing: autoDraw = False
+31.1574 	EXP 	cue_stim_guessing: autoDraw = False
+31.1574 	EXP 	guess_stim: autoDraw = False
+31.1574 	EXP 	dash_stim_guessing: autoDraw = False
+31.1574 	EXP 	cue_stim_guessing: autoDraw = False
+31.1574 	EXP 	guess_stim: autoDraw = False
+31.1574 	EXP 	cue_stim_guessing_resp: height = 0.05
+31.1574 	EXP 	cue_stim_guessing_resp: height = 0.05
+31.1574 	EXP 	cue_stim_guessing_resp: height = 0.05
+31.1574 	EXP 	cue_stim_guessing_resp: text = 'Wand'
+31.1574 	EXP 	dash_stim_guessing_resp: autoDraw = True
+31.1574 	EXP 	cue_stim_guessing_resp: autoDraw = True
+31.1574 	EXP 	guess_stim_resp: autoDraw = True
+31.1574 	EXP 	guess_question: autoDraw = True
+32.6581 	EXP 	dash_stim_guessing_resp: autoDraw = False
+32.6581 	EXP 	cue_stim_guessing_resp: autoDraw = False
+32.6581 	EXP 	guess_stim_resp: autoDraw = False
+32.6581 	EXP 	guess_question: autoDraw = False
+32.6581 	EXP 	dash_stim_guessing_resp: autoDraw = False
+32.6581 	EXP 	cue_stim_guessing_resp: autoDraw = False
+32.6581 	EXP 	guess_stim_resp: autoDraw = False
+32.6581 	EXP 	guess_question: autoDraw = False
+32.6581 	EXP 	no_response_feedback: text = 'Ihre Antwort: \nKeine Antwort gegeben.'
+32.6581 	EXP 	no_response_feedback: autoDraw = True
+34.1579 	EXP 	no_response_feedback: autoDraw = False
+34.1579 	EXP 	no_response_feedback: autoDraw = False
+34.1579 	EXP 	guess_delay_cross: autoDraw = True
+37.1737 	INFO 	Keyboard events cleared
+37.1736 	EXP 	guess_delay_cross: autoDraw = False
+37.1736 	EXP 	guess_delay_cross: autoDraw = False
+37.1736 	EXP 	cue_stim_learning: height = 0.05
+37.1736 	EXP 	cue_stim_learning: height = 0.05
+37.1736 	EXP 	cue_stim_learning: height = 0.05
+37.1736 	EXP 	cue_stim_learning: text = 'Wand'
+37.1736 	EXP 	target_stim: height = 0.05
+37.1736 	EXP 	target_stim: height = 0.05
+37.1736 	EXP 	target_stim: height = 0.05
+37.1736 	EXP 	target_stim: text = 'Fenster'
+37.1736 	EXP 	dash_stim_learning: autoDraw = True
+37.1736 	EXP 	cue_stim_learning: autoDraw = True
+37.1736 	EXP 	target_stim: autoDraw = True
+40.1607 	EXP 	New trial (rep=0, index=2): <Trial 2 (2 in rep 0) data={'cue': 'Park', 'target': 'Spielplatz', 'thisN': 2, 'thisTrialN': 2, 'thisRepN': 0}>
+40.1742 	EXP 	dash_stim_learning: autoDraw = False
+40.1742 	EXP 	cue_stim_learning: autoDraw = False
+40.1742 	EXP 	target_stim: autoDraw = False
+40.1742 	EXP 	iti_practice_blank: autoDraw = True
+42.1743 	INFO 	Keyboard events cleared
+42.1739 	EXP 	iti_practice_blank: autoDraw = False
+42.1739 	EXP 	cue_stim_guessing: height = 0.05
+42.1739 	EXP 	cue_stim_guessing: height = 0.05
+42.1739 	EXP 	cue_stim_guessing: height = 0.05
+42.1739 	EXP 	cue_stim_guessing: text = 'Park'
+42.1739 	EXP 	dash_stim_guessing: autoDraw = True
+42.1739 	EXP 	cue_stim_guessing: autoDraw = True
+42.1739 	EXP 	guess_stim: autoDraw = True
+45.1739 	INFO 	Keyboard events cleared
+45.1737 	EXP 	dash_stim_guessing: autoDraw = False
+45.1737 	EXP 	cue_stim_guessing: autoDraw = False
+45.1737 	EXP 	guess_stim: autoDraw = False
+45.1737 	EXP 	dash_stim_guessing: autoDraw = False
+45.1737 	EXP 	cue_stim_guessing: autoDraw = False
+45.1737 	EXP 	guess_stim: autoDraw = False
+45.1737 	EXP 	cue_stim_guessing_resp: height = 0.05
+45.1737 	EXP 	cue_stim_guessing_resp: height = 0.05
+45.1737 	EXP 	cue_stim_guessing_resp: height = 0.05
+45.1737 	EXP 	cue_stim_guessing_resp: text = 'Park'
+45.1737 	EXP 	dash_stim_guessing_resp: autoDraw = True
+45.1737 	EXP 	cue_stim_guessing_resp: autoDraw = True
+45.1737 	EXP 	guess_stim_resp: autoDraw = True
+45.1737 	EXP 	guess_question: autoDraw = True
+46.6741 	EXP 	dash_stim_guessing_resp: autoDraw = False
+46.6741 	EXP 	cue_stim_guessing_resp: autoDraw = False
+46.6741 	EXP 	guess_stim_resp: autoDraw = False
+46.6741 	EXP 	guess_question: autoDraw = False
+46.6741 	EXP 	dash_stim_guessing_resp: autoDraw = False
+46.6741 	EXP 	cue_stim_guessing_resp: autoDraw = False
+46.6741 	EXP 	guess_stim_resp: autoDraw = False
+46.6741 	EXP 	guess_question: autoDraw = False
+46.6741 	EXP 	no_response_feedback: text = 'Ihre Antwort: \nKeine Antwort gegeben.'
+46.6741 	EXP 	no_response_feedback: autoDraw = True
+48.1741 	EXP 	no_response_feedback: autoDraw = False
+48.1741 	EXP 	no_response_feedback: autoDraw = False
+48.1741 	EXP 	guess_delay_cross: autoDraw = True
+51.1742 	INFO 	Keyboard events cleared
+51.1739 	EXP 	guess_delay_cross: autoDraw = False
+51.1739 	EXP 	guess_delay_cross: autoDraw = False
+51.1739 	EXP 	cue_stim_learning: height = 0.05
+51.1739 	EXP 	cue_stim_learning: height = 0.05
+51.1739 	EXP 	cue_stim_learning: height = 0.05
+51.1739 	EXP 	cue_stim_learning: text = 'Park'
+51.1739 	EXP 	target_stim: height = 0.05
+51.1739 	EXP 	target_stim: height = 0.05
+51.1739 	EXP 	target_stim: height = 0.05
+51.1739 	EXP 	target_stim: text = 'Spielplatz'
+51.1739 	EXP 	dash_stim_learning: autoDraw = True
+51.1739 	EXP 	cue_stim_learning: autoDraw = True
+51.1739 	EXP 	target_stim: autoDraw = True
+54.1597 	EXP 	New trial (rep=0, index=3): <Trial 3 (3 in rep 0) data={'cue': 'Hund', 'target': 'Pfote', 'thisN': 3, 'thisTrialN': 3, 'thisRepN': 0}>
+54.1747 	EXP 	dash_stim_learning: autoDraw = False
+54.1747 	EXP 	cue_stim_learning: autoDraw = False
+54.1747 	EXP 	target_stim: autoDraw = False
+54.1747 	EXP 	iti_practice_blank: autoDraw = True
+56.1741 	EXP 	iti_practice_blank: autoDraw = False
+56.1741 	EXP 	cue_stim_guessing: height = 0.05
+56.1741 	EXP 	cue_stim_guessing: height = 0.05
+56.1741 	EXP 	cue_stim_guessing: height = 0.05
+56.1741 	EXP 	cue_stim_guessing: text = 'Hund'
+56.1741 	EXP 	dash_stim_guessing: autoDraw = False
+56.1741 	EXP 	cue_stim_guessing: autoDraw = False
+56.1741 	EXP 	guess_stim: autoDraw = False
+56.1741 	EXP 	cue_stim_guessing_resp: height = 0.05
+56.1741 	EXP 	cue_stim_guessing_resp: height = 0.05
+56.1741 	EXP 	cue_stim_guessing_resp: height = 0.05
+56.1741 	EXP 	cue_stim_guessing_resp: text = 'Hund'
+56.1741 	EXP 	dash_stim_guessing_resp: autoDraw = False
+56.1741 	EXP 	cue_stim_guessing_resp: autoDraw = False
+56.1741 	EXP 	guess_stim_resp: autoDraw = False
+56.1741 	EXP 	guess_question: autoDraw = False
+56.1741 	EXP 	no_response_feedback: text = 'Ihre Antwort: \nKeine Antwort gegeben.'
+56.1741 	EXP 	no_response_feedback: autoDraw = True
+56.1907 	INFO 	Keyboard events cleared
+56.1905 	EXP 	no_response_feedback: autoDraw = False
+56.1905 	EXP 	no_response_feedback: autoDraw = False
+56.1905 	EXP 	guess_delay_cross: autoDraw = False
+56.1905 	EXP 	cue_stim_learning: height = 0.05
+56.1905 	EXP 	cue_stim_learning: height = 0.05
+56.1905 	EXP 	cue_stim_learning: height = 0.05
+56.1905 	EXP 	cue_stim_learning: text = 'Hund'
+56.1905 	EXP 	target_stim: height = 0.05
+56.1905 	EXP 	target_stim: height = 0.05
+56.1905 	EXP 	target_stim: height = 0.05
+56.1905 	EXP 	target_stim: text = 'Pfote'
+56.1905 	EXP 	dash_stim_learning: autoDraw = True
+56.1905 	EXP 	cue_stim_learning: autoDraw = True
+56.1905 	EXP 	target_stim: autoDraw = True
+59.1914 	INFO 	Keyboard events cleared
+59.1910 	EXP 	dash_stim_learning: autoDraw = False
+59.1910 	EXP 	cue_stim_learning: autoDraw = False
+59.1910 	EXP 	target_stim: autoDraw = False
+59.1910 	EXP 	dash_stim_learning: autoDraw = False
+59.1910 	EXP 	cue_stim_learning: autoDraw = False
+59.1910 	EXP 	target_stim: autoDraw = False
+59.1910 	EXP 	start_task_text: autoDraw = True
+60.5484 	DATA 	Mouse: Left button down, pos=(472,291)
+60.6778 	DATA 	Mouse:  Left button up, pos=(473,291)
+61.9934 	DATA 	Keypress: 1
+62.0074 	INFO 	Keyboard events cleared
+62.0072 	EXP 	start_task_text: autoDraw = False
+62.0072 	EXP 	ready_set_text: autoDraw = True
+63.7099 	DATA 	Keypress: space
+63.7243 	INFO 	Keyboard events cleared
+63.7240 	EXP 	ready_set_text: autoDraw = False
+63.7240 	EXP 	starting_soon: autoDraw = True
+65.5590 	DATA 	Keypress: p
+65.5738 	EXP 	starting_soon: autoDraw = False
+65.5738 	EXP 	begin_run_cross: autoDraw = True
+74.5645 	DEBUG 	Read excel file with openpyxl: cue_target_pairs.xlsx
+74.5657 	EXP 	Imported cue_target_pairs.xlsx as conditions, 4 conditions, 2 params
+74.5659 	EXP 	New trial (rep=0, index=0): <Trial 0 (0 in rep 0) data={'cue': 'Chips', 'target': 'Salz', 'thisN': 0, 'thisTrialN': 0, 'thisRepN': 0}>
+74.5740 	INFO 	Keyboard events cleared
+74.5738 	EXP 	begin_run_cross: autoDraw = False
+74.5738 	EXP 	cue_stim_guessing: height = 0.05
+74.5738 	EXP 	cue_stim_guessing: height = 0.05
+74.5738 	EXP 	cue_stim_guessing: height = 0.05
+74.5738 	EXP 	cue_stim_guessing: text = 'Chips'
+74.5738 	EXP 	dash_stim_guessing: autoDraw = False
+74.5738 	EXP 	cue_stim_guessing: autoDraw = False
+74.5738 	EXP 	guess_stim: autoDraw = False
+74.5738 	EXP 	cue_stim_guessing_resp: height = 0.05
+74.5738 	EXP 	cue_stim_guessing_resp: height = 0.05
+74.5738 	EXP 	cue_stim_guessing_resp: height = 0.05
+74.5738 	EXP 	cue_stim_guessing_resp: text = 'Chips'
+74.5738 	EXP 	dash_stim_guessing_resp: autoDraw = False
+74.5738 	EXP 	cue_stim_guessing_resp: autoDraw = False
+74.5738 	EXP 	guess_stim_resp: autoDraw = False
+74.5738 	EXP 	guess_question: autoDraw = False
+74.5738 	EXP 	guess_delay_cross: autoDraw = False
+74.5738 	EXP 	cue_stim_learning: height = 0.05
+74.5738 	EXP 	cue_stim_learning: height = 0.05
+74.5738 	EXP 	cue_stim_learning: height = 0.05
+74.5738 	EXP 	cue_stim_learning: text = 'Chips'
+74.5738 	EXP 	target_stim: height = 0.05
+74.5738 	EXP 	target_stim: height = 0.05
+74.5738 	EXP 	target_stim: height = 0.05
+74.5738 	EXP 	target_stim: text = 'Salz'
+74.5738 	EXP 	dash_stim_learning: autoDraw = True
+74.5738 	EXP 	cue_stim_learning: autoDraw = True
+74.5738 	EXP 	target_stim: autoDraw = True
+77.5743 	EXP 	dash_stim_learning: autoDraw = False
+77.5743 	EXP 	cue_stim_learning: autoDraw = False
+77.5743 	EXP 	target_stim: autoDraw = False
+77.5743 	EXP 	dash_stim_learning: autoDraw = False
+77.5743 	EXP 	cue_stim_learning: autoDraw = False
+77.5743 	EXP 	target_stim: autoDraw = False
+77.5743 	EXP 	iti_cross: autoDraw = True
+82.0586 	EXP 	New trial (rep=0, index=1): <Trial 1 (1 in rep 0) data={'cue': 'Experiment', 'target': 'Versuch', 'thisN': 1, 'thisTrialN': 1, 'thisRepN': 0}>
+82.0743 	INFO 	Keyboard events cleared
+82.0740 	EXP 	iti_cross: autoDraw = False
+82.0740 	EXP 	iti_cross: autoDraw = False
+82.0740 	EXP 	task_break_text: autoDraw = False
+82.0740 	EXP 	end_run_cross: autoDraw = False
+82.0740 	EXP 	ready_set_text: autoDraw = False
+82.0740 	EXP 	starting_soon: autoDraw = False
+82.0740 	EXP 	cue_stim_guessing: height = 0.05
+82.0740 	EXP 	cue_stim_guessing: height = 0.05
+82.0740 	EXP 	cue_stim_guessing: height = 0.05
+82.0740 	EXP 	cue_stim_guessing: text = 'Experiment'
+82.0740 	EXP 	dash_stim_guessing: autoDraw = False
+82.0740 	EXP 	cue_stim_guessing: autoDraw = False
+82.0740 	EXP 	guess_stim: autoDraw = False
+82.0740 	EXP 	cue_stim_guessing_resp: height = 0.05
+82.0740 	EXP 	cue_stim_guessing_resp: height = 0.05
+82.0740 	EXP 	cue_stim_guessing_resp: height = 0.05
+82.0740 	EXP 	cue_stim_guessing_resp: text = 'Experiment'
+82.0740 	EXP 	dash_stim_guessing_resp: autoDraw = False
+82.0740 	EXP 	cue_stim_guessing_resp: autoDraw = False
+82.0740 	EXP 	guess_stim_resp: autoDraw = False
+82.0740 	EXP 	guess_question: autoDraw = False
+82.0740 	EXP 	guess_delay_cross: autoDraw = False
+82.0740 	EXP 	cue_stim_learning: height = 0.05
+82.0740 	EXP 	cue_stim_learning: height = 0.05
+82.0740 	EXP 	cue_stim_learning: height = 0.05
+82.0740 	EXP 	cue_stim_learning: text = 'Experiment'
+82.0740 	EXP 	target_stim: height = 0.05
+82.0740 	EXP 	target_stim: height = 0.05
+82.0740 	EXP 	target_stim: height = 0.05
+82.0740 	EXP 	target_stim: text = 'Versuch'
+82.0740 	EXP 	dash_stim_learning: autoDraw = True
+82.0740 	EXP 	cue_stim_learning: autoDraw = True
+82.0740 	EXP 	target_stim: autoDraw = True
+85.0735 	EXP 	dash_stim_learning: autoDraw = False
+85.0735 	EXP 	cue_stim_learning: autoDraw = False
+85.0735 	EXP 	target_stim: autoDraw = False
+85.0735 	EXP 	dash_stim_learning: autoDraw = False
+85.0735 	EXP 	cue_stim_learning: autoDraw = False
+85.0735 	EXP 	target_stim: autoDraw = False
+85.0735 	EXP 	iti_cross: autoDraw = True
+91.0610 	EXP 	New trial (rep=0, index=2): <Trial 2 (2 in rep 0) data={'cue': 'Definition', 'target': 'Begriff', 'thisN': 2, 'thisTrialN': 2, 'thisRepN': 0}>
+91.0742 	INFO 	Keyboard events cleared
+91.0739 	EXP 	iti_cross: autoDraw = False
+91.0739 	EXP 	iti_cross: autoDraw = False
+91.0739 	EXP 	task_break_text: autoDraw = False
+91.0739 	EXP 	end_run_cross: autoDraw = False
+91.0739 	EXP 	ready_set_text: autoDraw = False
+91.0739 	EXP 	starting_soon: autoDraw = False
+91.0739 	EXP 	cue_stim_guessing: height = 0.05
+91.0739 	EXP 	cue_stim_guessing: height = 0.05
+91.0739 	EXP 	cue_stim_guessing: height = 0.05
+91.0739 	EXP 	cue_stim_guessing: text = 'Definition'
+91.0739 	EXP 	dash_stim_guessing: autoDraw = True
+91.0739 	EXP 	cue_stim_guessing: autoDraw = True
+91.0739 	EXP 	guess_stim: autoDraw = True
+94.0736 	INFO 	Keyboard events cleared
+94.0735 	EXP 	dash_stim_guessing: autoDraw = False
+94.0735 	EXP 	cue_stim_guessing: autoDraw = False
+94.0735 	EXP 	guess_stim: autoDraw = False
+94.0735 	EXP 	dash_stim_guessing: autoDraw = False
+94.0735 	EXP 	cue_stim_guessing: autoDraw = False
+94.0735 	EXP 	guess_stim: autoDraw = False
+94.0735 	EXP 	cue_stim_guessing_resp: height = 0.05
+94.0735 	EXP 	cue_stim_guessing_resp: height = 0.05
+94.0735 	EXP 	cue_stim_guessing_resp: height = 0.05
+94.0735 	EXP 	cue_stim_guessing_resp: text = 'Definition'
+94.0735 	EXP 	dash_stim_guessing_resp: autoDraw = True
+94.0735 	EXP 	cue_stim_guessing_resp: autoDraw = True
+94.0735 	EXP 	guess_stim_resp: autoDraw = True
+94.0735 	EXP 	guess_question: autoDraw = True
+95.5739 	EXP 	dash_stim_guessing_resp: autoDraw = False
+95.5739 	EXP 	cue_stim_guessing_resp: autoDraw = False
+95.5739 	EXP 	guess_stim_resp: autoDraw = False
+95.5739 	EXP 	guess_question: autoDraw = False
+95.5739 	EXP 	dash_stim_guessing_resp: autoDraw = False
+95.5739 	EXP 	cue_stim_guessing_resp: autoDraw = False
+95.5739 	EXP 	guess_stim_resp: autoDraw = False
+95.5739 	EXP 	guess_question: autoDraw = False
+95.5739 	EXP 	guess_delay_cross: autoDraw = True
+98.5739 	INFO 	Keyboard events cleared
+98.5737 	EXP 	guess_delay_cross: autoDraw = False
+98.5737 	EXP 	guess_delay_cross: autoDraw = False
+98.5737 	EXP 	cue_stim_learning: height = 0.05
+98.5737 	EXP 	cue_stim_learning: height = 0.05
+98.5737 	EXP 	cue_stim_learning: height = 0.05
+98.5737 	EXP 	cue_stim_learning: text = 'Definition'
+98.5737 	EXP 	target_stim: height = 0.05
+98.5737 	EXP 	target_stim: height = 0.05
+98.5737 	EXP 	target_stim: height = 0.05
+98.5737 	EXP 	target_stim: text = 'Begriff'
+98.5737 	EXP 	dash_stim_learning: autoDraw = True
+98.5737 	EXP 	cue_stim_learning: autoDraw = True
+98.5737 	EXP 	target_stim: autoDraw = True
+101.5739 	EXP 	dash_stim_learning: autoDraw = False
+101.5739 	EXP 	cue_stim_learning: autoDraw = False
+101.5739 	EXP 	target_stim: autoDraw = False
+101.5739 	EXP 	dash_stim_learning: autoDraw = False
+101.5739 	EXP 	cue_stim_learning: autoDraw = False
+101.5739 	EXP 	target_stim: autoDraw = False
+101.5739 	EXP 	iti_cross: autoDraw = True
+109.0624 	EXP 	New trial (rep=0, index=3): <Trial 3 (3 in rep 0) data={'cue': 'Akrobatin', 'target': 'Seil', 'thisN': 3, 'thisTrialN': 3, 'thisRepN': 0}>
+109.0738 	INFO 	Keyboard events cleared
+109.0736 	EXP 	iti_cross: autoDraw = False
+109.0736 	EXP 	iti_cross: autoDraw = False
+109.0736 	EXP 	task_break_text: autoDraw = False
+109.0736 	EXP 	end_run_cross: autoDraw = False
+109.0736 	EXP 	ready_set_text: autoDraw = False
+109.0736 	EXP 	starting_soon: autoDraw = False
+109.0736 	EXP 	cue_stim_guessing: height = 0.05
+109.0736 	EXP 	cue_stim_guessing: height = 0.05
+109.0736 	EXP 	cue_stim_guessing: height = 0.05
+109.0736 	EXP 	cue_stim_guessing: text = 'Akrobatin'
+109.0736 	EXP 	dash_stim_guessing: autoDraw = False
+109.0736 	EXP 	cue_stim_guessing: autoDraw = False
+109.0736 	EXP 	guess_stim: autoDraw = False
+109.0736 	EXP 	cue_stim_guessing_resp: height = 0.05
+109.0736 	EXP 	cue_stim_guessing_resp: height = 0.05
+109.0736 	EXP 	cue_stim_guessing_resp: height = 0.05
+109.0736 	EXP 	cue_stim_guessing_resp: text = 'Akrobatin'
+109.0736 	EXP 	dash_stim_guessing_resp: autoDraw = False
+109.0736 	EXP 	cue_stim_guessing_resp: autoDraw = False
+109.0736 	EXP 	guess_stim_resp: autoDraw = False
+109.0736 	EXP 	guess_question: autoDraw = False
+109.0736 	EXP 	guess_delay_cross: autoDraw = False
+109.0736 	EXP 	cue_stim_learning: height = 0.05
+109.0736 	EXP 	cue_stim_learning: height = 0.05
+109.0736 	EXP 	cue_stim_learning: height = 0.05
+109.0736 	EXP 	cue_stim_learning: text = 'Akrobatin'
+109.0736 	EXP 	target_stim: height = 0.05
+109.0736 	EXP 	target_stim: height = 0.05
+109.0736 	EXP 	target_stim: height = 0.05
+109.0736 	EXP 	target_stim: text = 'Seil'
+109.0736 	EXP 	dash_stim_learning: autoDraw = True
+109.0736 	EXP 	cue_stim_learning: autoDraw = True
+109.0736 	EXP 	target_stim: autoDraw = True
+112.0738 	EXP 	dash_stim_learning: autoDraw = False
+112.0738 	EXP 	cue_stim_learning: autoDraw = False
+112.0738 	EXP 	target_stim: autoDraw = False
+112.0738 	EXP 	dash_stim_learning: autoDraw = False
+112.0738 	EXP 	cue_stim_learning: autoDraw = False
+112.0738 	EXP 	target_stim: autoDraw = False
+112.0738 	EXP 	iti_cross: autoDraw = True
+121.0746 	INFO 	Keyboard events cleared
+121.0741 	EXP 	iti_cross: autoDraw = False
+121.0741 	EXP 	iti_cross: autoDraw = False
+121.0741 	EXP 	task_break_text: autoDraw = False
+121.0741 	EXP 	end_run_cross: autoDraw = False
+121.0741 	EXP 	ready_set_text: autoDraw = False
+121.0741 	EXP 	starting_soon: autoDraw = False
+121.0741 	EXP 	end_part1_text: autoDraw = True
+136.0126 	DATA 	Keypress: 1
+136.0243 	INFO 	Keyboard events cleared
+136.0240 	EXP 	end_part1_text: autoDraw = False
+136.0240 	EXP 	recall_instructions1_text: autoDraw = True
+143.8457 	DATA 	Keypress: 1
+143.8579 	INFO 	Keyboard events cleared
+143.8576 	EXP 	recall_instructions1_text: autoDraw = False
+143.8576 	EXP 	recall_instructions1_text_2: autoDraw = True
+145.2281 	DATA 	Keypress: 1
+145.2494 	DEBUG 	Read excel file with openpyxl: practice.xlsx
+145.2495 	EXP 	Imported practice.xlsx as conditions, 4 conditions, 2 params
+145.2497 	EXP 	New trial (rep=0, index=0): <Trial 0 (0 in rep 0) data={'cue': 'Frühstück', 'target': 'Brot', 'thisN': 0, 'thisTrialN': 0, 'thisRepN': 0}>
+145.2569 	EXP 	recall_instructions1_text_2: autoDraw = False
+145.2569 	EXP 	iti_recall_practice_cross: autoDraw = True
+147.2575 	INFO 	Keyboard events cleared
+147.2572 	EXP 	iti_recall_practice_cross: autoDraw = False
+147.2572 	EXP 	iti_recall_practice_cross: autoDraw = False
+147.2572 	EXP 	cue_stim_recall: height = 0.05
+147.2572 	EXP 	cue_stim_recall: height = 0.05
+147.2572 	EXP 	cue_stim_recall: height = 0.05
+147.2572 	EXP 	cue_stim_recall: text = 'Frühstück'
+147.2572 	EXP 	cue_stim_recall: autoDraw = True
+147.2572 	EXP 	dash_stim_recall: autoDraw = True
+147.2572 	EXP 	qmark_target: autoDraw = True
+150.2572 	INFO 	Keyboard events cleared
+150.2570 	EXP 	cue_stim_recall: autoDraw = False
+150.2570 	EXP 	dash_stim_recall: autoDraw = False
+150.2570 	EXP 	qmark_target: autoDraw = False
+150.2570 	EXP 	cue_stim_recall: autoDraw = False
+150.2570 	EXP 	dash_stim_recall: autoDraw = False
+150.2570 	EXP 	qmark_target: autoDraw = False
+150.2570 	EXP 	cue_stim_recall_resp: height = 0.05
+150.2570 	EXP 	cue_stim_recall_resp: height = 0.05
+150.2570 	EXP 	cue_stim_recall_resp: height = 0.05
+150.2570 	EXP 	cue_stim_recall_resp: text = 'Frühstück'
+150.2570 	EXP 	dash_stim_recall_resp: autoDraw = True
+150.2570 	EXP 	cue_stim_recall_resp: autoDraw = True
+150.2570 	EXP 	recall_stim_resp: autoDraw = True
+150.2570 	EXP 	recall_question: autoDraw = True
+151.7300 	DATA 	Keypress: 1
+152.2738 	INFO 	Keyboard events cleared
+152.2736 	EXP 	dash_stim_recall_resp: autoDraw = False
+152.2736 	EXP 	cue_stim_recall_resp: autoDraw = False
+152.2736 	EXP 	recall_stim_resp: autoDraw = False
+152.2736 	EXP 	recall_question: autoDraw = False
+152.2736 	EXP 	dash_stim_recall_resp: autoDraw = False
+152.2736 	EXP 	cue_stim_recall_resp: autoDraw = False
+152.2736 	EXP 	recall_stim_resp: autoDraw = False
+152.2736 	EXP 	recall_question: autoDraw = False
+152.2736 	EXP 	cue_stim_recall_select: height = 0.05
+152.2736 	EXP 	cue_stim_recall_select: height = 0.05
+152.2736 	EXP 	cue_stim_recall_select: height = 0.05
+152.2736 	EXP 	cue_stim_recall_select: text = 'Frühstück'
+152.2736 	EXP 	recall_question_select: height = 0.05
+152.2736 	EXP 	recall_question_select: height = 0.05
+152.2736 	EXP 	recall_question_select: height = 0.05
+152.2736 	EXP 	recall_question_select: text = 'Wählen Sie den letzten Buchstaben des Wortes mit einer Zahlentaste.\n1) m        2) t        3) j        4) d'
+152.2736 	EXP 	dash_stim_recall_select: autoDraw = False
+152.2736 	EXP 	cue_stim_recall_select: autoDraw = False
+152.2736 	EXP 	recall_stim_select: autoDraw = False
+152.2736 	EXP 	recall_question_select: autoDraw = False
+152.2736 	EXP 	cue_stim_feedback: height = 0.05
+152.2736 	EXP 	cue_stim_feedback: height = 0.05
+152.2736 	EXP 	cue_stim_feedback: height = 0.05
+152.2736 	EXP 	cue_stim_feedback: text = 'Frühstück'
+152.2736 	EXP 	target_stim_feedback: height = 0.05
+152.2736 	EXP 	target_stim_feedback: height = 0.05
+152.2736 	EXP 	target_stim_feedback: height = 0.05
+152.2736 	EXP 	target_stim_feedback: text = 'Brot'
+152.2736 	EXP 	recall_feedback2: height = 0.05
+152.2736 	EXP 	recall_feedback2: height = 0.05
+152.2736 	EXP 	recall_feedback2: height = 0.05
+152.2736 	EXP 	recall_feedback2: text = 't'
+152.2736 	EXP 	dash_stim_feedback: autoDraw = True
+152.2736 	EXP 	cue_stim_feedback: autoDraw = True
+152.2736 	EXP 	target_stim_feedback: autoDraw = True
+152.2736 	EXP 	recall_feedback1: autoDraw = True
+152.2736 	EXP 	recall_feedback2: autoDraw = True
+155.2597 	EXP 	New trial (rep=0, index=1): <Trial 1 (1 in rep 0) data={'cue': 'Wand', 'target': 'Fenster', 'thisN': 1, 'thisTrialN': 1, 'thisRepN': 0}>
+155.2744 	EXP 	dash_stim_feedback: autoDraw = False
+155.2744 	EXP 	cue_stim_feedback: autoDraw = False
+155.2744 	EXP 	target_stim_feedback: autoDraw = False
+155.2744 	EXP 	recall_feedback1: autoDraw = False
+155.2744 	EXP 	recall_feedback2: autoDraw = False
+155.2744 	EXP 	iti_recall_practice_cross: autoDraw = True
+157.2747 	INFO 	Keyboard events cleared
+157.2743 	EXP 	iti_recall_practice_cross: autoDraw = False
+157.2743 	EXP 	cue_stim_recall: height = 0.05
+157.2743 	EXP 	cue_stim_recall: height = 0.05
+157.2743 	EXP 	cue_stim_recall: height = 0.05
+157.2743 	EXP 	cue_stim_recall: text = 'Wand'
+157.2743 	EXP 	cue_stim_recall: autoDraw = True
+157.2743 	EXP 	dash_stim_recall: autoDraw = True
+157.2743 	EXP 	qmark_target: autoDraw = True
+160.2743 	INFO 	Keyboard events cleared
+160.2740 	EXP 	cue_stim_recall: autoDraw = False
+160.2740 	EXP 	dash_stim_recall: autoDraw = False
+160.2740 	EXP 	qmark_target: autoDraw = False
+160.2740 	EXP 	cue_stim_recall_resp: height = 0.05
+160.2740 	EXP 	cue_stim_recall_resp: height = 0.05
+160.2740 	EXP 	cue_stim_recall_resp: height = 0.05
+160.2740 	EXP 	cue_stim_recall_resp: text = 'Wand'
+160.2740 	EXP 	dash_stim_recall_resp: autoDraw = True
+160.2740 	EXP 	cue_stim_recall_resp: autoDraw = True
+160.2740 	EXP 	recall_stim_resp: autoDraw = True
+160.2740 	EXP 	recall_question: autoDraw = True
+160.8110 	DATA 	Keypress: 1
+162.2739 	INFO 	Keyboard events cleared
+162.2737 	EXP 	dash_stim_recall_resp: autoDraw = False
+162.2737 	EXP 	cue_stim_recall_resp: autoDraw = False
+162.2737 	EXP 	recall_stim_resp: autoDraw = False
+162.2737 	EXP 	recall_question: autoDraw = False
+162.2737 	EXP 	cue_stim_recall_select: height = 0.05
+162.2737 	EXP 	cue_stim_recall_select: height = 0.05
+162.2737 	EXP 	cue_stim_recall_select: height = 0.05
+162.2737 	EXP 	cue_stim_recall_select: text = 'Wand'
+162.2737 	EXP 	recall_question_select: height = 0.05
+162.2737 	EXP 	recall_question_select: height = 0.05
+162.2737 	EXP 	recall_question_select: height = 0.05
+162.2737 	EXP 	recall_question_select: text = 'Wählen Sie den letzten Buchstaben des Wortes mit einer Zahlentaste.\n1) c        2) l        3) a        4) r'
+162.2737 	EXP 	dash_stim_recall_select: autoDraw = False
+162.2737 	EXP 	cue_stim_recall_select: autoDraw = False
+162.2737 	EXP 	recall_stim_select: autoDraw = False
+162.2737 	EXP 	recall_question_select: autoDraw = False
+162.2737 	EXP 	cue_stim_feedback: height = 0.05
+162.2737 	EXP 	cue_stim_feedback: height = 0.05
+162.2737 	EXP 	cue_stim_feedback: height = 0.05
+162.2737 	EXP 	cue_stim_feedback: text = 'Wand'
+162.2737 	EXP 	target_stim_feedback: height = 0.05
+162.2737 	EXP 	target_stim_feedback: height = 0.05
+162.2737 	EXP 	target_stim_feedback: height = 0.05
+162.2737 	EXP 	target_stim_feedback: text = 'Fenster'
+162.2737 	EXP 	recall_feedback2: height = 0.05
+162.2737 	EXP 	recall_feedback2: height = 0.05
+162.2737 	EXP 	recall_feedback2: height = 0.05
+162.2737 	EXP 	recall_feedback2: text = 'r'
+162.2737 	EXP 	dash_stim_feedback: autoDraw = True
+162.2737 	EXP 	cue_stim_feedback: autoDraw = True
+162.2737 	EXP 	target_stim_feedback: autoDraw = True
+162.2737 	EXP 	recall_feedback1: autoDraw = True
+162.2737 	EXP 	recall_feedback2: autoDraw = True
+165.2608 	EXP 	New trial (rep=0, index=2): <Trial 2 (2 in rep 0) data={'cue': 'Hund', 'target': 'Pfote', 'thisN': 2, 'thisTrialN': 2, 'thisRepN': 0}>
+165.2741 	EXP 	dash_stim_feedback: autoDraw = False
+165.2741 	EXP 	cue_stim_feedback: autoDraw = False
+165.2741 	EXP 	target_stim_feedback: autoDraw = False
+165.2741 	EXP 	recall_feedback1: autoDraw = False
+165.2741 	EXP 	recall_feedback2: autoDraw = False
+165.2741 	EXP 	dash_stim_feedback: autoDraw = False
+165.2741 	EXP 	cue_stim_feedback: autoDraw = False
+165.2741 	EXP 	target_stim_feedback: autoDraw = False
+165.2741 	EXP 	recall_feedback1: autoDraw = False
+165.2741 	EXP 	recall_feedback2: autoDraw = False
+165.2741 	EXP 	iti_recall_practice_cross: autoDraw = True
+167.2741 	INFO 	Keyboard events cleared
+167.2738 	EXP 	iti_recall_practice_cross: autoDraw = False
+167.2738 	EXP 	iti_recall_practice_cross: autoDraw = False
+167.2738 	EXP 	cue_stim_recall: height = 0.05
+167.2738 	EXP 	cue_stim_recall: height = 0.05
+167.2738 	EXP 	cue_stim_recall: height = 0.05
+167.2738 	EXP 	cue_stim_recall: text = 'Hund'
+167.2738 	EXP 	cue_stim_recall: autoDraw = True
+167.2738 	EXP 	dash_stim_recall: autoDraw = True
+167.2738 	EXP 	qmark_target: autoDraw = True
+170.2745 	INFO 	Keyboard events cleared
+170.2741 	EXP 	cue_stim_recall: autoDraw = False
+170.2741 	EXP 	dash_stim_recall: autoDraw = False
+170.2741 	EXP 	qmark_target: autoDraw = False
+170.2741 	EXP 	cue_stim_recall: autoDraw = False
+170.2741 	EXP 	dash_stim_recall: autoDraw = False
+170.2741 	EXP 	qmark_target: autoDraw = False
+170.2741 	EXP 	cue_stim_recall_resp: height = 0.05
+170.2741 	EXP 	cue_stim_recall_resp: height = 0.05
+170.2741 	EXP 	cue_stim_recall_resp: height = 0.05
+170.2741 	EXP 	cue_stim_recall_resp: text = 'Hund'
+170.2741 	EXP 	dash_stim_recall_resp: autoDraw = True
+170.2741 	EXP 	cue_stim_recall_resp: autoDraw = True
+170.2741 	EXP 	recall_stim_resp: autoDraw = True
+170.2741 	EXP 	recall_question: autoDraw = True
+171.5789 	DATA 	Keypress: 2
+172.2737 	INFO 	Keyboard events cleared
+172.2735 	EXP 	dash_stim_recall_resp: autoDraw = False
+172.2735 	EXP 	cue_stim_recall_resp: autoDraw = False
+172.2735 	EXP 	recall_stim_resp: autoDraw = False
+172.2735 	EXP 	recall_question: autoDraw = False
+172.2735 	EXP 	dash_stim_recall_resp: autoDraw = False
+172.2735 	EXP 	cue_stim_recall_resp: autoDraw = False
+172.2735 	EXP 	recall_stim_resp: autoDraw = False
+172.2735 	EXP 	recall_question: autoDraw = False
+172.2735 	EXP 	cue_stim_recall_select: height = 0.05
+172.2735 	EXP 	cue_stim_recall_select: height = 0.05
+172.2735 	EXP 	cue_stim_recall_select: height = 0.05
+172.2735 	EXP 	cue_stim_recall_select: text = 'Hund'
+172.2735 	EXP 	recall_question_select: height = 0.05
+172.2735 	EXP 	recall_question_select: height = 0.05
+172.2735 	EXP 	recall_question_select: height = 0.05
+172.2735 	EXP 	recall_question_select: text = 'Wählen Sie den letzten Buchstaben des Wortes mit einer Zahlentaste.\n1) r        2) o        3) l        4) e'
+172.2735 	EXP 	dash_stim_recall_select: autoDraw = True
+172.2735 	EXP 	cue_stim_recall_select: autoDraw = True
+172.2735 	EXP 	recall_stim_select: autoDraw = True
+172.2735 	EXP 	recall_question_select: autoDraw = True
+174.5613 	DATA 	Keypress: 4
+175.2738 	INFO 	Keyboard events cleared
+175.2737 	EXP 	dash_stim_recall_select: autoDraw = False
+175.2737 	EXP 	cue_stim_recall_select: autoDraw = False
+175.2737 	EXP 	recall_stim_select: autoDraw = False
+175.2737 	EXP 	recall_question_select: autoDraw = False
+175.2737 	EXP 	dash_stim_recall_select: autoDraw = False
+175.2737 	EXP 	cue_stim_recall_select: autoDraw = False
+175.2737 	EXP 	recall_stim_select: autoDraw = False
+175.2737 	EXP 	recall_question_select: autoDraw = False
+175.2737 	EXP 	cue_stim_feedback: height = 0.05
+175.2737 	EXP 	cue_stim_feedback: height = 0.05
+175.2737 	EXP 	cue_stim_feedback: height = 0.05
+175.2737 	EXP 	cue_stim_feedback: text = 'Hund'
+175.2737 	EXP 	target_stim_feedback: height = 0.05
+175.2737 	EXP 	target_stim_feedback: height = 0.05
+175.2737 	EXP 	target_stim_feedback: height = 0.05
+175.2737 	EXP 	target_stim_feedback: text = 'Pfote'
+175.2737 	EXP 	recall_feedback2: height = 0.05
+175.2737 	EXP 	recall_feedback2: height = 0.05
+175.2737 	EXP 	recall_feedback2: height = 0.05
+175.2737 	EXP 	recall_feedback2: text = 'e'
+175.2737 	EXP 	dash_stim_feedback: autoDraw = True
+175.2737 	EXP 	cue_stim_feedback: autoDraw = True
+175.2737 	EXP 	target_stim_feedback: autoDraw = True
+175.2737 	EXP 	recall_feedback1: autoDraw = True
+175.2737 	EXP 	recall_feedback2: autoDraw = True
+178.2599 	EXP 	New trial (rep=0, index=3): <Trial 3 (3 in rep 0) data={'cue': 'Park', 'target': 'Spielplatz', 'thisN': 3, 'thisTrialN': 3, 'thisRepN': 0}>
+178.2742 	EXP 	dash_stim_feedback: autoDraw = False
+178.2742 	EXP 	cue_stim_feedback: autoDraw = False
+178.2742 	EXP 	target_stim_feedback: autoDraw = False
+178.2742 	EXP 	recall_feedback1: autoDraw = False
+178.2742 	EXP 	recall_feedback2: autoDraw = False
+178.2742 	EXP 	dash_stim_feedback: autoDraw = False
+178.2742 	EXP 	cue_stim_feedback: autoDraw = False
+178.2742 	EXP 	target_stim_feedback: autoDraw = False
+178.2742 	EXP 	recall_feedback1: autoDraw = False
+178.2742 	EXP 	recall_feedback2: autoDraw = False
+178.2742 	EXP 	iti_recall_practice_cross: autoDraw = True
+180.2744 	INFO 	Keyboard events cleared
+180.2741 	EXP 	iti_recall_practice_cross: autoDraw = False
+180.2741 	EXP 	iti_recall_practice_cross: autoDraw = False
+180.2741 	EXP 	cue_stim_recall: height = 0.05
+180.2741 	EXP 	cue_stim_recall: height = 0.05
+180.2741 	EXP 	cue_stim_recall: height = 0.05
+180.2741 	EXP 	cue_stim_recall: text = 'Park'
+180.2741 	EXP 	cue_stim_recall: autoDraw = True
+180.2741 	EXP 	dash_stim_recall: autoDraw = True
+180.2741 	EXP 	qmark_target: autoDraw = True
+183.2743 	INFO 	Keyboard events cleared
+183.2740 	EXP 	cue_stim_recall: autoDraw = False
+183.2740 	EXP 	dash_stim_recall: autoDraw = False
+183.2740 	EXP 	qmark_target: autoDraw = False
+183.2740 	EXP 	cue_stim_recall_resp: height = 0.05
+183.2740 	EXP 	cue_stim_recall_resp: height = 0.05
+183.2740 	EXP 	cue_stim_recall_resp: height = 0.05
+183.2740 	EXP 	cue_stim_recall_resp: text = 'Park'
+183.2740 	EXP 	dash_stim_recall_resp: autoDraw = True
+183.2740 	EXP 	cue_stim_recall_resp: autoDraw = True
+183.2740 	EXP 	recall_stim_resp: autoDraw = True
+183.2740 	EXP 	recall_question: autoDraw = True
+185.2740 	INFO 	Keyboard events cleared
+185.2739 	EXP 	dash_stim_recall_resp: autoDraw = False
+185.2739 	EXP 	cue_stim_recall_resp: autoDraw = False
+185.2739 	EXP 	recall_stim_resp: autoDraw = False
+185.2739 	EXP 	recall_question: autoDraw = False
+185.2739 	EXP 	dash_stim_recall_resp: autoDraw = False
+185.2739 	EXP 	cue_stim_recall_resp: autoDraw = False
+185.2739 	EXP 	recall_stim_resp: autoDraw = False
+185.2739 	EXP 	recall_question: autoDraw = False
+185.2739 	EXP 	cue_stim_recall_select: height = 0.05
+185.2739 	EXP 	cue_stim_recall_select: height = 0.05
+185.2739 	EXP 	cue_stim_recall_select: height = 0.05
+185.2739 	EXP 	cue_stim_recall_select: text = 'Park'
+185.2739 	EXP 	recall_question_select: height = 0.05
+185.2739 	EXP 	recall_question_select: height = 0.05
+185.2739 	EXP 	recall_question_select: height = 0.05
+185.2739 	EXP 	recall_question_select: text = 'Wählen Sie den letzten Buchstaben des Wortes mit einer Zahlentaste.\n1) m        2) l        3) z        4) d'
+185.2739 	EXP 	dash_stim_recall_select: autoDraw = False
+185.2739 	EXP 	cue_stim_recall_select: autoDraw = False
+185.2739 	EXP 	recall_stim_select: autoDraw = False
+185.2739 	EXP 	recall_question_select: autoDraw = False
+185.2739 	EXP 	cue_stim_feedback: height = 0.05
+185.2739 	EXP 	cue_stim_feedback: height = 0.05
+185.2739 	EXP 	cue_stim_feedback: height = 0.05
+185.2739 	EXP 	cue_stim_feedback: text = 'Park'
+185.2739 	EXP 	target_stim_feedback: height = 0.05
+185.2739 	EXP 	target_stim_feedback: height = 0.05
+185.2739 	EXP 	target_stim_feedback: height = 0.05
+185.2739 	EXP 	target_stim_feedback: text = 'Spielplatz'
+185.2739 	EXP 	recall_feedback2: height = 0.05
+185.2739 	EXP 	recall_feedback2: height = 0.05
+185.2739 	EXP 	recall_feedback2: height = 0.05
+185.2739 	EXP 	recall_feedback2: text = 'z'
+185.2739 	EXP 	dash_stim_feedback: autoDraw = True
+185.2739 	EXP 	cue_stim_feedback: autoDraw = True
+185.2739 	EXP 	target_stim_feedback: autoDraw = True
+185.2739 	EXP 	recall_feedback1: autoDraw = True
+185.2739 	EXP 	recall_feedback2: autoDraw = True
+188.2589 	EXP 	New trial (rep=0, index=0): <Trial 0 (0 in rep 0) data={'thisN': 0, 'thisTrialN': 0, 'thisRepN': 0}>
+188.2740 	INFO 	Keyboard events cleared
+188.2738 	EXP 	dash_stim_feedback: autoDraw = False
+188.2738 	EXP 	cue_stim_feedback: autoDraw = False
+188.2738 	EXP 	target_stim_feedback: autoDraw = False
+188.2738 	EXP 	recall_feedback1: autoDraw = False
+188.2738 	EXP 	recall_feedback2: autoDraw = False
+188.2738 	EXP 	dash_stim_feedback: autoDraw = False
+188.2738 	EXP 	cue_stim_feedback: autoDraw = False
+188.2738 	EXP 	target_stim_feedback: autoDraw = False
+188.2738 	EXP 	recall_feedback1: autoDraw = False
+188.2738 	EXP 	recall_feedback2: autoDraw = False
+188.2738 	EXP 	start_task_text: autoDraw = True
+229.5656 	DATA 	Mouse: Left button down, pos=(383,304)
+229.6771 	DATA 	Mouse:  Left button up, pos=(383,304)
+230.5268 	DATA 	Keypress: 1
+230.5417 	INFO 	Keyboard events cleared
+230.5413 	EXP 	start_task_text: autoDraw = False
+230.5413 	EXP 	ready_set_text: autoDraw = True
+236.2122 	DATA 	Keypress: p
+237.2615 	DATA 	Mouse: Left button down, pos=(534,367)
+237.3940 	DATA 	Mouse:  Left button up, pos=(534,366)
+238.4959 	DATA 	Keypress: p
+240.2290 	DATA 	Mouse: Left button down, pos=(701,317)
+240.3776 	DATA 	Mouse:  Left button up, pos=(701,317)
+240.6281 	DATA 	Keypress: p
+242.1110 	DATA 	Keypress: space
+242.1244 	INFO 	Keyboard events cleared
+242.1241 	EXP 	ready_set_text: autoDraw = False
+242.1241 	EXP 	starting_soon: autoDraw = True
+242.9122 	DATA 	Keypress: p
+242.9246 	EXP 	starting_soon: autoDraw = False
+242.9246 	EXP 	begin_run_cross: autoDraw = True
+251.9164 	DEBUG 	Read excel file with openpyxl: cue_target_pairs.xlsx
+251.9176 	EXP 	Imported cue_target_pairs.xlsx as conditions, 79 conditions, 2 params
+251.9181 	EXP 	New trial (rep=0, index=0): <Trial 0 (0 in rep 0) data={'cue': 'Shampoo', 'target': 'Seife', 'thisN': 0, 'thisTrialN': 0, 'thisRepN': 0}>
+251.9458 	DEBUG 	Saving data for guess ExperimentHandler
+251.9471 	INFO 	saved data to C:\Users\LocalAdmin\Documents\GUESS\Guess_fMRI\data/p_guess_2025-04-02_11h39.07.665.psydat
+251.9512 	INFO 	saved data to 'C:\\Users\\LocalAdmin\\Documents\\GUESS\\Guess_fMRI\\data/p_guess_2025-04-02_11h39.07.665.csv'

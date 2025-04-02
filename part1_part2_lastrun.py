@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """
 This experiment was created using PsychoPy3 Experiment Builder (v2024.2.4),
-    on März 25, 2025, at 14:15
+    on April 02, 2025, at 11:44
 If you publish work using this script the most relevant publication is:
 
     Peirce J, Gray JR, Simpson S, MacAskill M, Höchenberger R, Sogo H, Kastman E, Lindeløv JK. (2019) 
@@ -43,7 +43,7 @@ psychopyVersion = '2024.2.4'
 expName = 'guess'  # from the Builder filename that created this script
 # information about this experiment
 expInfo = {
-    'ID-Nummer': f"{randint(0, 999999):06.0f}",
+    'ID-Nummer': '',
     'Alter': '',
     'Geschlecht (optional)': '',
     'date|hid': data.getDateStr(),
@@ -61,7 +61,7 @@ or run the experiment with `--pilot` as an argument. To change what pilot
 PILOTING = core.setPilotModeFromArgs()
 # start off with values from experiment settings
 _fullScr = True
-_winSize = [1024, 768]
+_winSize = [1920, 1080]
 # if in pilot mode, apply overrides according to preferences
 if PILOTING:
     # force windowed mode
@@ -127,7 +127,7 @@ def setupData(expInfo, dataDir=None):
     thisExp = data.ExperimentHandler(
         name=expName, version='',
         extraInfo=expInfo, runtimeInfo=None,
-        originPath='C:\\Users\\Nemecz\\Documents\\Guess_fMRI-main\\part1_part2_lastrun.py',
+        originPath='C:\\Users\\LocalAdmin\\Documents\\GUESS\\Guess_fMRI\\part1_part2_lastrun.py',
         savePickle=True, saveWideText=True,
         dataFileName=dataDir + os.sep + filename, sortColumns='time'
     )
@@ -494,9 +494,9 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     # import random for letter randomization
     import random as rnd
     
-    from psychopy import parallel
-    port = parallel.ParallelPort(address = 0x2FE8) 
-    pinNumber = 10 #Change to match the pin that is receiving the pulse value sent by your scanner. Set this to None to scan all pins
+    #from psychopy import parallel
+    #port = parallel.ParallelPort(address = 0x2FE8) 
+    #pinNumber = 10 #Change to match the pin that is receiving the pulse value sent by your scanner. Set this to None to scan all pins
     
     # --- Initialize components for Routine "load_guess_conditions" ---
     # Run 'Begin Experiment' code from load_guess_list
@@ -541,7 +541,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     
     # --- Initialize components for Routine "instructions4" ---
     instructions4_text = visual.TextStim(win=win, name='instructions4_text',
-        text='Sie haben 3 Sekunden Zeit, um nach dem Erscheinen des linken Wortes mindestens einen stillen Rateversuch zu machen. Danach müssen Sie angeben, ob Sie einen oder mehrere Rateversuche machen konnten, indem Sie die Tasten F, G oder H drücken.\n\nF) Keinen Rateversuch generiert G) Einen Rateversuch generiert H) Mehr als einen Rateversuch generiert\n\nDrücken Sie eine Taste, um fortzufahren.',
+        text='Sie haben 3 Sekunden Zeit, um nach dem Erscheinen des linken Wortes mindestens einen stillen Rateversuch zu machen. Danach müssen Sie angeben, ob Sie einen oder mehrere Rateversuche machen konnten, indem Sie die Tasten 1 oder 2 drücken.\n\n1) Rateversuch generiert 2) Keinen Rateversuch generiert\n\nDrücken Sie eine Taste, um fortzufahren.',
         font='Arial',
         pos=(0, 0), draggable=False, height=0.05, wrapWidth=1.2, ori=0.0, 
         color='white', colorSpace='rgb', opacity=None, 
@@ -551,7 +551,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     
     # --- Initialize components for Routine "instructions5" ---
     instructions5_text = visual.TextStim(win=win, name='instructions5_text',
-        text='Zusammenfassung:\nIhre Aufgabe ist es, so viele der auf dem Bildschirm präsentierten Wortpaare wie möglich zu lernen.\n\nManchmal wird Ihnen zunächst nur ein einzelnes Wort angezeigt, und Sie müssen raten, was das zugehörige Wortpaar sein könnte. Drücken Sie F, G oder H, um anzugeben, ob Sie einen Rateversuch gemacht haben.\n\nVor dem Experiment werden Sie die Aufgabe üben.\n\nDrücken Sie eine Taste, um mit der Übung zu beginnen.\n',
+        text='Zusammenfassung:\nIhre Aufgabe ist es, so viele der auf dem Bildschirm präsentierten Wortpaare wie möglich zu lernen.\n\nManchmal wird Ihnen zunächst nur ein einzelnes Wort angezeigt, und Sie müssen raten, was das zugehörige Wortpaar sein könnte. Drücken Sie 1 oder 2, um anzugeben, ob Sie einen Rateversuch gemacht haben.\n\nVor dem Experiment werden Sie die Aufgabe üben.\n\nDrücken Sie eine Taste, um mit der Übung zu beginnen.\n',
         font='Arial',
         pos=(0, 0), draggable=False, height=0.05, wrapWidth=1.2, ori=0.0, 
         color='white', colorSpace='rgb', opacity=None, 
@@ -868,7 +868,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     
     # --- Initialize components for Routine "instructions_recall1" ---
     recall_instructions1_text = visual.TextStim(win=win, name='recall_instructions1_text',
-        text='Im nächsten Teil des Experiments müssen Sie das Wortpaar zu jedem auf dem Bildschirm angezeigten Wort abrufen.\n\nVersuchen Sie, das Wort (3 Sekunden) abzurufen, und geben Sie dann an, ob Sie sich an das Wort erinnern, indem Sie die Tasten F (Kann mich nicht erinnern) und G (Kann mich erinnern) verwenden.\n\nDrücken Sie eine Taste, um fortzufahren.',
+        text='Im nächsten Teil des Experiments müssen Sie das Wortpaar zu jedem auf dem Bildschirm angezeigten Wort abrufen.\n\nVersuchen Sie, das Wort (3 Sekunden) abzurufen, und geben Sie dann an, ob Sie sich an das Wort erinnern, indem Sie die Tasten 1 (Kann mich nicht erinnern) und 2(Kann mich erinnern) verwenden.\n\nDrücken Sie eine Taste, um fortzufahren.',
         font='Arial',
         pos=(0, 0), draggable=False, height=0.05, wrapWidth=1.2, ori=0.0, 
         color='white', colorSpace='rgb', opacity=None, 
@@ -2442,7 +2442,6 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         thisExp.addData('iti_learning_practice.stopped', iti_learning_practice.tStop)
         # Run 'End Routine' code from set_practice_guess_stim
         guess_cond = practice_list.pop()
-        print(guess_cond)
         # using non-slip timing so subtract the expected duration of this Routine (unless ended on request)
         if iti_learning_practice.maxDurationReached:
             routineTimer.addTime(-iti_learning_practice.maxDuration)
@@ -2999,7 +2998,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         if guess_reached.keys == "2":
             feedback = feedback + "\nKeinen Rateversuch gemacht."
         elif guess_reached.keys == "1":
-            feedback = feedback + "\Rateversuch gemacht."
+            feedback = feedback + "\nRateversuch gemacht."
         else:
             feedback = feedback + "\nKeine Antwort gegeben."
         no_response_feedback.setText(feedback)
@@ -3848,8 +3847,8 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
             # update params
             pass
         # Run 'Each Frame' code from catch_trigger
-        if port.readPin(pinNumber) > 0:
-            continueRoutine = False #A trigger was detected, so move on
+        #if port.readPin(pinNumber) > 0:
+        #    continueRoutine = False #A trigger was detected, so move on
         
         # *skip_trigger* updates
         waitOnFlip = False
@@ -4061,11 +4060,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         method='random', 
         extraInfo=expInfo, 
         originPath=-1, 
-        trialList=data.importConditions(
-        'cue_target_pairs.xlsx', 
-        selection='0:4'
-    )
-    , 
+        trialList=data.importConditions('cue_target_pairs.xlsx'), 
         seed=None, 
     )
     thisExp.addLoop(learning_trials)  # add the loop to the experiment
@@ -4101,7 +4096,6 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         # Run 'Begin Routine' code from set_iti_guess_stim
         guess_cond = guess_list.pop()
         this_iti = iti_list.pop()
-        print(guess_cond, this_iti)
         # store start times for setup_learning_trial
         setup_learning_trial.tStartRefresh = win.getFutureFlipTime(clock=globalClock)
         setup_learning_trial.tStart = globalClock.getTime(format='float')
@@ -5596,8 +5590,8 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
                 # update params
                 pass
             # Run 'Each Frame' code from catch_trigger
-            if port.readPin(pinNumber) > 0:
-                continueRoutine = False #A trigger was detected, so move on
+            #if port.readPin(pinNumber) > 0:
+            #    continueRoutine = False #A trigger was detected, so move on
             
             # *skip_trigger* updates
             waitOnFlip = False
@@ -6818,9 +6812,9 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         
         
         random_letters.append(target_letter)
-        print(random_letters)
+        
         letters = rnd.sample(random_letters, len(random_letters))
-        print(letters)
+        
         recall_select_text += "1) " + letters[0] + "        "
         recall_select_text += "2) " + letters[1] + "        "
         recall_select_text += "3) " + letters[2] + "        "
@@ -7886,8 +7880,8 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
             # update params
             pass
         # Run 'Each Frame' code from catch_trigger
-        if port.readPin(pinNumber) > 0:
-            continueRoutine = False #A trigger was detected, so move on
+        #if port.readPin(pinNumber) > 0:
+        #    continueRoutine = False #A trigger was detected, so move on
         
         # *skip_trigger* updates
         waitOnFlip = False
@@ -8099,11 +8093,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         method='random', 
         extraInfo=expInfo, 
         originPath=-1, 
-        trialList=data.importConditions(
-        'cue_target_pairs.xlsx', 
-        selection='0:4'
-    )
-    , 
+        trialList=data.importConditions('cue_target_pairs.xlsx'), 
         seed=None, 
     )
     thisExp.addLoop(test_trials)  # add the loop to the experiment
@@ -8768,9 +8758,9 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         
         
         random_letters.append(target_letter)
-        print(random_letters)
+        
         letters = rnd.sample(random_letters, len(random_letters))
-        print(letters)
+        
         recall_select_text += "1) " + letters[0] + "        "
         recall_select_text += "2) " + letters[1] + "        "
         recall_select_text += "3) " + letters[2] + "        "
@@ -9558,8 +9548,8 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
                 # update params
                 pass
             # Run 'Each Frame' code from catch_trigger
-            if port.readPin(pinNumber) > 0:
-                continueRoutine = False #A trigger was detected, so move on
+            #if port.readPin(pinNumber) > 0:
+            #    continueRoutine = False #A trigger was detected, so move on
             
             # *skip_trigger* updates
             waitOnFlip = False
@@ -9711,7 +9701,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
             win.callOnFlip(end_part2_key.clock.reset)  # t=0 on next screen flip
             win.callOnFlip(end_part2_key.clearEvents, eventType='keyboard')  # clear events on next screen flip
         if end_part2_key.status == STARTED and not waitOnFlip:
-            theseKeys = end_part2_key.getKeys(keyList=['space'], ignoreKeys=["escape"], waitRelease=False)
+            theseKeys = end_part2_key.getKeys(keyList=['space', '1', '2','3','4','5'], ignoreKeys=["escape"], waitRelease=False)
             _end_part2_key_allKeys.extend(theseKeys)
             if len(_end_part2_key_allKeys):
                 end_part2_key.keys = _end_part2_key_allKeys[-1].name  # just the last key pressed
