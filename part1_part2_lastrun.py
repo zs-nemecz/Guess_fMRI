@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """
 This experiment was created using PsychoPy3 Experiment Builder (v2024.2.4),
-    on April 02, 2025, at 11:44
+    on April 02, 2025, at 12:13
 If you publish work using this script the most relevant publication is:
 
     Peirce J, Gray JR, Simpson S, MacAskill M, Höchenberger R, Sogo H, Kastman E, Lindeløv JK. (2019) 
@@ -1482,7 +1482,11 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         method='random', 
         extraInfo=expInfo, 
         originPath=-1, 
-        trialList=data.importConditions('iti_randomization.xlsx'), 
+        trialList=data.importConditions(
+        'iti_randomization.xlsx', 
+        selection='0:4'
+    )
+    , 
         seed=None, 
     )
     thisExp.addLoop(iti_learning)  # add the loop to the experiment
@@ -4060,7 +4064,11 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         method='random', 
         extraInfo=expInfo, 
         originPath=-1, 
-        trialList=data.importConditions('cue_target_pairs.xlsx'), 
+        trialList=data.importConditions(
+        'cue_target_pairs.xlsx', 
+        selection='0:4'
+    )
+    , 
         seed=None, 
     )
     thisExp.addLoop(learning_trials)  # add the loop to the experiment
@@ -5283,7 +5291,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
                 win.callOnFlip(task_break_resp.clock.reset)  # t=0 on next screen flip
                 win.callOnFlip(task_break_resp.clearEvents, eventType='keyboard')  # clear events on next screen flip
             if task_break_resp.status == STARTED and not waitOnFlip:
-                theseKeys = task_break_resp.getKeys(keyList=['space'], ignoreKeys=["escape"], waitRelease=False)
+                theseKeys = task_break_resp.getKeys(keyList=['space',1,2,3,4,5], ignoreKeys=["escape"], waitRelease=False)
                 _task_break_resp_allKeys.extend(theseKeys)
                 if len(_task_break_resp_allKeys):
                     task_break_resp.keys = _task_break_resp_allKeys[-1].name  # just the last key pressed
@@ -6776,7 +6784,6 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
             recall_practice.addData('recall_reached.rt', recall_reached.rt)
             recall_practice.addData('recall_reached.duration', recall_reached.duration)
         # Run 'End Routine' code from skip_recall_select
-        print(recall_reached.keys)
         skip_letters = 0
         trial_dur = 3
         if recall_reached.keys == "2":
@@ -6784,7 +6791,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         else:
             trial_dur = 0.01
             skip_letters = 1
-        print(trial_dur)
+        
         # using non-slip timing so subtract the expected duration of this Routine (unless ended on request)
         if recall_response.maxDurationReached:
             routineTimer.addTime(-recall_response.maxDuration)
@@ -7420,7 +7427,11 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         method='random', 
         extraInfo=expInfo, 
         originPath=-1, 
-        trialList=[None], 
+        trialList=data.importConditions(
+        'iti_randomization.xlsx', 
+        selection='0:4'
+    )
+    , 
         seed=None, 
     )
     thisExp.addLoop(iti_recall)  # add the loop to the experiment
@@ -8093,7 +8104,11 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         method='random', 
         extraInfo=expInfo, 
         originPath=-1, 
-        trialList=data.importConditions('cue_target_pairs.xlsx'), 
+        trialList=data.importConditions(
+        'cue_target_pairs.xlsx', 
+        selection='0:4'
+    )
+    , 
         seed=None, 
     )
     thisExp.addLoop(test_trials)  # add the loop to the experiment
@@ -8722,7 +8737,6 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
             test_trials.addData('recall_reached.rt', recall_reached.rt)
             test_trials.addData('recall_reached.duration', recall_reached.duration)
         # Run 'End Routine' code from skip_recall_select
-        print(recall_reached.keys)
         skip_letters = 0
         trial_dur = 3
         if recall_reached.keys == "2":
@@ -8730,7 +8744,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         else:
             trial_dur = 0.01
             skip_letters = 1
-        print(trial_dur)
+        
         # using non-slip timing so subtract the expected duration of this Routine (unless ended on request)
         if recall_response.maxDurationReached:
             routineTimer.addTime(-recall_response.maxDuration)
@@ -9241,7 +9255,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
                 win.callOnFlip(task_break_resp.clock.reset)  # t=0 on next screen flip
                 win.callOnFlip(task_break_resp.clearEvents, eventType='keyboard')  # clear events on next screen flip
             if task_break_resp.status == STARTED and not waitOnFlip:
-                theseKeys = task_break_resp.getKeys(keyList=['space'], ignoreKeys=["escape"], waitRelease=False)
+                theseKeys = task_break_resp.getKeys(keyList=['space',1,2,3,4,5], ignoreKeys=["escape"], waitRelease=False)
                 _task_break_resp_allKeys.extend(theseKeys)
                 if len(_task_break_resp_allKeys):
                     task_break_resp.keys = _task_break_resp_allKeys[-1].name  # just the last key pressed
