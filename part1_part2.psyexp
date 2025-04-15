@@ -127,8 +127,8 @@
       <CodeComponent name="experiment_setup" plugin="None">
         <Param val="" valType="extendedCode" updates="constant" name="Before Experiment"/>
         <Param val="" valType="extendedCode" updates="constant" name="Before JS Experiment"/>
-        <Param val="# import random for letter randomization&amp;#10;import random as rnd&amp;#10;&amp;#10;from psychopy import parallel&amp;#10;port = parallel.ParallelPort(address = 0x2FE8) &amp;#10;pinNumber = 10 #Change to match the pin that is receiving the pulse value sent by your scanner. Set this to None to scan all pins" valType="extendedCode" updates="constant" name="Begin Experiment"/>
-        <Param val="import * as rnd from 'random';&amp;#10;import {parallel} from 'psychopy';&amp;#10;port = new parallel.ParallelPort({&quot;address&quot;: 12264});&amp;#10;pinNumber = 10;&amp;#10;" valType="extendedCode" updates="constant" name="Begin JS Experiment"/>
+        <Param val="# import random for letter randomization&amp;#10;import random as rnd&amp;#10;&amp;#10;from psychopy import parallel&amp;#10;#port = parallel.ParallelPort(address = 0x2FE8) &amp;#10;pinNumber = 10 #Change to match the pin that is receiving the pulse value sent by your scanner. Set this to None to scan all pins&amp;#10;&amp;#10;guess_dur = 3&amp;#10;guess_resp_dur = 1.5&amp;#10;guess_delay_dur = 3&amp;#10;&amp;#10;cue_types = {}&amp;#10;target_types = {}&amp;#10;&amp;#10;run_counter = 1" valType="extendedCode" updates="constant" name="Begin Experiment"/>
+        <Param val="import * as rnd from 'random';&amp;#10;import {parallel} from 'psychopy';&amp;#10;pinNumber = 10;&amp;#10;guess_dur = 3;&amp;#10;guess_resp_dur = 1.5;&amp;#10;guess_delay_dur = 3;&amp;#10;cue_types = {};&amp;#10;target_types = {};&amp;#10;run_counter = 1;&amp;#10;" valType="extendedCode" updates="constant" name="Begin JS Experiment"/>
         <Param val="" valType="extendedCode" updates="constant" name="Begin JS Routine"/>
         <Param val="" valType="extendedCode" updates="constant" name="Begin Routine"/>
         <Param val="Auto-&gt;JS" valType="str" updates="None" name="Code Type"/>
@@ -531,8 +531,8 @@
         <Param val="" valType="extendedCode" updates="constant" name="Each JS Frame"/>
         <Param val="" valType="extendedCode" updates="constant" name="End Experiment"/>
         <Param val="" valType="extendedCode" updates="constant" name="End JS Experiment"/>
-        <Param val="guess_cond = practice_list.splice((practice_list.length - 1), 1);&amp;#10;" valType="extendedCode" updates="constant" name="End JS Routine"/>
-        <Param val="guess_cond = practice_list.pop()" valType="extendedCode" updates="constant" name="End Routine"/>
+        <Param val="guess_cond = practice_list.splice((practice_list.length - 1), 1);&amp;#10;this_cue = cue;&amp;#10;this_target = target;&amp;#10;" valType="extendedCode" updates="constant" name="End JS Routine"/>
+        <Param val="guess_cond = practice_list.pop()&amp;#10;this_cue = cue&amp;#10;this_target = target" valType="extendedCode" updates="constant" name="End Routine"/>
         <Param val="False" valType="bool" updates="None" name="disabled"/>
         <Param val="set_practice_guess_stim" valType="code" updates="None" name="name"/>
       </CodeComponent>
@@ -630,7 +630,7 @@
         <Param val="duration (s)" valType="str" updates="None" name="stopType"/>
         <Param val="3.0" valType="code" updates="constant" name="stopVal"/>
         <Param val="True" valType="bool" updates="None" name="syncScreenRefresh"/>
-        <Param val="$cue" valType="str" updates="set every repeat" name="text"/>
+        <Param val="$this_cue" valType="str" updates="set every repeat" name="text"/>
         <Param val="from exp settings" valType="str" updates="None" name="units"/>
         <Param val="" valType="code" updates="None" name="validator"/>
         <Param val="" valType="num" updates="constant" name="wrapWidth"/>
@@ -657,7 +657,7 @@
         <Param val="duration (s)" valType="str" updates="None" name="stopType"/>
         <Param val="3.0" valType="code" updates="constant" name="stopVal"/>
         <Param val="True" valType="bool" updates="None" name="syncScreenRefresh"/>
-        <Param val="$target" valType="str" updates="set every repeat" name="text"/>
+        <Param val="$this_target" valType="str" updates="set every repeat" name="text"/>
         <Param val="from exp settings" valType="str" updates="None" name="units"/>
         <Param val="" valType="code" updates="None" name="validator"/>
         <Param val="" valType="num" updates="constant" name="wrapWidth"/>
@@ -685,10 +685,10 @@
       <CodeComponent name="save_learning_trial_type" plugin="None">
         <Param val="" valType="extendedCode" updates="constant" name="Before Experiment"/>
         <Param val="" valType="extendedCode" updates="constant" name="Before JS Experiment"/>
-        <Param val="cue_types = {}&amp;#10;target_types = {}" valType="extendedCode" updates="constant" name="Begin Experiment"/>
-        <Param val="cue_types = {};&amp;#10;target_types = {};&amp;#10;" valType="extendedCode" updates="constant" name="Begin JS Experiment"/>
-        <Param val="cue_types[cue] = guess_cond;&amp;#10;target_types[target] = guess_cond;&amp;#10;psychoJS.experiment.addData(&quot;trial_type&quot;, guess_cond);&amp;#10;" valType="extendedCode" updates="constant" name="Begin JS Routine"/>
-        <Param val="cue_types[cue] = guess_cond&amp;#10;target_types[target] = guess_cond&amp;#10;thisExp.addData('trial_type', guess_cond)" valType="extendedCode" updates="constant" name="Begin Routine"/>
+        <Param val="" valType="extendedCode" updates="constant" name="Begin Experiment"/>
+        <Param val="" valType="extendedCode" updates="constant" name="Begin JS Experiment"/>
+        <Param val="cue_types[this_cue] = guess_cond;&amp;#10;target_types[this_target] = guess_cond;&amp;#10;psychoJS.experiment.addData(&quot;trial_type&quot;, guess_cond);&amp;#10;psychoJS.experiment.addData(&quot;Cue&quot;, this_cue);&amp;#10;psychoJS.experiment.addData(&quot;Target&quot;, this_target);&amp;#10;psychoJS.experiment.addData(&quot;RunNr&quot;, run_counter);&amp;#10;" valType="extendedCode" updates="constant" name="Begin JS Routine"/>
+        <Param val="cue_types[this_cue] = guess_cond&amp;#10;target_types[this_target] = guess_cond&amp;#10;thisExp.addData('trial_type', guess_cond)&amp;#10;thisExp.addData('Cue', this_cue)&amp;#10;thisExp.addData('Target', this_target)&amp;#10;thisExp.addData('RunNr', run_counter)" valType="extendedCode" updates="constant" name="Begin Routine"/>
         <Param val="Auto-&gt;JS" valType="str" updates="None" name="Code Type"/>
         <Param val="" valType="extendedCode" updates="constant" name="Each Frame"/>
         <Param val="" valType="extendedCode" updates="constant" name="Each JS Frame"/>
@@ -916,10 +916,10 @@
       <CodeComponent name="skip_guess" plugin="None">
         <Param val="" valType="extendedCode" updates="constant" name="Before Experiment"/>
         <Param val="" valType="extendedCode" updates="constant" name="Before JS Experiment"/>
-        <Param val="trial_dur = 0" valType="extendedCode" updates="constant" name="Begin Experiment"/>
-        <Param val="trial_dur = 0;&amp;#10;" valType="extendedCode" updates="constant" name="Begin JS Experiment"/>
-        <Param val="if ((guess_cond === &quot;Read&quot;)) {&amp;#10;    trial_dur = 0.001;&amp;#10;} else {&amp;#10;    trial_dur = 3;&amp;#10;}&amp;#10;" valType="extendedCode" updates="constant" name="Begin JS Routine"/>
-        <Param val="if guess_cond == &quot;Read&quot;:&amp;#10;    trial_dur = 0.001&amp;#10;else:&amp;#10;    trial_dur = 3" valType="extendedCode" updates="constant" name="Begin Routine"/>
+        <Param val="" valType="extendedCode" updates="constant" name="Begin Experiment"/>
+        <Param val="" valType="extendedCode" updates="constant" name="Begin JS Experiment"/>
+        <Param val="if ((guess_cond === &quot;Read&quot;)) {&amp;#10;    trial_dur = 0.0;&amp;#10;} else {&amp;#10;    trial_dur = guess_dur;&amp;#10;}&amp;#10;" valType="extendedCode" updates="constant" name="Begin JS Routine"/>
+        <Param val="if guess_cond == &quot;Read&quot;:&amp;#10;    trial_dur = 0.000&amp;#10;else:&amp;#10;    trial_dur = guess_dur" valType="extendedCode" updates="constant" name="Begin Routine"/>
         <Param val="Auto-&gt;JS" valType="str" updates="None" name="Code Type"/>
         <Param val="" valType="extendedCode" updates="constant" name="Each Frame"/>
         <Param val="" valType="extendedCode" updates="constant" name="Each JS Frame"/>
@@ -979,7 +979,7 @@
         <Param val="duration (s)" valType="str" updates="None" name="stopType"/>
         <Param val="$trial_dur" valType="code" updates="constant" name="stopVal"/>
         <Param val="True" valType="bool" updates="None" name="syncScreenRefresh"/>
-        <Param val="$cue" valType="str" updates="set every repeat" name="text"/>
+        <Param val="$this_cue" valType="str" updates="set every repeat" name="text"/>
         <Param val="from exp settings" valType="str" updates="None" name="units"/>
         <Param val="" valType="code" updates="None" name="validator"/>
         <Param val="" valType="num" updates="constant" name="wrapWidth"/>
@@ -1119,8 +1119,8 @@
         <Param val="" valType="extendedCode" updates="constant" name="Before JS Experiment"/>
         <Param val="" valType="extendedCode" updates="constant" name="Begin Experiment"/>
         <Param val="" valType="extendedCode" updates="constant" name="Begin JS Experiment"/>
-        <Param val="if ((guess_cond === &quot;Read&quot;)) {&amp;#10;    trial_dur = 0.001;&amp;#10;} else {&amp;#10;    trial_dur = 1.5;&amp;#10;}&amp;#10;" valType="extendedCode" updates="constant" name="Begin JS Routine"/>
-        <Param val="if guess_cond == &quot;Read&quot;:&amp;#10;    trial_dur = 0.001&amp;#10;else:&amp;#10;    trial_dur = 1.5" valType="extendedCode" updates="constant" name="Begin Routine"/>
+        <Param val="if ((guess_cond === &quot;Read&quot;)) {&amp;#10;    trial_dur = 0.0;&amp;#10;} else {&amp;#10;    trial_dur = guess_resp_dur;&amp;#10;}&amp;#10;" valType="extendedCode" updates="constant" name="Begin JS Routine"/>
+        <Param val="if guess_cond == &quot;Read&quot;:&amp;#10;    trial_dur = 0.000&amp;#10;else:&amp;#10;    trial_dur = guess_resp_dur" valType="extendedCode" updates="constant" name="Begin Routine"/>
         <Param val="Auto-&gt;JS" valType="str" updates="None" name="Code Type"/>
         <Param val="" valType="extendedCode" updates="constant" name="Each Frame"/>
         <Param val="" valType="extendedCode" updates="constant" name="Each JS Frame"/>
@@ -1180,7 +1180,7 @@
         <Param val="duration (s)" valType="str" updates="None" name="stopType"/>
         <Param val="$trial_dur" valType="code" updates="constant" name="stopVal"/>
         <Param val="True" valType="bool" updates="None" name="syncScreenRefresh"/>
-        <Param val="$cue" valType="str" updates="set every repeat" name="text"/>
+        <Param val="$this_cue" valType="str" updates="set every repeat" name="text"/>
         <Param val="from exp settings" valType="str" updates="None" name="units"/>
         <Param val="" valType="code" updates="None" name="validator"/>
         <Param val="" valType="num" updates="constant" name="wrapWidth"/>
@@ -1354,7 +1354,7 @@
         <Param val="False" valType="code" updates="None" name="forceNonSlip"/>
         <Param val="task_break" valType="code" updates="None" name="name"/>
         <Param val="True" valType="bool" updates="None" name="saveStartStop"/>
-        <Param val="task_trial &lt; 40" valType="code" updates="constant" name="skipIf"/>
+        <Param val="run_counter &gt;= 2" valType="code" updates="constant" name="skipIf"/>
         <Param val="duration (s)" valType="str" updates="None" name="stopType"/>
         <Param val="" valType="code" updates="constant" name="stopVal"/>
         <Param val="False" valType="bool" updates="None" name="useWindowParams"/>
@@ -1411,15 +1411,15 @@
         <Param val="" valType="extendedCode" updates="constant" name="Before JS Experiment"/>
         <Param val="" valType="extendedCode" updates="constant" name="Begin Experiment"/>
         <Param val="" valType="extendedCode" updates="constant" name="Begin JS Experiment"/>
-        <Param val="task_trial = (task_trial + 1);&amp;#10;" valType="extendedCode" updates="constant" name="Begin JS Routine"/>
-        <Param val="task_trial = task_trial + 1" valType="extendedCode" updates="constant" name="Begin Routine"/>
+        <Param val="" valType="extendedCode" updates="constant" name="Begin JS Routine"/>
+        <Param val="" valType="extendedCode" updates="constant" name="Begin Routine"/>
         <Param val="Auto-&gt;JS" valType="str" updates="None" name="Code Type"/>
         <Param val="" valType="extendedCode" updates="constant" name="Each Frame"/>
         <Param val="" valType="extendedCode" updates="constant" name="Each JS Frame"/>
         <Param val="" valType="extendedCode" updates="constant" name="End Experiment"/>
         <Param val="" valType="extendedCode" updates="constant" name="End JS Experiment"/>
-        <Param val="" valType="extendedCode" updates="constant" name="End JS Routine"/>
-        <Param val="" valType="extendedCode" updates="constant" name="End Routine"/>
+        <Param val="if ((run_counter &lt; 2)) {&amp;#10;    run_counter = (run_counter + 1);&amp;#10;} else {&amp;#10;    if ((run_counter &gt;= 2)) {&amp;#10;        run_counter = 1;&amp;#10;    }&amp;#10;}&amp;#10;" valType="extendedCode" updates="constant" name="End JS Routine"/>
+        <Param val="if run_counter &lt; 2:&amp;#10;    run_counter = run_counter + 1&amp;#10;elif run_counter &gt;= 2:&amp;#10;    run_counter = 1" valType="extendedCode" updates="constant" name="End Routine"/>
         <Param val="False" valType="bool" updates="None" name="disabled"/>
         <Param val="task_reset_counter" valType="code" updates="None" name="name"/>
       </CodeComponent>
@@ -1471,10 +1471,10 @@
       <CodeComponent name="skip_guess_delay" plugin="None">
         <Param val="" valType="extendedCode" updates="constant" name="Before Experiment"/>
         <Param val="" valType="extendedCode" updates="constant" name="Before JS Experiment"/>
-        <Param val="trial_dur = 0" valType="extendedCode" updates="constant" name="Begin Experiment"/>
-        <Param val="trial_dur = 0;&amp;#10;" valType="extendedCode" updates="constant" name="Begin JS Experiment"/>
-        <Param val="if ((guess_cond === &quot;Read&quot;)) {&amp;#10;    trial_dur = 0.001;&amp;#10;} else {&amp;#10;    trial_dur = 3;&amp;#10;}&amp;#10;" valType="extendedCode" updates="constant" name="Begin JS Routine"/>
-        <Param val="if guess_cond == &quot;Read&quot;:&amp;#10;    trial_dur = 0.001&amp;#10;else:&amp;#10;    trial_dur = 3" valType="extendedCode" updates="constant" name="Begin Routine"/>
+        <Param val="" valType="extendedCode" updates="constant" name="Begin Experiment"/>
+        <Param val="" valType="extendedCode" updates="constant" name="Begin JS Experiment"/>
+        <Param val="if ((guess_cond === &quot;Read&quot;)) {&amp;#10;    trial_dur = 0.0;&amp;#10;} else {&amp;#10;    trial_dur = guess_delay_dur;&amp;#10;}&amp;#10;" valType="extendedCode" updates="constant" name="Begin JS Routine"/>
+        <Param val="if guess_cond == &quot;Read&quot;:&amp;#10;    trial_dur = 0.000&amp;#10;else:&amp;#10;    trial_dur = guess_delay_dur" valType="extendedCode" updates="constant" name="Begin Routine"/>
         <Param val="Auto-&gt;JS" valType="str" updates="None" name="Code Type"/>
         <Param val="" valType="extendedCode" updates="constant" name="Each Frame"/>
         <Param val="" valType="extendedCode" updates="constant" name="Each JS Frame"/>
@@ -1548,52 +1548,24 @@
         <Param val="load_iti" valType="code" updates="None" name="name"/>
       </CodeComponent>
     </Routine>
-    <Routine name="begin_run">
-      <RoutineSettingsComponent name="begin_run" plugin="None">
-        <Param val="none" valType="str" updates="None" name="backgroundFit"/>
-        <Param val="" valType="str" updates="None" name="backgroundImg"/>
-        <Param val="$[0,0,0]" valType="color" updates="None" name="color"/>
-        <Param val="rgb" valType="str" updates="None" name="colorSpace"/>
-        <Param val="" valType="str" updates="constant" name="desc"/>
-        <Param val="False" valType="bool" updates="None" name="disabled"/>
-        <Param val="" valType="code" updates="None" name="durationEstim"/>
-        <Param val="False" valType="code" updates="None" name="forceNonSlip"/>
-        <Param val="begin_run" valType="code" updates="None" name="name"/>
-        <Param val="True" valType="bool" updates="None" name="saveStartStop"/>
-        <Param val="" valType="code" updates="constant" name="skipIf"/>
-        <Param val="duration (s)" valType="str" updates="None" name="stopType"/>
-        <Param val="" valType="code" updates="constant" name="stopVal"/>
-        <Param val="False" valType="bool" updates="None" name="useWindowParams"/>
-      </RoutineSettingsComponent>
-      <TextComponent name="begin_run_cross" plugin="None">
-        <Param val="white" valType="color" updates="constant" name="color"/>
-        <Param val="rgb" valType="str" updates="constant" name="colorSpace"/>
-        <Param val="1" valType="num" updates="constant" name="contrast"/>
-        <Param val="False" valType="bool" updates="None" name="disabled"/>
-        <Param val="False" valType="code" updates="constant" name="draggable"/>
-        <Param val="" valType="code" updates="None" name="durationEstim"/>
-        <Param val="None" valType="str" updates="constant" name="flip"/>
-        <Param val="Arial" valType="str" updates="constant" name="font"/>
-        <Param val="LTR" valType="str" updates="None" name="languageStyle"/>
-        <Param val="0.05" valType="num" updates="constant" name="letterHeight"/>
-        <Param val="begin_run_cross" valType="code" updates="None" name="name"/>
-        <Param val="" valType="num" updates="constant" name="opacity"/>
-        <Param val="0" valType="num" updates="constant" name="ori"/>
-        <Param val="(0, 0)" valType="list" updates="constant" name="pos"/>
-        <Param val="True" valType="bool" updates="None" name="saveStartStop"/>
-        <Param val="" valType="code" updates="None" name="startEstim"/>
-        <Param val="time (s)" valType="str" updates="None" name="startType"/>
-        <Param val="0.0" valType="code" updates="None" name="startVal"/>
-        <Param val="duration (s)" valType="str" updates="None" name="stopType"/>
-        <Param val="9.0" valType="code" updates="constant" name="stopVal"/>
-        <Param val="True" valType="bool" updates="None" name="syncScreenRefresh"/>
-        <Param val="+" valType="str" updates="constant" name="text"/>
-        <Param val="from exp settings" valType="str" updates="None" name="units"/>
-        <Param val="" valType="code" updates="None" name="validator"/>
-        <Param val="" valType="num" updates="constant" name="wrapWidth"/>
-      </TextComponent>
-    </Routine>
     <Routine name="wait_for_trigger">
+      <CodeComponent name="catch_trigger" plugin="None">
+        <Param val="" valType="extendedCode" updates="constant" name="Before Experiment"/>
+        <Param val="" valType="extendedCode" updates="constant" name="Before JS Experiment"/>
+        <Param val="" valType="extendedCode" updates="constant" name="Begin Experiment"/>
+        <Param val="" valType="extendedCode" updates="constant" name="Begin JS Experiment"/>
+        <Param val="" valType="extendedCode" updates="constant" name="Begin JS Routine"/>
+        <Param val="" valType="extendedCode" updates="constant" name="Begin Routine"/>
+        <Param val="Auto-&gt;JS" valType="str" updates="None" name="Code Type"/>
+        <Param val="#if port.readPin(pinNumber) &gt; 0:&amp;#10;#    continueRoutine = False #A trigger was detected, so move on" valType="extendedCode" updates="constant" name="Each Frame"/>
+        <Param val="" valType="extendedCode" updates="constant" name="Each JS Frame"/>
+        <Param val="" valType="extendedCode" updates="constant" name="End Experiment"/>
+        <Param val="" valType="extendedCode" updates="constant" name="End JS Experiment"/>
+        <Param val="" valType="extendedCode" updates="constant" name="End JS Routine"/>
+        <Param val="" valType="extendedCode" updates="constant" name="End Routine"/>
+        <Param val="False" valType="bool" updates="None" name="disabled"/>
+        <Param val="catch_trigger" valType="code" updates="None" name="name"/>
+      </CodeComponent>
       <RoutineSettingsComponent name="wait_for_trigger" plugin="None">
         <Param val="none" valType="str" updates="None" name="backgroundFit"/>
         <Param val="" valType="str" updates="None" name="backgroundImg"/>
@@ -1605,7 +1577,7 @@
         <Param val="False" valType="code" updates="None" name="forceNonSlip"/>
         <Param val="wait_for_trigger" valType="code" updates="None" name="name"/>
         <Param val="True" valType="bool" updates="None" name="saveStartStop"/>
-        <Param val="task_trial &lt; 40" valType="code" updates="constant" name="skipIf"/>
+        <Param val="" valType="code" updates="constant" name="skipIf"/>
         <Param val="duration (s)" valType="str" updates="None" name="stopType"/>
         <Param val="" valType="code" updates="constant" name="stopVal"/>
         <Param val="False" valType="bool" updates="None" name="useWindowParams"/>
@@ -1637,40 +1609,6 @@
         <Param val="" valType="code" updates="None" name="validator"/>
         <Param val="" valType="num" updates="constant" name="wrapWidth"/>
       </TextComponent>
-      <CodeComponent name="catch_trigger" plugin="None">
-        <Param val="" valType="extendedCode" updates="constant" name="Before Experiment"/>
-        <Param val="" valType="extendedCode" updates="constant" name="Before JS Experiment"/>
-        <Param val="" valType="extendedCode" updates="constant" name="Begin Experiment"/>
-        <Param val="" valType="extendedCode" updates="constant" name="Begin JS Experiment"/>
-        <Param val="" valType="extendedCode" updates="constant" name="Begin JS Routine"/>
-        <Param val="" valType="extendedCode" updates="constant" name="Begin Routine"/>
-        <Param val="Auto-&gt;JS" valType="str" updates="None" name="Code Type"/>
-        <Param val="if port.readPin(pinNumber) &gt; 0:&amp;#10;    continueRoutine = False #A trigger was detected, so move on" valType="extendedCode" updates="constant" name="Each Frame"/>
-        <Param val="if ((port.readPin(pinNumber) &gt; 0)) {&amp;#10;    continueRoutine = false;&amp;#10;}&amp;#10;" valType="extendedCode" updates="constant" name="Each JS Frame"/>
-        <Param val="" valType="extendedCode" updates="constant" name="End Experiment"/>
-        <Param val="" valType="extendedCode" updates="constant" name="End JS Experiment"/>
-        <Param val="" valType="extendedCode" updates="constant" name="End JS Routine"/>
-        <Param val="" valType="extendedCode" updates="constant" name="End Routine"/>
-        <Param val="False" valType="bool" updates="None" name="disabled"/>
-        <Param val="catch_trigger" valType="code" updates="None" name="name"/>
-      </CodeComponent>
-      <CodeComponent name="reset_trial_counter" plugin="None">
-        <Param val="" valType="extendedCode" updates="constant" name="Before Experiment"/>
-        <Param val="" valType="extendedCode" updates="constant" name="Before JS Experiment"/>
-        <Param val="" valType="extendedCode" updates="constant" name="Begin Experiment"/>
-        <Param val="" valType="extendedCode" updates="constant" name="Begin JS Experiment"/>
-        <Param val="" valType="extendedCode" updates="constant" name="Begin JS Routine"/>
-        <Param val="" valType="extendedCode" updates="constant" name="Begin Routine"/>
-        <Param val="Auto-&gt;JS" valType="str" updates="None" name="Code Type"/>
-        <Param val="" valType="extendedCode" updates="constant" name="Each Frame"/>
-        <Param val="" valType="extendedCode" updates="constant" name="Each JS Frame"/>
-        <Param val="" valType="extendedCode" updates="constant" name="End Experiment"/>
-        <Param val="" valType="extendedCode" updates="constant" name="End JS Experiment"/>
-        <Param val="if ((task_trial === 40)) {&amp;#10;    task_trial = 0;&amp;#10;}&amp;#10;" valType="extendedCode" updates="constant" name="End JS Routine"/>
-        <Param val="if task_trial == 40:&amp;#10;    task_trial = 0&amp;#10;" valType="extendedCode" updates="constant" name="End Routine"/>
-        <Param val="False" valType="bool" updates="None" name="disabled"/>
-        <Param val="reset_trial_counter" valType="code" updates="None" name="name"/>
-      </CodeComponent>
       <KeyboardComponent name="skip_trigger" plugin="None">
         <Param val="'p'" valType="list" updates="constant" name="allowedKeys"/>
         <Param val="" valType="str" updates="constant" name="correctAns"/>
@@ -1704,7 +1642,7 @@
         <Param val="False" valType="code" updates="None" name="forceNonSlip"/>
         <Param val="prep_scanner" valType="code" updates="None" name="name"/>
         <Param val="True" valType="bool" updates="None" name="saveStartStop"/>
-        <Param val="task_trial &lt; 40" valType="code" updates="constant" name="skipIf"/>
+        <Param val="" valType="code" updates="constant" name="skipIf"/>
         <Param val="duration (s)" valType="str" updates="None" name="stopType"/>
         <Param val="" valType="code" updates="constant" name="stopVal"/>
         <Param val="False" valType="bool" updates="None" name="useWindowParams"/>
@@ -2716,8 +2654,8 @@
         <Param val="" valType="extendedCode" updates="constant" name="Before JS Experiment"/>
         <Param val="" valType="extendedCode" updates="constant" name="Begin Experiment"/>
         <Param val="" valType="extendedCode" updates="constant" name="Begin JS Experiment"/>
-        <Param val="guess_cond = guess_list.splice((guess_list.length - 1), 1);&amp;#10;this_iti = iti_list.splice((iti_list.length - 1), 1);&amp;#10;" valType="extendedCode" updates="constant" name="Begin JS Routine"/>
-        <Param val="guess_cond = guess_list.pop()&amp;#10;this_iti = iti_list.pop()" valType="extendedCode" updates="constant" name="Begin Routine"/>
+        <Param val="guess_cond = guess_list.splice((guess_list.length - 1), 1);&amp;#10;this_iti = iti_list.splice((iti_list.length - 1), 1);&amp;#10;this_cue = cue_list.splice((cue_list.length - 1), 1);&amp;#10;this_target = target_list.splice((target_list.length - 1), 1);&amp;#10;" valType="extendedCode" updates="constant" name="Begin JS Routine"/>
+        <Param val="guess_cond = guess_list.pop()&amp;#10;this_iti = iti_list.pop()&amp;#10;this_cue = cue_list.pop()&amp;#10;this_target = target_list.pop()" valType="extendedCode" updates="constant" name="Begin Routine"/>
         <Param val="Auto-&gt;JS" valType="str" updates="None" name="Code Type"/>
         <Param val="" valType="extendedCode" updates="constant" name="Each Frame"/>
         <Param val="" valType="extendedCode" updates="constant" name="Each JS Frame"/>
@@ -2764,35 +2702,102 @@
         <Param val="set_iti_guess_stim_2" valType="code" updates="None" name="name"/>
       </CodeComponent>
     </Routine>
+    <Routine name="blank">
+      <RoutineSettingsComponent name="blank" plugin="None">
+        <Param val="none" valType="str" updates="None" name="backgroundFit"/>
+        <Param val="" valType="str" updates="None" name="backgroundImg"/>
+        <Param val="$[0,0,0]" valType="color" updates="None" name="color"/>
+        <Param val="rgb" valType="str" updates="None" name="colorSpace"/>
+        <Param val="" valType="str" updates="constant" name="desc"/>
+        <Param val="False" valType="bool" updates="None" name="disabled"/>
+        <Param val="" valType="code" updates="None" name="durationEstim"/>
+        <Param val="False" valType="code" updates="None" name="forceNonSlip"/>
+        <Param val="blank" valType="code" updates="None" name="name"/>
+        <Param val="True" valType="bool" updates="None" name="saveStartStop"/>
+        <Param val="" valType="code" updates="constant" name="skipIf"/>
+        <Param val="duration (s)" valType="str" updates="None" name="stopType"/>
+        <Param val="" valType="code" updates="constant" name="stopVal"/>
+        <Param val="False" valType="bool" updates="None" name="useWindowParams"/>
+      </RoutineSettingsComponent>
+      <TextComponent name="begin_end_run_cross" plugin="None">
+        <Param val="white" valType="color" updates="constant" name="color"/>
+        <Param val="rgb" valType="str" updates="constant" name="colorSpace"/>
+        <Param val="1" valType="num" updates="constant" name="contrast"/>
+        <Param val="False" valType="bool" updates="None" name="disabled"/>
+        <Param val="False" valType="code" updates="constant" name="draggable"/>
+        <Param val="" valType="code" updates="None" name="durationEstim"/>
+        <Param val="None" valType="str" updates="constant" name="flip"/>
+        <Param val="Arial" valType="str" updates="constant" name="font"/>
+        <Param val="LTR" valType="str" updates="None" name="languageStyle"/>
+        <Param val="0.05" valType="num" updates="constant" name="letterHeight"/>
+        <Param val="begin_end_run_cross" valType="code" updates="None" name="name"/>
+        <Param val="" valType="num" updates="constant" name="opacity"/>
+        <Param val="0" valType="num" updates="constant" name="ori"/>
+        <Param val="(0, 0)" valType="list" updates="constant" name="pos"/>
+        <Param val="True" valType="bool" updates="None" name="saveStartStop"/>
+        <Param val="" valType="code" updates="None" name="startEstim"/>
+        <Param val="time (s)" valType="str" updates="None" name="startType"/>
+        <Param val="0.0" valType="code" updates="None" name="startVal"/>
+        <Param val="duration (s)" valType="str" updates="None" name="stopType"/>
+        <Param val="9.0" valType="code" updates="constant" name="stopVal"/>
+        <Param val="True" valType="bool" updates="None" name="syncScreenRefresh"/>
+        <Param val="+" valType="str" updates="constant" name="text"/>
+        <Param val="from exp settings" valType="str" updates="None" name="units"/>
+        <Param val="" valType="code" updates="None" name="validator"/>
+        <Param val="" valType="num" updates="constant" name="wrapWidth"/>
+      </TextComponent>
+    </Routine>
+    <Routine name="load_word_pairs">
+      <RoutineSettingsComponent name="load_word_pairs" plugin="None">
+        <Param val="none" valType="str" updates="None" name="backgroundFit"/>
+        <Param val="" valType="str" updates="None" name="backgroundImg"/>
+        <Param val="$[0,0,0]" valType="color" updates="None" name="color"/>
+        <Param val="rgb" valType="str" updates="None" name="colorSpace"/>
+        <Param val="" valType="str" updates="constant" name="desc"/>
+        <Param val="False" valType="bool" updates="None" name="disabled"/>
+        <Param val="" valType="code" updates="None" name="durationEstim"/>
+        <Param val="False" valType="code" updates="None" name="forceNonSlip"/>
+        <Param val="load_word_pairs" valType="code" updates="None" name="name"/>
+        <Param val="True" valType="bool" updates="None" name="saveStartStop"/>
+        <Param val="" valType="code" updates="constant" name="skipIf"/>
+        <Param val="duration (s)" valType="str" updates="None" name="stopType"/>
+        <Param val="" valType="code" updates="constant" name="stopVal"/>
+        <Param val="False" valType="bool" updates="None" name="useWindowParams"/>
+      </RoutineSettingsComponent>
+      <CodeComponent name="load_stimuli" plugin="None">
+        <Param val="" valType="extendedCode" updates="constant" name="Before Experiment"/>
+        <Param val="" valType="extendedCode" updates="constant" name="Before JS Experiment"/>
+        <Param val="cue_list = []&amp;#10;target_list = []&amp;#10;" valType="extendedCode" updates="constant" name="Begin Experiment"/>
+        <Param val="cue_list = [];&amp;#10;target_list = [];&amp;#10;" valType="extendedCode" updates="constant" name="Begin JS Experiment"/>
+        <Param val="cue_list.push(cue);&amp;#10;target_list.push(target);&amp;#10;" valType="extendedCode" updates="constant" name="Begin JS Routine"/>
+        <Param val="cue_list.append(cue)&amp;#10;target_list.append(target)&amp;#10;" valType="extendedCode" updates="constant" name="Begin Routine"/>
+        <Param val="Auto-&gt;JS" valType="str" updates="None" name="Code Type"/>
+        <Param val="" valType="extendedCode" updates="constant" name="Each Frame"/>
+        <Param val="" valType="extendedCode" updates="constant" name="Each JS Frame"/>
+        <Param val="" valType="extendedCode" updates="constant" name="End Experiment"/>
+        <Param val="" valType="extendedCode" updates="constant" name="End JS Experiment"/>
+        <Param val="" valType="extendedCode" updates="constant" name="End JS Routine"/>
+        <Param val="" valType="extendedCode" updates="constant" name="End Routine"/>
+        <Param val="False" valType="bool" updates="None" name="disabled"/>
+        <Param val="load_stimuli" valType="code" updates="None" name="name"/>
+      </CodeComponent>
+    </Routine>
   </Routines>
   <Flow>
     <Routine name="welcome"/>
-    <LoopInitiator loopType="TrialHandler" name="guess_conditions">
+    <LoopInitiator loopType="TrialHandler" name="word_pair_loop">
       <Param name="Selected rows" updates="None" val="" valType="str"/>
-      <Param name="conditions" updates="None" val="[{'guess_condition': 'Read'}, {'guess_condition': 'Guess'}, {'guess_condition': 'Read'}, {'guess_condition': 'Guess'}, {'guess_condition': 'Read'}, {'guess_condition': 'Guess'}, {'guess_condition': 'Read'}, {'guess_condition': 'Guess'}, {'guess_condition': 'Read'}, {'guess_condition': 'Guess'}, {'guess_condition': 'Read'}, {'guess_condition': 'Guess'}, {'guess_condition': 'Read'}, {'guess_condition': 'Guess'}, {'guess_condition': 'Read'}, {'guess_condition': 'Guess'}, {'guess_condition': 'Read'}, {'guess_condition': 'Guess'}, {'guess_condition': 'Read'}, {'guess_condition': 'Guess'}, {'guess_condition': 'Read'}, {'guess_condition': 'Guess'}, {'guess_condition': 'Read'}, {'guess_condition': 'Guess'}, {'guess_condition': 'Read'}, {'guess_condition': 'Guess'}, {'guess_condition': 'Read'}, {'guess_condition': 'Guess'}, {'guess_condition': 'Read'}, {'guess_condition': 'Guess'}, {'guess_condition': 'Read'}, {'guess_condition': 'Guess'}, {'guess_condition': 'Read'}, {'guess_condition': 'Guess'}, {'guess_condition': 'Read'}, {'guess_condition': 'Guess'}, {'guess_condition': 'Read'}, {'guess_condition': 'Guess'}, {'guess_condition': 'Read'}, {'guess_condition': 'Guess'}, {'guess_condition': 'Read'}, {'guess_condition': 'Guess'}, {'guess_condition': 'Read'}, {'guess_condition': 'Guess'}, {'guess_condition': 'Read'}, {'guess_condition': 'Guess'}, {'guess_condition': 'Read'}, {'guess_condition': 'Guess'}, {'guess_condition': 'Read'}, {'guess_condition': 'Guess'}, {'guess_condition': 'Read'}, {'guess_condition': 'Guess'}, {'guess_condition': 'Read'}, {'guess_condition': 'Guess'}, {'guess_condition': 'Read'}, {'guess_condition': 'Guess'}, {'guess_condition': 'Read'}, {'guess_condition': 'Guess'}, {'guess_condition': 'Read'}, {'guess_condition': 'Guess'}, {'guess_condition': 'Read'}, {'guess_condition': 'Guess'}, {'guess_condition': 'Read'}, {'guess_condition': 'Guess'}, {'guess_condition': 'Read'}, {'guess_condition': 'Guess'}, {'guess_condition': 'Read'}, {'guess_condition': 'Guess'}, {'guess_condition': 'Read'}, {'guess_condition': 'Guess'}, {'guess_condition': 'Read'}, {'guess_condition': 'Guess'}, {'guess_condition': 'Read'}, {'guess_condition': 'Guess'}, {'guess_condition': 'Read'}, {'guess_condition': 'Guess'}, {'guess_condition': 'Read'}, {'guess_condition': 'Guess'}, {'guess_condition': 'Read'}, {'guess_condition': 'Guess'}]" valType="str"/>
-      <Param name="conditionsFile" updates="None" val="guess_condition_randomization.xlsx" valType="file"/>
+      <Param name="conditions" updates="None" val="[{'cue': 'Akrobatin', 'target': 'Seil'}, {'cue': 'Chips', 'target': 'Salz'}, {'cue': 'Definition', 'target': 'Begriff'}, {'cue': 'Experiment', 'target': 'Versuch'}, {'cue': 'Fakt', 'target': 'Wissen'}, {'cue': 'Leistung', 'target': 'Ehre'}, {'cue': 'Rauch', 'target': 'Nebel'}, {'cue': 'Scheidung', 'target': 'Anwalt'}, {'cue': 'Service', 'target': 'Kunde'}, {'cue': 'Shampoo', 'target': 'Seife'}, {'cue': 'Soldat', 'target': 'Kämpfer'}, {'cue': 'Zeichnung', 'target': 'Bleistift'}, {'cue': 'Anführer', 'target': 'Boss'}, {'cue': 'Beutel', 'target': 'Sack'}, {'cue': 'Gast', 'target': 'Zimmer'}, {'cue': 'Geburtstag', 'target': 'Kerze'}, {'cue': 'Geschwister', 'target': 'Eltern'}, {'cue': 'Golf', 'target': 'Loch'}, {'cue': 'Küche', 'target': 'Tisch'}, {'cue': 'Rasen', 'target': 'Pflege'}, {'cue': 'Safari', 'target': 'Ausflug'}, {'cue': 'Sitzgurt', 'target': 'Gesetz'}, {'cue': 'Vampir', 'target': 'Geist'}, {'cue': 'Vergangenheit', 'target': 'Erinnerungen'}, {'cue': 'Agent', 'target': 'Reise'}, {'cue': 'Brise', 'target': 'Luft'}, {'cue': 'Decke', 'target': 'Kissen'}, {'cue': 'Diskussion', 'target': 'Vorlesung'}, {'cue': 'Eingeweide', 'target': 'Organ'}, {'cue': 'Floh', 'target': 'Käfer'}, {'cue': 'Frieden', 'target': 'Harmonie'}, {'cue': 'Garage', 'target': 'Haus'}, {'cue': 'Gegenstand', 'target': 'Artikel'}, {'cue': 'Humor', 'target': 'Komödie'}, {'cue': 'Insel', 'target': 'Meer'}, {'cue': 'Karneval', 'target': 'Festival'}, {'cue': 'Mappe', 'target': 'Buch'}, {'cue': 'Publikum', 'target': 'Applaus'}, {'cue': 'Pumpe', 'target': 'Reifen'}, {'cue': 'Raum', 'target': 'Platz'}, {'cue': 'Schlüssel', 'target': 'Ring'}, {'cue': 'Statue', 'target': 'Monument'}, {'cue': 'Tänzer', 'target': 'Musik'}, {'cue': 'Teleskop', 'target': 'Mikroskop'}, {'cue': 'Teller', 'target': 'Gabel'}, {'cue': 'Tradition', 'target': 'Weihnachten'}, {'cue': 'Vers', 'target': 'Poesie'}, {'cue': 'Vogel', 'target': 'Feder'}, {'cue': 'Zug', 'target': 'Flugzeug'}, {'cue': 'Zunge', 'target': 'Backe'}, {'cue': 'Bad', 'target': 'Handtuch'}, {'cue': 'Bar', 'target': 'Alkohol'}, {'cue': 'Beweis', 'target': 'Gericht'}, {'cue': 'Blumen', 'target': 'Bouquet'}, {'cue': 'Flotte', 'target': 'Boot'}, {'cue': 'Häftling', 'target': 'Verurteilter'}, {'cue': 'Helm', 'target': 'Kopf'}, {'cue': 'Juwel', 'target': 'Gold'}, {'cue': 'Kastanien', 'target': 'Rösten'}, {'cue': 'Kante', 'target': 'Messer'}, {'cue': 'Kind', 'target': 'Junge'}, {'cue': 'Kino', 'target': 'Theater'}, {'cue': 'Klebstoff', 'target': 'Papier'}, {'cue': 'Königreich', 'target': 'Schloss'}, {'cue': 'Mauer', 'target': 'Straße'}, {'cue': 'Surfen', 'target': 'Strand'}, {'cue': 'Schauspielerin', 'target': 'Frau'}, {'cue': 'Schnorchel', 'target': 'Flossen'}, {'cue': 'Schuh', 'target': 'Stiefel'}, {'cue': 'Schwan', 'target': 'Taube'}, {'cue': 'Streifen', 'target': 'Shirt'}, {'cue': 'Tee', 'target': 'Blätter'}, {'cue': 'Traube', 'target': 'Rosine'}, {'cue': 'Wasserfall', 'target': 'Felsen'}, {'cue': 'Wein', 'target': 'Abendessen'}, {'cue': 'Winkel', 'target': 'Kurve'}, {'cue': 'Zahnpasta', 'target': 'Minze'}, {'cue': 'Zimt', 'target': 'Rolle'}, {'cue': 'Nudeln', 'target': 'Pizza'}, {'cue': 'Kamin', 'target': 'Ziegel'}]" valType="str"/>
+      <Param name="conditionsFile" updates="None" val="cue_target_pairs.xlsx" valType="file"/>
       <Param name="endPoints" updates="None" val="[0, 1]" valType="num"/>
       <Param name="isTrials" updates="None" val="False" valType="bool"/>
       <Param name="loopType" updates="None" val="random" valType="str"/>
       <Param name="nReps" updates="None" val="1" valType="num"/>
-      <Param name="name" updates="None" val="guess_conditions" valType="code"/>
+      <Param name="name" updates="None" val="word_pair_loop" valType="code"/>
       <Param name="random seed" updates="None" val="" valType="code"/>
     </LoopInitiator>
-    <Routine name="load_guess_conditions"/>
-    <LoopTerminator name="guess_conditions"/>
-    <LoopInitiator loopType="TrialHandler" name="iti_learning">
-      <Param name="Selected rows" updates="None" val="" valType="str"/>
-      <Param name="conditions" updates="None" val="[{'iti': 4.5}, {'iti': 6}, {'iti': 7.5}, {'iti': 9}, {'iti': 4.5}, {'iti': 6}, {'iti': 7.5}, {'iti': 9}, {'iti': 4.5}, {'iti': 6}, {'iti': 7.5}, {'iti': 9}, {'iti': 4.5}, {'iti': 6}, {'iti': 7.5}, {'iti': 9}, {'iti': 4.5}, {'iti': 6}, {'iti': 7.5}, {'iti': 9}, {'iti': 4.5}, {'iti': 6}, {'iti': 7.5}, {'iti': 9}, {'iti': 4.5}, {'iti': 6}, {'iti': 7.5}, {'iti': 9}, {'iti': 4.5}, {'iti': 6}, {'iti': 7.5}, {'iti': 9}, {'iti': 4.5}, {'iti': 6}, {'iti': 7.5}, {'iti': 9}, {'iti': 4.5}, {'iti': 6}, {'iti': 7.5}, {'iti': 9}, {'iti': 4.5}, {'iti': 6}, {'iti': 7.5}, {'iti': 9}, {'iti': 4.5}, {'iti': 6}, {'iti': 7.5}, {'iti': 9}, {'iti': 4.5}, {'iti': 6}, {'iti': 7.5}, {'iti': 9}, {'iti': 4.5}, {'iti': 6}, {'iti': 7.5}, {'iti': 9}, {'iti': 4.5}, {'iti': 6}, {'iti': 7.5}, {'iti': 9}, {'iti': 4.5}, {'iti': 6}, {'iti': 7.5}, {'iti': 9}, {'iti': 4.5}, {'iti': 6}, {'iti': 7.5}, {'iti': 9}, {'iti': 4.5}, {'iti': 6}, {'iti': 7.5}, {'iti': 9}, {'iti': 4.5}, {'iti': 6}, {'iti': 7.5}, {'iti': 9}, {'iti': 4.5}, {'iti': 6}, {'iti': 7.5}, {'iti': 9}]" valType="str"/>
-      <Param name="conditionsFile" updates="None" val="iti_randomization.xlsx" valType="file"/>
-      <Param name="endPoints" updates="None" val="[0, 1]" valType="num"/>
-      <Param name="isTrials" updates="None" val="False" valType="bool"/>
-      <Param name="loopType" updates="None" val="random" valType="str"/>
-      <Param name="nReps" updates="None" val="1" valType="num"/>
-      <Param name="name" updates="None" val="iti_learning" valType="code"/>
-      <Param name="random seed" updates="None" val="" valType="code"/>
-    </LoopInitiator>
-    <Routine name="load_iti"/>
-    <LoopTerminator name="iti_learning"/>
+    <Routine name="load_word_pairs"/>
+    <LoopTerminator name="word_pair_loop"/>
     <Routine name="instructions1"/>
     <Routine name="instructions2"/>
     <Routine name="instructions3"/>
@@ -2800,7 +2805,7 @@
     <Routine name="instructions5"/>
     <LoopInitiator loopType="TrialHandler" name="practice_trials">
       <Param name="Selected rows" updates="None" val="" valType="str"/>
-      <Param name="conditions" updates="None" val="[{'cue': 'Wand', 'target': 'Fenster', 'guess_cond': 'Guess'}, {'cue': 'Frühstück', 'target': 'Brot', 'guess_cond': 'Read'}, {'cue': 'Hund', 'target': 'Pfote', 'guess_cond': 'Read'}, {'cue': 'Park', 'target': 'Baum', 'guess_cond': 'Guess'}]" valType="str"/>
+      <Param name="conditions" updates="None" val="[{'cue': 'Wand', 'target': 'Fenster'}, {'cue': 'Frühstück', 'target': 'Brot'}, {'cue': 'Hund', 'target': 'Pfote'}, {'cue': 'Park', 'target': 'Spielplatz'}]" valType="str"/>
       <Param name="conditionsFile" updates="None" val="practice.xlsx" valType="file"/>
       <Param name="endPoints" updates="None" val="[0, 1]" valType="num"/>
       <Param name="isTrials" updates="None" val="True" valType="bool"/>
@@ -2817,17 +2822,54 @@
     <Routine name="encode"/>
     <LoopTerminator name="practice_trials"/>
     <Routine name="start_task"/>
+    <LoopInitiator loopType="TrialHandler" name="learning_block">
+      <Param name="Selected rows" updates="None" val="" valType="str"/>
+      <Param name="conditions" updates="None" val="None" valType="str"/>
+      <Param name="conditionsFile" updates="None" val="" valType="file"/>
+      <Param name="endPoints" updates="None" val="[0, 1]" valType="num"/>
+      <Param name="isTrials" updates="None" val="False" valType="bool"/>
+      <Param name="loopType" updates="None" val="random" valType="str"/>
+      <Param name="nReps" updates="None" val="2" valType="num"/>
+      <Param name="name" updates="None" val="learning_block" valType="code"/>
+      <Param name="random seed" updates="None" val="" valType="code"/>
+    </LoopInitiator>
+    <LoopInitiator loopType="TrialHandler" name="conditions_loop">
+      <Param name="Selected rows" updates="None" val="" valType="str"/>
+      <Param name="conditions" updates="None" val="[{'guess_condition': 'Read'}, {'guess_condition': 'Guess'}, {'guess_condition': 'Read'}, {'guess_condition': 'Guess'}, {'guess_condition': 'Read'}, {'guess_condition': 'Guess'}, {'guess_condition': 'Read'}, {'guess_condition': 'Guess'}, {'guess_condition': 'Read'}, {'guess_condition': 'Guess'}, {'guess_condition': 'Read'}, {'guess_condition': 'Guess'}, {'guess_condition': 'Read'}, {'guess_condition': 'Guess'}, {'guess_condition': 'Read'}, {'guess_condition': 'Guess'}, {'guess_condition': 'Read'}, {'guess_condition': 'Guess'}, {'guess_condition': 'Read'}, {'guess_condition': 'Guess'}, {'guess_condition': 'Read'}, {'guess_condition': 'Guess'}, {'guess_condition': 'Read'}, {'guess_condition': 'Guess'}, {'guess_condition': 'Read'}, {'guess_condition': 'Guess'}, {'guess_condition': 'Read'}, {'guess_condition': 'Guess'}, {'guess_condition': 'Read'}, {'guess_condition': 'Guess'}, {'guess_condition': 'Read'}, {'guess_condition': 'Guess'}, {'guess_condition': 'Read'}, {'guess_condition': 'Guess'}, {'guess_condition': 'Read'}, {'guess_condition': 'Guess'}, {'guess_condition': 'Read'}, {'guess_condition': 'Guess'}, {'guess_condition': 'Read'}, {'guess_condition': 'Guess'}]" valType="str"/>
+      <Param name="conditionsFile" updates="None" val="guess_condition_randomization.xlsx" valType="file"/>
+      <Param name="endPoints" updates="None" val="[0, 1]" valType="num"/>
+      <Param name="isTrials" updates="None" val="False" valType="bool"/>
+      <Param name="loopType" updates="None" val="random" valType="str"/>
+      <Param name="nReps" updates="None" val="1" valType="num"/>
+      <Param name="name" updates="None" val="conditions_loop" valType="code"/>
+      <Param name="random seed" updates="None" val="" valType="code"/>
+    </LoopInitiator>
+    <Routine name="load_guess_conditions"/>
+    <LoopTerminator name="conditions_loop"/>
+    <LoopInitiator loopType="TrialHandler" name="iti_loop">
+      <Param name="Selected rows" updates="None" val="" valType="str"/>
+      <Param name="conditions" updates="None" val="[{'iti': 4.5}, {'iti': 6}, {'iti': 7.5}, {'iti': 9}, {'iti': 4.5}, {'iti': 6}, {'iti': 7.5}, {'iti': 9}, {'iti': 4.5}, {'iti': 6}, {'iti': 7.5}, {'iti': 9}, {'iti': 4.5}, {'iti': 6}, {'iti': 7.5}, {'iti': 9}, {'iti': 4.5}, {'iti': 6}, {'iti': 7.5}, {'iti': 9}, {'iti': 4.5}, {'iti': 6}, {'iti': 7.5}, {'iti': 9}, {'iti': 4.5}, {'iti': 6}, {'iti': 7.5}, {'iti': 9}, {'iti': 4.5}, {'iti': 6}, {'iti': 7.5}, {'iti': 9}, {'iti': 4.5}, {'iti': 6}, {'iti': 7.5}, {'iti': 9}, {'iti': 4.5}, {'iti': 6}, {'iti': 7.5}, {'iti': 9}]" valType="str"/>
+      <Param name="conditionsFile" updates="None" val="iti_randomization.xlsx" valType="file"/>
+      <Param name="endPoints" updates="None" val="[0, 1]" valType="num"/>
+      <Param name="isTrials" updates="None" val="False" valType="bool"/>
+      <Param name="loopType" updates="None" val="random" valType="str"/>
+      <Param name="nReps" updates="None" val="5" valType="num"/>
+      <Param name="name" updates="None" val="iti_loop" valType="code"/>
+      <Param name="random seed" updates="None" val="" valType="code"/>
+    </LoopInitiator>
+    <Routine name="load_iti"/>
+    <LoopTerminator name="iti_loop"/>
     <Routine name="prep_scanner"/>
     <Routine name="wait_for_trigger"/>
-    <Routine name="begin_run"/>
+    <Routine name="blank"/>
     <LoopInitiator loopType="TrialHandler" name="learning_trials">
       <Param name="Selected rows" updates="None" val="" valType="str"/>
       <Param name="conditions" updates="None" val="[{'cue': 'Akrobatin', 'target': 'Seil'}, {'cue': 'Chips', 'target': 'Salz'}, {'cue': 'Definition', 'target': 'Begriff'}, {'cue': 'Experiment', 'target': 'Versuch'}, {'cue': 'Fakt', 'target': 'Wissen'}, {'cue': 'Leistung', 'target': 'Ehre'}, {'cue': 'Rauch', 'target': 'Nebel'}, {'cue': 'Scheidung', 'target': 'Anwalt'}, {'cue': 'Service', 'target': 'Kunde'}, {'cue': 'Shampoo', 'target': 'Seife'}, {'cue': 'Soldat', 'target': 'Kämpfer'}, {'cue': 'Zeichnung', 'target': 'Bleistift'}, {'cue': 'Anführer', 'target': 'Boss'}, {'cue': 'Beutel', 'target': 'Sack'}, {'cue': 'Gast', 'target': 'Zimmer'}, {'cue': 'Geburtstag', 'target': 'Kerze'}, {'cue': 'Geschwister', 'target': 'Eltern'}, {'cue': 'Golf', 'target': 'Loch'}, {'cue': 'Küche', 'target': 'Tisch'}, {'cue': 'Rasen', 'target': 'Pflege'}, {'cue': 'Safari', 'target': 'Ausflug'}, {'cue': 'Sitzgurt', 'target': 'Gesetz'}, {'cue': 'Vampir', 'target': 'Geist'}, {'cue': 'Vergangenheit', 'target': 'Erinnerungen'}, {'cue': 'Agent', 'target': 'Reise'}, {'cue': 'Brise', 'target': 'Luft'}, {'cue': 'Decke', 'target': 'Kissen'}, {'cue': 'Diskussion', 'target': 'Vorlesung'}, {'cue': 'Eingeweide', 'target': 'Organ'}, {'cue': 'Floh', 'target': 'Käfer'}, {'cue': 'Frieden', 'target': 'Harmonie'}, {'cue': 'Garage', 'target': 'Haus'}, {'cue': 'Gegenstand', 'target': 'Artikel'}, {'cue': 'Humor', 'target': 'Komödie'}, {'cue': 'Insel', 'target': 'Meer'}, {'cue': 'Karneval', 'target': 'Festival'}, {'cue': 'Mappe', 'target': 'Buch'}, {'cue': 'Publikum', 'target': 'Applaus'}, {'cue': 'Pumpe', 'target': 'Reifen'}, {'cue': 'Raum', 'target': 'Platz'}, {'cue': 'Schlüssel', 'target': 'Ring'}, {'cue': 'Statue', 'target': 'Monument'}, {'cue': 'Tänzer', 'target': 'Musik'}, {'cue': 'Teleskop', 'target': 'Mikroskop'}, {'cue': 'Teller', 'target': 'Gabel'}, {'cue': 'Tradition', 'target': 'Weihnachten'}, {'cue': 'Vers', 'target': 'Poesie'}, {'cue': 'Vogel', 'target': 'Feder'}, {'cue': 'Zug', 'target': 'Flugzeug'}, {'cue': 'Zunge', 'target': 'Backe'}, {'cue': 'Bad', 'target': 'Handtuch'}, {'cue': 'Bar', 'target': 'Alkohol'}, {'cue': 'Beweis', 'target': 'Gericht'}, {'cue': 'Blumen', 'target': 'Bouquet'}, {'cue': 'Flotte', 'target': 'Boot'}, {'cue': 'Häftling', 'target': 'Verurteilter'}, {'cue': 'Helm', 'target': 'Kopf'}, {'cue': 'Juwel', 'target': 'Gold'}, {'cue': 'Kastanien', 'target': 'Rösten'}, {'cue': 'Kante', 'target': 'Messer'}, {'cue': 'Kind', 'target': 'Junge'}, {'cue': 'Kino', 'target': 'Theater'}, {'cue': 'Klebstoff', 'target': 'Papier'}, {'cue': 'Königreich', 'target': 'Schloss'}, {'cue': 'Mauer', 'target': 'Straße'}, {'cue': 'Surfen', 'target': 'Strand'}, {'cue': 'Schauspielerin', 'target': 'Frau'}, {'cue': 'Schnorchel', 'target': 'Flossen'}, {'cue': 'Schuh', 'target': 'Stiefel'}, {'cue': 'Schwan', 'target': 'Taube'}, {'cue': 'Streifen', 'target': 'Shirt'}, {'cue': 'Tee', 'target': 'Blätter'}, {'cue': 'Traube', 'target': 'Rosine'}, {'cue': 'Wasserfall', 'target': 'Felsen'}, {'cue': 'Wein', 'target': 'Abendessen'}, {'cue': 'Winkel', 'target': 'Kurve'}, {'cue': 'Zahnpasta', 'target': 'Minze'}, {'cue': 'Zimt', 'target': 'Rolle'}, {'cue': 'Nudeln', 'target': 'Pizza'}, {'cue': 'Kamin', 'target': 'Ziegel'}]" valType="str"/>
-      <Param name="conditionsFile" updates="None" val="cue_target_pairs.xlsx" valType="file"/>
+      <Param name="conditionsFile" updates="None" val="" valType="file"/>
       <Param name="endPoints" updates="None" val="[0, 1]" valType="num"/>
       <Param name="isTrials" updates="None" val="True" valType="bool"/>
       <Param name="loopType" updates="None" val="random" valType="str"/>
-      <Param name="nReps" updates="None" val="1" valType="num"/>
+      <Param name="nReps" updates="None" val="4" valType="num"/>
       <Param name="name" updates="None" val="learning_trials" valType="code"/>
       <Param name="random seed" updates="None" val="" valType="code"/>
     </LoopInitiator>
@@ -2837,10 +2879,10 @@
     <Routine name="guess_delay"/>
     <Routine name="encode"/>
     <Routine name="iti_task"/>
-    <Routine name="task_break"/>
-    <Routine name="prep_scanner"/>
-    <Routine name="wait_for_trigger"/>
     <LoopTerminator name="learning_trials"/>
+    <Routine name="blank"/>
+    <Routine name="task_break"/>
+    <LoopTerminator name="learning_block"/>
     <Routine name="end_part1"/>
     <Routine name="instructions_recall1"/>
     <Routine name="instructions_recall2"/>
@@ -2877,7 +2919,7 @@
     <Routine name="start_task"/>
     <Routine name="prep_scanner"/>
     <Routine name="wait_for_trigger"/>
-    <Routine name="begin_run"/>
+    <Routine name="blank"/>
     <LoopInitiator loopType="TrialHandler" name="test_trials">
       <Param name="Selected rows" updates="None" val="" valType="str"/>
       <Param name="conditions" updates="None" val="[{'cue': 'Akrobatin', 'target': 'Seil'}, {'cue': 'Chips', 'target': 'Salz'}, {'cue': 'Definition', 'target': 'Begriff'}, {'cue': 'Experiment', 'target': 'Versuch'}, {'cue': 'Fakt', 'target': 'Wissen'}, {'cue': 'Leistung', 'target': 'Ehre'}, {'cue': 'Rauch', 'target': 'Nebel'}, {'cue': 'Scheidung', 'target': 'Anwalt'}, {'cue': 'Service', 'target': 'Kunde'}, {'cue': 'Shampoo', 'target': 'Seife'}, {'cue': 'Soldat', 'target': 'Kämpfer'}, {'cue': 'Zeichnung', 'target': 'Bleistift'}, {'cue': 'Anführer', 'target': 'Boss'}, {'cue': 'Beutel', 'target': 'Sack'}, {'cue': 'Gast', 'target': 'Zimmer'}, {'cue': 'Geburtstag', 'target': 'Kerze'}, {'cue': 'Geschwister', 'target': 'Eltern'}, {'cue': 'Golf', 'target': 'Loch'}, {'cue': 'Küche', 'target': 'Tisch'}, {'cue': 'Rasen', 'target': 'Pflege'}, {'cue': 'Safari', 'target': 'Ausflug'}, {'cue': 'Sitzgurt', 'target': 'Gesetz'}, {'cue': 'Vampir', 'target': 'Geist'}, {'cue': 'Vergangenheit', 'target': 'Erinnerungen'}, {'cue': 'Agent', 'target': 'Reise'}, {'cue': 'Brise', 'target': 'Luft'}, {'cue': 'Decke', 'target': 'Kissen'}, {'cue': 'Diskussion', 'target': 'Vorlesung'}, {'cue': 'Eingeweide', 'target': 'Organ'}, {'cue': 'Floh', 'target': 'Käfer'}, {'cue': 'Frieden', 'target': 'Harmonie'}, {'cue': 'Garage', 'target': 'Haus'}, {'cue': 'Gegenstand', 'target': 'Artikel'}, {'cue': 'Humor', 'target': 'Komödie'}, {'cue': 'Insel', 'target': 'Meer'}, {'cue': 'Karneval', 'target': 'Festival'}, {'cue': 'Mappe', 'target': 'Buch'}, {'cue': 'Publikum', 'target': 'Applaus'}, {'cue': 'Pumpe', 'target': 'Reifen'}, {'cue': 'Raum', 'target': 'Platz'}, {'cue': 'Schlüssel', 'target': 'Ring'}, {'cue': 'Statue', 'target': 'Monument'}, {'cue': 'Tänzer', 'target': 'Musik'}, {'cue': 'Teleskop', 'target': 'Mikroskop'}, {'cue': 'Teller', 'target': 'Gabel'}, {'cue': 'Tradition', 'target': 'Weihnachten'}, {'cue': 'Vers', 'target': 'Poesie'}, {'cue': 'Vogel', 'target': 'Feder'}, {'cue': 'Zug', 'target': 'Flugzeug'}, {'cue': 'Zunge', 'target': 'Backe'}, {'cue': 'Bad', 'target': 'Handtuch'}, {'cue': 'Bar', 'target': 'Alkohol'}, {'cue': 'Beweis', 'target': 'Gericht'}, {'cue': 'Blumen', 'target': 'Bouquet'}, {'cue': 'Flotte', 'target': 'Boot'}, {'cue': 'Häftling', 'target': 'Verurteilter'}, {'cue': 'Helm', 'target': 'Kopf'}, {'cue': 'Juwel', 'target': 'Gold'}, {'cue': 'Kastanien', 'target': 'Rösten'}, {'cue': 'Kante', 'target': 'Messer'}, {'cue': 'Kind', 'target': 'Junge'}, {'cue': 'Kino', 'target': 'Theater'}, {'cue': 'Klebstoff', 'target': 'Papier'}, {'cue': 'Königreich', 'target': 'Schloss'}, {'cue': 'Mauer', 'target': 'Straße'}, {'cue': 'Surfen', 'target': 'Strand'}, {'cue': 'Schauspielerin', 'target': 'Frau'}, {'cue': 'Schnorchel', 'target': 'Flossen'}, {'cue': 'Schuh', 'target': 'Stiefel'}, {'cue': 'Schwan', 'target': 'Taube'}, {'cue': 'Streifen', 'target': 'Shirt'}, {'cue': 'Tee', 'target': 'Blätter'}, {'cue': 'Traube', 'target': 'Rosine'}, {'cue': 'Wasserfall', 'target': 'Felsen'}, {'cue': 'Wein', 'target': 'Abendessen'}, {'cue': 'Winkel', 'target': 'Kurve'}, {'cue': 'Zahnpasta', 'target': 'Minze'}, {'cue': 'Zimt', 'target': 'Rolle'}, {'cue': 'Nudeln', 'target': 'Pizza'}, {'cue': 'Kamin', 'target': 'Ziegel'}]" valType="str"/>
