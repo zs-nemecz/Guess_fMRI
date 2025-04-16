@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """
 This experiment was created using PsychoPy3 Experiment Builder (v2024.2.4),
-    on April 16, 2025, at 12:05
+    on April 16, 2025, at 16:14
 If you publish work using this script the most relevant publication is:
 
     Peirce J, Gray JR, Simpson S, MacAskill M, Höchenberger R, Sogo H, Kastman E, Lindeløv JK. (2019) 
@@ -59,7 +59,7 @@ or run the experiment with `--pilot` as an argument. To change what pilot
 PILOTING = core.setPilotModeFromArgs()
 # start off with values from experiment settings
 _fullScr = True
-_winSize = [1920, 1080]
+_winSize = [1024, 768]
 # if in pilot mode, apply overrides according to preferences
 if PILOTING:
     # force windowed mode
@@ -125,7 +125,7 @@ def setupData(expInfo, dataDir=None):
     thisExp = data.ExperimentHandler(
         name=expName, version='',
         extraInfo=expInfo, runtimeInfo=None,
-        originPath='C:\\Users\\LocalAdmin\\Documents\\GUESS\\Guess_fMRI\\part0_lastrun.py',
+        originPath='C:\\Users\\Nemecz\\Documents\\Guess_fMRI\\part0_lastrun.py',
         savePickle=True, saveWideText=True,
         dataFileName=dataDir + os.sep + filename, sortColumns='time'
     )
@@ -466,7 +466,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         win, name='movie',
         filename=None, movieLib='ffpyplayer',
         loop=False, volume=1.0, noAudio=False,
-        pos=(0, 0), size=(1920,1080), units='pix',
+        pos=(0, 0), size=(1024,576), units='pix',
         ori=0.0, anchor='center',opacity=None, contrast=1.0,
         depth=0
     )
