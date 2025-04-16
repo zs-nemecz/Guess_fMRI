@@ -127,8 +127,8 @@
       <CodeComponent name="experiment_setup" plugin="None">
         <Param val="" valType="extendedCode" updates="constant" name="Before Experiment"/>
         <Param val="" valType="extendedCode" updates="constant" name="Before JS Experiment"/>
-        <Param val="# import random for letter randomization&amp;#10;import random as rnd&amp;#10;&amp;#10;from psychopy import parallel&amp;#10;#port = parallel.ParallelPort(address = 0x2FE8) &amp;#10;pinNumber = 10 #Change to match the pin that is receiving the pulse value sent by your scanner. Set this to None to scan all pins&amp;#10;&amp;#10;all_keys = ['space', '1', '2', '3', '4', '5']&amp;#10;guess_made_key = &quot;2&quot;&amp;#10;no_guess_made_key = &quot;3&quot;&amp;#10;&amp;#10;guess_dur = 3&amp;#10;guess_resp_dur = 1.5&amp;#10;guess_delay_dur = 3&amp;#10;&amp;#10;cue_types = {}&amp;#10;target_types = {}&amp;#10;&amp;#10;no_recall_key = &quot;2&quot;&amp;#10;letter_dur = 3&amp;#10;&amp;#10;run_counter = 1&amp;#10;&amp;#10;num_trials = 40 # number of trials per run&amp;#10;if expInfo[&quot;ID&quot;] == &quot;pilot&quot; :&amp;#10;    num_trials = 2&amp;#10;" valType="extendedCode" updates="constant" name="Begin Experiment"/>
-        <Param val="import * as rnd from 'random';&amp;#10;import {parallel} from 'psychopy';&amp;#10;pinNumber = 10;&amp;#10;all_keys = [&quot;space&quot;, &quot;1&quot;, &quot;2&quot;, &quot;3&quot;, &quot;4&quot;, &quot;5&quot;];&amp;#10;guess_made_key = &quot;2&quot;;&amp;#10;no_guess_made_key = &quot;3&quot;;&amp;#10;guess_dur = 3;&amp;#10;guess_resp_dur = 1.5;&amp;#10;guess_delay_dur = 3;&amp;#10;cue_types = {};&amp;#10;target_types = {};&amp;#10;no_recall_key = &quot;2&quot;;&amp;#10;letter_dur = 3;&amp;#10;run_counter = 1;&amp;#10;num_trials = 40;&amp;#10;if ((expInfo[&quot;ID&quot;] === &quot;pilot&quot;)) {&amp;#10;    num_trials = 2;&amp;#10;}&amp;#10;" valType="extendedCode" updates="constant" name="Begin JS Experiment"/>
+        <Param val="# import random for letter randomization&amp;#10;import random as rnd&amp;#10;&amp;#10;from psychopy import parallel&amp;#10;#port = parallel.ParallelPort(address = 0x2FE8) &amp;#10;pinNumber = 10 #Change to match the pin that is receiving the pulse value sent by your scanner. Set this to None to scan all pins&amp;#10;&amp;#10;all_keys = ['space', '1', '2', '3', '4', '5']&amp;#10;guess_made_key = &quot;2&quot;&amp;#10;no_guess_made_key = &quot;3&quot;&amp;#10;&amp;#10;guess_dur = 3&amp;#10;guess_resp_dur = 1.5&amp;#10;guess_delay_dur = 3&amp;#10;&amp;#10;cue_types = {}&amp;#10;target_types = {}&amp;#10;&amp;#10;succ_recall_key = &quot;3&quot;&amp;#10;letter_dur = 3&amp;#10;&amp;#10;run_counter = 1&amp;#10;&amp;#10;num_trials = 40 # number of trials per run&amp;#10;if expInfo[&quot;ID&quot;] == &quot;pilot&quot; :&amp;#10;    num_trials = 2&amp;#10;" valType="extendedCode" updates="constant" name="Begin Experiment"/>
+        <Param val="import * as rnd from 'random';&amp;#10;import {parallel} from 'psychopy';&amp;#10;pinNumber = 10;&amp;#10;all_keys = [&quot;space&quot;, &quot;1&quot;, &quot;2&quot;, &quot;3&quot;, &quot;4&quot;, &quot;5&quot;];&amp;#10;guess_made_key = &quot;2&quot;;&amp;#10;no_guess_made_key = &quot;3&quot;;&amp;#10;guess_dur = 3;&amp;#10;guess_resp_dur = 1.5;&amp;#10;guess_delay_dur = 3;&amp;#10;cue_types = {};&amp;#10;target_types = {};&amp;#10;succ_recall_key = &quot;3&quot;;&amp;#10;letter_dur = 3;&amp;#10;run_counter = 1;&amp;#10;num_trials = 40;&amp;#10;if ((expInfo[&quot;ID&quot;] === &quot;pilot&quot;)) {&amp;#10;    num_trials = 2;&amp;#10;}&amp;#10;" valType="extendedCode" updates="constant" name="Begin JS Experiment"/>
         <Param val="" valType="extendedCode" updates="constant" name="Begin JS Routine"/>
         <Param val="" valType="extendedCode" updates="constant" name="Begin Routine"/>
         <Param val="Auto-&gt;JS" valType="str" updates="None" name="Code Type"/>
@@ -551,8 +551,8 @@
         <Param val="" valType="extendedCode" updates="constant" name="Each JS Frame"/>
         <Param val="" valType="extendedCode" updates="constant" name="End Experiment"/>
         <Param val="" valType="extendedCode" updates="constant" name="End JS Experiment"/>
-        <Param val="guess_cond = practice_list.splice((practice_list.length - 1), 1);&amp;#10;this_cue = cue;&amp;#10;this_target = target;&amp;#10;" valType="extendedCode" updates="constant" name="End JS Routine"/>
-        <Param val="guess_cond = practice_list.pop()&amp;#10;this_cue = cue&amp;#10;this_target = target" valType="extendedCode" updates="constant" name="End Routine"/>
+        <Param val="guess_cond = practice_list.splice((practice_list.length - 1), 1);&amp;#10;this_cue = cue;&amp;#10;this_target = target;&amp;#10;run_counter = 0;&amp;#10;" valType="extendedCode" updates="constant" name="End JS Routine"/>
+        <Param val="guess_cond = practice_list.pop()&amp;#10;this_cue = cue&amp;#10;this_target = target&amp;#10;run_counter = 0" valType="extendedCode" updates="constant" name="End Routine"/>
         <Param val="False" valType="bool" updates="None" name="disabled"/>
         <Param val="set_practice_guess_stim" valType="code" updates="None" name="name"/>
       </CodeComponent>
@@ -1710,8 +1710,8 @@
         <Param val="" valType="extendedCode" updates="constant" name="Before JS Experiment"/>
         <Param val="" valType="extendedCode" updates="constant" name="Begin Experiment"/>
         <Param val="" valType="extendedCode" updates="constant" name="Begin JS Experiment"/>
-        <Param val="psychoJS.experiment.addData(&quot;trial_type&quot;, cue_types[this_cue]);&amp;#10;" valType="extendedCode" updates="constant" name="Begin JS Routine"/>
-        <Param val="thisExp.addData('trial_type', cue_types[this_cue])&amp;#10;" valType="extendedCode" updates="constant" name="Begin Routine"/>
+        <Param val="psychoJS.experiment.addData(&quot;trial_type&quot;, cue_types[this_cue]);&amp;#10;psychoJS.experiment.addData(&quot;RunNr&quot;, run_counter);&amp;#10;" valType="extendedCode" updates="constant" name="Begin JS Routine"/>
+        <Param val="thisExp.addData('trial_type', cue_types[this_cue])&amp;#10;thisExp.addData('RunNr', run_counter)&amp;#10;" valType="extendedCode" updates="constant" name="Begin Routine"/>
         <Param val="Auto-&gt;JS" valType="str" updates="None" name="Code Type"/>
         <Param val="" valType="extendedCode" updates="constant" name="Each Frame"/>
         <Param val="" valType="extendedCode" updates="constant" name="Each JS Frame"/>
@@ -1722,33 +1722,6 @@
         <Param val="False" valType="bool" updates="None" name="disabled"/>
         <Param val="save_recall_trial_type" valType="code" updates="None" name="name"/>
       </CodeComponent>
-      <TextComponent name="cue_stim_recall" plugin="None">
-        <Param val="white" valType="color" updates="constant" name="color"/>
-        <Param val="rgb" valType="str" updates="constant" name="colorSpace"/>
-        <Param val="1" valType="num" updates="constant" name="contrast"/>
-        <Param val="False" valType="bool" updates="None" name="disabled"/>
-        <Param val="False" valType="code" updates="constant" name="draggable"/>
-        <Param val="" valType="code" updates="None" name="durationEstim"/>
-        <Param val="None" valType="str" updates="constant" name="flip"/>
-        <Param val="Arial" valType="str" updates="constant" name="font"/>
-        <Param val="LTR" valType="str" updates="None" name="languageStyle"/>
-        <Param val="0.05" valType="num" updates="constant" name="letterHeight"/>
-        <Param val="cue_stim_recall" valType="code" updates="None" name="name"/>
-        <Param val="" valType="num" updates="constant" name="opacity"/>
-        <Param val="0" valType="num" updates="constant" name="ori"/>
-        <Param val="(-0.2, 0)" valType="list" updates="constant" name="pos"/>
-        <Param val="True" valType="bool" updates="None" name="saveStartStop"/>
-        <Param val="" valType="code" updates="None" name="startEstim"/>
-        <Param val="time (s)" valType="str" updates="None" name="startType"/>
-        <Param val="0.0" valType="code" updates="None" name="startVal"/>
-        <Param val="duration (s)" valType="str" updates="None" name="stopType"/>
-        <Param val="3.0" valType="code" updates="constant" name="stopVal"/>
-        <Param val="True" valType="bool" updates="None" name="syncScreenRefresh"/>
-        <Param val="$this_cue" valType="str" updates="set every repeat" name="text"/>
-        <Param val="from exp settings" valType="str" updates="None" name="units"/>
-        <Param val="" valType="code" updates="None" name="validator"/>
-        <Param val="" valType="num" updates="constant" name="wrapWidth"/>
-      </TextComponent>
       <TextComponent name="dash_stim_recall" plugin="None">
         <Param val="white" valType="color" updates="constant" name="color"/>
         <Param val="rgb" valType="str" updates="constant" name="colorSpace"/>
@@ -1823,6 +1796,33 @@
         <Param val="False" valType="bool" updates="constant" name="storeCorrect"/>
         <Param val="True" valType="bool" updates="constant" name="syncScreenRefresh"/>
       </KeyboardComponent>
+      <TextComponent name="cue_stim_recall" plugin="None">
+        <Param val="white" valType="color" updates="constant" name="color"/>
+        <Param val="rgb" valType="str" updates="constant" name="colorSpace"/>
+        <Param val="1" valType="num" updates="constant" name="contrast"/>
+        <Param val="False" valType="bool" updates="None" name="disabled"/>
+        <Param val="False" valType="code" updates="constant" name="draggable"/>
+        <Param val="" valType="code" updates="None" name="durationEstim"/>
+        <Param val="None" valType="str" updates="constant" name="flip"/>
+        <Param val="Arial" valType="str" updates="constant" name="font"/>
+        <Param val="LTR" valType="str" updates="None" name="languageStyle"/>
+        <Param val="0.05" valType="num" updates="constant" name="letterHeight"/>
+        <Param val="cue_stim_recall" valType="code" updates="None" name="name"/>
+        <Param val="" valType="num" updates="constant" name="opacity"/>
+        <Param val="0" valType="num" updates="constant" name="ori"/>
+        <Param val="(-0.2, 0)" valType="list" updates="constant" name="pos"/>
+        <Param val="True" valType="bool" updates="None" name="saveStartStop"/>
+        <Param val="" valType="code" updates="None" name="startEstim"/>
+        <Param val="time (s)" valType="str" updates="None" name="startType"/>
+        <Param val="0.0" valType="code" updates="None" name="startVal"/>
+        <Param val="duration (s)" valType="str" updates="None" name="stopType"/>
+        <Param val="3.0" valType="code" updates="constant" name="stopVal"/>
+        <Param val="True" valType="bool" updates="None" name="syncScreenRefresh"/>
+        <Param val="$this_cue" valType="str" updates="set every repeat" name="text"/>
+        <Param val="from exp settings" valType="str" updates="None" name="units"/>
+        <Param val="" valType="code" updates="None" name="validator"/>
+        <Param val="" valType="num" updates="constant" name="wrapWidth"/>
+      </TextComponent>
     </Routine>
     <Routine name="recall_response">
       <RoutineSettingsComponent name="recall_response" plugin="None">
@@ -1981,8 +1981,8 @@
         <Param val="" valType="extendedCode" updates="constant" name="Each JS Frame"/>
         <Param val="" valType="extendedCode" updates="constant" name="End Experiment"/>
         <Param val="" valType="extendedCode" updates="constant" name="End JS Experiment"/>
-        <Param val="skip_letters = 0;&amp;#10;trial_dur = letter_dur;&amp;#10;if ((recall_reached.keys === no_recall_key)) {&amp;#10;    trial_dur = letter_dur;&amp;#10;} else {&amp;#10;    trial_dur = 0.0;&amp;#10;    skip_letters = 1;&amp;#10;}&amp;#10;" valType="extendedCode" updates="constant" name="End JS Routine"/>
-        <Param val="skip_letters = 0&amp;#10;trial_dur = letter_dur&amp;#10;if recall_reached.keys == no_recall_key:&amp;#10;    trial_dur = letter_dur&amp;#10;else:&amp;#10;    trial_dur = 0.00&amp;#10;    skip_letters = 1&amp;#10;" valType="extendedCode" updates="constant" name="End Routine"/>
+        <Param val="skip_letters = 0;&amp;#10;trial_dur = letter_dur;&amp;#10;if ((recall_reached.keys === succ_recall_key)) {&amp;#10;    trial_dur = letter_dur;&amp;#10;} else {&amp;#10;    trial_dur = 0.0;&amp;#10;    skip_letters = 1;&amp;#10;}&amp;#10;" valType="extendedCode" updates="constant" name="End JS Routine"/>
+        <Param val="skip_letters = 0&amp;#10;trial_dur = letter_dur&amp;#10;if recall_reached.keys == succ_recall_key:&amp;#10;    trial_dur = letter_dur&amp;#10;else:&amp;#10;    trial_dur = 0.00&amp;#10;    skip_letters = 1&amp;#10;" valType="extendedCode" updates="constant" name="End Routine"/>
         <Param val="False" valType="bool" updates="None" name="disabled"/>
         <Param val="skip_recall_select" valType="code" updates="None" name="name"/>
       </CodeComponent>
@@ -2254,7 +2254,7 @@
         <Param val="duration (s)" valType="str" updates="None" name="stopType"/>
         <Param val="" valType="code" updates="constant" name="stopVal"/>
         <Param val="True" valType="bool" updates="None" name="syncScreenRefresh"/>
-        <Param val="Im nächsten Teil des Experiments müssen Sie das Wortpaar zu jedem auf dem Bildschirm angezeigten Wort abrufen.&amp;#10;&amp;#10;Versuchen Sie, das Wort (3 Sekunden) abzurufen, und geben Sie dann an, ob Sie sich an das Wort erinnern, indem Sie die Tasten 1 (Kann mich nicht erinnern) und 2(Kann mich erinnern) verwenden.&amp;#10;&amp;#10;Drücken Sie eine Taste, um fortzufahren." valType="str" updates="constant" name="text"/>
+        <Param val="Im nächsten Teil des Experiments müssen Sie das Wortpaar zu jedem auf dem Bildschirm angezeigten Wort abrufen.&amp;#10;&amp;#10;Versuchen Sie, das Wort (3 Sekunden) abzurufen, und geben Sie dann an, ob Sie sich an das Wort erinnern, indem Sie die Tasten 1 (Kann mich nicht erinnern) und 2 (Kann mich erinnern) verwenden.&amp;#10;&amp;#10;Drücken Sie eine Taste, um fortzufahren." valType="str" updates="constant" name="text"/>
         <Param val="from exp settings" valType="str" updates="None" name="units"/>
         <Param val="" valType="code" updates="None" name="validator"/>
         <Param val="1.2" valType="num" updates="constant" name="wrapWidth"/>
@@ -2574,8 +2574,8 @@
         <Param val="" valType="extendedCode" updates="constant" name="Each JS Frame"/>
         <Param val="" valType="extendedCode" updates="constant" name="End Experiment"/>
         <Param val="" valType="extendedCode" updates="constant" name="End JS Experiment"/>
-        <Param val="this_cue = cue;&amp;#10;this_target = target;&amp;#10;" valType="extendedCode" updates="constant" name="End JS Routine"/>
-        <Param val="this_cue = cue&amp;#10;this_target = target" valType="extendedCode" updates="constant" name="End Routine"/>
+        <Param val="this_cue = cue;&amp;#10;this_target = target;&amp;#10;run_counter = 0;&amp;#10;" valType="extendedCode" updates="constant" name="End JS Routine"/>
+        <Param val="this_cue = cue&amp;#10;this_target = target&amp;#10;run_counter = 0" valType="extendedCode" updates="constant" name="End Routine"/>
         <Param val="False" valType="bool" updates="None" name="disabled"/>
         <Param val="set_recall_practice_stim" valType="code" updates="None" name="name"/>
       </CodeComponent>
@@ -2778,19 +2778,6 @@
   </Routines>
   <Flow>
     <Routine name="welcome"/>
-    <LoopInitiator loopType="TrialHandler" name="learning_stimuli_loop">
-      <Param name="Selected rows" updates="None" val="" valType="str"/>
-      <Param name="conditions" updates="None" val="[{'cue': 'Akrobatin', 'target': 'Seil'}, {'cue': 'Chips', 'target': 'Salz'}, {'cue': 'Definition', 'target': 'Begriff'}, {'cue': 'Experiment', 'target': 'Versuch'}, {'cue': 'Fakt', 'target': 'Wissen'}, {'cue': 'Leistung', 'target': 'Ehre'}, {'cue': 'Rauch', 'target': 'Nebel'}, {'cue': 'Scheidung', 'target': 'Anwalt'}, {'cue': 'Service', 'target': 'Kunde'}, {'cue': 'Shampoo', 'target': 'Seife'}, {'cue': 'Soldat', 'target': 'Kämpfer'}, {'cue': 'Zeichnung', 'target': 'Bleistift'}, {'cue': 'Anführer', 'target': 'Boss'}, {'cue': 'Beutel', 'target': 'Sack'}, {'cue': 'Gast', 'target': 'Zimmer'}, {'cue': 'Geburtstag', 'target': 'Kerze'}, {'cue': 'Geschwister', 'target': 'Eltern'}, {'cue': 'Golf', 'target': 'Loch'}, {'cue': 'Küche', 'target': 'Tisch'}, {'cue': 'Rasen', 'target': 'Pflege'}, {'cue': 'Safari', 'target': 'Ausflug'}, {'cue': 'Sitzgurt', 'target': 'Gesetz'}, {'cue': 'Vampir', 'target': 'Geist'}, {'cue': 'Vergangenheit', 'target': 'Erinnerungen'}, {'cue': 'Agent', 'target': 'Reise'}, {'cue': 'Brise', 'target': 'Luft'}, {'cue': 'Decke', 'target': 'Kissen'}, {'cue': 'Diskussion', 'target': 'Vorlesung'}, {'cue': 'Eingeweide', 'target': 'Organ'}, {'cue': 'Floh', 'target': 'Käfer'}, {'cue': 'Frieden', 'target': 'Harmonie'}, {'cue': 'Garage', 'target': 'Haus'}, {'cue': 'Gegenstand', 'target': 'Artikel'}, {'cue': 'Humor', 'target': 'Komödie'}, {'cue': 'Insel', 'target': 'Meer'}, {'cue': 'Karneval', 'target': 'Festival'}, {'cue': 'Mappe', 'target': 'Buch'}, {'cue': 'Publikum', 'target': 'Applaus'}, {'cue': 'Pumpe', 'target': 'Reifen'}, {'cue': 'Raum', 'target': 'Platz'}, {'cue': 'Schlüssel', 'target': 'Ring'}, {'cue': 'Statue', 'target': 'Monument'}, {'cue': 'Tänzer', 'target': 'Musik'}, {'cue': 'Teleskop', 'target': 'Mikroskop'}, {'cue': 'Teller', 'target': 'Gabel'}, {'cue': 'Tradition', 'target': 'Weihnachten'}, {'cue': 'Vers', 'target': 'Poesie'}, {'cue': 'Vogel', 'target': 'Feder'}, {'cue': 'Zug', 'target': 'Flugzeug'}, {'cue': 'Zunge', 'target': 'Backe'}, {'cue': 'Bad', 'target': 'Handtuch'}, {'cue': 'Bar', 'target': 'Alkohol'}, {'cue': 'Beweis', 'target': 'Gericht'}, {'cue': 'Blumen', 'target': 'Bouquet'}, {'cue': 'Flotte', 'target': 'Boot'}, {'cue': 'Häftling', 'target': 'Verurteilter'}, {'cue': 'Helm', 'target': 'Kopf'}, {'cue': 'Juwel', 'target': 'Gold'}, {'cue': 'Kastanien', 'target': 'Rösten'}, {'cue': 'Kante', 'target': 'Messer'}, {'cue': 'Kind', 'target': 'Junge'}, {'cue': 'Kino', 'target': 'Theater'}, {'cue': 'Klebstoff', 'target': 'Papier'}, {'cue': 'Königreich', 'target': 'Schloss'}, {'cue': 'Mauer', 'target': 'Straße'}, {'cue': 'Surfen', 'target': 'Strand'}, {'cue': 'Schauspielerin', 'target': 'Frau'}, {'cue': 'Schnorchel', 'target': 'Flossen'}, {'cue': 'Schuh', 'target': 'Stiefel'}, {'cue': 'Schwan', 'target': 'Taube'}, {'cue': 'Streifen', 'target': 'Shirt'}, {'cue': 'Tee', 'target': 'Blätter'}, {'cue': 'Traube', 'target': 'Rosine'}, {'cue': 'Wasserfall', 'target': 'Felsen'}, {'cue': 'Wein', 'target': 'Abendessen'}, {'cue': 'Winkel', 'target': 'Kurve'}, {'cue': 'Zahnpasta', 'target': 'Minze'}, {'cue': 'Zimt', 'target': 'Rolle'}, {'cue': 'Nudeln', 'target': 'Pizza'}, {'cue': 'Kamin', 'target': 'Ziegel'}]" valType="str"/>
-      <Param name="conditionsFile" updates="None" val="cue_target_pairs.xlsx" valType="file"/>
-      <Param name="endPoints" updates="None" val="[0, 1]" valType="num"/>
-      <Param name="isTrials" updates="None" val="False" valType="bool"/>
-      <Param name="loopType" updates="None" val="random" valType="str"/>
-      <Param name="nReps" updates="None" val="1" valType="num"/>
-      <Param name="name" updates="None" val="learning_stimuli_loop" valType="code"/>
-      <Param name="random seed" updates="None" val="" valType="code"/>
-    </LoopInitiator>
-    <Routine name="load_word_pairs"/>
-    <LoopTerminator name="learning_stimuli_loop"/>
     <Routine name="instructions1"/>
     <Routine name="instructions2"/>
     <Routine name="instructions3"/>
@@ -2814,6 +2801,19 @@
     <Routine name="guess_delay"/>
     <Routine name="encode"/>
     <LoopTerminator name="practice_trials"/>
+    <LoopInitiator loopType="TrialHandler" name="learning_words_loop">
+      <Param name="Selected rows" updates="None" val="" valType="str"/>
+      <Param name="conditions" updates="None" val="[{'cue': 'Akrobatin', 'target': 'Seil'}, {'cue': 'Chips', 'target': 'Salz'}, {'cue': 'Definition', 'target': 'Begriff'}, {'cue': 'Experiment', 'target': 'Versuch'}, {'cue': 'Fakt', 'target': 'Wissen'}, {'cue': 'Leistung', 'target': 'Ehre'}, {'cue': 'Rauch', 'target': 'Nebel'}, {'cue': 'Scheidung', 'target': 'Anwalt'}, {'cue': 'Service', 'target': 'Kunde'}, {'cue': 'Shampoo', 'target': 'Seife'}, {'cue': 'Soldat', 'target': 'Kämpfer'}, {'cue': 'Zeichnung', 'target': 'Bleistift'}, {'cue': 'Anführer', 'target': 'Boss'}, {'cue': 'Beutel', 'target': 'Sack'}, {'cue': 'Gast', 'target': 'Zimmer'}, {'cue': 'Geburtstag', 'target': 'Kerze'}, {'cue': 'Geschwister', 'target': 'Eltern'}, {'cue': 'Golf', 'target': 'Loch'}, {'cue': 'Küche', 'target': 'Tisch'}, {'cue': 'Rasen', 'target': 'Pflege'}, {'cue': 'Safari', 'target': 'Ausflug'}, {'cue': 'Sitzgurt', 'target': 'Gesetz'}, {'cue': 'Vampir', 'target': 'Geist'}, {'cue': 'Vergangenheit', 'target': 'Erinnerungen'}, {'cue': 'Agent', 'target': 'Reise'}, {'cue': 'Brise', 'target': 'Luft'}, {'cue': 'Decke', 'target': 'Kissen'}, {'cue': 'Diskussion', 'target': 'Vorlesung'}, {'cue': 'Eingeweide', 'target': 'Organ'}, {'cue': 'Floh', 'target': 'Käfer'}, {'cue': 'Frieden', 'target': 'Harmonie'}, {'cue': 'Garage', 'target': 'Haus'}, {'cue': 'Gegenstand', 'target': 'Artikel'}, {'cue': 'Humor', 'target': 'Komödie'}, {'cue': 'Insel', 'target': 'Meer'}, {'cue': 'Karneval', 'target': 'Festival'}, {'cue': 'Mappe', 'target': 'Buch'}, {'cue': 'Publikum', 'target': 'Applaus'}, {'cue': 'Pumpe', 'target': 'Reifen'}, {'cue': 'Raum', 'target': 'Platz'}, {'cue': 'Schlüssel', 'target': 'Ring'}, {'cue': 'Statue', 'target': 'Monument'}, {'cue': 'Tänzer', 'target': 'Musik'}, {'cue': 'Teleskop', 'target': 'Mikroskop'}, {'cue': 'Teller', 'target': 'Gabel'}, {'cue': 'Tradition', 'target': 'Weihnachten'}, {'cue': 'Vers', 'target': 'Poesie'}, {'cue': 'Vogel', 'target': 'Feder'}, {'cue': 'Zug', 'target': 'Flugzeug'}, {'cue': 'Zunge', 'target': 'Backe'}, {'cue': 'Bad', 'target': 'Handtuch'}, {'cue': 'Bar', 'target': 'Alkohol'}, {'cue': 'Beweis', 'target': 'Gericht'}, {'cue': 'Blumen', 'target': 'Bouquet'}, {'cue': 'Flotte', 'target': 'Boot'}, {'cue': 'Häftling', 'target': 'Verurteilter'}, {'cue': 'Helm', 'target': 'Kopf'}, {'cue': 'Juwel', 'target': 'Gold'}, {'cue': 'Kastanien', 'target': 'Rösten'}, {'cue': 'Kante', 'target': 'Messer'}, {'cue': 'Kind', 'target': 'Junge'}, {'cue': 'Kino', 'target': 'Theater'}, {'cue': 'Klebstoff', 'target': 'Papier'}, {'cue': 'Königreich', 'target': 'Schloss'}, {'cue': 'Mauer', 'target': 'Straße'}, {'cue': 'Surfen', 'target': 'Strand'}, {'cue': 'Schauspielerin', 'target': 'Frau'}, {'cue': 'Schnorchel', 'target': 'Flossen'}, {'cue': 'Schuh', 'target': 'Stiefel'}, {'cue': 'Schwan', 'target': 'Taube'}, {'cue': 'Streifen', 'target': 'Shirt'}, {'cue': 'Tee', 'target': 'Blätter'}, {'cue': 'Traube', 'target': 'Rosine'}, {'cue': 'Wasserfall', 'target': 'Felsen'}, {'cue': 'Wein', 'target': 'Abendessen'}, {'cue': 'Winkel', 'target': 'Kurve'}, {'cue': 'Zahnpasta', 'target': 'Minze'}, {'cue': 'Zimt', 'target': 'Rolle'}, {'cue': 'Nudeln', 'target': 'Pizza'}, {'cue': 'Kamin', 'target': 'Ziegel'}]" valType="str"/>
+      <Param name="conditionsFile" updates="None" val="cue_target_pairs.xlsx" valType="file"/>
+      <Param name="endPoints" updates="None" val="[0, 1]" valType="num"/>
+      <Param name="isTrials" updates="None" val="False" valType="bool"/>
+      <Param name="loopType" updates="None" val="random" valType="str"/>
+      <Param name="nReps" updates="None" val="1" valType="num"/>
+      <Param name="name" updates="None" val="learning_words_loop" valType="code"/>
+      <Param name="random seed" updates="None" val="" valType="code"/>
+    </LoopInitiator>
+    <Routine name="load_word_pairs"/>
+    <LoopTerminator name="learning_words_loop"/>
     <Routine name="start_task"/>
     <LoopInitiator loopType="TrialHandler" name="learning_block">
       <Param name="Selected rows" updates="None" val="" valType="str"/>
@@ -2877,19 +2877,6 @@
     <Routine name="task_break"/>
     <LoopTerminator name="learning_block"/>
     <Routine name="end_part1"/>
-    <LoopInitiator loopType="TrialHandler" name="recall_stimuli_loop">
-      <Param name="Selected rows" updates="None" val="" valType="str"/>
-      <Param name="conditions" updates="None" val="None" valType="str"/>
-      <Param name="conditionsFile" updates="None" val="" valType="file"/>
-      <Param name="endPoints" updates="None" val="[0, 1]" valType="num"/>
-      <Param name="isTrials" updates="None" val="False" valType="bool"/>
-      <Param name="loopType" updates="None" val="random" valType="str"/>
-      <Param name="nReps" updates="None" val="1" valType="num"/>
-      <Param name="name" updates="None" val="recall_stimuli_loop" valType="code"/>
-      <Param name="random seed" updates="None" val="" valType="code"/>
-    </LoopInitiator>
-    <Routine name="load_word_pairs"/>
-    <LoopTerminator name="recall_stimuli_loop"/>
     <Routine name="instructions_recall1"/>
     <Routine name="instructions_recall2"/>
     <LoopInitiator loopType="TrialHandler" name="recall_practice">
@@ -2909,6 +2896,19 @@
     <Routine name="recall_select"/>
     <Routine name="recall_feedback"/>
     <LoopTerminator name="recall_practice"/>
+    <LoopInitiator loopType="TrialHandler" name="recall_words_loop">
+      <Param name="Selected rows" updates="None" val="" valType="str"/>
+      <Param name="conditions" updates="None" val="[{'cue': 'Akrobatin', 'target': 'Seil'}, {'cue': 'Chips', 'target': 'Salz'}, {'cue': 'Definition', 'target': 'Begriff'}, {'cue': 'Experiment', 'target': 'Versuch'}, {'cue': 'Fakt', 'target': 'Wissen'}, {'cue': 'Leistung', 'target': 'Ehre'}, {'cue': 'Rauch', 'target': 'Nebel'}, {'cue': 'Scheidung', 'target': 'Anwalt'}, {'cue': 'Service', 'target': 'Kunde'}, {'cue': 'Shampoo', 'target': 'Seife'}, {'cue': 'Soldat', 'target': 'Kämpfer'}, {'cue': 'Zeichnung', 'target': 'Bleistift'}, {'cue': 'Anführer', 'target': 'Boss'}, {'cue': 'Beutel', 'target': 'Sack'}, {'cue': 'Gast', 'target': 'Zimmer'}, {'cue': 'Geburtstag', 'target': 'Kerze'}, {'cue': 'Geschwister', 'target': 'Eltern'}, {'cue': 'Golf', 'target': 'Loch'}, {'cue': 'Küche', 'target': 'Tisch'}, {'cue': 'Rasen', 'target': 'Pflege'}, {'cue': 'Safari', 'target': 'Ausflug'}, {'cue': 'Sitzgurt', 'target': 'Gesetz'}, {'cue': 'Vampir', 'target': 'Geist'}, {'cue': 'Vergangenheit', 'target': 'Erinnerungen'}, {'cue': 'Agent', 'target': 'Reise'}, {'cue': 'Brise', 'target': 'Luft'}, {'cue': 'Decke', 'target': 'Kissen'}, {'cue': 'Diskussion', 'target': 'Vorlesung'}, {'cue': 'Eingeweide', 'target': 'Organ'}, {'cue': 'Floh', 'target': 'Käfer'}, {'cue': 'Frieden', 'target': 'Harmonie'}, {'cue': 'Garage', 'target': 'Haus'}, {'cue': 'Gegenstand', 'target': 'Artikel'}, {'cue': 'Humor', 'target': 'Komödie'}, {'cue': 'Insel', 'target': 'Meer'}, {'cue': 'Karneval', 'target': 'Festival'}, {'cue': 'Mappe', 'target': 'Buch'}, {'cue': 'Publikum', 'target': 'Applaus'}, {'cue': 'Pumpe', 'target': 'Reifen'}, {'cue': 'Raum', 'target': 'Platz'}, {'cue': 'Schlüssel', 'target': 'Ring'}, {'cue': 'Statue', 'target': 'Monument'}, {'cue': 'Tänzer', 'target': 'Musik'}, {'cue': 'Teleskop', 'target': 'Mikroskop'}, {'cue': 'Teller', 'target': 'Gabel'}, {'cue': 'Tradition', 'target': 'Weihnachten'}, {'cue': 'Vers', 'target': 'Poesie'}, {'cue': 'Vogel', 'target': 'Feder'}, {'cue': 'Zug', 'target': 'Flugzeug'}, {'cue': 'Zunge', 'target': 'Backe'}, {'cue': 'Bad', 'target': 'Handtuch'}, {'cue': 'Bar', 'target': 'Alkohol'}, {'cue': 'Beweis', 'target': 'Gericht'}, {'cue': 'Blumen', 'target': 'Bouquet'}, {'cue': 'Flotte', 'target': 'Boot'}, {'cue': 'Häftling', 'target': 'Verurteilter'}, {'cue': 'Helm', 'target': 'Kopf'}, {'cue': 'Juwel', 'target': 'Gold'}, {'cue': 'Kastanien', 'target': 'Rösten'}, {'cue': 'Kante', 'target': 'Messer'}, {'cue': 'Kind', 'target': 'Junge'}, {'cue': 'Kino', 'target': 'Theater'}, {'cue': 'Klebstoff', 'target': 'Papier'}, {'cue': 'Königreich', 'target': 'Schloss'}, {'cue': 'Mauer', 'target': 'Straße'}, {'cue': 'Surfen', 'target': 'Strand'}, {'cue': 'Schauspielerin', 'target': 'Frau'}, {'cue': 'Schnorchel', 'target': 'Flossen'}, {'cue': 'Schuh', 'target': 'Stiefel'}, {'cue': 'Schwan', 'target': 'Taube'}, {'cue': 'Streifen', 'target': 'Shirt'}, {'cue': 'Tee', 'target': 'Blätter'}, {'cue': 'Traube', 'target': 'Rosine'}, {'cue': 'Wasserfall', 'target': 'Felsen'}, {'cue': 'Wein', 'target': 'Abendessen'}, {'cue': 'Winkel', 'target': 'Kurve'}, {'cue': 'Zahnpasta', 'target': 'Minze'}, {'cue': 'Zimt', 'target': 'Rolle'}, {'cue': 'Nudeln', 'target': 'Pizza'}, {'cue': 'Kamin', 'target': 'Ziegel'}]" valType="str"/>
+      <Param name="conditionsFile" updates="None" val="cue_target_pairs.xlsx" valType="file"/>
+      <Param name="endPoints" updates="None" val="[0, 1]" valType="num"/>
+      <Param name="isTrials" updates="None" val="False" valType="bool"/>
+      <Param name="loopType" updates="None" val="random" valType="str"/>
+      <Param name="nReps" updates="None" val="1" valType="num"/>
+      <Param name="name" updates="None" val="recall_words_loop" valType="code"/>
+      <Param name="random seed" updates="None" val="" valType="code"/>
+    </LoopInitiator>
+    <Routine name="load_word_pairs"/>
+    <LoopTerminator name="recall_words_loop"/>
     <Routine name="start_task"/>
     <LoopInitiator loopType="TrialHandler" name="recall_block">
       <Param name="Selected rows" updates="None" val="" valType="str"/>
@@ -2940,11 +2940,11 @@
     <LoopInitiator loopType="TrialHandler" name="test_trials">
       <Param name="Selected rows" updates="None" val="" valType="str"/>
       <Param name="conditions" updates="None" val="[{'cue': 'Akrobatin', 'target': 'Seil'}, {'cue': 'Chips', 'target': 'Salz'}, {'cue': 'Definition', 'target': 'Begriff'}, {'cue': 'Experiment', 'target': 'Versuch'}, {'cue': 'Fakt', 'target': 'Wissen'}, {'cue': 'Leistung', 'target': 'Ehre'}, {'cue': 'Rauch', 'target': 'Nebel'}, {'cue': 'Scheidung', 'target': 'Anwalt'}, {'cue': 'Service', 'target': 'Kunde'}, {'cue': 'Shampoo', 'target': 'Seife'}, {'cue': 'Soldat', 'target': 'Kämpfer'}, {'cue': 'Zeichnung', 'target': 'Bleistift'}, {'cue': 'Anführer', 'target': 'Boss'}, {'cue': 'Beutel', 'target': 'Sack'}, {'cue': 'Gast', 'target': 'Zimmer'}, {'cue': 'Geburtstag', 'target': 'Kerze'}, {'cue': 'Geschwister', 'target': 'Eltern'}, {'cue': 'Golf', 'target': 'Loch'}, {'cue': 'Küche', 'target': 'Tisch'}, {'cue': 'Rasen', 'target': 'Pflege'}, {'cue': 'Safari', 'target': 'Ausflug'}, {'cue': 'Sitzgurt', 'target': 'Gesetz'}, {'cue': 'Vampir', 'target': 'Geist'}, {'cue': 'Vergangenheit', 'target': 'Erinnerungen'}, {'cue': 'Agent', 'target': 'Reise'}, {'cue': 'Brise', 'target': 'Luft'}, {'cue': 'Decke', 'target': 'Kissen'}, {'cue': 'Diskussion', 'target': 'Vorlesung'}, {'cue': 'Eingeweide', 'target': 'Organ'}, {'cue': 'Floh', 'target': 'Käfer'}, {'cue': 'Frieden', 'target': 'Harmonie'}, {'cue': 'Garage', 'target': 'Haus'}, {'cue': 'Gegenstand', 'target': 'Artikel'}, {'cue': 'Humor', 'target': 'Komödie'}, {'cue': 'Insel', 'target': 'Meer'}, {'cue': 'Karneval', 'target': 'Festival'}, {'cue': 'Mappe', 'target': 'Buch'}, {'cue': 'Publikum', 'target': 'Applaus'}, {'cue': 'Pumpe', 'target': 'Reifen'}, {'cue': 'Raum', 'target': 'Platz'}, {'cue': 'Schlüssel', 'target': 'Ring'}, {'cue': 'Statue', 'target': 'Monument'}, {'cue': 'Tänzer', 'target': 'Musik'}, {'cue': 'Teleskop', 'target': 'Mikroskop'}, {'cue': 'Teller', 'target': 'Gabel'}, {'cue': 'Tradition', 'target': 'Weihnachten'}, {'cue': 'Vers', 'target': 'Poesie'}, {'cue': 'Vogel', 'target': 'Feder'}, {'cue': 'Zug', 'target': 'Flugzeug'}, {'cue': 'Zunge', 'target': 'Backe'}, {'cue': 'Bad', 'target': 'Handtuch'}, {'cue': 'Bar', 'target': 'Alkohol'}, {'cue': 'Beweis', 'target': 'Gericht'}, {'cue': 'Blumen', 'target': 'Bouquet'}, {'cue': 'Flotte', 'target': 'Boot'}, {'cue': 'Häftling', 'target': 'Verurteilter'}, {'cue': 'Helm', 'target': 'Kopf'}, {'cue': 'Juwel', 'target': 'Gold'}, {'cue': 'Kastanien', 'target': 'Rösten'}, {'cue': 'Kante', 'target': 'Messer'}, {'cue': 'Kind', 'target': 'Junge'}, {'cue': 'Kino', 'target': 'Theater'}, {'cue': 'Klebstoff', 'target': 'Papier'}, {'cue': 'Königreich', 'target': 'Schloss'}, {'cue': 'Mauer', 'target': 'Straße'}, {'cue': 'Surfen', 'target': 'Strand'}, {'cue': 'Schauspielerin', 'target': 'Frau'}, {'cue': 'Schnorchel', 'target': 'Flossen'}, {'cue': 'Schuh', 'target': 'Stiefel'}, {'cue': 'Schwan', 'target': 'Taube'}, {'cue': 'Streifen', 'target': 'Shirt'}, {'cue': 'Tee', 'target': 'Blätter'}, {'cue': 'Traube', 'target': 'Rosine'}, {'cue': 'Wasserfall', 'target': 'Felsen'}, {'cue': 'Wein', 'target': 'Abendessen'}, {'cue': 'Winkel', 'target': 'Kurve'}, {'cue': 'Zahnpasta', 'target': 'Minze'}, {'cue': 'Zimt', 'target': 'Rolle'}, {'cue': 'Nudeln', 'target': 'Pizza'}, {'cue': 'Kamin', 'target': 'Ziegel'}]" valType="str"/>
-      <Param name="conditionsFile" updates="None" val="cue_target_pairs.xlsx" valType="file"/>
+      <Param name="conditionsFile" updates="None" val="" valType="file"/>
       <Param name="endPoints" updates="None" val="[0, 1]" valType="num"/>
       <Param name="isTrials" updates="None" val="True" valType="bool"/>
       <Param name="loopType" updates="None" val="random" valType="str"/>
-      <Param name="nReps" updates="None" val="1" valType="num"/>
+      <Param name="nReps" updates="None" val="num_trials" valType="num"/>
       <Param name="name" updates="None" val="test_trials" valType="code"/>
       <Param name="random seed" updates="None" val="" valType="code"/>
     </LoopInitiator>

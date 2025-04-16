@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """
 This experiment was created using PsychoPy3 Experiment Builder (v2024.2.4),
-    on április 15, 2025, at 17:36
+    on April 16, 2025, at 13:21
 If you publish work using this script the most relevant publication is:
 
     Peirce J, Gray JR, Simpson S, MacAskill M, Höchenberger R, Sogo H, Kastman E, Lindeløv JK. (2019) 
@@ -128,7 +128,7 @@ def setupData(expInfo, dataDir=None):
     thisExp = data.ExperimentHandler(
         name=expName, version='',
         extraInfo=expInfo, runtimeInfo=None,
-        originPath='C:\\Users\\Asus\\Documents\\pretest_fmri\\Guess_fMRI\\part1_part2_lastrun.py',
+        originPath='C:\\Users\\LocalAdmin\\Documents\\GUESS\\Guess_fMRI\\part1_part2_lastrun.py',
         savePickle=True, saveWideText=True,
         dataFileName=dataDir + os.sep + filename, sortColumns='time'
     )
@@ -516,7 +516,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     cue_types = {}
     target_types = {}
     
-    no_recall_key = "2"
+    succ_recall_key = "3"
     letter_dur = 3
     
     run_counter = 1
@@ -526,12 +526,6 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         num_trials = 2
     
     start_experiment_key = keyboard.Keyboard(deviceName='start_experiment_key')
-    
-    # --- Initialize components for Routine "load_word_pairs" ---
-    # Run 'Begin Experiment' code from load_stimuli
-    cue_list = []
-    target_list = []
-    
     
     # --- Initialize components for Routine "instructions1" ---
     instructions1_text = visual.TextStim(win=win, name='instructions1_text',
@@ -688,6 +682,12 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         languageStyle='LTR',
         depth=-2.0);
     end_encoding = keyboard.Keyboard(deviceName='end_encoding')
+    
+    # --- Initialize components for Routine "load_word_pairs" ---
+    # Run 'Begin Experiment' code from load_stimuli
+    cue_list = []
+    target_list = []
+    
     
     # --- Initialize components for Routine "start_task" ---
     start_task_text = visual.TextStim(win=win, name='start_task_text',
@@ -867,15 +867,9 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         languageStyle='LTR',
         depth=-1.0);
     
-    # --- Initialize components for Routine "load_word_pairs" ---
-    # Run 'Begin Experiment' code from load_stimuli
-    cue_list = []
-    target_list = []
-    
-    
     # --- Initialize components for Routine "instructions_recall1" ---
     recall_instructions1_text = visual.TextStim(win=win, name='recall_instructions1_text',
-        text='Im nächsten Teil des Experiments müssen Sie das Wortpaar zu jedem auf dem Bildschirm angezeigten Wort abrufen.\n\nVersuchen Sie, das Wort (3 Sekunden) abzurufen, und geben Sie dann an, ob Sie sich an das Wort erinnern, indem Sie die Tasten 1 (Kann mich nicht erinnern) und 2(Kann mich erinnern) verwenden.\n\nDrücken Sie eine Taste, um fortzufahren.',
+        text='Im nächsten Teil des Experiments müssen Sie das Wortpaar zu jedem auf dem Bildschirm angezeigten Wort abrufen.\n\nVersuchen Sie, das Wort (3 Sekunden) abzurufen, und geben Sie dann an, ob Sie sich an das Wort erinnern, indem Sie die Tasten 1 (Kann mich nicht erinnern) und 2 (Kann mich erinnern) verwenden.\n\nDrücken Sie eine Taste, um fortzufahren.',
         font='Arial',
         pos=(0, 0), draggable=False, height=0.05, wrapWidth=1.2, ori=0.0, 
         color='white', colorSpace='rgb', opacity=None, 
@@ -903,28 +897,28 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         depth=0.0);
     
     # --- Initialize components for Routine "cued_recall" ---
-    cue_stim_recall = visual.TextStim(win=win, name='cue_stim_recall',
-        text='',
-        font='Arial',
-        pos=(-0.2, 0), draggable=False, height=0.05, wrapWidth=None, ori=0.0, 
-        color='white', colorSpace='rgb', opacity=None, 
-        languageStyle='LTR',
-        depth=-1.0);
     dash_stim_recall = visual.TextStim(win=win, name='dash_stim_recall',
         text='-',
         font='Arial',
         pos=(0, 0), draggable=False, height=0.05, wrapWidth=None, ori=0.0, 
         color='white', colorSpace='rgb', opacity=None, 
         languageStyle='LTR',
-        depth=-2.0);
+        depth=-1.0);
     qmark_target = visual.TextStim(win=win, name='qmark_target',
         text='?',
         font='Arial',
         pos=(0.2, 0), draggable=False, height=0.05, wrapWidth=None, ori=0.0, 
         color='white', colorSpace='rgb', opacity=None, 
         languageStyle='LTR',
-        depth=-3.0);
+        depth=-2.0);
     end_cued_recall = keyboard.Keyboard(deviceName='end_cued_recall')
+    cue_stim_recall = visual.TextStim(win=win, name='cue_stim_recall',
+        text='',
+        font='Arial',
+        pos=(-0.2, 0), draggable=False, height=0.05, wrapWidth=None, ori=0.0, 
+        color='white', colorSpace='rgb', opacity=None, 
+        languageStyle='LTR',
+        depth=-4.0);
     
     # --- Initialize components for Routine "recall_response" ---
     dash_stim_recall_resp = visual.TextStim(win=win, name='dash_stim_recall_resp',
@@ -1026,6 +1020,12 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         languageStyle='LTR',
         depth=-5.0);
     
+    # --- Initialize components for Routine "load_word_pairs" ---
+    # Run 'Begin Experiment' code from load_stimuli
+    cue_list = []
+    target_list = []
+    
+    
     # --- Initialize components for Routine "start_task" ---
     start_task_text = visual.TextStim(win=win, name='start_task_text',
         text='Jetzt beginnt die Aufgabe. Sie erhalten keine Rückmeldungen mehr.\n\nDrücken Sie eine Taste, wenn Sie bereit sind zu starten.',
@@ -1082,28 +1082,28 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         depth=0.0);
     
     # --- Initialize components for Routine "cued_recall" ---
-    cue_stim_recall = visual.TextStim(win=win, name='cue_stim_recall',
-        text='',
-        font='Arial',
-        pos=(-0.2, 0), draggable=False, height=0.05, wrapWidth=None, ori=0.0, 
-        color='white', colorSpace='rgb', opacity=None, 
-        languageStyle='LTR',
-        depth=-1.0);
     dash_stim_recall = visual.TextStim(win=win, name='dash_stim_recall',
         text='-',
         font='Arial',
         pos=(0, 0), draggable=False, height=0.05, wrapWidth=None, ori=0.0, 
         color='white', colorSpace='rgb', opacity=None, 
         languageStyle='LTR',
-        depth=-2.0);
+        depth=-1.0);
     qmark_target = visual.TextStim(win=win, name='qmark_target',
         text='?',
         font='Arial',
         pos=(0.2, 0), draggable=False, height=0.05, wrapWidth=None, ori=0.0, 
         color='white', colorSpace='rgb', opacity=None, 
         languageStyle='LTR',
-        depth=-3.0);
+        depth=-2.0);
     end_cued_recall = keyboard.Keyboard(deviceName='end_cued_recall')
+    cue_stim_recall = visual.TextStim(win=win, name='cue_stim_recall',
+        text='',
+        font='Arial',
+        pos=(-0.2, 0), draggable=False, height=0.05, wrapWidth=None, ori=0.0, 
+        color='white', colorSpace='rgb', opacity=None, 
+        languageStyle='LTR',
+        depth=-4.0);
     
     # --- Initialize components for Routine "recall_response" ---
     dash_stim_recall_resp = visual.TextStim(win=win, name='dash_stim_recall_resp',
@@ -1375,121 +1375,6 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     thisExp.nextEntry()
     # the Routine "welcome" was not non-slip safe, so reset the non-slip timer
     routineTimer.reset()
-    
-    # set up handler to look after randomisation of conditions etc
-    learning_stimuli_loop = data.TrialHandler2(
-        name='learning_stimuli_loop',
-        nReps=1.0, 
-        method='random', 
-        extraInfo=expInfo, 
-        originPath=-1, 
-        trialList=data.importConditions('cue_target_pairs.xlsx'), 
-        seed=None, 
-    )
-    thisExp.addLoop(learning_stimuli_loop)  # add the loop to the experiment
-    thisLearning_stimulus_loop = learning_stimuli_loop.trialList[0]  # so we can initialise stimuli with some values
-    # abbreviate parameter names if possible (e.g. rgb = thisLearning_stimulus_loop.rgb)
-    if thisLearning_stimulus_loop != None:
-        for paramName in thisLearning_stimulus_loop:
-            globals()[paramName] = thisLearning_stimulus_loop[paramName]
-    
-    for thisLearning_stimulus_loop in learning_stimuli_loop:
-        currentLoop = learning_stimuli_loop
-        thisExp.timestampOnFlip(win, 'thisRow.t', format=globalClock.format)
-        # abbreviate parameter names if possible (e.g. rgb = thisLearning_stimulus_loop.rgb)
-        if thisLearning_stimulus_loop != None:
-            for paramName in thisLearning_stimulus_loop:
-                globals()[paramName] = thisLearning_stimulus_loop[paramName]
-        
-        # --- Prepare to start Routine "load_word_pairs" ---
-        # create an object to store info about Routine load_word_pairs
-        load_word_pairs = data.Routine(
-            name='load_word_pairs',
-            components=[],
-        )
-        load_word_pairs.status = NOT_STARTED
-        continueRoutine = True
-        # update component parameters for each repeat
-        # Run 'Begin Routine' code from load_stimuli
-        cue_list.append(cue)
-        target_list.append(target)
-        
-        # store start times for load_word_pairs
-        load_word_pairs.tStartRefresh = win.getFutureFlipTime(clock=globalClock)
-        load_word_pairs.tStart = globalClock.getTime(format='float')
-        load_word_pairs.status = STARTED
-        thisExp.addData('load_word_pairs.started', load_word_pairs.tStart)
-        load_word_pairs.maxDuration = None
-        # keep track of which components have finished
-        load_word_pairsComponents = load_word_pairs.components
-        for thisComponent in load_word_pairs.components:
-            thisComponent.tStart = None
-            thisComponent.tStop = None
-            thisComponent.tStartRefresh = None
-            thisComponent.tStopRefresh = None
-            if hasattr(thisComponent, 'status'):
-                thisComponent.status = NOT_STARTED
-        # reset timers
-        t = 0
-        _timeToFirstFrame = win.getFutureFlipTime(clock="now")
-        frameN = -1
-        
-        # --- Run Routine "load_word_pairs" ---
-        # if trial has changed, end Routine now
-        if isinstance(learning_stimuli_loop, data.TrialHandler2) and thisLearning_stimulus_loop.thisN != learning_stimuli_loop.thisTrial.thisN:
-            continueRoutine = False
-        load_word_pairs.forceEnded = routineForceEnded = not continueRoutine
-        while continueRoutine:
-            # get current time
-            t = routineTimer.getTime()
-            tThisFlip = win.getFutureFlipTime(clock=routineTimer)
-            tThisFlipGlobal = win.getFutureFlipTime(clock=None)
-            frameN = frameN + 1  # number of completed frames (so 0 is the first frame)
-            # update/draw components on each frame
-            
-            # check for quit (typically the Esc key)
-            if defaultKeyboard.getKeys(keyList=["escape"]):
-                thisExp.status = FINISHED
-            if thisExp.status == FINISHED or endExpNow:
-                endExperiment(thisExp, win=win)
-                return
-            # pause experiment here if requested
-            if thisExp.status == PAUSED:
-                pauseExperiment(
-                    thisExp=thisExp, 
-                    win=win, 
-                    timers=[routineTimer], 
-                    playbackComponents=[]
-                )
-                # skip the frame we paused on
-                continue
-            
-            # check if all components have finished
-            if not continueRoutine:  # a component has requested a forced-end of Routine
-                load_word_pairs.forceEnded = routineForceEnded = True
-                break
-            continueRoutine = False  # will revert to True if at least one component still running
-            for thisComponent in load_word_pairs.components:
-                if hasattr(thisComponent, "status") and thisComponent.status != FINISHED:
-                    continueRoutine = True
-                    break  # at least one component has not yet finished
-            
-            # refresh the screen
-            if continueRoutine:  # don't flip if this routine is over or we'll get a blank screen
-                win.flip()
-        
-        # --- Ending Routine "load_word_pairs" ---
-        for thisComponent in load_word_pairs.components:
-            if hasattr(thisComponent, "setAutoDraw"):
-                thisComponent.setAutoDraw(False)
-        # store stop times for load_word_pairs
-        load_word_pairs.tStop = globalClock.getTime(format='float')
-        load_word_pairs.tStopRefresh = tThisFlipGlobal
-        thisExp.addData('load_word_pairs.stopped', load_word_pairs.tStop)
-        # the Routine "load_word_pairs" was not non-slip safe, so reset the non-slip timer
-        routineTimer.reset()
-    # completed 1.0 repeats of 'learning_stimuli_loop'
-    
     
     # --- Prepare to start Routine "instructions1" ---
     # create an object to store info about Routine instructions1
@@ -3469,6 +3354,121 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     if thisSession is not None:
         # if running in a Session with a Liaison client, send data up to now
         thisSession.sendExperimentData()
+    
+    # set up handler to look after randomisation of conditions etc
+    learning_words_loop = data.TrialHandler2(
+        name='learning_words_loop',
+        nReps=1.0, 
+        method='random', 
+        extraInfo=expInfo, 
+        originPath=-1, 
+        trialList=data.importConditions('cue_target_pairs.xlsx'), 
+        seed=None, 
+    )
+    thisExp.addLoop(learning_words_loop)  # add the loop to the experiment
+    thisLearning_words_loop = learning_words_loop.trialList[0]  # so we can initialise stimuli with some values
+    # abbreviate parameter names if possible (e.g. rgb = thisLearning_words_loop.rgb)
+    if thisLearning_words_loop != None:
+        for paramName in thisLearning_words_loop:
+            globals()[paramName] = thisLearning_words_loop[paramName]
+    
+    for thisLearning_words_loop in learning_words_loop:
+        currentLoop = learning_words_loop
+        thisExp.timestampOnFlip(win, 'thisRow.t', format=globalClock.format)
+        # abbreviate parameter names if possible (e.g. rgb = thisLearning_words_loop.rgb)
+        if thisLearning_words_loop != None:
+            for paramName in thisLearning_words_loop:
+                globals()[paramName] = thisLearning_words_loop[paramName]
+        
+        # --- Prepare to start Routine "load_word_pairs" ---
+        # create an object to store info about Routine load_word_pairs
+        load_word_pairs = data.Routine(
+            name='load_word_pairs',
+            components=[],
+        )
+        load_word_pairs.status = NOT_STARTED
+        continueRoutine = True
+        # update component parameters for each repeat
+        # Run 'Begin Routine' code from load_stimuli
+        cue_list.append(cue)
+        target_list.append(target)
+        
+        # store start times for load_word_pairs
+        load_word_pairs.tStartRefresh = win.getFutureFlipTime(clock=globalClock)
+        load_word_pairs.tStart = globalClock.getTime(format='float')
+        load_word_pairs.status = STARTED
+        thisExp.addData('load_word_pairs.started', load_word_pairs.tStart)
+        load_word_pairs.maxDuration = None
+        # keep track of which components have finished
+        load_word_pairsComponents = load_word_pairs.components
+        for thisComponent in load_word_pairs.components:
+            thisComponent.tStart = None
+            thisComponent.tStop = None
+            thisComponent.tStartRefresh = None
+            thisComponent.tStopRefresh = None
+            if hasattr(thisComponent, 'status'):
+                thisComponent.status = NOT_STARTED
+        # reset timers
+        t = 0
+        _timeToFirstFrame = win.getFutureFlipTime(clock="now")
+        frameN = -1
+        
+        # --- Run Routine "load_word_pairs" ---
+        # if trial has changed, end Routine now
+        if isinstance(learning_words_loop, data.TrialHandler2) and thisLearning_words_loop.thisN != learning_words_loop.thisTrial.thisN:
+            continueRoutine = False
+        load_word_pairs.forceEnded = routineForceEnded = not continueRoutine
+        while continueRoutine:
+            # get current time
+            t = routineTimer.getTime()
+            tThisFlip = win.getFutureFlipTime(clock=routineTimer)
+            tThisFlipGlobal = win.getFutureFlipTime(clock=None)
+            frameN = frameN + 1  # number of completed frames (so 0 is the first frame)
+            # update/draw components on each frame
+            
+            # check for quit (typically the Esc key)
+            if defaultKeyboard.getKeys(keyList=["escape"]):
+                thisExp.status = FINISHED
+            if thisExp.status == FINISHED or endExpNow:
+                endExperiment(thisExp, win=win)
+                return
+            # pause experiment here if requested
+            if thisExp.status == PAUSED:
+                pauseExperiment(
+                    thisExp=thisExp, 
+                    win=win, 
+                    timers=[routineTimer], 
+                    playbackComponents=[]
+                )
+                # skip the frame we paused on
+                continue
+            
+            # check if all components have finished
+            if not continueRoutine:  # a component has requested a forced-end of Routine
+                load_word_pairs.forceEnded = routineForceEnded = True
+                break
+            continueRoutine = False  # will revert to True if at least one component still running
+            for thisComponent in load_word_pairs.components:
+                if hasattr(thisComponent, "status") and thisComponent.status != FINISHED:
+                    continueRoutine = True
+                    break  # at least one component has not yet finished
+            
+            # refresh the screen
+            if continueRoutine:  # don't flip if this routine is over or we'll get a blank screen
+                win.flip()
+        
+        # --- Ending Routine "load_word_pairs" ---
+        for thisComponent in load_word_pairs.components:
+            if hasattr(thisComponent, "setAutoDraw"):
+                thisComponent.setAutoDraw(False)
+        # store stop times for load_word_pairs
+        load_word_pairs.tStop = globalClock.getTime(format='float')
+        load_word_pairs.tStopRefresh = tThisFlipGlobal
+        thisExp.addData('load_word_pairs.stopped', load_word_pairs.tStop)
+        # the Routine "load_word_pairs" was not non-slip safe, so reset the non-slip timer
+        routineTimer.reset()
+    # completed 1.0 repeats of 'learning_words_loop'
+    
     
     # --- Prepare to start Routine "start_task" ---
     # create an object to store info about Routine start_task
@@ -5888,121 +5888,6 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     # the Routine "end_part1" was not non-slip safe, so reset the non-slip timer
     routineTimer.reset()
     
-    # set up handler to look after randomisation of conditions etc
-    recall_stimuli_loop = data.TrialHandler2(
-        name='recall_stimuli_loop',
-        nReps=1.0, 
-        method='random', 
-        extraInfo=expInfo, 
-        originPath=-1, 
-        trialList=[None], 
-        seed=None, 
-    )
-    thisExp.addLoop(recall_stimuli_loop)  # add the loop to the experiment
-    thisRecall_stimulus_loop = recall_stimuli_loop.trialList[0]  # so we can initialise stimuli with some values
-    # abbreviate parameter names if possible (e.g. rgb = thisRecall_stimulus_loop.rgb)
-    if thisRecall_stimulus_loop != None:
-        for paramName in thisRecall_stimulus_loop:
-            globals()[paramName] = thisRecall_stimulus_loop[paramName]
-    
-    for thisRecall_stimulus_loop in recall_stimuli_loop:
-        currentLoop = recall_stimuli_loop
-        thisExp.timestampOnFlip(win, 'thisRow.t', format=globalClock.format)
-        # abbreviate parameter names if possible (e.g. rgb = thisRecall_stimulus_loop.rgb)
-        if thisRecall_stimulus_loop != None:
-            for paramName in thisRecall_stimulus_loop:
-                globals()[paramName] = thisRecall_stimulus_loop[paramName]
-        
-        # --- Prepare to start Routine "load_word_pairs" ---
-        # create an object to store info about Routine load_word_pairs
-        load_word_pairs = data.Routine(
-            name='load_word_pairs',
-            components=[],
-        )
-        load_word_pairs.status = NOT_STARTED
-        continueRoutine = True
-        # update component parameters for each repeat
-        # Run 'Begin Routine' code from load_stimuli
-        cue_list.append(cue)
-        target_list.append(target)
-        
-        # store start times for load_word_pairs
-        load_word_pairs.tStartRefresh = win.getFutureFlipTime(clock=globalClock)
-        load_word_pairs.tStart = globalClock.getTime(format='float')
-        load_word_pairs.status = STARTED
-        thisExp.addData('load_word_pairs.started', load_word_pairs.tStart)
-        load_word_pairs.maxDuration = None
-        # keep track of which components have finished
-        load_word_pairsComponents = load_word_pairs.components
-        for thisComponent in load_word_pairs.components:
-            thisComponent.tStart = None
-            thisComponent.tStop = None
-            thisComponent.tStartRefresh = None
-            thisComponent.tStopRefresh = None
-            if hasattr(thisComponent, 'status'):
-                thisComponent.status = NOT_STARTED
-        # reset timers
-        t = 0
-        _timeToFirstFrame = win.getFutureFlipTime(clock="now")
-        frameN = -1
-        
-        # --- Run Routine "load_word_pairs" ---
-        # if trial has changed, end Routine now
-        if isinstance(recall_stimuli_loop, data.TrialHandler2) and thisRecall_stimulus_loop.thisN != recall_stimuli_loop.thisTrial.thisN:
-            continueRoutine = False
-        load_word_pairs.forceEnded = routineForceEnded = not continueRoutine
-        while continueRoutine:
-            # get current time
-            t = routineTimer.getTime()
-            tThisFlip = win.getFutureFlipTime(clock=routineTimer)
-            tThisFlipGlobal = win.getFutureFlipTime(clock=None)
-            frameN = frameN + 1  # number of completed frames (so 0 is the first frame)
-            # update/draw components on each frame
-            
-            # check for quit (typically the Esc key)
-            if defaultKeyboard.getKeys(keyList=["escape"]):
-                thisExp.status = FINISHED
-            if thisExp.status == FINISHED or endExpNow:
-                endExperiment(thisExp, win=win)
-                return
-            # pause experiment here if requested
-            if thisExp.status == PAUSED:
-                pauseExperiment(
-                    thisExp=thisExp, 
-                    win=win, 
-                    timers=[routineTimer], 
-                    playbackComponents=[]
-                )
-                # skip the frame we paused on
-                continue
-            
-            # check if all components have finished
-            if not continueRoutine:  # a component has requested a forced-end of Routine
-                load_word_pairs.forceEnded = routineForceEnded = True
-                break
-            continueRoutine = False  # will revert to True if at least one component still running
-            for thisComponent in load_word_pairs.components:
-                if hasattr(thisComponent, "status") and thisComponent.status != FINISHED:
-                    continueRoutine = True
-                    break  # at least one component has not yet finished
-            
-            # refresh the screen
-            if continueRoutine:  # don't flip if this routine is over or we'll get a blank screen
-                win.flip()
-        
-        # --- Ending Routine "load_word_pairs" ---
-        for thisComponent in load_word_pairs.components:
-            if hasattr(thisComponent, "setAutoDraw"):
-                thisComponent.setAutoDraw(False)
-        # store stop times for load_word_pairs
-        load_word_pairs.tStop = globalClock.getTime(format='float')
-        load_word_pairs.tStopRefresh = tThisFlipGlobal
-        thisExp.addData('load_word_pairs.stopped', load_word_pairs.tStop)
-        # the Routine "load_word_pairs" was not non-slip safe, so reset the non-slip timer
-        routineTimer.reset()
-    # completed 1.0 repeats of 'recall_stimuli_loop'
-    
-    
     # --- Prepare to start Routine "instructions_recall1" ---
     # create an object to store info about Routine instructions_recall1
     instructions_recall1 = data.Routine(
@@ -6468,7 +6353,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         # create an object to store info about Routine cued_recall
         cued_recall = data.Routine(
             name='cued_recall',
-            components=[cue_stim_recall, dash_stim_recall, qmark_target, end_cued_recall],
+            components=[dash_stim_recall, qmark_target, end_cued_recall, cue_stim_recall],
         )
         cued_recall.status = NOT_STARTED
         continueRoutine = True
@@ -6476,11 +6361,11 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         # Run 'Begin Routine' code from save_recall_trial_type
         thisExp.addData('trial_type', cue_types[this_cue])
         
-        cue_stim_recall.setText(this_cue)
         # create starting attributes for end_cued_recall
         end_cued_recall.keys = []
         end_cued_recall.rt = []
         _end_cued_recall_allKeys = []
+        cue_stim_recall.setText(this_cue)
         # store start times for cued_recall
         cued_recall.tStartRefresh = win.getFutureFlipTime(clock=globalClock)
         cued_recall.tStart = globalClock.getTime(format='float')
@@ -6513,40 +6398,6 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
             tThisFlipGlobal = win.getFutureFlipTime(clock=None)
             frameN = frameN + 1  # number of completed frames (so 0 is the first frame)
             # update/draw components on each frame
-            
-            # *cue_stim_recall* updates
-            
-            # if cue_stim_recall is starting this frame...
-            if cue_stim_recall.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
-                # keep track of start time/frame for later
-                cue_stim_recall.frameNStart = frameN  # exact frame index
-                cue_stim_recall.tStart = t  # local t and not account for scr refresh
-                cue_stim_recall.tStartRefresh = tThisFlipGlobal  # on global time
-                win.timeOnFlip(cue_stim_recall, 'tStartRefresh')  # time at next scr refresh
-                # add timestamp to datafile
-                thisExp.timestampOnFlip(win, 'cue_stim_recall.started')
-                # update status
-                cue_stim_recall.status = STARTED
-                cue_stim_recall.setAutoDraw(True)
-            
-            # if cue_stim_recall is active this frame...
-            if cue_stim_recall.status == STARTED:
-                # update params
-                pass
-            
-            # if cue_stim_recall is stopping this frame...
-            if cue_stim_recall.status == STARTED:
-                # is it time to stop? (based on global clock, using actual start)
-                if tThisFlipGlobal > cue_stim_recall.tStartRefresh + 3.0-frameTolerance:
-                    # keep track of stop time/frame for later
-                    cue_stim_recall.tStop = t  # not accounting for scr refresh
-                    cue_stim_recall.tStopRefresh = tThisFlipGlobal  # on global time
-                    cue_stim_recall.frameNStop = frameN  # exact frame index
-                    # add timestamp to datafile
-                    thisExp.timestampOnFlip(win, 'cue_stim_recall.stopped')
-                    # update status
-                    cue_stim_recall.status = FINISHED
-                    cue_stim_recall.setAutoDraw(False)
             
             # *dash_stim_recall* updates
             
@@ -6657,6 +6508,40 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
                     end_cued_recall.duration = _end_cued_recall_allKeys[-1].duration
                     # a response ends the routine
                     continueRoutine = False
+            
+            # *cue_stim_recall* updates
+            
+            # if cue_stim_recall is starting this frame...
+            if cue_stim_recall.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+                # keep track of start time/frame for later
+                cue_stim_recall.frameNStart = frameN  # exact frame index
+                cue_stim_recall.tStart = t  # local t and not account for scr refresh
+                cue_stim_recall.tStartRefresh = tThisFlipGlobal  # on global time
+                win.timeOnFlip(cue_stim_recall, 'tStartRefresh')  # time at next scr refresh
+                # add timestamp to datafile
+                thisExp.timestampOnFlip(win, 'cue_stim_recall.started')
+                # update status
+                cue_stim_recall.status = STARTED
+                cue_stim_recall.setAutoDraw(True)
+            
+            # if cue_stim_recall is active this frame...
+            if cue_stim_recall.status == STARTED:
+                # update params
+                pass
+            
+            # if cue_stim_recall is stopping this frame...
+            if cue_stim_recall.status == STARTED:
+                # is it time to stop? (based on global clock, using actual start)
+                if tThisFlipGlobal > cue_stim_recall.tStartRefresh + 3.0-frameTolerance:
+                    # keep track of stop time/frame for later
+                    cue_stim_recall.tStop = t  # not accounting for scr refresh
+                    cue_stim_recall.tStopRefresh = tThisFlipGlobal  # on global time
+                    cue_stim_recall.frameNStop = frameN  # exact frame index
+                    # add timestamp to datafile
+                    thisExp.timestampOnFlip(win, 'cue_stim_recall.stopped')
+                    # update status
+                    cue_stim_recall.status = FINISHED
+                    cue_stim_recall.setAutoDraw(False)
             
             # check for quit (typically the Esc key)
             if defaultKeyboard.getKeys(keyList=["escape"]):
@@ -6995,7 +6880,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         # Run 'End Routine' code from skip_recall_select
         skip_letters = 0
         trial_dur = letter_dur
-        if recall_reached.keys == no_recall_key:
+        if recall_reached.keys == succ_recall_key:
             trial_dur = letter_dur
         else:
             trial_dur = 0.00
@@ -7648,6 +7533,121 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     if thisSession is not None:
         # if running in a Session with a Liaison client, send data up to now
         thisSession.sendExperimentData()
+    
+    # set up handler to look after randomisation of conditions etc
+    recall_words_loop = data.TrialHandler2(
+        name='recall_words_loop',
+        nReps=1.0, 
+        method='random', 
+        extraInfo=expInfo, 
+        originPath=-1, 
+        trialList=data.importConditions('cue_target_pairs.xlsx'), 
+        seed=None, 
+    )
+    thisExp.addLoop(recall_words_loop)  # add the loop to the experiment
+    thisRecall_words_loop = recall_words_loop.trialList[0]  # so we can initialise stimuli with some values
+    # abbreviate parameter names if possible (e.g. rgb = thisRecall_words_loop.rgb)
+    if thisRecall_words_loop != None:
+        for paramName in thisRecall_words_loop:
+            globals()[paramName] = thisRecall_words_loop[paramName]
+    
+    for thisRecall_words_loop in recall_words_loop:
+        currentLoop = recall_words_loop
+        thisExp.timestampOnFlip(win, 'thisRow.t', format=globalClock.format)
+        # abbreviate parameter names if possible (e.g. rgb = thisRecall_words_loop.rgb)
+        if thisRecall_words_loop != None:
+            for paramName in thisRecall_words_loop:
+                globals()[paramName] = thisRecall_words_loop[paramName]
+        
+        # --- Prepare to start Routine "load_word_pairs" ---
+        # create an object to store info about Routine load_word_pairs
+        load_word_pairs = data.Routine(
+            name='load_word_pairs',
+            components=[],
+        )
+        load_word_pairs.status = NOT_STARTED
+        continueRoutine = True
+        # update component parameters for each repeat
+        # Run 'Begin Routine' code from load_stimuli
+        cue_list.append(cue)
+        target_list.append(target)
+        
+        # store start times for load_word_pairs
+        load_word_pairs.tStartRefresh = win.getFutureFlipTime(clock=globalClock)
+        load_word_pairs.tStart = globalClock.getTime(format='float')
+        load_word_pairs.status = STARTED
+        thisExp.addData('load_word_pairs.started', load_word_pairs.tStart)
+        load_word_pairs.maxDuration = None
+        # keep track of which components have finished
+        load_word_pairsComponents = load_word_pairs.components
+        for thisComponent in load_word_pairs.components:
+            thisComponent.tStart = None
+            thisComponent.tStop = None
+            thisComponent.tStartRefresh = None
+            thisComponent.tStopRefresh = None
+            if hasattr(thisComponent, 'status'):
+                thisComponent.status = NOT_STARTED
+        # reset timers
+        t = 0
+        _timeToFirstFrame = win.getFutureFlipTime(clock="now")
+        frameN = -1
+        
+        # --- Run Routine "load_word_pairs" ---
+        # if trial has changed, end Routine now
+        if isinstance(recall_words_loop, data.TrialHandler2) and thisRecall_words_loop.thisN != recall_words_loop.thisTrial.thisN:
+            continueRoutine = False
+        load_word_pairs.forceEnded = routineForceEnded = not continueRoutine
+        while continueRoutine:
+            # get current time
+            t = routineTimer.getTime()
+            tThisFlip = win.getFutureFlipTime(clock=routineTimer)
+            tThisFlipGlobal = win.getFutureFlipTime(clock=None)
+            frameN = frameN + 1  # number of completed frames (so 0 is the first frame)
+            # update/draw components on each frame
+            
+            # check for quit (typically the Esc key)
+            if defaultKeyboard.getKeys(keyList=["escape"]):
+                thisExp.status = FINISHED
+            if thisExp.status == FINISHED or endExpNow:
+                endExperiment(thisExp, win=win)
+                return
+            # pause experiment here if requested
+            if thisExp.status == PAUSED:
+                pauseExperiment(
+                    thisExp=thisExp, 
+                    win=win, 
+                    timers=[routineTimer], 
+                    playbackComponents=[]
+                )
+                # skip the frame we paused on
+                continue
+            
+            # check if all components have finished
+            if not continueRoutine:  # a component has requested a forced-end of Routine
+                load_word_pairs.forceEnded = routineForceEnded = True
+                break
+            continueRoutine = False  # will revert to True if at least one component still running
+            for thisComponent in load_word_pairs.components:
+                if hasattr(thisComponent, "status") and thisComponent.status != FINISHED:
+                    continueRoutine = True
+                    break  # at least one component has not yet finished
+            
+            # refresh the screen
+            if continueRoutine:  # don't flip if this routine is over or we'll get a blank screen
+                win.flip()
+        
+        # --- Ending Routine "load_word_pairs" ---
+        for thisComponent in load_word_pairs.components:
+            if hasattr(thisComponent, "setAutoDraw"):
+                thisComponent.setAutoDraw(False)
+        # store stop times for load_word_pairs
+        load_word_pairs.tStop = globalClock.getTime(format='float')
+        load_word_pairs.tStopRefresh = tThisFlipGlobal
+        thisExp.addData('load_word_pairs.stopped', load_word_pairs.tStop)
+        # the Routine "load_word_pairs" was not non-slip safe, so reset the non-slip timer
+        routineTimer.reset()
+    # completed 1.0 repeats of 'recall_words_loop'
+    
     
     # --- Prepare to start Routine "start_task" ---
     # create an object to store info about Routine start_task
@@ -8357,11 +8357,11 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         # set up handler to look after randomisation of conditions etc
         test_trials = data.TrialHandler2(
             name='test_trials',
-            nReps=1.0, 
+            nReps=num_trials, 
             method='random', 
             extraInfo=expInfo, 
             originPath=-1, 
-            trialList=data.importConditions('cue_target_pairs.xlsx'), 
+            trialList=[None], 
             seed=None, 
         )
         thisExp.addLoop(test_trials)  # add the loop to the experiment
@@ -8595,7 +8595,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
             # create an object to store info about Routine cued_recall
             cued_recall = data.Routine(
                 name='cued_recall',
-                components=[cue_stim_recall, dash_stim_recall, qmark_target, end_cued_recall],
+                components=[dash_stim_recall, qmark_target, end_cued_recall, cue_stim_recall],
             )
             cued_recall.status = NOT_STARTED
             continueRoutine = True
@@ -8603,11 +8603,11 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
             # Run 'Begin Routine' code from save_recall_trial_type
             thisExp.addData('trial_type', cue_types[this_cue])
             
-            cue_stim_recall.setText(this_cue)
             # create starting attributes for end_cued_recall
             end_cued_recall.keys = []
             end_cued_recall.rt = []
             _end_cued_recall_allKeys = []
+            cue_stim_recall.setText(this_cue)
             # store start times for cued_recall
             cued_recall.tStartRefresh = win.getFutureFlipTime(clock=globalClock)
             cued_recall.tStart = globalClock.getTime(format='float')
@@ -8640,40 +8640,6 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
                 tThisFlipGlobal = win.getFutureFlipTime(clock=None)
                 frameN = frameN + 1  # number of completed frames (so 0 is the first frame)
                 # update/draw components on each frame
-                
-                # *cue_stim_recall* updates
-                
-                # if cue_stim_recall is starting this frame...
-                if cue_stim_recall.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
-                    # keep track of start time/frame for later
-                    cue_stim_recall.frameNStart = frameN  # exact frame index
-                    cue_stim_recall.tStart = t  # local t and not account for scr refresh
-                    cue_stim_recall.tStartRefresh = tThisFlipGlobal  # on global time
-                    win.timeOnFlip(cue_stim_recall, 'tStartRefresh')  # time at next scr refresh
-                    # add timestamp to datafile
-                    thisExp.timestampOnFlip(win, 'cue_stim_recall.started')
-                    # update status
-                    cue_stim_recall.status = STARTED
-                    cue_stim_recall.setAutoDraw(True)
-                
-                # if cue_stim_recall is active this frame...
-                if cue_stim_recall.status == STARTED:
-                    # update params
-                    pass
-                
-                # if cue_stim_recall is stopping this frame...
-                if cue_stim_recall.status == STARTED:
-                    # is it time to stop? (based on global clock, using actual start)
-                    if tThisFlipGlobal > cue_stim_recall.tStartRefresh + 3.0-frameTolerance:
-                        # keep track of stop time/frame for later
-                        cue_stim_recall.tStop = t  # not accounting for scr refresh
-                        cue_stim_recall.tStopRefresh = tThisFlipGlobal  # on global time
-                        cue_stim_recall.frameNStop = frameN  # exact frame index
-                        # add timestamp to datafile
-                        thisExp.timestampOnFlip(win, 'cue_stim_recall.stopped')
-                        # update status
-                        cue_stim_recall.status = FINISHED
-                        cue_stim_recall.setAutoDraw(False)
                 
                 # *dash_stim_recall* updates
                 
@@ -8784,6 +8750,40 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
                         end_cued_recall.duration = _end_cued_recall_allKeys[-1].duration
                         # a response ends the routine
                         continueRoutine = False
+                
+                # *cue_stim_recall* updates
+                
+                # if cue_stim_recall is starting this frame...
+                if cue_stim_recall.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+                    # keep track of start time/frame for later
+                    cue_stim_recall.frameNStart = frameN  # exact frame index
+                    cue_stim_recall.tStart = t  # local t and not account for scr refresh
+                    cue_stim_recall.tStartRefresh = tThisFlipGlobal  # on global time
+                    win.timeOnFlip(cue_stim_recall, 'tStartRefresh')  # time at next scr refresh
+                    # add timestamp to datafile
+                    thisExp.timestampOnFlip(win, 'cue_stim_recall.started')
+                    # update status
+                    cue_stim_recall.status = STARTED
+                    cue_stim_recall.setAutoDraw(True)
+                
+                # if cue_stim_recall is active this frame...
+                if cue_stim_recall.status == STARTED:
+                    # update params
+                    pass
+                
+                # if cue_stim_recall is stopping this frame...
+                if cue_stim_recall.status == STARTED:
+                    # is it time to stop? (based on global clock, using actual start)
+                    if tThisFlipGlobal > cue_stim_recall.tStartRefresh + 3.0-frameTolerance:
+                        # keep track of stop time/frame for later
+                        cue_stim_recall.tStop = t  # not accounting for scr refresh
+                        cue_stim_recall.tStopRefresh = tThisFlipGlobal  # on global time
+                        cue_stim_recall.frameNStop = frameN  # exact frame index
+                        # add timestamp to datafile
+                        thisExp.timestampOnFlip(win, 'cue_stim_recall.stopped')
+                        # update status
+                        cue_stim_recall.status = FINISHED
+                        cue_stim_recall.setAutoDraw(False)
                 
                 # check for quit (typically the Esc key)
                 if defaultKeyboard.getKeys(keyList=["escape"]):
@@ -9122,7 +9122,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
             # Run 'End Routine' code from skip_recall_select
             skip_letters = 0
             trial_dur = letter_dur
-            if recall_reached.keys == no_recall_key:
+            if recall_reached.keys == succ_recall_key:
                 trial_dur = letter_dur
             else:
                 trial_dur = 0.00
@@ -9455,7 +9455,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
             routineTimer.reset()
             thisExp.nextEntry()
             
-        # completed 1.0 repeats of 'test_trials'
+        # completed num_trials repeats of 'test_trials'
         
         if thisSession is not None:
             # if running in a Session with a Liaison client, send data up to now
