@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """
 This experiment was created using PsychoPy3 Experiment Builder (v2024.2.4),
-    on április 16, 2025, at 10:09
+    on April 16, 2025, at 12:05
 If you publish work using this script the most relevant publication is:
 
     Peirce J, Gray JR, Simpson S, MacAskill M, Höchenberger R, Sogo H, Kastman E, Lindeløv JK. (2019) 
@@ -59,7 +59,7 @@ or run the experiment with `--pilot` as an argument. To change what pilot
 PILOTING = core.setPilotModeFromArgs()
 # start off with values from experiment settings
 _fullScr = True
-_winSize = [1440, 900]
+_winSize = [1920, 1080]
 # if in pilot mode, apply overrides according to preferences
 if PILOTING:
     # force windowed mode
@@ -125,7 +125,7 @@ def setupData(expInfo, dataDir=None):
     thisExp = data.ExperimentHandler(
         name=expName, version='',
         extraInfo=expInfo, runtimeInfo=None,
-        originPath='C:\\Users\\Asus\\Documents\\pretest_fmri\\Guess_fMRI\\part0_lastrun.py',
+        originPath='C:\\Users\\LocalAdmin\\Documents\\GUESS\\Guess_fMRI\\part0_lastrun.py',
         savePickle=True, saveWideText=True,
         dataFileName=dataDir + os.sep + filename, sortColumns='time'
     )
@@ -192,7 +192,7 @@ def setupWindow(expInfo=None, win=None):
     if win is None:
         # if not given a window to setup, make one
         win = visual.Window(
-            size=_winSize, fullscr=_fullScr, screen=0,
+            size=_winSize, fullscr=_fullScr, screen=1,
             winType='pyglet', allowGUI=False, allowStencil=False,
             monitor='testMonitor', color=[0,0,0], colorSpace='rgb',
             backgroundImage='', backgroundFit='none',
@@ -282,6 +282,18 @@ def setupDevices(expInfo, thisExp, win):
         select_video_keys = deviceManager.addDevice(
             deviceClass='keyboard',
             deviceName='select_video_keys',
+        )
+    if deviceManager.getDevice('end_video') is None:
+        # initialise end_video
+        end_video = deviceManager.addDevice(
+            deviceClass='keyboard',
+            deviceName='end_video',
+        )
+    if deviceManager.getDevice('key_resp_2') is None:
+        # initialise key_resp_2
+        key_resp_2 = deviceManager.addDevice(
+            deviceClass='keyboard',
+            deviceName='key_resp_2',
         )
     # return True if completed successfully
     return True
@@ -396,6 +408,14 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     # Run 'Begin Experiment' code from setup_code
     all_keys = ['space', '1','2','3','4','5']
     
+    video_dict = {}
+    video_dict['2'] = 'baby_animals.mp4'
+    video_dict['3'] = 'deep_sea.mp4'
+    video_dict['4'] = 'scotland.mp4'
+    video_dict['5'] = 'brazil.mp4'
+    
+    
+    
     # --- Initialize components for Routine "hand_intro" ---
     hand_image = visual.ImageStim(
         win=win,
@@ -433,13 +453,41 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     
     # --- Initialize components for Routine "select_video" ---
     select_video_text = visual.TextStim(win=win, name='select_video_text',
-        text='Great!\n\nNow we will do the structural scans.\nYou can select a video with a button press to watch meanwhile. \n1) \n2) ',
+        text='Great!\n\nNow we will do the structural scans.\nYou can select a video with a button press to watch meanwhile. \n1) Baby Animals \n2) Deep Sea\n3) Scotland\n4) Brazil',
         font='Arial',
         pos=(0, 0), draggable=False, height=0.05, wrapWidth=None, ori=0.0, 
         color='white', colorSpace='rgb', opacity=None, 
         languageStyle='LTR',
         depth=0.0);
     select_video_keys = keyboard.Keyboard(deviceName='select_video_keys')
+    
+    # --- Initialize components for Routine "play_video" ---
+    movie = visual.MovieStim(
+        win, name='movie',
+        filename=None, movieLib='ffpyplayer',
+        loop=False, volume=1.0, noAudio=False,
+        pos=(0, 0), size=(1920,1080), units='pix',
+        ori=0.0, anchor='center',opacity=None, contrast=1.0,
+        depth=0
+    )
+    video_text = visual.TextStim(win=win, name='video_text',
+        text='Video is loading...\n\nWe are starting the scanner. Please stay still.',
+        font='Arial',
+        pos=(0, 0), draggable=False, height=0.05, wrapWidth=None, ori=0.0, 
+        color='white', colorSpace='rgb', opacity=None, 
+        languageStyle='LTR',
+        depth=-1.0);
+    end_video = keyboard.Keyboard(deviceName='end_video')
+    
+    # --- Initialize components for Routine "end" ---
+    end_text = visual.TextStim(win=win, name='end_text',
+        text='The anatomical scan ended. Thank you.\n\nNow comes the task!',
+        font='Arial',
+        pos=(0, 0), draggable=False, height=0.05, wrapWidth=None, ori=0.0, 
+        color='white', colorSpace='rgb', opacity=None, 
+        languageStyle='LTR',
+        depth=0.0);
+    key_resp_2 = keyboard.Keyboard(deviceName='key_resp_2')
     
     # create some handy timers
     
@@ -1143,8 +1191,341 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     if select_video_keys.keys != None:  # we had a response
         thisExp.addData('select_video_keys.rt', select_video_keys.rt)
         thisExp.addData('select_video_keys.duration', select_video_keys.duration)
+    # Run 'End Routine' code from select_video_code
+    selected = select_video_keys.keys[0]
+    this_video = video_dict[selected]
+    print(this_video)
     thisExp.nextEntry()
     # the Routine "select_video" was not non-slip safe, so reset the non-slip timer
+    routineTimer.reset()
+    
+    # --- Prepare to start Routine "play_video" ---
+    # create an object to store info about Routine play_video
+    play_video = data.Routine(
+        name='play_video',
+        components=[movie, video_text, end_video],
+    )
+    play_video.status = NOT_STARTED
+    continueRoutine = True
+    # update component parameters for each repeat
+    movie.setMovie(this_video)
+    # create starting attributes for end_video
+    end_video.keys = []
+    end_video.rt = []
+    _end_video_allKeys = []
+    # store start times for play_video
+    play_video.tStartRefresh = win.getFutureFlipTime(clock=globalClock)
+    play_video.tStart = globalClock.getTime(format='float')
+    play_video.status = STARTED
+    thisExp.addData('play_video.started', play_video.tStart)
+    play_video.maxDuration = None
+    # keep track of which components have finished
+    play_videoComponents = play_video.components
+    for thisComponent in play_video.components:
+        thisComponent.tStart = None
+        thisComponent.tStop = None
+        thisComponent.tStartRefresh = None
+        thisComponent.tStopRefresh = None
+        if hasattr(thisComponent, 'status'):
+            thisComponent.status = NOT_STARTED
+    # reset timers
+    t = 0
+    _timeToFirstFrame = win.getFutureFlipTime(clock="now")
+    frameN = -1
+    
+    # --- Run Routine "play_video" ---
+    play_video.forceEnded = routineForceEnded = not continueRoutine
+    while continueRoutine:
+        # get current time
+        t = routineTimer.getTime()
+        tThisFlip = win.getFutureFlipTime(clock=routineTimer)
+        tThisFlipGlobal = win.getFutureFlipTime(clock=None)
+        frameN = frameN + 1  # number of completed frames (so 0 is the first frame)
+        # update/draw components on each frame
+        
+        # *movie* updates
+        
+        # if movie is starting this frame...
+        if movie.status == NOT_STARTED and tThisFlip >= 5.0-frameTolerance:
+            # keep track of start time/frame for later
+            movie.frameNStart = frameN  # exact frame index
+            movie.tStart = t  # local t and not account for scr refresh
+            movie.tStartRefresh = tThisFlipGlobal  # on global time
+            win.timeOnFlip(movie, 'tStartRefresh')  # time at next scr refresh
+            # add timestamp to datafile
+            thisExp.timestampOnFlip(win, 'movie.started')
+            # update status
+            movie.status = STARTED
+            movie.setAutoDraw(True)
+            movie.play()
+        
+        # if movie is stopping this frame...
+        if movie.status == STARTED:
+            # is it time to stop? (based on global clock, using actual start)
+            if tThisFlipGlobal > movie.tStartRefresh + 600 -frameTolerance or movie.isFinished:
+                # keep track of stop time/frame for later
+                movie.tStop = t  # not accounting for scr refresh
+                movie.tStopRefresh = tThisFlipGlobal  # on global time
+                movie.frameNStop = frameN  # exact frame index
+                # add timestamp to datafile
+                thisExp.timestampOnFlip(win, 'movie.stopped')
+                # update status
+                movie.status = FINISHED
+                movie.setAutoDraw(False)
+                movie.stop()
+        
+        # *video_text* updates
+        
+        # if video_text is starting this frame...
+        if video_text.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+            # keep track of start time/frame for later
+            video_text.frameNStart = frameN  # exact frame index
+            video_text.tStart = t  # local t and not account for scr refresh
+            video_text.tStartRefresh = tThisFlipGlobal  # on global time
+            win.timeOnFlip(video_text, 'tStartRefresh')  # time at next scr refresh
+            # add timestamp to datafile
+            thisExp.timestampOnFlip(win, 'video_text.started')
+            # update status
+            video_text.status = STARTED
+            video_text.setAutoDraw(True)
+        
+        # if video_text is active this frame...
+        if video_text.status == STARTED:
+            # update params
+            pass
+        
+        # if video_text is stopping this frame...
+        if video_text.status == STARTED:
+            # is it time to stop? (based on global clock, using actual start)
+            if tThisFlipGlobal > video_text.tStartRefresh + 5.0-frameTolerance:
+                # keep track of stop time/frame for later
+                video_text.tStop = t  # not accounting for scr refresh
+                video_text.tStopRefresh = tThisFlipGlobal  # on global time
+                video_text.frameNStop = frameN  # exact frame index
+                # add timestamp to datafile
+                thisExp.timestampOnFlip(win, 'video_text.stopped')
+                # update status
+                video_text.status = FINISHED
+                video_text.setAutoDraw(False)
+        
+        # *end_video* updates
+        waitOnFlip = False
+        
+        # if end_video is starting this frame...
+        if end_video.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+            # keep track of start time/frame for later
+            end_video.frameNStart = frameN  # exact frame index
+            end_video.tStart = t  # local t and not account for scr refresh
+            end_video.tStartRefresh = tThisFlipGlobal  # on global time
+            win.timeOnFlip(end_video, 'tStartRefresh')  # time at next scr refresh
+            # add timestamp to datafile
+            thisExp.timestampOnFlip(win, 'end_video.started')
+            # update status
+            end_video.status = STARTED
+            # keyboard checking is just starting
+            waitOnFlip = True
+            win.callOnFlip(end_video.clock.reset)  # t=0 on next screen flip
+            win.callOnFlip(end_video.clearEvents, eventType='keyboard')  # clear events on next screen flip
+        if end_video.status == STARTED and not waitOnFlip:
+            theseKeys = end_video.getKeys(keyList=['space'], ignoreKeys=["escape"], waitRelease=False)
+            _end_video_allKeys.extend(theseKeys)
+            if len(_end_video_allKeys):
+                end_video.keys = _end_video_allKeys[-1].name  # just the last key pressed
+                end_video.rt = _end_video_allKeys[-1].rt
+                end_video.duration = _end_video_allKeys[-1].duration
+                # a response ends the routine
+                continueRoutine = False
+        
+        # check for quit (typically the Esc key)
+        if defaultKeyboard.getKeys(keyList=["escape"]):
+            thisExp.status = FINISHED
+        if thisExp.status == FINISHED or endExpNow:
+            endExperiment(thisExp, win=win)
+            return
+        # pause experiment here if requested
+        if thisExp.status == PAUSED:
+            pauseExperiment(
+                thisExp=thisExp, 
+                win=win, 
+                timers=[routineTimer], 
+                playbackComponents=[movie]
+            )
+            # skip the frame we paused on
+            continue
+        
+        # check if all components have finished
+        if not continueRoutine:  # a component has requested a forced-end of Routine
+            play_video.forceEnded = routineForceEnded = True
+            break
+        continueRoutine = False  # will revert to True if at least one component still running
+        for thisComponent in play_video.components:
+            if hasattr(thisComponent, "status") and thisComponent.status != FINISHED:
+                continueRoutine = True
+                break  # at least one component has not yet finished
+        
+        # refresh the screen
+        if continueRoutine:  # don't flip if this routine is over or we'll get a blank screen
+            win.flip()
+    
+    # --- Ending Routine "play_video" ---
+    for thisComponent in play_video.components:
+        if hasattr(thisComponent, "setAutoDraw"):
+            thisComponent.setAutoDraw(False)
+    # store stop times for play_video
+    play_video.tStop = globalClock.getTime(format='float')
+    play_video.tStopRefresh = tThisFlipGlobal
+    thisExp.addData('play_video.stopped', play_video.tStop)
+    movie.stop()  # ensure movie has stopped at end of Routine
+    # check responses
+    if end_video.keys in ['', [], None]:  # No response was made
+        end_video.keys = None
+    thisExp.addData('end_video.keys',end_video.keys)
+    if end_video.keys != None:  # we had a response
+        thisExp.addData('end_video.rt', end_video.rt)
+        thisExp.addData('end_video.duration', end_video.duration)
+    thisExp.nextEntry()
+    # the Routine "play_video" was not non-slip safe, so reset the non-slip timer
+    routineTimer.reset()
+    
+    # --- Prepare to start Routine "end" ---
+    # create an object to store info about Routine end
+    end = data.Routine(
+        name='end',
+        components=[end_text, key_resp_2],
+    )
+    end.status = NOT_STARTED
+    continueRoutine = True
+    # update component parameters for each repeat
+    # create starting attributes for key_resp_2
+    key_resp_2.keys = []
+    key_resp_2.rt = []
+    _key_resp_2_allKeys = []
+    # store start times for end
+    end.tStartRefresh = win.getFutureFlipTime(clock=globalClock)
+    end.tStart = globalClock.getTime(format='float')
+    end.status = STARTED
+    thisExp.addData('end.started', end.tStart)
+    end.maxDuration = None
+    # keep track of which components have finished
+    endComponents = end.components
+    for thisComponent in end.components:
+        thisComponent.tStart = None
+        thisComponent.tStop = None
+        thisComponent.tStartRefresh = None
+        thisComponent.tStopRefresh = None
+        if hasattr(thisComponent, 'status'):
+            thisComponent.status = NOT_STARTED
+    # reset timers
+    t = 0
+    _timeToFirstFrame = win.getFutureFlipTime(clock="now")
+    frameN = -1
+    
+    # --- Run Routine "end" ---
+    end.forceEnded = routineForceEnded = not continueRoutine
+    while continueRoutine:
+        # get current time
+        t = routineTimer.getTime()
+        tThisFlip = win.getFutureFlipTime(clock=routineTimer)
+        tThisFlipGlobal = win.getFutureFlipTime(clock=None)
+        frameN = frameN + 1  # number of completed frames (so 0 is the first frame)
+        # update/draw components on each frame
+        
+        # *end_text* updates
+        
+        # if end_text is starting this frame...
+        if end_text.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+            # keep track of start time/frame for later
+            end_text.frameNStart = frameN  # exact frame index
+            end_text.tStart = t  # local t and not account for scr refresh
+            end_text.tStartRefresh = tThisFlipGlobal  # on global time
+            win.timeOnFlip(end_text, 'tStartRefresh')  # time at next scr refresh
+            # add timestamp to datafile
+            thisExp.timestampOnFlip(win, 'end_text.started')
+            # update status
+            end_text.status = STARTED
+            end_text.setAutoDraw(True)
+        
+        # if end_text is active this frame...
+        if end_text.status == STARTED:
+            # update params
+            pass
+        
+        # *key_resp_2* updates
+        waitOnFlip = False
+        
+        # if key_resp_2 is starting this frame...
+        if key_resp_2.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+            # keep track of start time/frame for later
+            key_resp_2.frameNStart = frameN  # exact frame index
+            key_resp_2.tStart = t  # local t and not account for scr refresh
+            key_resp_2.tStartRefresh = tThisFlipGlobal  # on global time
+            win.timeOnFlip(key_resp_2, 'tStartRefresh')  # time at next scr refresh
+            # add timestamp to datafile
+            thisExp.timestampOnFlip(win, 'key_resp_2.started')
+            # update status
+            key_resp_2.status = STARTED
+            # keyboard checking is just starting
+            waitOnFlip = True
+            win.callOnFlip(key_resp_2.clock.reset)  # t=0 on next screen flip
+            win.callOnFlip(key_resp_2.clearEvents, eventType='keyboard')  # clear events on next screen flip
+        if key_resp_2.status == STARTED and not waitOnFlip:
+            theseKeys = key_resp_2.getKeys(keyList=['space'], ignoreKeys=["escape"], waitRelease=False)
+            _key_resp_2_allKeys.extend(theseKeys)
+            if len(_key_resp_2_allKeys):
+                key_resp_2.keys = _key_resp_2_allKeys[-1].name  # just the last key pressed
+                key_resp_2.rt = _key_resp_2_allKeys[-1].rt
+                key_resp_2.duration = _key_resp_2_allKeys[-1].duration
+                # a response ends the routine
+                continueRoutine = False
+        
+        # check for quit (typically the Esc key)
+        if defaultKeyboard.getKeys(keyList=["escape"]):
+            thisExp.status = FINISHED
+        if thisExp.status == FINISHED or endExpNow:
+            endExperiment(thisExp, win=win)
+            return
+        # pause experiment here if requested
+        if thisExp.status == PAUSED:
+            pauseExperiment(
+                thisExp=thisExp, 
+                win=win, 
+                timers=[routineTimer], 
+                playbackComponents=[]
+            )
+            # skip the frame we paused on
+            continue
+        
+        # check if all components have finished
+        if not continueRoutine:  # a component has requested a forced-end of Routine
+            end.forceEnded = routineForceEnded = True
+            break
+        continueRoutine = False  # will revert to True if at least one component still running
+        for thisComponent in end.components:
+            if hasattr(thisComponent, "status") and thisComponent.status != FINISHED:
+                continueRoutine = True
+                break  # at least one component has not yet finished
+        
+        # refresh the screen
+        if continueRoutine:  # don't flip if this routine is over or we'll get a blank screen
+            win.flip()
+    
+    # --- Ending Routine "end" ---
+    for thisComponent in end.components:
+        if hasattr(thisComponent, "setAutoDraw"):
+            thisComponent.setAutoDraw(False)
+    # store stop times for end
+    end.tStop = globalClock.getTime(format='float')
+    end.tStopRefresh = tThisFlipGlobal
+    thisExp.addData('end.stopped', end.tStop)
+    # check responses
+    if key_resp_2.keys in ['', [], None]:  # No response was made
+        key_resp_2.keys = None
+    thisExp.addData('key_resp_2.keys',key_resp_2.keys)
+    if key_resp_2.keys != None:  # we had a response
+        thisExp.addData('key_resp_2.rt', key_resp_2.rt)
+        thisExp.addData('key_resp_2.duration', key_resp_2.duration)
+    thisExp.nextEntry()
+    # the Routine "end" was not non-slip safe, so reset the non-slip timer
     routineTimer.reset()
     
     # mark experiment as finished
