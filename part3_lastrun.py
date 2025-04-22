@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """
 This experiment was created using PsychoPy3 Experiment Builder (v2024.2.4),
-    on April 16, 2025, at 14:29
+    on április 22, 2025, at 11:13
 If you publish work using this script the most relevant publication is:
 
     Peirce J, Gray JR, Simpson S, MacAskill M, Höchenberger R, Sogo H, Kastman E, Lindeløv JK. (2019) 
@@ -127,7 +127,7 @@ def setupData(expInfo, dataDir=None):
     thisExp = data.ExperimentHandler(
         name=expName, version='',
         extraInfo=expInfo, runtimeInfo=None,
-        originPath='C:\\Users\\LocalAdmin\\Documents\\GUESS\\Guess_fMRI\\part3_lastrun.py',
+        originPath='C:\\Users\\Asus\\Documents\\pretest_fmri\\Guess_fMRI\\part3_lastrun.py',
         savePickle=True, saveWideText=True,
         dataFileName=dataDir + os.sep + filename, sortColumns='time'
     )
@@ -1235,7 +1235,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
             method='random', 
             extraInfo=expInfo, 
             originPath=-1, 
-            trialList=data.importConditions('sm_items.xlsx'), 
+            trialList=data.importConditions('sm_words.xlsx'), 
             seed=None, 
         )
         thisExp.addLoop(load_and_shuffle)  # add the loop to the experiment
@@ -2171,7 +2171,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
                 if isinstance(semantic_mapping_run, data.TrialHandler2) and thisSemantic_mapping_run.thisN != semantic_mapping_run.thisTrial.thisN:
                     continueRoutine = False
                 item.forceEnded = routineForceEnded = not continueRoutine
-                while continueRoutine and routineTimer.getTime() < 1.5:
+                while continueRoutine and routineTimer.getTime() < 2.0:
                     # get current time
                     t = routineTimer.getTime()
                     tThisFlip = win.getFutureFlipTime(clock=routineTimer)
@@ -2209,7 +2209,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
                     # if living_nonliving is stopping this frame...
                     if living_nonliving.status == STARTED:
                         # is it time to stop? (based on global clock, using actual start)
-                        if tThisFlipGlobal > living_nonliving.tStartRefresh + 1.5-frameTolerance:
+                        if tThisFlipGlobal > living_nonliving.tStartRefresh + 2-frameTolerance:
                             # keep track of stop time/frame for later
                             living_nonliving.tStop = t  # not accounting for scr refresh
                             living_nonliving.tStopRefresh = tThisFlipGlobal  # on global time
@@ -2249,7 +2249,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
                     # if end_mapping is stopping this frame...
                     if end_mapping.status == STARTED:
                         # is it time to stop? (based on global clock, using actual start)
-                        if tThisFlipGlobal > end_mapping.tStartRefresh + 1.5-frameTolerance:
+                        if tThisFlipGlobal > end_mapping.tStartRefresh + 2-frameTolerance:
                             # keep track of stop time/frame for later
                             end_mapping.tStop = t  # not accounting for scr refresh
                             end_mapping.tStopRefresh = tThisFlipGlobal  # on global time
@@ -2292,7 +2292,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
                     # if living_nonliving_text is stopping this frame...
                     if living_nonliving_text.status == STARTED:
                         # is it time to stop? (based on global clock, using actual start)
-                        if tThisFlipGlobal > living_nonliving_text.tStartRefresh + 1.5-frameTolerance:
+                        if tThisFlipGlobal > living_nonliving_text.tStartRefresh + 2-frameTolerance:
                             # keep track of stop time/frame for later
                             living_nonliving_text.tStop = t  # not accounting for scr refresh
                             living_nonliving_text.tStopRefresh = tThisFlipGlobal  # on global time
@@ -2326,7 +2326,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
                     # if semantic_map_item is stopping this frame...
                     if semantic_map_item.status == STARTED:
                         # is it time to stop? (based on global clock, using actual start)
-                        if tThisFlipGlobal > semantic_map_item.tStartRefresh + 1.5-frameTolerance:
+                        if tThisFlipGlobal > semantic_map_item.tStartRefresh + 2-frameTolerance:
                             # keep track of stop time/frame for later
                             semantic_map_item.tStop = t  # not accounting for scr refresh
                             semantic_map_item.tStopRefresh = tThisFlipGlobal  # on global time
@@ -2396,7 +2396,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
                 elif item.forceEnded:
                     routineTimer.reset()
                 else:
-                    routineTimer.addTime(-1.500000)
+                    routineTimer.addTime(-2.000000)
                 thisExp.nextEntry()
                 
             # completed num_trials repeats of 'semantic_mapping_run'
