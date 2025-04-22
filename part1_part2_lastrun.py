@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """
 This experiment was created using PsychoPy3 Experiment Builder (v2024.2.4),
-    on április 22, 2025, at 12:17
+    on April 22, 2025, at 13:19
 If you publish work using this script the most relevant publication is:
 
     Peirce J, Gray JR, Simpson S, MacAskill M, Höchenberger R, Sogo H, Kastman E, Lindeløv JK. (2019) 
@@ -128,7 +128,7 @@ def setupData(expInfo, dataDir=None):
     thisExp = data.ExperimentHandler(
         name=expName, version='',
         extraInfo=expInfo, runtimeInfo=None,
-        originPath='C:\\Users\\Asus\\Documents\\pretest_fmri\\Guess_fMRI\\part1_part2_lastrun.py',
+        originPath='C:\\Users\\Nemecz\\Documents\\Guess_fMRI\\part1_part2_lastrun.py',
         savePickle=True, saveWideText=True,
         dataFileName=dataDir + os.sep + filename, sortColumns='time'
     )
@@ -502,7 +502,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     import random as rnd
     
     from psychopy import parallel
-    #port = parallel.ParallelPort(address = 0x2FE8) 
+    port = parallel.ParallelPort(address = 0x2FE8) 
     pinNumber = 10 #Change to match the pin that is receiving the pulse value sent by your scanner. Set this to None to scan all pins
     
     all_keys = ['space', '1', '2', '3', '4', '5']
@@ -4067,8 +4067,8 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
             frameN = frameN + 1  # number of completed frames (so 0 is the first frame)
             # update/draw components on each frame
             # Run 'Each Frame' code from catch_trigger
-            #if port.readPin(pinNumber) > 0:
-            #    continueRoutine = False #A trigger was detected, so move on
+            if port.readPin(pinNumber) > 0:
+                continueRoutine = False #A trigger was detected, so move on
             
             # *starting_soon* updates
             
@@ -8134,8 +8134,8 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
             frameN = frameN + 1  # number of completed frames (so 0 is the first frame)
             # update/draw components on each frame
             # Run 'Each Frame' code from catch_trigger
-            #if port.readPin(pinNumber) > 0:
-            #    continueRoutine = False #A trigger was detected, so move on
+            if port.readPin(pinNumber) > 0:
+                continueRoutine = False #A trigger was detected, so move on
             
             # *starting_soon* updates
             
