@@ -5,10 +5,10 @@
     <Param val="ptb" valType="str" updates="None" name="Audio lib"/>
     <Param val="https://regensburg.sona-systems.com/webstudy_credit.aspx?experiment_id=1093&amp;credit_token=3ab017d6ceb04173ba128bd636423369&amp;survey_code=&quot; + expInfo[‘participant’]" valType="str" updates="None" name="Completed URL"/>
     <Param val="auto" valType="str" updates="None" name="Data file delimiter"/>
-    <Param val="u'data/%s_%s_%s' % (expInfo['ID'], expName, expInfo['date'])" valType="code" updates="None" name="Data filename"/>
+    <Param val="u'data/%s_%s_%s' % (expInfo['PID'], expName, expInfo['date'])" valType="code" updates="None" name="Data filename"/>
     <Param val="True" valType="bool" updates="None" name="Enable Escape"/>
     <Param val="Thank you for your patience." valType="str" updates="None" name="End Message"/>
-    <Param val="{'ID': '', 'Alter': '', 'Geschlecht (optional)': ''}" valType="code" updates="None" name="Experiment info"/>
+    <Param val="{'PID': '', 'Alter': '', 'Geschlecht (optional)': '', 'MRI': '1'}" valType="code" updates="None" name="Experiment info"/>
     <Param val="True" valType="bool" updates="None" name="Force stereo"/>
     <Param val="True" valType="bool" updates="None" name="Full-screen window"/>
     <Param val="" valType="str" updates="None" name="HTML path"/>
@@ -46,7 +46,7 @@
     <Param val="False" valType="bool" updates="None" name="elSimMode"/>
     <Param val="RIGHT_EYE" valType="str" updates="None" name="elTrackEyes"/>
     <Param val="PUPIL_CR_TRACKING" valType="str" updates="None" name="elTrackingMode"/>
-    <Param val="guess" valType="str" updates="None" name="expName"/>
+    <Param val="sm" valType="str" updates="None" name="expName"/>
     <Param val="on Sync" valType="str" updates="None" name="exportHTML"/>
     <Param val="None" valType="str" updates="None" name="eyetracker"/>
     <Param val="" valType="code" updates="None" name="frameRate"/>
@@ -127,8 +127,8 @@
       <CodeComponent name="experiment_setup" plugin="None">
         <Param val="" valType="extendedCode" updates="constant" name="Before Experiment"/>
         <Param val="" valType="extendedCode" updates="constant" name="Before JS Experiment"/>
-        <Param val="# import random for letter randomization&amp;#10;import random as rnd&amp;#10;&amp;#10;from psychopy import parallel&amp;#10;port = parallel.ParallelPort(address = 0x2FE8) &amp;#10;pinNumber = 10 #Change to match the pin that is receiving the pulse value sent by your scanner. Set this to None to scan all pins&amp;#10;&amp;#10;all_keys = ['space', '1','2','3','4','5']&amp;#10;&amp;#10;my_runs = []&amp;#10;iti_list = []&amp;#10;list_item = &quot;None&quot;&amp;#10;&amp;#10;run_counter = 1&amp;#10;&amp;#10;num_trials = 30&amp;#10;if expInfo['ID'] == 'pilot':&amp;#10;    num_trials = 4&amp;#10;&amp;#10;" valType="extendedCode" updates="constant" name="Begin Experiment"/>
-        <Param val="import * as rnd from 'random';&amp;#10;import {parallel} from 'psychopy';&amp;#10;port = new parallel.ParallelPort({&quot;address&quot;: 12264});&amp;#10;pinNumber = 10;&amp;#10;all_keys = [&quot;space&quot;, &quot;1&quot;, &quot;2&quot;, &quot;3&quot;, &quot;4&quot;, &quot;5&quot;];&amp;#10;my_runs = [];&amp;#10;iti_list = [];&amp;#10;list_item = &quot;None&quot;;&amp;#10;run_counter = 1;&amp;#10;num_trials = 30;&amp;#10;if ((expInfo[&quot;ID&quot;] === &quot;pilot&quot;)) {&amp;#10;    num_trials = 4;&amp;#10;}&amp;#10;" valType="extendedCode" updates="constant" name="Begin JS Experiment"/>
+        <Param val="# import random for letter randomization&amp;#10;import random as rnd&amp;#10;&amp;#10;if expInfo['MRI'] == '1':&amp;#10;    from psychopy import parallel&amp;#10;    port = parallel.ParallelPort(address = 0x2FE8) &amp;#10;    pinNumber = 10 #Change to match the pin that is receiving the pulse value sent by your scanner. Set this to None to scan all pins&amp;#10;&amp;#10;all_keys = ['space', '1','2','3','4','5']&amp;#10;&amp;#10;my_runs = []&amp;#10;iti_list = []&amp;#10;list_item = &quot;None&quot;&amp;#10;&amp;#10;run_counter = 1&amp;#10;&amp;#10;num_trials = 60&amp;#10;if expInfo['PID'] == 'pilot':&amp;#10;    num_trials = 4&amp;#10;&amp;#10;" valType="extendedCode" updates="constant" name="Begin Experiment"/>
+        <Param val="import * as rnd from 'random';&amp;#10;if ((expInfo[&quot;MRI&quot;] === &quot;1&quot;)) {&amp;#10;    import {parallel} from 'psychopy';&amp;#10;    port = new parallel.ParallelPort({&quot;address&quot;: 12264});&amp;#10;    pinNumber = 10;&amp;#10;}&amp;#10;all_keys = [&quot;space&quot;, &quot;1&quot;, &quot;2&quot;, &quot;3&quot;, &quot;4&quot;, &quot;5&quot;];&amp;#10;my_runs = [];&amp;#10;iti_list = [];&amp;#10;list_item = &quot;None&quot;;&amp;#10;run_counter = 1;&amp;#10;num_trials = 60;&amp;#10;if ((expInfo[&quot;PID&quot;] === &quot;pilot&quot;)) {&amp;#10;    num_trials = 4;&amp;#10;}&amp;#10;" valType="extendedCode" updates="constant" name="Begin JS Experiment"/>
         <Param val="" valType="extendedCode" updates="constant" name="Begin JS Routine"/>
         <Param val="" valType="extendedCode" updates="constant" name="Begin Routine"/>
         <Param val="Auto-&gt;JS" valType="str" updates="None" name="Code Type"/>
@@ -194,8 +194,8 @@
         <Param val="" valType="extendedCode" updates="constant" name="Begin JS Routine"/>
         <Param val="" valType="extendedCode" updates="constant" name="Begin Routine"/>
         <Param val="Auto-&gt;JS" valType="str" updates="None" name="Code Type"/>
-        <Param val="if port.readPin(pinNumber) &gt; 0:&amp;#10;    continueRoutine = False #A trigger was detected, so move on" valType="extendedCode" updates="constant" name="Each Frame"/>
-        <Param val="if ((port.readPin(pinNumber) &gt; 0)) {&amp;#10;    continueRoutine = false;&amp;#10;}&amp;#10;" valType="extendedCode" updates="constant" name="Each JS Frame"/>
+        <Param val="if expInfo['MRI'] == '1':&amp;#10;    if port.readPin(pinNumber) &gt; 0:&amp;#10;        continueRoutine = False #A trigger was detected, so move on" valType="extendedCode" updates="constant" name="Each Frame"/>
+        <Param val="if ((expInfo[&quot;MRI&quot;] === &quot;1&quot;)) {&amp;#10;    if ((port.readPin(pinNumber) &gt; 0)) {&amp;#10;        continueRoutine = false;&amp;#10;    }&amp;#10;}&amp;#10;" valType="extendedCode" updates="constant" name="Each JS Frame"/>
         <Param val="" valType="extendedCode" updates="constant" name="End Experiment"/>
         <Param val="" valType="extendedCode" updates="constant" name="End JS Experiment"/>
         <Param val="" valType="extendedCode" updates="constant" name="End JS Routine"/>
@@ -844,8 +844,8 @@
         <Param val="" valType="extendedCode" updates="constant" name="Before JS Experiment"/>
         <Param val="" valType="extendedCode" updates="constant" name="Begin Experiment"/>
         <Param val="" valType="extendedCode" updates="constant" name="Begin JS Experiment"/>
-        <Param val="" valType="extendedCode" updates="constant" name="Begin JS Routine"/>
-        <Param val="" valType="extendedCode" updates="constant" name="Begin Routine"/>
+        <Param val="console.log(&quot;Finished SM run &quot;, run_counter);&amp;#10;" valType="extendedCode" updates="constant" name="Begin JS Routine"/>
+        <Param val="print(&quot;Finished SM run &quot;, run_counter)" valType="extendedCode" updates="constant" name="Begin Routine"/>
         <Param val="Auto-&gt;JS" valType="str" updates="None" name="Code Type"/>
         <Param val="" valType="extendedCode" updates="constant" name="Each Frame"/>
         <Param val="" valType="extendedCode" updates="constant" name="Each JS Frame"/>
@@ -914,8 +914,8 @@
         <Param val="" valType="extendedCode" updates="constant" name="Before JS Experiment"/>
         <Param val="" valType="extendedCode" updates="constant" name="Begin Experiment"/>
         <Param val="" valType="extendedCode" updates="constant" name="Begin JS Experiment"/>
-        <Param val="console.log(run1.length);&amp;#10;console.log(run2.length);&amp;#10;console.log(run3.length);&amp;#10;console.log(run4.length);&amp;#10;rnd.shuffle(run1);&amp;#10;rnd.shuffle(run2);&amp;#10;rnd.shuffle(run3);&amp;#10;rnd.shuffle(run4);&amp;#10;my_runs = [run1, run2, run3, run4];&amp;#10;console.log(my_runs);&amp;#10;" valType="extendedCode" updates="constant" name="Begin JS Routine"/>
-        <Param val="print(len(run1))&amp;#10;print(len(run2))&amp;#10;print(len(run3))&amp;#10;print(len(run4))&amp;#10;&amp;#10;rnd.shuffle(run1)&amp;#10;rnd.shuffle(run2)&amp;#10;rnd.shuffle(run3)&amp;#10;rnd.shuffle(run4)&amp;#10;&amp;#10;my_runs = [run1, run2, run3, run4]&amp;#10;&amp;#10;print(my_runs)&amp;#10;" valType="extendedCode" updates="constant" name="Begin Routine"/>
+        <Param val="rnd.shuffle(run1);&amp;#10;rnd.shuffle(run2);&amp;#10;rnd.shuffle(run3);&amp;#10;rnd.shuffle(run4);&amp;#10;my_runs = [run1, run2, run3, run4];&amp;#10;" valType="extendedCode" updates="constant" name="Begin JS Routine"/>
+        <Param val="rnd.shuffle(run1)&amp;#10;rnd.shuffle(run2)&amp;#10;rnd.shuffle(run3)&amp;#10;rnd.shuffle(run4)&amp;#10;&amp;#10;my_runs = [run1, run2, run3, run4]" valType="extendedCode" updates="constant" name="Begin Routine"/>
         <Param val="Auto-&gt;JS" valType="str" updates="None" name="Code Type"/>
         <Param val="" valType="extendedCode" updates="constant" name="Each Frame"/>
         <Param val="" valType="extendedCode" updates="constant" name="Each JS Frame"/>
@@ -984,8 +984,8 @@
         <Param val="" valType="extendedCode" updates="constant" name="Before JS Experiment"/>
         <Param val="" valType="extendedCode" updates="constant" name="Begin Experiment"/>
         <Param val="" valType="extendedCode" updates="constant" name="Begin JS Experiment"/>
-        <Param val="this_list = Number.parseInt(thisList);&amp;#10;this_run = my_runs[this_list];&amp;#10;this_item = this_run.splice((this_run.length - 1), 1);&amp;#10;this_iti = iti_list.splice((iti_list.length - 1), 1);&amp;#10;" valType="extendedCode" updates="constant" name="Begin JS Routine"/>
-        <Param val="this_list = int(thisList)&amp;#10;this_run = my_runs[this_list]&amp;#10;this_item = this_run.pop()&amp;#10;this_iti = iti_list.pop()" valType="extendedCode" updates="constant" name="Begin Routine"/>
+        <Param val="run_index = (run_counter - 1);&amp;#10;this_run = my_runs[run_index];&amp;#10;this_item = this_run.splice((this_run.length - 1), 1);&amp;#10;this_iti = iti_list.splice((iti_list.length - 1), 1);&amp;#10;psychoJS.experiment.addData(&quot;CurrentItem&quot;, this_item);&amp;#10;psychoJS.experiment.addData(&quot;CurrentITI&quot;, this_iti);&amp;#10;" valType="extendedCode" updates="constant" name="Begin JS Routine"/>
+        <Param val="run_index = run_counter - 1&amp;#10;this_run = my_runs[run_index]&amp;#10;this_item = this_run.pop()&amp;#10;this_iti = iti_list.pop()&amp;#10;&amp;#10;thisExp.addData('CurrentItem', this_item)&amp;#10;thisExp.addData('CurrentITI', this_iti)" valType="extendedCode" updates="constant" name="Begin Routine"/>
         <Param val="Auto-&gt;JS" valType="str" updates="None" name="Code Type"/>
         <Param val="" valType="extendedCode" updates="constant" name="Each Frame"/>
         <Param val="" valType="extendedCode" updates="constant" name="Each JS Frame"/>
@@ -1034,7 +1034,7 @@
         <Param val="time (s)" valType="str" updates="None" name="startType"/>
         <Param val="0.0" valType="code" updates="None" name="startVal"/>
         <Param val="duration (s)" valType="str" updates="None" name="stopType"/>
-        <Param val="10" valType="code" updates="constant" name="stopVal"/>
+        <Param val="12" valType="code" updates="constant" name="stopVal"/>
         <Param val="True" valType="bool" updates="None" name="syncScreenRefresh"/>
         <Param val="+" valType="str" updates="set every repeat" name="text"/>
         <Param val="from exp settings" valType="str" updates="None" name="units"/>
@@ -1103,19 +1103,6 @@
       <Param name="name" updates="None" val="blocks" valType="code"/>
       <Param name="random seed" updates="None" val="" valType="code"/>
     </LoopInitiator>
-    <LoopInitiator loopType="TrialHandler" name="sm_itis">
-      <Param name="Selected rows" updates="None" val="" valType="str"/>
-      <Param name="conditions" updates="None" val="[{'iti': 2}, {'iti': 4}, {'iti': 2}, {'iti': 4}, {'iti': 2}, {'iti': 4}, {'iti': 2}, {'iti': 4}, {'iti': 2}, {'iti': 4}, {'iti': 2}, {'iti': 4}, {'iti': 2}, {'iti': 4}, {'iti': 2}, {'iti': 4}, {'iti': 2}, {'iti': 4}, {'iti': 2}, {'iti': 4}, {'iti': 2}, {'iti': 4}, {'iti': 2}, {'iti': 4}, {'iti': 2}, {'iti': 4}, {'iti': 2}, {'iti': 4}, {'iti': 2}, {'iti': 4}, {'iti': 2}, {'iti': 4}, {'iti': 2}, {'iti': 4}, {'iti': 2}, {'iti': 4}, {'iti': 2}, {'iti': 4}, {'iti': 2}, {'iti': 4}, {'iti': 2}, {'iti': 4}, {'iti': 2}, {'iti': 4}, {'iti': 2}, {'iti': 4}, {'iti': 2}, {'iti': 4}, {'iti': 2}, {'iti': 4}, {'iti': 2}, {'iti': 4}, {'iti': 2}, {'iti': 4}, {'iti': 2}, {'iti': 4}, {'iti': 2}, {'iti': 4}, {'iti': 2}, {'iti': 4}]" valType="str"/>
-      <Param name="conditionsFile" updates="None" val="sm_iti_randomization.xlsx" valType="file"/>
-      <Param name="endPoints" updates="None" val="[0, 1]" valType="num"/>
-      <Param name="isTrials" updates="None" val="False" valType="bool"/>
-      <Param name="loopType" updates="None" val="random" valType="str"/>
-      <Param name="nReps" updates="None" val="1" valType="num"/>
-      <Param name="name" updates="None" val="sm_itis" valType="code"/>
-      <Param name="random seed" updates="None" val="" valType="code"/>
-    </LoopInitiator>
-    <Routine name="load_iti"/>
-    <LoopTerminator name="sm_itis"/>
     <Routine name="reset_run"/>
     <LoopInitiator loopType="TrialHandler" name="load_and_shuffle">
       <Param name="Selected rows" updates="None" val="" valType="str"/>
@@ -1134,14 +1121,27 @@
     <LoopInitiator loopType="TrialHandler" name="runs">
       <Param name="Selected rows" updates="None" val="" valType="str"/>
       <Param name="conditions" updates="None" val="[{'thisList': 0}, {'thisList': 1}, {'thisList': 2}, {'thisList': 3}]" valType="str"/>
-      <Param name="conditionsFile" updates="None" val="run_sheets.xlsx" valType="file"/>
+      <Param name="conditionsFile" updates="None" val="" valType="file"/>
+      <Param name="endPoints" updates="None" val="[0, 1]" valType="num"/>
+      <Param name="isTrials" updates="None" val="False" valType="bool"/>
+      <Param name="loopType" updates="None" val="random" valType="str"/>
+      <Param name="nReps" updates="None" val="4" valType="num"/>
+      <Param name="name" updates="None" val="runs" valType="code"/>
+      <Param name="random seed" updates="None" val="" valType="code"/>
+    </LoopInitiator>
+    <LoopInitiator loopType="TrialHandler" name="iti_loading_loop">
+      <Param name="Selected rows" updates="None" val="" valType="str"/>
+      <Param name="conditions" updates="None" val="[{'iti': 2}, {'iti': 4}, {'iti': 2}, {'iti': 4}, {'iti': 2}, {'iti': 4}, {'iti': 2}, {'iti': 4}, {'iti': 2}, {'iti': 4}, {'iti': 2}, {'iti': 4}, {'iti': 2}, {'iti': 4}, {'iti': 2}, {'iti': 4}, {'iti': 2}, {'iti': 4}, {'iti': 2}, {'iti': 4}, {'iti': 2}, {'iti': 4}, {'iti': 2}, {'iti': 4}, {'iti': 2}, {'iti': 4}, {'iti': 2}, {'iti': 4}, {'iti': 2}, {'iti': 4}, {'iti': 2}, {'iti': 4}, {'iti': 2}, {'iti': 4}, {'iti': 2}, {'iti': 4}, {'iti': 2}, {'iti': 4}, {'iti': 2}, {'iti': 4}, {'iti': 2}, {'iti': 4}, {'iti': 2}, {'iti': 4}, {'iti': 2}, {'iti': 4}, {'iti': 2}, {'iti': 4}, {'iti': 2}, {'iti': 4}, {'iti': 2}, {'iti': 4}, {'iti': 2}, {'iti': 4}, {'iti': 2}, {'iti': 4}, {'iti': 2}, {'iti': 4}, {'iti': 2}, {'iti': 4}]" valType="str"/>
+      <Param name="conditionsFile" updates="None" val="sm_iti_randomization.xlsx" valType="file"/>
       <Param name="endPoints" updates="None" val="[0, 1]" valType="num"/>
       <Param name="isTrials" updates="None" val="False" valType="bool"/>
       <Param name="loopType" updates="None" val="random" valType="str"/>
       <Param name="nReps" updates="None" val="1" valType="num"/>
-      <Param name="name" updates="None" val="runs" valType="code"/>
+      <Param name="name" updates="None" val="iti_loading_loop" valType="code"/>
       <Param name="random seed" updates="None" val="" valType="code"/>
     </LoopInitiator>
+    <Routine name="load_iti"/>
+    <LoopTerminator name="iti_loading_loop"/>
     <Routine name="prep_scanner"/>
     <Routine name="wait_for_trigger"/>
     <Routine name="blank"/>

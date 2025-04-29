@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """
 This experiment was created using PsychoPy3 Experiment Builder (v2024.2.4),
-    on April 22, 2025, at 13:19
+    on április 29, 2025, at 11:14
 If you publish work using this script the most relevant publication is:
 
     Peirce J, Gray JR, Simpson S, MacAskill M, Höchenberger R, Sogo H, Kastman E, Lindeløv JK. (2019) 
@@ -40,13 +40,14 @@ deviceManager = hardware.DeviceManager()
 _thisDir = os.path.dirname(os.path.abspath(__file__))
 # store info about the experiment session
 psychopyVersion = '2024.2.4'
-expName = 'guess'  # from the Builder filename that created this script
+expName = 'part1_part2'  # from the Builder filename that created this script
 # information about this experiment
 expInfo = {
-    'ID': '',
+    'PID': '',
     'Age': '',
     'Gender': '',
     'Handedness': '',
+    'MRI': '1',
     'date|hid': data.getDateStr(),
     'expName|hid': expName,
     'psychopyVersion|hid': psychopyVersion,
@@ -62,7 +63,7 @@ or run the experiment with `--pilot` as an argument. To change what pilot
 PILOTING = core.setPilotModeFromArgs()
 # start off with values from experiment settings
 _fullScr = True
-_winSize = [1440, 900]
+_winSize = [1920, 1080]
 # if in pilot mode, apply overrides according to preferences
 if PILOTING:
     # force windowed mode
@@ -118,7 +119,7 @@ def setupData(expInfo, dataDir=None):
     # data file name stem = absolute path + name; later add .psyexp, .csv, .log, etc
     if dataDir is None:
         dataDir = _thisDir
-    filename = u'data/%s_%s_%s' % (expInfo['ID'], expName, expInfo['date'])
+    filename = u'data/%s_%s_%s' % (expInfo['PID'], expName, expInfo['date'])
     # make sure filename is relative to dataDir
     if os.path.isabs(filename):
         dataDir = os.path.commonprefix([dataDir, filename])
@@ -128,7 +129,7 @@ def setupData(expInfo, dataDir=None):
     thisExp = data.ExperimentHandler(
         name=expName, version='',
         extraInfo=expInfo, runtimeInfo=None,
-        originPath='C:\\Users\\Nemecz\\Documents\\Guess_fMRI\\part1_part2_lastrun.py',
+        originPath='C:\\Users\\Asus\\Documents\\pretest_fmri\\Guess_fMRI\\part1_part2_lastrun.py',
         savePickle=True, saveWideText=True,
         dataFileName=dataDir + os.sep + filename, sortColumns='time'
     )
@@ -501,9 +502,10 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     # import random for letter randomization
     import random as rnd
     
-    from psychopy import parallel
-    port = parallel.ParallelPort(address = 0x2FE8) 
-    pinNumber = 10 #Change to match the pin that is receiving the pulse value sent by your scanner. Set this to None to scan all pins
+    if expInfo["MRI"] == "1":
+        from psychopy import parallel
+        port = parallel.ParallelPort(address = 0x2FE8) 
+        pinNumber = 10 #Change to match the pin that is receiving the pulse value sent by your scanner. Set this to None to scan all pins
     
     all_keys = ['space', '1', '2', '3', '4', '5']
     guess_made_key = "2"
@@ -522,7 +524,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     run_counter = 1
     
     num_trials = 40 # number of trials per run
-    if expInfo["ID"] == "pilot" :
+    if expInfo["PID"] == "pilot" :
         num_trials = 2
     
     start_experiment_key = keyboard.Keyboard(deviceName='start_experiment_key')
@@ -4067,8 +4069,9 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
             frameN = frameN + 1  # number of completed frames (so 0 is the first frame)
             # update/draw components on each frame
             # Run 'Each Frame' code from catch_trigger
-            if port.readPin(pinNumber) > 0:
-                continueRoutine = False #A trigger was detected, so move on
+            if expInfo["MRI"] == "1":
+                if port.readPin(pinNumber) > 0:
+                    continueRoutine = False #A trigger was detected, so move on
             
             # *starting_soon* updates
             
@@ -4201,7 +4204,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         if isinstance(learning_block, data.TrialHandler2) and thisLearning_block.thisN != learning_block.thisTrial.thisN:
             continueRoutine = False
         blank.forceEnded = routineForceEnded = not continueRoutine
-        while continueRoutine and routineTimer.getTime() < 10.0:
+        while continueRoutine and routineTimer.getTime() < 12.0:
             # get current time
             t = routineTimer.getTime()
             tThisFlip = win.getFutureFlipTime(clock=routineTimer)
@@ -4232,7 +4235,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
             # if begin_end_run_cross is stopping this frame...
             if begin_end_run_cross.status == STARTED:
                 # is it time to stop? (based on global clock, using actual start)
-                if tThisFlipGlobal > begin_end_run_cross.tStartRefresh + 10.0-frameTolerance:
+                if tThisFlipGlobal > begin_end_run_cross.tStartRefresh + 12.0-frameTolerance:
                     # keep track of stop time/frame for later
                     begin_end_run_cross.tStop = t  # not accounting for scr refresh
                     begin_end_run_cross.tStopRefresh = tThisFlipGlobal  # on global time
@@ -4288,7 +4291,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         elif blank.forceEnded:
             routineTimer.reset()
         else:
-            routineTimer.addTime(-10.000000)
+            routineTimer.addTime(-12.000000)
         
         # set up handler to look after randomisation of conditions etc
         learning_trials = data.TrialHandler2(
@@ -5487,7 +5490,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         if isinstance(learning_block, data.TrialHandler2) and thisLearning_block.thisN != learning_block.thisTrial.thisN:
             continueRoutine = False
         blank.forceEnded = routineForceEnded = not continueRoutine
-        while continueRoutine and routineTimer.getTime() < 10.0:
+        while continueRoutine and routineTimer.getTime() < 12.0:
             # get current time
             t = routineTimer.getTime()
             tThisFlip = win.getFutureFlipTime(clock=routineTimer)
@@ -5518,7 +5521,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
             # if begin_end_run_cross is stopping this frame...
             if begin_end_run_cross.status == STARTED:
                 # is it time to stop? (based on global clock, using actual start)
-                if tThisFlipGlobal > begin_end_run_cross.tStartRefresh + 10.0-frameTolerance:
+                if tThisFlipGlobal > begin_end_run_cross.tStartRefresh + 12.0-frameTolerance:
                     # keep track of stop time/frame for later
                     begin_end_run_cross.tStop = t  # not accounting for scr refresh
                     begin_end_run_cross.tStopRefresh = tThisFlipGlobal  # on global time
@@ -5574,7 +5577,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         elif blank.forceEnded:
             routineTimer.reset()
         else:
-            routineTimer.addTime(-10.000000)
+            routineTimer.addTime(-12.000000)
         
         # --- Prepare to start Routine "task_break" ---
         # create an object to store info about Routine task_break
@@ -6362,6 +6365,8 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         # update component parameters for each repeat
         # Run 'Begin Routine' code from save_recall_trial_type
         thisExp.addData('trial_type', cue_types[this_cue])
+        thisExp.addData('Cue', this_cue)
+        thisExp.addData('Target', this_target)
         thisExp.addData('RunNr', run_counter)
         
         # create starting attributes for end_cued_recall
@@ -6609,7 +6614,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         recall_response.status = NOT_STARTED
         continueRoutine = True
         # update component parameters for each repeat
-        cue_stim_recall_resp.setText(cue)
+        cue_stim_recall_resp.setText(this_cue)
         # create starting attributes for recall_reached
         recall_reached.keys = []
         recall_reached.rt = []
@@ -6925,7 +6930,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         recall_select_text += "3) " + letters[2] + "        "
         recall_select_text += "4) " + letters[3] 
         
-        cue_stim_recall_select.setText(cue)
+        cue_stim_recall_select.setText(this_cue)
         recall_question_select.setText(recall_select_text)
         # create starting attributes for recall_selection
         recall_selection.keys = []
@@ -8134,8 +8139,9 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
             frameN = frameN + 1  # number of completed frames (so 0 is the first frame)
             # update/draw components on each frame
             # Run 'Each Frame' code from catch_trigger
-            if port.readPin(pinNumber) > 0:
-                continueRoutine = False #A trigger was detected, so move on
+            if expInfo["MRI"] == "1":
+                if port.readPin(pinNumber) > 0:
+                    continueRoutine = False #A trigger was detected, so move on
             
             # *starting_soon* updates
             
@@ -8268,7 +8274,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         if isinstance(recall_block, data.TrialHandler2) and thisRecall_block.thisN != recall_block.thisTrial.thisN:
             continueRoutine = False
         blank.forceEnded = routineForceEnded = not continueRoutine
-        while continueRoutine and routineTimer.getTime() < 10.0:
+        while continueRoutine and routineTimer.getTime() < 12.0:
             # get current time
             t = routineTimer.getTime()
             tThisFlip = win.getFutureFlipTime(clock=routineTimer)
@@ -8299,7 +8305,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
             # if begin_end_run_cross is stopping this frame...
             if begin_end_run_cross.status == STARTED:
                 # is it time to stop? (based on global clock, using actual start)
-                if tThisFlipGlobal > begin_end_run_cross.tStartRefresh + 10.0-frameTolerance:
+                if tThisFlipGlobal > begin_end_run_cross.tStartRefresh + 12.0-frameTolerance:
                     # keep track of stop time/frame for later
                     begin_end_run_cross.tStop = t  # not accounting for scr refresh
                     begin_end_run_cross.tStopRefresh = tThisFlipGlobal  # on global time
@@ -8355,7 +8361,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         elif blank.forceEnded:
             routineTimer.reset()
         else:
-            routineTimer.addTime(-10.000000)
+            routineTimer.addTime(-12.000000)
         
         # set up handler to look after randomisation of conditions etc
         test_trials = data.TrialHandler2(
@@ -8605,6 +8611,8 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
             # update component parameters for each repeat
             # Run 'Begin Routine' code from save_recall_trial_type
             thisExp.addData('trial_type', cue_types[this_cue])
+            thisExp.addData('Cue', this_cue)
+            thisExp.addData('Target', this_target)
             thisExp.addData('RunNr', run_counter)
             
             # create starting attributes for end_cued_recall
@@ -8852,7 +8860,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
             recall_response.status = NOT_STARTED
             continueRoutine = True
             # update component parameters for each repeat
-            cue_stim_recall_resp.setText(cue)
+            cue_stim_recall_resp.setText(this_cue)
             # create starting attributes for recall_reached
             recall_reached.keys = []
             recall_reached.rt = []
@@ -9168,7 +9176,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
             recall_select_text += "3) " + letters[2] + "        "
             recall_select_text += "4) " + letters[3] 
             
-            cue_stim_recall_select.setText(cue)
+            cue_stim_recall_select.setText(this_cue)
             recall_question_select.setText(recall_select_text)
             # create starting attributes for recall_selection
             recall_selection.keys = []
@@ -9499,7 +9507,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         if isinstance(recall_block, data.TrialHandler2) and thisRecall_block.thisN != recall_block.thisTrial.thisN:
             continueRoutine = False
         blank.forceEnded = routineForceEnded = not continueRoutine
-        while continueRoutine and routineTimer.getTime() < 10.0:
+        while continueRoutine and routineTimer.getTime() < 12.0:
             # get current time
             t = routineTimer.getTime()
             tThisFlip = win.getFutureFlipTime(clock=routineTimer)
@@ -9530,7 +9538,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
             # if begin_end_run_cross is stopping this frame...
             if begin_end_run_cross.status == STARTED:
                 # is it time to stop? (based on global clock, using actual start)
-                if tThisFlipGlobal > begin_end_run_cross.tStartRefresh + 10.0-frameTolerance:
+                if tThisFlipGlobal > begin_end_run_cross.tStartRefresh + 12.0-frameTolerance:
                     # keep track of stop time/frame for later
                     begin_end_run_cross.tStop = t  # not accounting for scr refresh
                     begin_end_run_cross.tStopRefresh = tThisFlipGlobal  # on global time
@@ -9586,7 +9594,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         elif blank.forceEnded:
             routineTimer.reset()
         else:
-            routineTimer.addTime(-10.000000)
+            routineTimer.addTime(-12.000000)
         
         # --- Prepare to start Routine "task_break" ---
         # create an object to store info about Routine task_break

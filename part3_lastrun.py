@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """
 This experiment was created using PsychoPy3 Experiment Builder (v2024.2.4),
-    on April 22, 2025, at 14:15
+    on április 29, 2025, at 12:52
 If you publish work using this script the most relevant publication is:
 
     Peirce J, Gray JR, Simpson S, MacAskill M, Höchenberger R, Sogo H, Kastman E, Lindeløv JK. (2019) 
@@ -40,12 +40,13 @@ deviceManager = hardware.DeviceManager()
 _thisDir = os.path.dirname(os.path.abspath(__file__))
 # store info about the experiment session
 psychopyVersion = '2024.2.4'
-expName = 'guess'  # from the Builder filename that created this script
+expName = 'sm'  # from the Builder filename that created this script
 # information about this experiment
 expInfo = {
-    'ID': '',
+    'PID': '',
     'Alter': '',
     'Geschlecht (optional)': '',
+    'MRI': '1',
     'date|hid': data.getDateStr(),
     'expName|hid': expName,
     'psychopyVersion|hid': psychopyVersion,
@@ -117,7 +118,7 @@ def setupData(expInfo, dataDir=None):
     # data file name stem = absolute path + name; later add .psyexp, .csv, .log, etc
     if dataDir is None:
         dataDir = _thisDir
-    filename = u'data/%s_%s_%s' % (expInfo['ID'], expName, expInfo['date'])
+    filename = u'data/%s_%s_%s' % (expInfo['PID'], expName, expInfo['date'])
     # make sure filename is relative to dataDir
     if os.path.isabs(filename):
         dataDir = os.path.commonprefix([dataDir, filename])
@@ -127,7 +128,7 @@ def setupData(expInfo, dataDir=None):
     thisExp = data.ExperimentHandler(
         name=expName, version='',
         extraInfo=expInfo, runtimeInfo=None,
-        originPath='C:\\Users\\Nemecz\\Documents\\Guess_fMRI\\part3_lastrun.py',
+        originPath='C:\\Users\\Asus\\Documents\\pretest_fmri\\Guess_fMRI\\part3_lastrun.py',
         savePickle=True, saveWideText=True,
         dataFileName=dataDir + os.sep + filename, sortColumns='time'
     )
@@ -416,9 +417,10 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     # import random for letter randomization
     import random as rnd
     
-    from psychopy import parallel
-    port = parallel.ParallelPort(address = 0x2FE8) 
-    pinNumber = 10 #Change to match the pin that is receiving the pulse value sent by your scanner. Set this to None to scan all pins
+    if expInfo['MRI'] == '1':
+        from psychopy import parallel
+        port = parallel.ParallelPort(address = 0x2FE8) 
+        pinNumber = 10 #Change to match the pin that is receiving the pulse value sent by your scanner. Set this to None to scan all pins
     
     all_keys = ['space', '1','2','3','4','5']
     
@@ -428,8 +430,8 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     
     run_counter = 1
     
-    num_trials = 30
-    if expInfo['ID'] == 'pilot':
+    num_trials = 60
+    if expInfo['PID'] == 'pilot':
         num_trials = 4
     
     
@@ -454,13 +456,13 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         depth=0.0);
     sm_instructions2_key = keyboard.Keyboard(deviceName='sm_instructions2_key')
     
-    # --- Initialize components for Routine "load_iti" ---
-    
     # --- Initialize components for Routine "reset_run" ---
     
     # --- Initialize components for Routine "shuffle_items" ---
     
     # --- Initialize components for Routine "set_up_runs" ---
+    
+    # --- Initialize components for Routine "load_iti" ---
     
     # --- Initialize components for Routine "prep_scanner" ---
     scanner_ready_press = keyboard.Keyboard(deviceName='scanner_ready_press')
@@ -1026,119 +1028,6 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
             for paramName in thisBlock:
                 globals()[paramName] = thisBlock[paramName]
         
-        # set up handler to look after randomisation of conditions etc
-        sm_itis = data.TrialHandler2(
-            name='sm_itis',
-            nReps=1.0, 
-            method='random', 
-            extraInfo=expInfo, 
-            originPath=-1, 
-            trialList=data.importConditions('sm_iti_randomization.xlsx'), 
-            seed=None, 
-        )
-        thisExp.addLoop(sm_itis)  # add the loop to the experiment
-        thisSm_iti = sm_itis.trialList[0]  # so we can initialise stimuli with some values
-        # abbreviate parameter names if possible (e.g. rgb = thisSm_iti.rgb)
-        if thisSm_iti != None:
-            for paramName in thisSm_iti:
-                globals()[paramName] = thisSm_iti[paramName]
-        
-        for thisSm_iti in sm_itis:
-            currentLoop = sm_itis
-            thisExp.timestampOnFlip(win, 'thisRow.t', format=globalClock.format)
-            # abbreviate parameter names if possible (e.g. rgb = thisSm_iti.rgb)
-            if thisSm_iti != None:
-                for paramName in thisSm_iti:
-                    globals()[paramName] = thisSm_iti[paramName]
-            
-            # --- Prepare to start Routine "load_iti" ---
-            # create an object to store info about Routine load_iti
-            load_iti = data.Routine(
-                name='load_iti',
-                components=[],
-            )
-            load_iti.status = NOT_STARTED
-            continueRoutine = True
-            # update component parameters for each repeat
-            # Run 'Begin Routine' code from load_iti_code
-            iti_list.append(iti)
-            # store start times for load_iti
-            load_iti.tStartRefresh = win.getFutureFlipTime(clock=globalClock)
-            load_iti.tStart = globalClock.getTime(format='float')
-            load_iti.status = STARTED
-            thisExp.addData('load_iti.started', load_iti.tStart)
-            load_iti.maxDuration = None
-            # keep track of which components have finished
-            load_itiComponents = load_iti.components
-            for thisComponent in load_iti.components:
-                thisComponent.tStart = None
-                thisComponent.tStop = None
-                thisComponent.tStartRefresh = None
-                thisComponent.tStopRefresh = None
-                if hasattr(thisComponent, 'status'):
-                    thisComponent.status = NOT_STARTED
-            # reset timers
-            t = 0
-            _timeToFirstFrame = win.getFutureFlipTime(clock="now")
-            frameN = -1
-            
-            # --- Run Routine "load_iti" ---
-            # if trial has changed, end Routine now
-            if isinstance(sm_itis, data.TrialHandler2) and thisSm_iti.thisN != sm_itis.thisTrial.thisN:
-                continueRoutine = False
-            load_iti.forceEnded = routineForceEnded = not continueRoutine
-            while continueRoutine:
-                # get current time
-                t = routineTimer.getTime()
-                tThisFlip = win.getFutureFlipTime(clock=routineTimer)
-                tThisFlipGlobal = win.getFutureFlipTime(clock=None)
-                frameN = frameN + 1  # number of completed frames (so 0 is the first frame)
-                # update/draw components on each frame
-                
-                # check for quit (typically the Esc key)
-                if defaultKeyboard.getKeys(keyList=["escape"]):
-                    thisExp.status = FINISHED
-                if thisExp.status == FINISHED or endExpNow:
-                    endExperiment(thisExp, win=win)
-                    return
-                # pause experiment here if requested
-                if thisExp.status == PAUSED:
-                    pauseExperiment(
-                        thisExp=thisExp, 
-                        win=win, 
-                        timers=[routineTimer], 
-                        playbackComponents=[]
-                    )
-                    # skip the frame we paused on
-                    continue
-                
-                # check if all components have finished
-                if not continueRoutine:  # a component has requested a forced-end of Routine
-                    load_iti.forceEnded = routineForceEnded = True
-                    break
-                continueRoutine = False  # will revert to True if at least one component still running
-                for thisComponent in load_iti.components:
-                    if hasattr(thisComponent, "status") and thisComponent.status != FINISHED:
-                        continueRoutine = True
-                        break  # at least one component has not yet finished
-                
-                # refresh the screen
-                if continueRoutine:  # don't flip if this routine is over or we'll get a blank screen
-                    win.flip()
-            
-            # --- Ending Routine "load_iti" ---
-            for thisComponent in load_iti.components:
-                if hasattr(thisComponent, "setAutoDraw"):
-                    thisComponent.setAutoDraw(False)
-            # store stop times for load_iti
-            load_iti.tStop = globalClock.getTime(format='float')
-            load_iti.tStopRefresh = tThisFlipGlobal
-            thisExp.addData('load_iti.stopped', load_iti.tStop)
-            # the Routine "load_iti" was not non-slip safe, so reset the non-slip timer
-            routineTimer.reset()
-        # completed 1.0 repeats of 'sm_itis'
-        
-        
         # --- Prepare to start Routine "reset_run" ---
         # create an object to store info about Routine reset_run
         reset_run = data.Routine(
@@ -1359,20 +1248,12 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         continueRoutine = True
         # update component parameters for each repeat
         # Run 'Begin Routine' code from run_setup
-        print(len(run1))
-        print(len(run2))
-        print(len(run3))
-        print(len(run4))
-        
         rnd.shuffle(run1)
         rnd.shuffle(run2)
         rnd.shuffle(run3)
         rnd.shuffle(run4)
         
         my_runs = [run1, run2, run3, run4]
-        
-        print(my_runs)
-        
         # store start times for set_up_runs
         set_up_runs.tStartRefresh = win.getFutureFlipTime(clock=globalClock)
         set_up_runs.tStart = globalClock.getTime(format='float')
@@ -1451,11 +1332,11 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         # set up handler to look after randomisation of conditions etc
         runs = data.TrialHandler2(
             name='runs',
-            nReps=1.0, 
+            nReps=4.0, 
             method='random', 
             extraInfo=expInfo, 
             originPath=-1, 
-            trialList=data.importConditions('run_sheets.xlsx'), 
+            trialList=[None], 
             seed=None, 
         )
         thisExp.addLoop(runs)  # add the loop to the experiment
@@ -1472,6 +1353,119 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
             if thisRun != None:
                 for paramName in thisRun:
                     globals()[paramName] = thisRun[paramName]
+            
+            # set up handler to look after randomisation of conditions etc
+            iti_loading_loop = data.TrialHandler2(
+                name='iti_loading_loop',
+                nReps=1.0, 
+                method='random', 
+                extraInfo=expInfo, 
+                originPath=-1, 
+                trialList=data.importConditions('sm_iti_randomization.xlsx'), 
+                seed=None, 
+            )
+            thisExp.addLoop(iti_loading_loop)  # add the loop to the experiment
+            thisIti_loading_loop = iti_loading_loop.trialList[0]  # so we can initialise stimuli with some values
+            # abbreviate parameter names if possible (e.g. rgb = thisIti_loading_loop.rgb)
+            if thisIti_loading_loop != None:
+                for paramName in thisIti_loading_loop:
+                    globals()[paramName] = thisIti_loading_loop[paramName]
+            
+            for thisIti_loading_loop in iti_loading_loop:
+                currentLoop = iti_loading_loop
+                thisExp.timestampOnFlip(win, 'thisRow.t', format=globalClock.format)
+                # abbreviate parameter names if possible (e.g. rgb = thisIti_loading_loop.rgb)
+                if thisIti_loading_loop != None:
+                    for paramName in thisIti_loading_loop:
+                        globals()[paramName] = thisIti_loading_loop[paramName]
+                
+                # --- Prepare to start Routine "load_iti" ---
+                # create an object to store info about Routine load_iti
+                load_iti = data.Routine(
+                    name='load_iti',
+                    components=[],
+                )
+                load_iti.status = NOT_STARTED
+                continueRoutine = True
+                # update component parameters for each repeat
+                # Run 'Begin Routine' code from load_iti_code
+                iti_list.append(iti)
+                # store start times for load_iti
+                load_iti.tStartRefresh = win.getFutureFlipTime(clock=globalClock)
+                load_iti.tStart = globalClock.getTime(format='float')
+                load_iti.status = STARTED
+                thisExp.addData('load_iti.started', load_iti.tStart)
+                load_iti.maxDuration = None
+                # keep track of which components have finished
+                load_itiComponents = load_iti.components
+                for thisComponent in load_iti.components:
+                    thisComponent.tStart = None
+                    thisComponent.tStop = None
+                    thisComponent.tStartRefresh = None
+                    thisComponent.tStopRefresh = None
+                    if hasattr(thisComponent, 'status'):
+                        thisComponent.status = NOT_STARTED
+                # reset timers
+                t = 0
+                _timeToFirstFrame = win.getFutureFlipTime(clock="now")
+                frameN = -1
+                
+                # --- Run Routine "load_iti" ---
+                # if trial has changed, end Routine now
+                if isinstance(iti_loading_loop, data.TrialHandler2) and thisIti_loading_loop.thisN != iti_loading_loop.thisTrial.thisN:
+                    continueRoutine = False
+                load_iti.forceEnded = routineForceEnded = not continueRoutine
+                while continueRoutine:
+                    # get current time
+                    t = routineTimer.getTime()
+                    tThisFlip = win.getFutureFlipTime(clock=routineTimer)
+                    tThisFlipGlobal = win.getFutureFlipTime(clock=None)
+                    frameN = frameN + 1  # number of completed frames (so 0 is the first frame)
+                    # update/draw components on each frame
+                    
+                    # check for quit (typically the Esc key)
+                    if defaultKeyboard.getKeys(keyList=["escape"]):
+                        thisExp.status = FINISHED
+                    if thisExp.status == FINISHED or endExpNow:
+                        endExperiment(thisExp, win=win)
+                        return
+                    # pause experiment here if requested
+                    if thisExp.status == PAUSED:
+                        pauseExperiment(
+                            thisExp=thisExp, 
+                            win=win, 
+                            timers=[routineTimer], 
+                            playbackComponents=[]
+                        )
+                        # skip the frame we paused on
+                        continue
+                    
+                    # check if all components have finished
+                    if not continueRoutine:  # a component has requested a forced-end of Routine
+                        load_iti.forceEnded = routineForceEnded = True
+                        break
+                    continueRoutine = False  # will revert to True if at least one component still running
+                    for thisComponent in load_iti.components:
+                        if hasattr(thisComponent, "status") and thisComponent.status != FINISHED:
+                            continueRoutine = True
+                            break  # at least one component has not yet finished
+                    
+                    # refresh the screen
+                    if continueRoutine:  # don't flip if this routine is over or we'll get a blank screen
+                        win.flip()
+                
+                # --- Ending Routine "load_iti" ---
+                for thisComponent in load_iti.components:
+                    if hasattr(thisComponent, "setAutoDraw"):
+                        thisComponent.setAutoDraw(False)
+                # store stop times for load_iti
+                load_iti.tStop = globalClock.getTime(format='float')
+                load_iti.tStopRefresh = tThisFlipGlobal
+                thisExp.addData('load_iti.stopped', load_iti.tStop)
+                # the Routine "load_iti" was not non-slip safe, so reset the non-slip timer
+                routineTimer.reset()
+            # completed 1.0 repeats of 'iti_loading_loop'
+            
             
             # --- Prepare to start Routine "prep_scanner" ---
             # create an object to store info about Routine prep_scanner
@@ -1682,8 +1676,9 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
                     # update params
                     pass
                 # Run 'Each Frame' code from catch_trigger
-                if port.readPin(pinNumber) > 0:
-                    continueRoutine = False #A trigger was detected, so move on
+                if expInfo['MRI'] == '1':
+                    if port.readPin(pinNumber) > 0:
+                        continueRoutine = False #A trigger was detected, so move on
                 
                 # *skip_trigger* updates
                 waitOnFlip = False
@@ -1797,7 +1792,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
             if isinstance(runs, data.TrialHandler2) and thisRun.thisN != runs.thisTrial.thisN:
                 continueRoutine = False
             blank.forceEnded = routineForceEnded = not continueRoutine
-            while continueRoutine and routineTimer.getTime() < 10.0:
+            while continueRoutine and routineTimer.getTime() < 12.0:
                 # get current time
                 t = routineTimer.getTime()
                 tThisFlip = win.getFutureFlipTime(clock=routineTimer)
@@ -1828,7 +1823,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
                 # if blank_cross is stopping this frame...
                 if blank_cross.status == STARTED:
                     # is it time to stop? (based on global clock, using actual start)
-                    if tThisFlipGlobal > blank_cross.tStartRefresh + 10-frameTolerance:
+                    if tThisFlipGlobal > blank_cross.tStartRefresh + 12-frameTolerance:
                         # keep track of stop time/frame for later
                         blank_cross.tStop = t  # not accounting for scr refresh
                         blank_cross.tStopRefresh = tThisFlipGlobal  # on global time
@@ -1884,7 +1879,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
             elif blank.forceEnded:
                 routineTimer.reset()
             else:
-                routineTimer.addTime(-10.000000)
+                routineTimer.addTime(-12.000000)
             
             # set up handler to look after randomisation of conditions etc
             semantic_mapping_run = data.TrialHandler2(
@@ -1927,10 +1922,14 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
                 continueRoutine = True
                 # update component parameters for each repeat
                 # Run 'Begin Routine' code from select_item
-                this_list = int(thisList)
-                this_run = my_runs[this_list]
+                run_index = run_counter - 1
+                this_run = my_runs[run_index]
+                print(this_run)
                 this_item = this_run.pop()
                 this_iti = iti_list.pop()
+                
+                thisExp.addData('CurrentItem', this_item)
+                thisExp.addData('CurrentITI', this_iti)
                 # store start times for set_up_trial
                 set_up_trial.tStartRefresh = win.getFutureFlipTime(clock=globalClock)
                 set_up_trial.tStart = globalClock.getTime(format='float')
@@ -2440,7 +2439,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
             if isinstance(runs, data.TrialHandler2) and thisRun.thisN != runs.thisTrial.thisN:
                 continueRoutine = False
             blank.forceEnded = routineForceEnded = not continueRoutine
-            while continueRoutine and routineTimer.getTime() < 10.0:
+            while continueRoutine and routineTimer.getTime() < 12.0:
                 # get current time
                 t = routineTimer.getTime()
                 tThisFlip = win.getFutureFlipTime(clock=routineTimer)
@@ -2471,7 +2470,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
                 # if blank_cross is stopping this frame...
                 if blank_cross.status == STARTED:
                     # is it time to stop? (based on global clock, using actual start)
-                    if tThisFlipGlobal > blank_cross.tStartRefresh + 10-frameTolerance:
+                    if tThisFlipGlobal > blank_cross.tStartRefresh + 12-frameTolerance:
                         # keep track of stop time/frame for later
                         blank_cross.tStop = t  # not accounting for scr refresh
                         blank_cross.tStopRefresh = tThisFlipGlobal  # on global time
@@ -2527,7 +2526,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
             elif blank.forceEnded:
                 routineTimer.reset()
             else:
-                routineTimer.addTime(-10.000000)
+                routineTimer.addTime(-12.000000)
             
             # --- Prepare to start Routine "task_break" ---
             # create an object to store info about Routine task_break
@@ -2545,6 +2544,8 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
             # allowedKeys looks like a variable, so make sure it exists locally
             if 'all_keys' in globals():
                 all_keys = globals()['all_keys']
+            # Run 'Begin Routine' code from increase_run_counter
+            print("Finished SM run ", run_counter)
             # store start times for task_break
             task_break.tStartRefresh = win.getFutureFlipTime(clock=globalClock)
             task_break.tStart = globalClock.getTime(format='float')
@@ -2687,7 +2688,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
             run_counter = run_counter + 1
             # the Routine "task_break" was not non-slip safe, so reset the non-slip timer
             routineTimer.reset()
-        # completed 1.0 repeats of 'runs'
+        # completed 4.0 repeats of 'runs'
         
     # completed 2.0 repeats of 'blocks'
     
