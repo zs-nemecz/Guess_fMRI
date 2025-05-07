@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """
 This experiment was created using PsychoPy3 Experiment Builder (v2024.2.4),
-    on április 29, 2025, at 12:52
+    on május 07, 2025, at 17:21
 If you publish work using this script the most relevant publication is:
 
     Peirce J, Gray JR, Simpson S, MacAskill M, Höchenberger R, Sogo H, Kastman E, Lindeløv JK. (2019) 
@@ -1361,7 +1361,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
                 method='random', 
                 extraInfo=expInfo, 
                 originPath=-1, 
-                trialList=data.importConditions('sm_iti_randomization.xlsx'), 
+                trialList=data.importConditions('sm_iti_randomization.csv'), 
                 seed=None, 
             )
             thisExp.addLoop(iti_loading_loop)  # add the loop to the experiment
@@ -1924,7 +1924,6 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
                 # Run 'Begin Routine' code from select_item
                 run_index = run_counter - 1
                 this_run = my_runs[run_index]
-                print(this_run)
                 this_item = this_run.pop()
                 this_iti = iti_list.pop()
                 
