@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """
 This experiment was created using PsychoPy3 Experiment Builder (v2024.2.4),
-    on április 29, 2025, at 11:14
+    on május 07, 2025, at 15:23
 If you publish work using this script the most relevant publication is:
 
     Peirce J, Gray JR, Simpson S, MacAskill M, Höchenberger R, Sogo H, Kastman E, Lindeløv JK. (2019) 
@@ -512,7 +512,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     no_guess_made_key = "3"
     
     guess_dur = 3
-    guess_resp_dur = 2
+    guess_resp_dur = 3
     guess_delay_dur = 3
     
     cue_types = {}
@@ -708,8 +708,13 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     
     
     # --- Initialize components for Routine "load_iti" ---
-    # Run 'Begin Experiment' code from load_iti
+    # Run 'Begin Experiment' code from load_iti_code
     iti_list = []
+    
+    
+    # --- Initialize components for Routine "load_delay" ---
+    # Run 'Begin Experiment' code from load_delay_code
+    delay_list = []
     
     
     # --- Initialize components for Routine "prep_scanner" ---
@@ -1039,7 +1044,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     start_key = keyboard.Keyboard(deviceName='start_key')
     
     # --- Initialize components for Routine "load_iti" ---
-    # Run 'Begin Experiment' code from load_iti
+    # Run 'Begin Experiment' code from load_iti_code
     iti_list = []
     
     
@@ -3773,7 +3778,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
             method='random', 
             extraInfo=expInfo, 
             originPath=-1, 
-            trialList=data.importConditions('iti_randomization.xlsx'), 
+            trialList=data.importConditions('iti_randomization.csv'), 
             seed=None, 
         )
         thisExp.addLoop(iti_learning_loop)  # add the loop to the experiment
@@ -3800,7 +3805,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
             load_iti.status = NOT_STARTED
             continueRoutine = True
             # update component parameters for each repeat
-            # Run 'Begin Routine' code from load_iti
+            # Run 'Begin Routine' code from load_iti_code
             iti_list.append(iti)
             
             # store start times for load_iti
@@ -3878,6 +3883,120 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
             # the Routine "load_iti" was not non-slip safe, so reset the non-slip timer
             routineTimer.reset()
         # completed 1.0 repeats of 'iti_learning_loop'
+        
+        
+        # set up handler to look after randomisation of conditions etc
+        delay_loading_loop = data.TrialHandler2(
+            name='delay_loading_loop',
+            nReps=1.0, 
+            method='random', 
+            extraInfo=expInfo, 
+            originPath=-1, 
+            trialList=data.importConditions('guess_random_delay.csv'), 
+            seed=None, 
+        )
+        thisExp.addLoop(delay_loading_loop)  # add the loop to the experiment
+        thisDelay_loading_loop = delay_loading_loop.trialList[0]  # so we can initialise stimuli with some values
+        # abbreviate parameter names if possible (e.g. rgb = thisDelay_loading_loop.rgb)
+        if thisDelay_loading_loop != None:
+            for paramName in thisDelay_loading_loop:
+                globals()[paramName] = thisDelay_loading_loop[paramName]
+        
+        for thisDelay_loading_loop in delay_loading_loop:
+            currentLoop = delay_loading_loop
+            thisExp.timestampOnFlip(win, 'thisRow.t', format=globalClock.format)
+            # abbreviate parameter names if possible (e.g. rgb = thisDelay_loading_loop.rgb)
+            if thisDelay_loading_loop != None:
+                for paramName in thisDelay_loading_loop:
+                    globals()[paramName] = thisDelay_loading_loop[paramName]
+            
+            # --- Prepare to start Routine "load_delay" ---
+            # create an object to store info about Routine load_delay
+            load_delay = data.Routine(
+                name='load_delay',
+                components=[],
+            )
+            load_delay.status = NOT_STARTED
+            continueRoutine = True
+            # update component parameters for each repeat
+            # Run 'Begin Routine' code from load_delay_code
+            delay_list.append(delay)
+            
+            # store start times for load_delay
+            load_delay.tStartRefresh = win.getFutureFlipTime(clock=globalClock)
+            load_delay.tStart = globalClock.getTime(format='float')
+            load_delay.status = STARTED
+            thisExp.addData('load_delay.started', load_delay.tStart)
+            load_delay.maxDuration = None
+            # keep track of which components have finished
+            load_delayComponents = load_delay.components
+            for thisComponent in load_delay.components:
+                thisComponent.tStart = None
+                thisComponent.tStop = None
+                thisComponent.tStartRefresh = None
+                thisComponent.tStopRefresh = None
+                if hasattr(thisComponent, 'status'):
+                    thisComponent.status = NOT_STARTED
+            # reset timers
+            t = 0
+            _timeToFirstFrame = win.getFutureFlipTime(clock="now")
+            frameN = -1
+            
+            # --- Run Routine "load_delay" ---
+            # if trial has changed, end Routine now
+            if isinstance(delay_loading_loop, data.TrialHandler2) and thisDelay_loading_loop.thisN != delay_loading_loop.thisTrial.thisN:
+                continueRoutine = False
+            load_delay.forceEnded = routineForceEnded = not continueRoutine
+            while continueRoutine:
+                # get current time
+                t = routineTimer.getTime()
+                tThisFlip = win.getFutureFlipTime(clock=routineTimer)
+                tThisFlipGlobal = win.getFutureFlipTime(clock=None)
+                frameN = frameN + 1  # number of completed frames (so 0 is the first frame)
+                # update/draw components on each frame
+                
+                # check for quit (typically the Esc key)
+                if defaultKeyboard.getKeys(keyList=["escape"]):
+                    thisExp.status = FINISHED
+                if thisExp.status == FINISHED or endExpNow:
+                    endExperiment(thisExp, win=win)
+                    return
+                # pause experiment here if requested
+                if thisExp.status == PAUSED:
+                    pauseExperiment(
+                        thisExp=thisExp, 
+                        win=win, 
+                        timers=[routineTimer], 
+                        playbackComponents=[]
+                    )
+                    # skip the frame we paused on
+                    continue
+                
+                # check if all components have finished
+                if not continueRoutine:  # a component has requested a forced-end of Routine
+                    load_delay.forceEnded = routineForceEnded = True
+                    break
+                continueRoutine = False  # will revert to True if at least one component still running
+                for thisComponent in load_delay.components:
+                    if hasattr(thisComponent, "status") and thisComponent.status != FINISHED:
+                        continueRoutine = True
+                        break  # at least one component has not yet finished
+                
+                # refresh the screen
+                if continueRoutine:  # don't flip if this routine is over or we'll get a blank screen
+                    win.flip()
+            
+            # --- Ending Routine "load_delay" ---
+            for thisComponent in load_delay.components:
+                if hasattr(thisComponent, "setAutoDraw"):
+                    thisComponent.setAutoDraw(False)
+            # store stop times for load_delay
+            load_delay.tStop = globalClock.getTime(format='float')
+            load_delay.tStopRefresh = tThisFlipGlobal
+            thisExp.addData('load_delay.stopped', load_delay.tStop)
+            # the Routine "load_delay" was not non-slip safe, so reset the non-slip timer
+            routineTimer.reset()
+        # completed 1.0 repeats of 'delay_loading_loop'
         
         
         # --- Prepare to start Routine "prep_scanner" ---
@@ -4338,6 +4457,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
             this_iti = iti_list.pop()
             this_cue = cue_list.pop()
             this_target = target_list.pop()
+            guess_delay_dur = delay_list.pop()
             # store start times for setup_learning_trial
             setup_learning_trial.tStartRefresh = win.getFutureFlipTime(clock=globalClock)
             setup_learning_trial.tStart = globalClock.getTime(format='float')
@@ -7843,7 +7963,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
             method='random', 
             extraInfo=expInfo, 
             originPath=-1, 
-            trialList=data.importConditions('iti_randomization.xlsx'), 
+            trialList=data.importConditions('iti_randomization.csv'), 
             seed=None, 
         )
         thisExp.addLoop(iti_recall_loop)  # add the loop to the experiment
@@ -7870,7 +7990,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
             load_iti.status = NOT_STARTED
             continueRoutine = True
             # update component parameters for each repeat
-            # Run 'Begin Routine' code from load_iti
+            # Run 'Begin Routine' code from load_iti_code
             iti_list.append(iti)
             
             # store start times for load_iti
@@ -8407,6 +8527,11 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
             this_iti = iti_list.pop()
             this_cue = cue_list.pop()
             this_target = target_list.pop()
+            
+            if len(cue_list) == 40:
+                print('Last recall trial in run')
+            elif len(cue_list) == 0:
+                print('Last recall trial')
             # store start times for setup_recall_trial
             setup_recall_trial.tStartRefresh = win.getFutureFlipTime(clock=globalClock)
             setup_recall_trial.tStart = globalClock.getTime(format='float')
