@@ -70,7 +70,7 @@
     <Param val="1000" valType="num" updates="None" name="plPupilRemoteTimeoutMs"/>
     <Param val="False" valType="bool" updates="None" name="plPupillometryOnly"/>
     <Param val="psychopy_iohub_surface" valType="str" updates="None" name="plSurfaceName"/>
-    <Param val="0" valType="code" updates="None" name="runMode"/>
+    <Param val="1" valType="code" updates="None" name="runMode"/>
     <Param val="False" valType="bool" updates="None" name="rush"/>
     <Param val="time" valType="str" updates="None" name="sortColumns"/>
     <Param val="" valType="str" updates="None" name="tbLicenseFile"/>
@@ -851,8 +851,8 @@
         <Param val="" valType="extendedCode" updates="constant" name="Each JS Frame"/>
         <Param val="" valType="extendedCode" updates="constant" name="End Experiment"/>
         <Param val="" valType="extendedCode" updates="constant" name="End JS Experiment"/>
-        <Param val="run_counter = (run_counter + 1);&amp;#10;" valType="extendedCode" updates="constant" name="End JS Routine"/>
-        <Param val="run_counter = run_counter + 1" valType="extendedCode" updates="constant" name="End Routine"/>
+        <Param val="run_counter = (run_counter + 1);&amp;#10;if ((run_counter &gt; 4)) {&amp;#10;    run_counter = 0;&amp;#10;}&amp;#10;" valType="extendedCode" updates="constant" name="End JS Routine"/>
+        <Param val="run_counter = run_counter + 1&amp;#10;&amp;#10;if run_counter &gt; 4:&amp;#10;    run_counter = 0" valType="extendedCode" updates="constant" name="End Routine"/>
         <Param val="False" valType="bool" updates="None" name="disabled"/>
         <Param val="increase_run_counter" valType="code" updates="None" name="name"/>
       </CodeComponent>

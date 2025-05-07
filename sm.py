@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """
 This experiment was created using PsychoPy3 Experiment Builder (v2024.2.4),
-    on május 07, 2025, at 17:56
+    on Mai 07, 2025, at 20:29
 If you publish work using this script the most relevant publication is:
 
     Peirce J, Gray JR, Simpson S, MacAskill M, Höchenberger R, Sogo H, Kastman E, Lindeløv JK. (2019) 
@@ -128,7 +128,7 @@ def setupData(expInfo, dataDir=None):
     thisExp = data.ExperimentHandler(
         name=expName, version='',
         extraInfo=expInfo, runtimeInfo=None,
-        originPath='C:\\Users\\Asus\\Documents\\pretest_fmri\\Guess_fMRI\\sm.py',
+        originPath='C:\\Users\\Nemecz\\Documents\\Guess_fMRI\\sm.py',
         savePickle=True, saveWideText=True,
         dataFileName=dataDir + os.sep + filename, sortColumns='time'
     )
@@ -2685,6 +2685,9 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
                 runs.addData('task_break_resp.duration', task_break_resp.duration)
             # Run 'End Routine' code from increase_run_counter
             run_counter = run_counter + 1
+            
+            if run_counter > 4:
+                run_counter = 0
             # the Routine "task_break" was not non-slip safe, so reset the non-slip timer
             routineTimer.reset()
         # completed 4.0 repeats of 'runs'

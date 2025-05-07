@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """
 This experiment was created using PsychoPy3 Experiment Builder (v2024.2.4),
-    on május 07, 2025, at 17:21
+    on Mai 07, 2025, at 19:10
 If you publish work using this script the most relevant publication is:
 
     Peirce J, Gray JR, Simpson S, MacAskill M, Höchenberger R, Sogo H, Kastman E, Lindeløv JK. (2019) 
@@ -128,7 +128,7 @@ def setupData(expInfo, dataDir=None):
     thisExp = data.ExperimentHandler(
         name=expName, version='',
         extraInfo=expInfo, runtimeInfo=None,
-        originPath='C:\\Users\\Asus\\Documents\\pretest_fmri\\Guess_fMRI\\part3_lastrun.py',
+        originPath='C:\\Users\\Nemecz\\Documents\\Guess_fMRI\\part3_lastrun.py',
         savePickle=True, saveWideText=True,
         dataFileName=dataDir + os.sep + filename, sortColumns='time'
     )
@@ -533,7 +533,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     
     # --- Initialize components for Routine "task_break" ---
     task_break_text = visual.TextStim(win=win, name='task_break_text',
-        text='Pause. Drücken Sie die LEERTASTE, um fortzufahren.',
+        text='Pause. Drücken Sie eine Taste, um fortzufahren.',
         font='Arial',
         pos=(0, 0), draggable=False, height=0.05, wrapWidth=None, ori=0.0, 
         color='white', colorSpace='rgb', opacity=None, 
@@ -2685,6 +2685,9 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
                 runs.addData('task_break_resp.duration', task_break_resp.duration)
             # Run 'End Routine' code from increase_run_counter
             run_counter = run_counter + 1
+            
+            if run_counter > 3:
+                run_counter = 0
             # the Routine "task_break" was not non-slip safe, so reset the non-slip timer
             routineTimer.reset()
         # completed 4.0 repeats of 'runs'
