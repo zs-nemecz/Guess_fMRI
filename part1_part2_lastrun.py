@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """
 This experiment was created using PsychoPy3 Experiment Builder (v2024.2.4),
-    on május 07, 2025, at 15:32
+    on Mai 07, 2025, at 15:57
 If you publish work using this script the most relevant publication is:
 
     Peirce J, Gray JR, Simpson S, MacAskill M, Höchenberger R, Sogo H, Kastman E, Lindeløv JK. (2019) 
@@ -129,7 +129,7 @@ def setupData(expInfo, dataDir=None):
     thisExp = data.ExperimentHandler(
         name=expName, version='',
         extraInfo=expInfo, runtimeInfo=None,
-        originPath='C:\\Users\\Asus\\Documents\\pretest_fmri\\Guess_fMRI\\part1_part2_lastrun.py',
+        originPath='C:\\Users\\LocalAdmin\\Documents\\GUESS\\Guess_fMRI\\part1_part2_lastrun.py',
         savePickle=True, saveWideText=True,
         dataFileName=dataDir + os.sep + filename, sortColumns='time'
     )
@@ -2689,6 +2689,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
             trial_dur = 0.000
         else:
             trial_dur = guess_delay_dur
+            
         # store start times for guess_delay
         guess_delay.tStartRefresh = win.getFutureFlipTime(clock=globalClock)
         guess_delay.tStart = globalClock.getTime(format='float')
@@ -4155,7 +4156,9 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
             this_iti = iti_list.pop()
             this_cue = cue_list.pop()
             this_target = target_list.pop()
-            guess_delay_dur = delay_list.pop()
+            if guess_cond == "Guess":
+                guess_delay_dur = delay_list.pop()
+            
             # store start times for setup_learning_trial
             setup_learning_trial.tStartRefresh = win.getFutureFlipTime(clock=globalClock)
             setup_learning_trial.tStart = globalClock.getTime(format='float')
@@ -4536,6 +4539,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
                 trial_dur = 0.000
             else:
                 trial_dur = guess_delay_dur
+                
             # store start times for guess_delay
             guess_delay.tStartRefresh = win.getFutureFlipTime(clock=globalClock)
             guess_delay.tStart = globalClock.getTime(format='float')

@@ -70,7 +70,7 @@
     <Param val="1000" valType="num" updates="None" name="plPupilRemoteTimeoutMs"/>
     <Param val="False" valType="bool" updates="None" name="plPupillometryOnly"/>
     <Param val="psychopy_iohub_surface" valType="str" updates="None" name="plSurfaceName"/>
-    <Param val="0" valType="code" updates="None" name="runMode"/>
+    <Param val="1" valType="code" updates="None" name="runMode"/>
     <Param val="False" valType="bool" updates="None" name="rush"/>
     <Param val="time" valType="str" updates="None" name="sortColumns"/>
     <Param val="" valType="str" updates="None" name="tbLicenseFile"/>
@@ -1467,7 +1467,7 @@
         <Param val="" valType="extendedCode" updates="constant" name="Begin Experiment"/>
         <Param val="" valType="extendedCode" updates="constant" name="Begin JS Experiment"/>
         <Param val="if ((guess_cond === &quot;Read&quot;)) {&amp;#10;    trial_dur = 0.0;&amp;#10;} else {&amp;#10;    trial_dur = guess_delay_dur;&amp;#10;}&amp;#10;" valType="extendedCode" updates="constant" name="Begin JS Routine"/>
-        <Param val="if guess_cond == &quot;Read&quot;:&amp;#10;    trial_dur = 0.000&amp;#10;else:&amp;#10;    trial_dur = guess_delay_dur" valType="extendedCode" updates="constant" name="Begin Routine"/>
+        <Param val="if guess_cond == &quot;Read&quot;:&amp;#10;    trial_dur = 0.000&amp;#10;else:&amp;#10;    trial_dur = guess_delay_dur&amp;#10;    " valType="extendedCode" updates="constant" name="Begin Routine"/>
         <Param val="Auto-&gt;JS" valType="str" updates="None" name="Code Type"/>
         <Param val="" valType="extendedCode" updates="constant" name="Each Frame"/>
         <Param val="" valType="extendedCode" updates="constant" name="Each JS Frame"/>
@@ -2647,8 +2647,8 @@
         <Param val="" valType="extendedCode" updates="constant" name="Before JS Experiment"/>
         <Param val="" valType="extendedCode" updates="constant" name="Begin Experiment"/>
         <Param val="" valType="extendedCode" updates="constant" name="Begin JS Experiment"/>
-        <Param val="guess_cond = guess_list.splice((guess_list.length - 1), 1);&amp;#10;this_iti = iti_list.splice((iti_list.length - 1), 1);&amp;#10;this_cue = cue_list.splice((cue_list.length - 1), 1);&amp;#10;this_target = target_list.splice((target_list.length - 1), 1);&amp;#10;guess_delay_dur = delay_list.splice((delay_list.length - 1), 1);&amp;#10;" valType="extendedCode" updates="constant" name="Begin JS Routine"/>
-        <Param val="guess_cond = guess_list.pop()&amp;#10;this_iti = iti_list.pop()&amp;#10;this_cue = cue_list.pop()&amp;#10;this_target = target_list.pop()&amp;#10;guess_delay_dur = delay_list.pop()" valType="extendedCode" updates="constant" name="Begin Routine"/>
+        <Param val="guess_cond = guess_list.splice((guess_list.length - 1), 1);&amp;#10;this_iti = iti_list.splice((iti_list.length - 1), 1);&amp;#10;this_cue = cue_list.splice((cue_list.length - 1), 1);&amp;#10;this_target = target_list.splice((target_list.length - 1), 1);&amp;#10;if ((guess_cond === &quot;Guess&quot;)) {&amp;#10;    guess_delay_dur = delay_list.splice((delay_list.length - 1), 1);&amp;#10;}&amp;#10;" valType="extendedCode" updates="constant" name="Begin JS Routine"/>
+        <Param val="guess_cond = guess_list.pop()&amp;#10;this_iti = iti_list.pop()&amp;#10;this_cue = cue_list.pop()&amp;#10;this_target = target_list.pop()&amp;#10;if guess_cond == &quot;Guess&quot;:&amp;#10;    guess_delay_dur = delay_list.pop()&amp;#10;" valType="extendedCode" updates="constant" name="Begin Routine"/>
         <Param val="Auto-&gt;JS" valType="str" updates="None" name="Code Type"/>
         <Param val="" valType="extendedCode" updates="constant" name="Each Frame"/>
         <Param val="" valType="extendedCode" updates="constant" name="Each JS Frame"/>
