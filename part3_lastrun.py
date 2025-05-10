@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """
 This experiment was created using PsychoPy3 Experiment Builder (v2024.2.4),
-    on Mai 07, 2025, at 19:10
+    on május 10, 2025, at 08:08
 If you publish work using this script the most relevant publication is:
 
     Peirce J, Gray JR, Simpson S, MacAskill M, Höchenberger R, Sogo H, Kastman E, Lindeløv JK. (2019) 
@@ -128,7 +128,7 @@ def setupData(expInfo, dataDir=None):
     thisExp = data.ExperimentHandler(
         name=expName, version='',
         extraInfo=expInfo, runtimeInfo=None,
-        originPath='C:\\Users\\Nemecz\\Documents\\Guess_fMRI\\part3_lastrun.py',
+        originPath='C:\\Users\\Asus\\Documents\\pretest_fmri\\Guess_fMRI\\part3_lastrun.py',
         savePickle=True, saveWideText=True,
         dataFileName=dataDir + os.sep + filename, sortColumns='time'
     )
@@ -430,7 +430,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     
     run_counter = 1
     
-    num_trials = 60
+    num_trials = 80
     if expInfo['PID'] == 'pilot':
         num_trials = 4
     
@@ -1923,6 +1923,8 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
                 # update component parameters for each repeat
                 # Run 'Begin Routine' code from select_item
                 run_index = run_counter - 1
+                if run_counter > 4:
+                    run_index = run_counter - 1
                 this_run = my_runs[run_index]
                 this_item = this_run.pop()
                 this_iti = iti_list.pop()
@@ -2685,9 +2687,6 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
                 runs.addData('task_break_resp.duration', task_break_resp.duration)
             # Run 'End Routine' code from increase_run_counter
             run_counter = run_counter + 1
-            
-            if run_counter > 3:
-                run_counter = 0
             # the Routine "task_break" was not non-slip safe, so reset the non-slip timer
             routineTimer.reset()
         # completed 4.0 repeats of 'runs'
