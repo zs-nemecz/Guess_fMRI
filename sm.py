@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """
 This experiment was created using PsychoPy3 Experiment Builder (v2024.2.4),
-    on május 10, 2025, at 08:06
+    on Mai 10, 2025, at 12:05
 If you publish work using this script the most relevant publication is:
 
     Peirce J, Gray JR, Simpson S, MacAskill M, Höchenberger R, Sogo H, Kastman E, Lindeløv JK. (2019) 
@@ -128,7 +128,7 @@ def setupData(expInfo, dataDir=None):
     thisExp = data.ExperimentHandler(
         name=expName, version='',
         extraInfo=expInfo, runtimeInfo=None,
-        originPath='C:\\Users\\Asus\\Documents\\pretest_fmri\\Guess_fMRI\\sm.py',
+        originPath='C:\\Users\\Nemecz\\Documents\\Guess_fMRI\\sm.py',
         savePickle=True, saveWideText=True,
         dataFileName=dataDir + os.sep + filename, sortColumns='time'
     )
@@ -1924,7 +1924,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
                 # Run 'Begin Routine' code from select_item
                 run_index = run_counter - 1
                 if run_counter > 4:
-                    run_index = run_counter - 1
+                    run_index = run_counter - 5
                 this_run = my_runs[run_index]
                 this_item = this_run.pop()
                 this_iti = iti_list.pop()
