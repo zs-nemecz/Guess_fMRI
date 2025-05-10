@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """
 This experiment was created using PsychoPy3 Experiment Builder (v2024.2.4),
-    on Mai 10, 2025, at 14:40
+    on május 11, 2025, at 00:01
 If you publish work using this script the most relevant publication is:
 
     Peirce J, Gray JR, Simpson S, MacAskill M, Höchenberger R, Sogo H, Kastman E, Lindeløv JK. (2019) 
@@ -129,7 +129,7 @@ def setupData(expInfo, dataDir=None):
     thisExp = data.ExperimentHandler(
         name=expName, version='',
         extraInfo=expInfo, runtimeInfo=None,
-        originPath='C:\\Users\\Nemecz\\Documents\\Guess_fMRI\\part1_part2_lastrun.py',
+        originPath='C:\\Users\\Asus\\Documents\\pretest_fmri\\Guess_fMRI\\part1_part2_lastrun.py',
         savePickle=True, saveWideText=True,
         dataFileName=dataDir + os.sep + filename, sortColumns='time'
     )
@@ -329,6 +329,18 @@ def setupDevices(expInfo, thisExp, win):
             deviceClass='keyboard',
             deviceName='skip_trigger',
         )
+    # create speaker 'sound_1'
+    deviceManager.addDevice(
+        deviceName='sound_1',
+        deviceClass='psychopy.hardware.speaker.SpeakerDevice',
+        index=-1
+    )
+    # create speaker 'sound_2'
+    deviceManager.addDevice(
+        deviceName='sound_2',
+        deviceClass='psychopy.hardware.speaker.SpeakerDevice',
+        index=-1
+    )
     if deviceManager.getDevice('task_break_resp') is None:
         # initialise task_break_resp
         task_break_resp = deviceManager.addDevice(
@@ -715,6 +727,22 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         color='white', colorSpace='rgb', opacity=None, 
         languageStyle='LTR',
         depth=0.0);
+    sound_1 = sound.Sound(
+        'A', 
+        secs=1.2, 
+        stereo=True, 
+        hamming=True, 
+        speaker='sound_1',    name='sound_1'
+    )
+    sound_1.setVolume(1.0)
+    sound_2 = sound.Sound(
+        'A', 
+        secs=1, 
+        stereo=True, 
+        hamming=True, 
+        speaker='sound_2',    name='sound_2'
+    )
+    sound_2.setVolume(1.0)
     
     # --- Initialize components for Routine "setup_learning_trial" ---
     
@@ -799,6 +827,22 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         color='white', colorSpace='rgb', opacity=None, 
         languageStyle='LTR',
         depth=0.0);
+    sound_1 = sound.Sound(
+        'A', 
+        secs=1.2, 
+        stereo=True, 
+        hamming=True, 
+        speaker='sound_1',    name='sound_1'
+    )
+    sound_1.setVolume(1.0)
+    sound_2 = sound.Sound(
+        'A', 
+        secs=1, 
+        stereo=True, 
+        hamming=True, 
+        speaker='sound_2',    name='sound_2'
+    )
+    sound_2.setVolume(1.0)
     
     # --- Initialize components for Routine "task_break" ---
     task_break_text = visual.TextStim(win=win, name='task_break_text',
@@ -1022,6 +1066,22 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         color='white', colorSpace='rgb', opacity=None, 
         languageStyle='LTR',
         depth=0.0);
+    sound_1 = sound.Sound(
+        'A', 
+        secs=1.2, 
+        stereo=True, 
+        hamming=True, 
+        speaker='sound_1',    name='sound_1'
+    )
+    sound_1.setVolume(1.0)
+    sound_2 = sound.Sound(
+        'A', 
+        secs=1, 
+        stereo=True, 
+        hamming=True, 
+        speaker='sound_2',    name='sound_2'
+    )
+    sound_2.setVolume(1.0)
     
     # --- Initialize components for Routine "setup_recall_trial" ---
     
@@ -1128,6 +1188,22 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         color='white', colorSpace='rgb', opacity=None, 
         languageStyle='LTR',
         depth=0.0);
+    sound_1 = sound.Sound(
+        'A', 
+        secs=1.2, 
+        stereo=True, 
+        hamming=True, 
+        speaker='sound_1',    name='sound_1'
+    )
+    sound_1.setVolume(1.0)
+    sound_2 = sound.Sound(
+        'A', 
+        secs=1, 
+        stereo=True, 
+        hamming=True, 
+        speaker='sound_2',    name='sound_2'
+    )
+    sound_2.setVolume(1.0)
     
     # --- Initialize components for Routine "task_break" ---
     task_break_text = visual.TextStim(win=win, name='task_break_text',
@@ -3992,11 +4068,17 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         # create an object to store info about Routine blank
         blank = data.Routine(
             name='blank',
-            components=[begin_end_run_cross],
+            components=[begin_end_run_cross, sound_1, sound_2],
         )
         blank.status = NOT_STARTED
         continueRoutine = True
         # update component parameters for each repeat
+        sound_1.setSound('bell.wav', secs=1.2, hamming=True)
+        sound_1.setVolume(1.0, log=False)
+        sound_1.seek(0)
+        sound_2.setSound('end_call.wav', secs=1, hamming=True)
+        sound_2.setVolume(1.0, log=False)
+        sound_2.seek(0)
         # store start times for blank
         blank.tStartRefresh = win.getFutureFlipTime(clock=globalClock)
         blank.tStart = globalClock.getTime(format='float')
@@ -4064,6 +4146,62 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
                     begin_end_run_cross.status = FINISHED
                     begin_end_run_cross.setAutoDraw(False)
             
+            # *sound_1* updates
+            
+            # if sound_1 is starting this frame...
+            if sound_1.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+                # keep track of start time/frame for later
+                sound_1.frameNStart = frameN  # exact frame index
+                sound_1.tStart = t  # local t and not account for scr refresh
+                sound_1.tStartRefresh = tThisFlipGlobal  # on global time
+                # add timestamp to datafile
+                thisExp.addData('sound_1.started', tThisFlipGlobal)
+                # update status
+                sound_1.status = STARTED
+                sound_1.play(when=win)  # sync with win flip
+            
+            # if sound_1 is stopping this frame...
+            if sound_1.status == STARTED:
+                # is it time to stop? (based on global clock, using actual start)
+                if tThisFlipGlobal > sound_1.tStartRefresh + 1.2-frameTolerance or sound_1.isFinished:
+                    # keep track of stop time/frame for later
+                    sound_1.tStop = t  # not accounting for scr refresh
+                    sound_1.tStopRefresh = tThisFlipGlobal  # on global time
+                    sound_1.frameNStop = frameN  # exact frame index
+                    # add timestamp to datafile
+                    thisExp.timestampOnFlip(win, 'sound_1.stopped')
+                    # update status
+                    sound_1.status = FINISHED
+                    sound_1.stop()
+            
+            # *sound_2* updates
+            
+            # if sound_2 is starting this frame...
+            if sound_2.status == NOT_STARTED and tThisFlip >= 10.0-frameTolerance:
+                # keep track of start time/frame for later
+                sound_2.frameNStart = frameN  # exact frame index
+                sound_2.tStart = t  # local t and not account for scr refresh
+                sound_2.tStartRefresh = tThisFlipGlobal  # on global time
+                # add timestamp to datafile
+                thisExp.addData('sound_2.started', tThisFlipGlobal)
+                # update status
+                sound_2.status = STARTED
+                sound_2.play(when=win)  # sync with win flip
+            
+            # if sound_2 is stopping this frame...
+            if sound_2.status == STARTED:
+                # is it time to stop? (based on global clock, using actual start)
+                if tThisFlipGlobal > sound_2.tStartRefresh + 1-frameTolerance or sound_2.isFinished:
+                    # keep track of stop time/frame for later
+                    sound_2.tStop = t  # not accounting for scr refresh
+                    sound_2.tStopRefresh = tThisFlipGlobal  # on global time
+                    sound_2.frameNStop = frameN  # exact frame index
+                    # add timestamp to datafile
+                    thisExp.timestampOnFlip(win, 'sound_2.stopped')
+                    # update status
+                    sound_2.status = FINISHED
+                    sound_2.stop()
+            
             # check for quit (typically the Esc key)
             if defaultKeyboard.getKeys(keyList=["escape"]):
                 thisExp.status = FINISHED
@@ -4076,7 +4214,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
                     thisExp=thisExp, 
                     win=win, 
                     timers=[routineTimer], 
-                    playbackComponents=[]
+                    playbackComponents=[sound_1, sound_2]
                 )
                 # skip the frame we paused on
                 continue
@@ -4103,6 +4241,8 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         blank.tStop = globalClock.getTime(format='float')
         blank.tStopRefresh = tThisFlipGlobal
         thisExp.addData('blank.stopped', blank.tStop)
+        sound_1.pause()  # ensure sound has stopped at end of Routine
+        sound_2.pause()  # ensure sound has stopped at end of Routine
         # using non-slip timing so subtract the expected duration of this Routine (unless ended on request)
         if blank.maxDurationReached:
             routineTimer.addTime(-blank.maxDuration)
@@ -5034,11 +5174,17 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         # create an object to store info about Routine blank
         blank = data.Routine(
             name='blank',
-            components=[begin_end_run_cross],
+            components=[begin_end_run_cross, sound_1, sound_2],
         )
         blank.status = NOT_STARTED
         continueRoutine = True
         # update component parameters for each repeat
+        sound_1.setSound('bell.wav', secs=1.2, hamming=True)
+        sound_1.setVolume(1.0, log=False)
+        sound_1.seek(0)
+        sound_2.setSound('end_call.wav', secs=1, hamming=True)
+        sound_2.setVolume(1.0, log=False)
+        sound_2.seek(0)
         # store start times for blank
         blank.tStartRefresh = win.getFutureFlipTime(clock=globalClock)
         blank.tStart = globalClock.getTime(format='float')
@@ -5106,6 +5252,62 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
                     begin_end_run_cross.status = FINISHED
                     begin_end_run_cross.setAutoDraw(False)
             
+            # *sound_1* updates
+            
+            # if sound_1 is starting this frame...
+            if sound_1.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+                # keep track of start time/frame for later
+                sound_1.frameNStart = frameN  # exact frame index
+                sound_1.tStart = t  # local t and not account for scr refresh
+                sound_1.tStartRefresh = tThisFlipGlobal  # on global time
+                # add timestamp to datafile
+                thisExp.addData('sound_1.started', tThisFlipGlobal)
+                # update status
+                sound_1.status = STARTED
+                sound_1.play(when=win)  # sync with win flip
+            
+            # if sound_1 is stopping this frame...
+            if sound_1.status == STARTED:
+                # is it time to stop? (based on global clock, using actual start)
+                if tThisFlipGlobal > sound_1.tStartRefresh + 1.2-frameTolerance or sound_1.isFinished:
+                    # keep track of stop time/frame for later
+                    sound_1.tStop = t  # not accounting for scr refresh
+                    sound_1.tStopRefresh = tThisFlipGlobal  # on global time
+                    sound_1.frameNStop = frameN  # exact frame index
+                    # add timestamp to datafile
+                    thisExp.timestampOnFlip(win, 'sound_1.stopped')
+                    # update status
+                    sound_1.status = FINISHED
+                    sound_1.stop()
+            
+            # *sound_2* updates
+            
+            # if sound_2 is starting this frame...
+            if sound_2.status == NOT_STARTED and tThisFlip >= 10.0-frameTolerance:
+                # keep track of start time/frame for later
+                sound_2.frameNStart = frameN  # exact frame index
+                sound_2.tStart = t  # local t and not account for scr refresh
+                sound_2.tStartRefresh = tThisFlipGlobal  # on global time
+                # add timestamp to datafile
+                thisExp.addData('sound_2.started', tThisFlipGlobal)
+                # update status
+                sound_2.status = STARTED
+                sound_2.play(when=win)  # sync with win flip
+            
+            # if sound_2 is stopping this frame...
+            if sound_2.status == STARTED:
+                # is it time to stop? (based on global clock, using actual start)
+                if tThisFlipGlobal > sound_2.tStartRefresh + 1-frameTolerance or sound_2.isFinished:
+                    # keep track of stop time/frame for later
+                    sound_2.tStop = t  # not accounting for scr refresh
+                    sound_2.tStopRefresh = tThisFlipGlobal  # on global time
+                    sound_2.frameNStop = frameN  # exact frame index
+                    # add timestamp to datafile
+                    thisExp.timestampOnFlip(win, 'sound_2.stopped')
+                    # update status
+                    sound_2.status = FINISHED
+                    sound_2.stop()
+            
             # check for quit (typically the Esc key)
             if defaultKeyboard.getKeys(keyList=["escape"]):
                 thisExp.status = FINISHED
@@ -5118,7 +5320,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
                     thisExp=thisExp, 
                     win=win, 
                     timers=[routineTimer], 
-                    playbackComponents=[]
+                    playbackComponents=[sound_1, sound_2]
                 )
                 # skip the frame we paused on
                 continue
@@ -5145,6 +5347,8 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         blank.tStop = globalClock.getTime(format='float')
         blank.tStopRefresh = tThisFlipGlobal
         thisExp.addData('blank.stopped', blank.tStop)
+        sound_1.pause()  # ensure sound has stopped at end of Routine
+        sound_2.pause()  # ensure sound has stopped at end of Routine
         # using non-slip timing so subtract the expected duration of this Routine (unless ended on request)
         if blank.maxDurationReached:
             routineTimer.addTime(-blank.maxDuration)
@@ -7818,11 +8022,17 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         # create an object to store info about Routine blank
         blank = data.Routine(
             name='blank',
-            components=[begin_end_run_cross],
+            components=[begin_end_run_cross, sound_1, sound_2],
         )
         blank.status = NOT_STARTED
         continueRoutine = True
         # update component parameters for each repeat
+        sound_1.setSound('bell.wav', secs=1.2, hamming=True)
+        sound_1.setVolume(1.0, log=False)
+        sound_1.seek(0)
+        sound_2.setSound('end_call.wav', secs=1, hamming=True)
+        sound_2.setVolume(1.0, log=False)
+        sound_2.seek(0)
         # store start times for blank
         blank.tStartRefresh = win.getFutureFlipTime(clock=globalClock)
         blank.tStart = globalClock.getTime(format='float')
@@ -7890,6 +8100,62 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
                     begin_end_run_cross.status = FINISHED
                     begin_end_run_cross.setAutoDraw(False)
             
+            # *sound_1* updates
+            
+            # if sound_1 is starting this frame...
+            if sound_1.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+                # keep track of start time/frame for later
+                sound_1.frameNStart = frameN  # exact frame index
+                sound_1.tStart = t  # local t and not account for scr refresh
+                sound_1.tStartRefresh = tThisFlipGlobal  # on global time
+                # add timestamp to datafile
+                thisExp.addData('sound_1.started', tThisFlipGlobal)
+                # update status
+                sound_1.status = STARTED
+                sound_1.play(when=win)  # sync with win flip
+            
+            # if sound_1 is stopping this frame...
+            if sound_1.status == STARTED:
+                # is it time to stop? (based on global clock, using actual start)
+                if tThisFlipGlobal > sound_1.tStartRefresh + 1.2-frameTolerance or sound_1.isFinished:
+                    # keep track of stop time/frame for later
+                    sound_1.tStop = t  # not accounting for scr refresh
+                    sound_1.tStopRefresh = tThisFlipGlobal  # on global time
+                    sound_1.frameNStop = frameN  # exact frame index
+                    # add timestamp to datafile
+                    thisExp.timestampOnFlip(win, 'sound_1.stopped')
+                    # update status
+                    sound_1.status = FINISHED
+                    sound_1.stop()
+            
+            # *sound_2* updates
+            
+            # if sound_2 is starting this frame...
+            if sound_2.status == NOT_STARTED and tThisFlip >= 10.0-frameTolerance:
+                # keep track of start time/frame for later
+                sound_2.frameNStart = frameN  # exact frame index
+                sound_2.tStart = t  # local t and not account for scr refresh
+                sound_2.tStartRefresh = tThisFlipGlobal  # on global time
+                # add timestamp to datafile
+                thisExp.addData('sound_2.started', tThisFlipGlobal)
+                # update status
+                sound_2.status = STARTED
+                sound_2.play(when=win)  # sync with win flip
+            
+            # if sound_2 is stopping this frame...
+            if sound_2.status == STARTED:
+                # is it time to stop? (based on global clock, using actual start)
+                if tThisFlipGlobal > sound_2.tStartRefresh + 1-frameTolerance or sound_2.isFinished:
+                    # keep track of stop time/frame for later
+                    sound_2.tStop = t  # not accounting for scr refresh
+                    sound_2.tStopRefresh = tThisFlipGlobal  # on global time
+                    sound_2.frameNStop = frameN  # exact frame index
+                    # add timestamp to datafile
+                    thisExp.timestampOnFlip(win, 'sound_2.stopped')
+                    # update status
+                    sound_2.status = FINISHED
+                    sound_2.stop()
+            
             # check for quit (typically the Esc key)
             if defaultKeyboard.getKeys(keyList=["escape"]):
                 thisExp.status = FINISHED
@@ -7902,7 +8168,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
                     thisExp=thisExp, 
                     win=win, 
                     timers=[routineTimer], 
-                    playbackComponents=[]
+                    playbackComponents=[sound_1, sound_2]
                 )
                 # skip the frame we paused on
                 continue
@@ -7929,6 +8195,8 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         blank.tStop = globalClock.getTime(format='float')
         blank.tStopRefresh = tThisFlipGlobal
         thisExp.addData('blank.stopped', blank.tStop)
+        sound_1.pause()  # ensure sound has stopped at end of Routine
+        sound_2.pause()  # ensure sound has stopped at end of Routine
         # using non-slip timing so subtract the expected duration of this Routine (unless ended on request)
         if blank.maxDurationReached:
             routineTimer.addTime(-blank.maxDuration)
@@ -9056,11 +9324,17 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         # create an object to store info about Routine blank
         blank = data.Routine(
             name='blank',
-            components=[begin_end_run_cross],
+            components=[begin_end_run_cross, sound_1, sound_2],
         )
         blank.status = NOT_STARTED
         continueRoutine = True
         # update component parameters for each repeat
+        sound_1.setSound('bell.wav', secs=1.2, hamming=True)
+        sound_1.setVolume(1.0, log=False)
+        sound_1.seek(0)
+        sound_2.setSound('end_call.wav', secs=1, hamming=True)
+        sound_2.setVolume(1.0, log=False)
+        sound_2.seek(0)
         # store start times for blank
         blank.tStartRefresh = win.getFutureFlipTime(clock=globalClock)
         blank.tStart = globalClock.getTime(format='float')
@@ -9128,6 +9402,62 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
                     begin_end_run_cross.status = FINISHED
                     begin_end_run_cross.setAutoDraw(False)
             
+            # *sound_1* updates
+            
+            # if sound_1 is starting this frame...
+            if sound_1.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+                # keep track of start time/frame for later
+                sound_1.frameNStart = frameN  # exact frame index
+                sound_1.tStart = t  # local t and not account for scr refresh
+                sound_1.tStartRefresh = tThisFlipGlobal  # on global time
+                # add timestamp to datafile
+                thisExp.addData('sound_1.started', tThisFlipGlobal)
+                # update status
+                sound_1.status = STARTED
+                sound_1.play(when=win)  # sync with win flip
+            
+            # if sound_1 is stopping this frame...
+            if sound_1.status == STARTED:
+                # is it time to stop? (based on global clock, using actual start)
+                if tThisFlipGlobal > sound_1.tStartRefresh + 1.2-frameTolerance or sound_1.isFinished:
+                    # keep track of stop time/frame for later
+                    sound_1.tStop = t  # not accounting for scr refresh
+                    sound_1.tStopRefresh = tThisFlipGlobal  # on global time
+                    sound_1.frameNStop = frameN  # exact frame index
+                    # add timestamp to datafile
+                    thisExp.timestampOnFlip(win, 'sound_1.stopped')
+                    # update status
+                    sound_1.status = FINISHED
+                    sound_1.stop()
+            
+            # *sound_2* updates
+            
+            # if sound_2 is starting this frame...
+            if sound_2.status == NOT_STARTED and tThisFlip >= 10.0-frameTolerance:
+                # keep track of start time/frame for later
+                sound_2.frameNStart = frameN  # exact frame index
+                sound_2.tStart = t  # local t and not account for scr refresh
+                sound_2.tStartRefresh = tThisFlipGlobal  # on global time
+                # add timestamp to datafile
+                thisExp.addData('sound_2.started', tThisFlipGlobal)
+                # update status
+                sound_2.status = STARTED
+                sound_2.play(when=win)  # sync with win flip
+            
+            # if sound_2 is stopping this frame...
+            if sound_2.status == STARTED:
+                # is it time to stop? (based on global clock, using actual start)
+                if tThisFlipGlobal > sound_2.tStartRefresh + 1-frameTolerance or sound_2.isFinished:
+                    # keep track of stop time/frame for later
+                    sound_2.tStop = t  # not accounting for scr refresh
+                    sound_2.tStopRefresh = tThisFlipGlobal  # on global time
+                    sound_2.frameNStop = frameN  # exact frame index
+                    # add timestamp to datafile
+                    thisExp.timestampOnFlip(win, 'sound_2.stopped')
+                    # update status
+                    sound_2.status = FINISHED
+                    sound_2.stop()
+            
             # check for quit (typically the Esc key)
             if defaultKeyboard.getKeys(keyList=["escape"]):
                 thisExp.status = FINISHED
@@ -9140,7 +9470,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
                     thisExp=thisExp, 
                     win=win, 
                     timers=[routineTimer], 
-                    playbackComponents=[]
+                    playbackComponents=[sound_1, sound_2]
                 )
                 # skip the frame we paused on
                 continue
@@ -9167,6 +9497,8 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         blank.tStop = globalClock.getTime(format='float')
         blank.tStopRefresh = tThisFlipGlobal
         thisExp.addData('blank.stopped', blank.tStop)
+        sound_1.pause()  # ensure sound has stopped at end of Routine
+        sound_2.pause()  # ensure sound has stopped at end of Routine
         # using non-slip timing so subtract the expected duration of this Routine (unless ended on request)
         if blank.maxDurationReached:
             routineTimer.addTime(-blank.maxDuration)
