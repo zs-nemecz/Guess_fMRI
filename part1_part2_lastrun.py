@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """
 This experiment was created using PsychoPy3 Experiment Builder (v2024.2.4),
-    on Mai 07, 2025, at 18:18
+    on Mai 10, 2025, at 10:19
 If you publish work using this script the most relevant publication is:
 
     Peirce J, Gray JR, Simpson S, MacAskill M, Höchenberger R, Sogo H, Kastman E, Lindeløv JK. (2019) 
@@ -513,7 +513,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     target_types = {}
     
     succ_recall_key = "3"
-    letter_dur = 3
+    letter_dur = 2.5
     
     run_counter = 1
     
@@ -6221,7 +6221,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         if isinstance(recall_practice, data.TrialHandler2) and thisRecall_practice.thisN != recall_practice.thisTrial.thisN:
             continueRoutine = False
         recall_response.forceEnded = routineForceEnded = not continueRoutine
-        while continueRoutine and routineTimer.getTime() < 2.0:
+        while continueRoutine and routineTimer.getTime() < 1.5:
             # get current time
             t = routineTimer.getTime()
             tThisFlip = win.getFutureFlipTime(clock=routineTimer)
@@ -6252,7 +6252,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
             # if dash_stim_recall_resp is stopping this frame...
             if dash_stim_recall_resp.status == STARTED:
                 # is it time to stop? (based on global clock, using actual start)
-                if tThisFlipGlobal > dash_stim_recall_resp.tStartRefresh + 2.0-frameTolerance:
+                if tThisFlipGlobal > dash_stim_recall_resp.tStartRefresh + 1.5-frameTolerance:
                     # keep track of stop time/frame for later
                     dash_stim_recall_resp.tStop = t  # not accounting for scr refresh
                     dash_stim_recall_resp.tStopRefresh = tThisFlipGlobal  # on global time
@@ -6286,7 +6286,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
             # if cue_stim_recall_resp is stopping this frame...
             if cue_stim_recall_resp.status == STARTED:
                 # is it time to stop? (based on global clock, using actual start)
-                if tThisFlipGlobal > cue_stim_recall_resp.tStartRefresh + 2.0-frameTolerance:
+                if tThisFlipGlobal > cue_stim_recall_resp.tStartRefresh + 1.5-frameTolerance:
                     # keep track of stop time/frame for later
                     cue_stim_recall_resp.tStop = t  # not accounting for scr refresh
                     cue_stim_recall_resp.tStopRefresh = tThisFlipGlobal  # on global time
@@ -6320,7 +6320,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
             # if recall_stim_resp is stopping this frame...
             if recall_stim_resp.status == STARTED:
                 # is it time to stop? (based on global clock, using actual start)
-                if tThisFlipGlobal > recall_stim_resp.tStartRefresh + 2.0-frameTolerance:
+                if tThisFlipGlobal > recall_stim_resp.tStartRefresh + 1.5-frameTolerance:
                     # keep track of stop time/frame for later
                     recall_stim_resp.tStop = t  # not accounting for scr refresh
                     recall_stim_resp.tStopRefresh = tThisFlipGlobal  # on global time
@@ -6354,7 +6354,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
             # if recall_question is stopping this frame...
             if recall_question.status == STARTED:
                 # is it time to stop? (based on global clock, using actual start)
-                if tThisFlipGlobal > recall_question.tStartRefresh + 2.0-frameTolerance:
+                if tThisFlipGlobal > recall_question.tStartRefresh + 1.5-frameTolerance:
                     # keep track of stop time/frame for later
                     recall_question.tStop = t  # not accounting for scr refresh
                     recall_question.tStopRefresh = tThisFlipGlobal  # on global time
@@ -6395,7 +6395,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
             # if recall_reached is stopping this frame...
             if recall_reached.status == STARTED:
                 # is it time to stop? (based on global clock, using actual start)
-                if tThisFlipGlobal > recall_reached.tStartRefresh + 2.0-frameTolerance:
+                if tThisFlipGlobal > recall_reached.tStartRefresh + 1.5-frameTolerance:
                     # keep track of stop time/frame for later
                     recall_reached.tStop = t  # not accounting for scr refresh
                     recall_reached.tStopRefresh = tThisFlipGlobal  # on global time
@@ -6474,7 +6474,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         elif recall_response.forceEnded:
             routineTimer.reset()
         else:
-            routineTimer.addTime(-2.000000)
+            routineTimer.addTime(-1.500000)
         
         # --- Prepare to start Routine "recall_select" ---
         # create an object to store info about Routine recall_select
@@ -8472,7 +8472,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
             if isinstance(test_trials, data.TrialHandler2) and thisTest_trial.thisN != test_trials.thisTrial.thisN:
                 continueRoutine = False
             recall_response.forceEnded = routineForceEnded = not continueRoutine
-            while continueRoutine and routineTimer.getTime() < 2.0:
+            while continueRoutine and routineTimer.getTime() < 1.5:
                 # get current time
                 t = routineTimer.getTime()
                 tThisFlip = win.getFutureFlipTime(clock=routineTimer)
@@ -8503,7 +8503,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
                 # if dash_stim_recall_resp is stopping this frame...
                 if dash_stim_recall_resp.status == STARTED:
                     # is it time to stop? (based on global clock, using actual start)
-                    if tThisFlipGlobal > dash_stim_recall_resp.tStartRefresh + 2.0-frameTolerance:
+                    if tThisFlipGlobal > dash_stim_recall_resp.tStartRefresh + 1.5-frameTolerance:
                         # keep track of stop time/frame for later
                         dash_stim_recall_resp.tStop = t  # not accounting for scr refresh
                         dash_stim_recall_resp.tStopRefresh = tThisFlipGlobal  # on global time
@@ -8537,7 +8537,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
                 # if cue_stim_recall_resp is stopping this frame...
                 if cue_stim_recall_resp.status == STARTED:
                     # is it time to stop? (based on global clock, using actual start)
-                    if tThisFlipGlobal > cue_stim_recall_resp.tStartRefresh + 2.0-frameTolerance:
+                    if tThisFlipGlobal > cue_stim_recall_resp.tStartRefresh + 1.5-frameTolerance:
                         # keep track of stop time/frame for later
                         cue_stim_recall_resp.tStop = t  # not accounting for scr refresh
                         cue_stim_recall_resp.tStopRefresh = tThisFlipGlobal  # on global time
@@ -8571,7 +8571,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
                 # if recall_stim_resp is stopping this frame...
                 if recall_stim_resp.status == STARTED:
                     # is it time to stop? (based on global clock, using actual start)
-                    if tThisFlipGlobal > recall_stim_resp.tStartRefresh + 2.0-frameTolerance:
+                    if tThisFlipGlobal > recall_stim_resp.tStartRefresh + 1.5-frameTolerance:
                         # keep track of stop time/frame for later
                         recall_stim_resp.tStop = t  # not accounting for scr refresh
                         recall_stim_resp.tStopRefresh = tThisFlipGlobal  # on global time
@@ -8605,7 +8605,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
                 # if recall_question is stopping this frame...
                 if recall_question.status == STARTED:
                     # is it time to stop? (based on global clock, using actual start)
-                    if tThisFlipGlobal > recall_question.tStartRefresh + 2.0-frameTolerance:
+                    if tThisFlipGlobal > recall_question.tStartRefresh + 1.5-frameTolerance:
                         # keep track of stop time/frame for later
                         recall_question.tStop = t  # not accounting for scr refresh
                         recall_question.tStopRefresh = tThisFlipGlobal  # on global time
@@ -8646,7 +8646,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
                 # if recall_reached is stopping this frame...
                 if recall_reached.status == STARTED:
                     # is it time to stop? (based on global clock, using actual start)
-                    if tThisFlipGlobal > recall_reached.tStartRefresh + 2.0-frameTolerance:
+                    if tThisFlipGlobal > recall_reached.tStartRefresh + 1.5-frameTolerance:
                         # keep track of stop time/frame for later
                         recall_reached.tStop = t  # not accounting for scr refresh
                         recall_reached.tStopRefresh = tThisFlipGlobal  # on global time
@@ -8725,7 +8725,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
             elif recall_response.forceEnded:
                 routineTimer.reset()
             else:
-                routineTimer.addTime(-2.000000)
+                routineTimer.addTime(-1.500000)
             
             # --- Prepare to start Routine "recall_select" ---
             # create an object to store info about Routine recall_select

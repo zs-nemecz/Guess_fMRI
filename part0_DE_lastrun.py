@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """
 This experiment was created using PsychoPy3 Experiment Builder (v2024.2.4),
-    on Mai 07, 2025, at 18:06
+    on Mai 10, 2025, at 10:13
 If you publish work using this script the most relevant publication is:
 
     Peirce J, Gray JR, Simpson S, MacAskill M, Höchenberger R, Sogo H, Kastman E, Lindeløv JK. (2019) 
@@ -429,7 +429,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     hand_intro_text = visual.TextStim(win=win, name='hand_intro_text',
         text='Während der Aufgaben werden Sie die Tasten mit den Fingern Ihrer rechten Hand drücken.\n\nJeder Finger wird während der Aufgabe mit einer Zahl zugeordnet.\n\nLassen Sie uns das Drücken der Tasten üben!\nWenn Sie bereit dazu sind zu üben, drücken Sie eine beliebige Taste. \n\n',
         font='Arial',
-        pos=(0, 0.25), draggable=False, height=0.05, wrapWidth=None, ori=0.0, 
+        pos=(0, 0.23), draggable=False, height=0.04, wrapWidth=None, ori=0.0, 
         color='white', colorSpace='rgb', opacity=None, 
         languageStyle='LTR',
         depth=-2.0);
