@@ -455,7 +455,7 @@
         <Param val="False" valType="bool" updates="None" name="disabled"/>
         <Param val="600" valType="code" updates="None" name="durationEstim"/>
         <Param val="False" valType="bool" updates="constant" name="forceEndRoutine"/>
-        <Param val="False" valType="bool" updates="None" name="loop"/>
+        <Param val="True" valType="bool" updates="None" name="loop"/>
         <Param val="$this_video" valType="file" updates="set every repeat" name="movie"/>
         <Param val="movie" valType="code" updates="None" name="name"/>
         <Param val="" valType="num" updates="constant" name="opacity"/>

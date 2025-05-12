@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """
 This experiment was created using PsychoPy3 Experiment Builder (v2024.2.4),
-    on május 11, 2025, at 00:14
+    on május 12, 2025, at 11:46
 If you publish work using this script the most relevant publication is:
 
     Peirce J, Gray JR, Simpson S, MacAskill M, Höchenberger R, Sogo H, Kastman E, Lindeløv JK. (2019) 
@@ -44,8 +44,6 @@ expName = 'sm'  # from the Builder filename that created this script
 # information about this experiment
 expInfo = {
     'PID': '',
-    'Alter': '',
-    'Geschlecht (optional)': '',
     'MRI': '1',
     'date|hid': data.getDateStr(),
     'expName|hid': expName,
@@ -62,7 +60,7 @@ or run the experiment with `--pilot` as an argument. To change what pilot
 PILOTING = core.setPilotModeFromArgs()
 # start off with values from experiment settings
 _fullScr = True
-_winSize = [1920, 1080]
+_winSize = [1440, 900]
 # if in pilot mode, apply overrides according to preferences
 if PILOTING:
     # force windowed mode
@@ -309,6 +307,12 @@ def setupDevices(expInfo, thisExp, win):
         end_mapping = deviceManager.addDevice(
             deviceClass='keyboard',
             deviceName='end_mapping',
+        )
+    if deviceManager.getDevice('key_resp') is None:
+        # initialise key_resp
+        key_resp = deviceManager.addDevice(
+            deviceClass='keyboard',
+            deviceName='key_resp',
         )
     if deviceManager.getDevice('task_break_resp') is None:
         # initialise task_break_resp
@@ -574,6 +578,16 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         speaker='sound_2',    name='sound_2'
     )
     sound_2.setVolume(1.0)
+    
+    # --- Initialize components for Routine "scout" ---
+    scout_text = visual.TextStim(win=win, name='scout_text',
+        text='Wir führen einen kurzen technischen Scan durch. Dies wird 3 Minuten dauern. Bitte halten Sie still.\n\n ',
+        font='Arial',
+        pos=(0, 0), draggable=False, height=0.05, wrapWidth=None, ori=0.0, 
+        color='white', colorSpace='rgb', opacity=None, 
+        languageStyle='LTR',
+        depth=0.0);
+    key_resp = keyboard.Keyboard(deviceName='key_resp')
     
     # --- Initialize components for Routine "task_break" ---
     task_break_text = visual.TextStim(win=win, name='task_break_text',
@@ -2698,6 +2712,152 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
                 routineTimer.reset()
             else:
                 routineTimer.addTime(-12.000000)
+            
+            # --- Prepare to start Routine "scout" ---
+            # create an object to store info about Routine scout
+            scout = data.Routine(
+                name='scout',
+                components=[scout_text, key_resp],
+            )
+            scout.status = NOT_STARTED
+            continueRoutine = True
+            # update component parameters for each repeat
+            # create starting attributes for key_resp
+            key_resp.keys = []
+            key_resp.rt = []
+            _key_resp_allKeys = []
+            # store start times for scout
+            scout.tStartRefresh = win.getFutureFlipTime(clock=globalClock)
+            scout.tStart = globalClock.getTime(format='float')
+            scout.status = STARTED
+            thisExp.addData('scout.started', scout.tStart)
+            scout.maxDuration = None
+            # skip Routine scout if its 'Skip if' condition is True
+            scout.skipped = continueRoutine and not (run_counter != 4)
+            continueRoutine = scout.skipped
+            # keep track of which components have finished
+            scoutComponents = scout.components
+            for thisComponent in scout.components:
+                thisComponent.tStart = None
+                thisComponent.tStop = None
+                thisComponent.tStartRefresh = None
+                thisComponent.tStopRefresh = None
+                if hasattr(thisComponent, 'status'):
+                    thisComponent.status = NOT_STARTED
+            # reset timers
+            t = 0
+            _timeToFirstFrame = win.getFutureFlipTime(clock="now")
+            frameN = -1
+            
+            # --- Run Routine "scout" ---
+            # if trial has changed, end Routine now
+            if isinstance(runs, data.TrialHandler2) and thisRun.thisN != runs.thisTrial.thisN:
+                continueRoutine = False
+            scout.forceEnded = routineForceEnded = not continueRoutine
+            while continueRoutine:
+                # get current time
+                t = routineTimer.getTime()
+                tThisFlip = win.getFutureFlipTime(clock=routineTimer)
+                tThisFlipGlobal = win.getFutureFlipTime(clock=None)
+                frameN = frameN + 1  # number of completed frames (so 0 is the first frame)
+                # update/draw components on each frame
+                
+                # *scout_text* updates
+                
+                # if scout_text is starting this frame...
+                if scout_text.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+                    # keep track of start time/frame for later
+                    scout_text.frameNStart = frameN  # exact frame index
+                    scout_text.tStart = t  # local t and not account for scr refresh
+                    scout_text.tStartRefresh = tThisFlipGlobal  # on global time
+                    win.timeOnFlip(scout_text, 'tStartRefresh')  # time at next scr refresh
+                    # add timestamp to datafile
+                    thisExp.timestampOnFlip(win, 'scout_text.started')
+                    # update status
+                    scout_text.status = STARTED
+                    scout_text.setAutoDraw(True)
+                
+                # if scout_text is active this frame...
+                if scout_text.status == STARTED:
+                    # update params
+                    pass
+                
+                # *key_resp* updates
+                waitOnFlip = False
+                
+                # if key_resp is starting this frame...
+                if key_resp.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+                    # keep track of start time/frame for later
+                    key_resp.frameNStart = frameN  # exact frame index
+                    key_resp.tStart = t  # local t and not account for scr refresh
+                    key_resp.tStartRefresh = tThisFlipGlobal  # on global time
+                    win.timeOnFlip(key_resp, 'tStartRefresh')  # time at next scr refresh
+                    # add timestamp to datafile
+                    thisExp.timestampOnFlip(win, 'key_resp.started')
+                    # update status
+                    key_resp.status = STARTED
+                    # keyboard checking is just starting
+                    waitOnFlip = True
+                    win.callOnFlip(key_resp.clock.reset)  # t=0 on next screen flip
+                    win.callOnFlip(key_resp.clearEvents, eventType='keyboard')  # clear events on next screen flip
+                if key_resp.status == STARTED and not waitOnFlip:
+                    theseKeys = key_resp.getKeys(keyList=['space'], ignoreKeys=["escape"], waitRelease=False)
+                    _key_resp_allKeys.extend(theseKeys)
+                    if len(_key_resp_allKeys):
+                        key_resp.keys = _key_resp_allKeys[-1].name  # just the last key pressed
+                        key_resp.rt = _key_resp_allKeys[-1].rt
+                        key_resp.duration = _key_resp_allKeys[-1].duration
+                        # a response ends the routine
+                        continueRoutine = False
+                
+                # check for quit (typically the Esc key)
+                if defaultKeyboard.getKeys(keyList=["escape"]):
+                    thisExp.status = FINISHED
+                if thisExp.status == FINISHED or endExpNow:
+                    endExperiment(thisExp, win=win)
+                    return
+                # pause experiment here if requested
+                if thisExp.status == PAUSED:
+                    pauseExperiment(
+                        thisExp=thisExp, 
+                        win=win, 
+                        timers=[routineTimer], 
+                        playbackComponents=[]
+                    )
+                    # skip the frame we paused on
+                    continue
+                
+                # check if all components have finished
+                if not continueRoutine:  # a component has requested a forced-end of Routine
+                    scout.forceEnded = routineForceEnded = True
+                    break
+                continueRoutine = False  # will revert to True if at least one component still running
+                for thisComponent in scout.components:
+                    if hasattr(thisComponent, "status") and thisComponent.status != FINISHED:
+                        continueRoutine = True
+                        break  # at least one component has not yet finished
+                
+                # refresh the screen
+                if continueRoutine:  # don't flip if this routine is over or we'll get a blank screen
+                    win.flip()
+            
+            # --- Ending Routine "scout" ---
+            for thisComponent in scout.components:
+                if hasattr(thisComponent, "setAutoDraw"):
+                    thisComponent.setAutoDraw(False)
+            # store stop times for scout
+            scout.tStop = globalClock.getTime(format='float')
+            scout.tStopRefresh = tThisFlipGlobal
+            thisExp.addData('scout.stopped', scout.tStop)
+            # check responses
+            if key_resp.keys in ['', [], None]:  # No response was made
+                key_resp.keys = None
+            runs.addData('key_resp.keys',key_resp.keys)
+            if key_resp.keys != None:  # we had a response
+                runs.addData('key_resp.rt', key_resp.rt)
+                runs.addData('key_resp.duration', key_resp.duration)
+            # the Routine "scout" was not non-slip safe, so reset the non-slip timer
+            routineTimer.reset()
             
             # --- Prepare to start Routine "task_break" ---
             # create an object to store info about Routine task_break
