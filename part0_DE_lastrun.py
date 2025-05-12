@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """
 This experiment was created using PsychoPy3 Experiment Builder (v2024.2.4),
-    on Mai 10, 2025, at 14:29
+    on Mai 12, 2025, at 12:51
 If you publish work using this script the most relevant publication is:
 
     Peirce J, Gray JR, Simpson S, MacAskill M, Höchenberger R, Sogo H, Kastman E, Lindeløv JK. (2019) 
@@ -465,7 +465,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     movie = visual.MovieStim(
         win, name='movie',
         filename=None, movieLib='ffpyplayer',
-        loop=False, volume=1.0, noAudio=False,
+        loop=True, volume=1.0, noAudio=False,
         pos=(0, 0), size=(1024,576), units='pix',
         ori=0.0, anchor='center',opacity=None, contrast=1.0,
         depth=0
