@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """
 This experiment was created using PsychoPy3 Experiment Builder (v2024.2.4),
-    on május 11, 2025, at 00:01
+    on május 12, 2025, at 11:56
 If you publish work using this script the most relevant publication is:
 
     Peirce J, Gray JR, Simpson S, MacAskill M, Höchenberger R, Sogo H, Kastman E, Lindeløv JK. (2019) 
@@ -44,7 +44,7 @@ expName = 'part1_part2'  # from the Builder filename that created this script
 # information about this experiment
 expInfo = {
     'PID': '',
-    'Age': '',
+    'Birthyear': '',
     'Gender': '',
     'Handedness': '',
     'MRI': '1',
@@ -63,7 +63,7 @@ or run the experiment with `--pilot` as an argument. To change what pilot
 PILOTING = core.setPilotModeFromArgs()
 # start off with values from experiment settings
 _fullScr = True
-_winSize = [1920, 1080]
+_winSize = [1440, 900]
 # if in pilot mode, apply overrides according to preferences
 if PILOTING:
     # force windowed mode
@@ -940,7 +940,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         languageStyle='LTR',
         depth=-2.0);
     recall_question = visual.TextStim(win=win, name='recall_question',
-        text='Können Sie sich an das Wortpaar erinnern?\n\n1) Nein        2) Ja',
+        text='1) Nein        2) Ja',
         font='Arial',
         pos=(0, -0.3), draggable=False, height=0.05, wrapWidth=None, ori=0.0, 
         color='white', colorSpace='rgb', opacity=None, 
@@ -1141,7 +1141,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         languageStyle='LTR',
         depth=-2.0);
     recall_question = visual.TextStim(win=win, name='recall_question',
-        text='Können Sie sich an das Wortpaar erinnern?\n\n1) Nein        2) Ja',
+        text='1) Nein        2) Ja',
         font='Arial',
         pos=(0, -0.3), draggable=False, height=0.05, wrapWidth=None, ori=0.0, 
         color='white', colorSpace='rgb', opacity=None, 
@@ -6690,7 +6690,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         continueRoutine = True
         # update component parameters for each repeat
         # Run 'Begin Routine' code from letter_choice
-        recall_select_text = "Wählen Sie den letzten Buchstaben des Wortes mit einer Zahlentaste.\n"
+        recall_select_text = ""
         
         random_letters = rnd.sample("abcdefghijklmnoprstuvz", k=3)
         target_letter = this_target[-1]
@@ -9005,7 +9005,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
             continueRoutine = True
             # update component parameters for each repeat
             # Run 'Begin Routine' code from letter_choice
-            recall_select_text = "Wählen Sie den letzten Buchstaben des Wortes mit einer Zahlentaste.\n"
+            recall_select_text = ""
             
             random_letters = rnd.sample("abcdefghijklmnoprstuvz", k=3)
             target_letter = this_target[-1]
