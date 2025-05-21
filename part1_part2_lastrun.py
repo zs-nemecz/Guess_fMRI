@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """
 This experiment was created using PsychoPy3 Experiment Builder (v2024.2.4),
-    on május 21, 2025, at 11:23
+    on Mai 21, 2025, at 18:10
 If you publish work using this script the most relevant publication is:
 
     Peirce J, Gray JR, Simpson S, MacAskill M, Höchenberger R, Sogo H, Kastman E, Lindeløv JK. (2019) 
@@ -129,7 +129,7 @@ def setupData(expInfo, dataDir=None):
     thisExp = data.ExperimentHandler(
         name=expName, version='',
         extraInfo=expInfo, runtimeInfo=None,
-        originPath='C:\\Users\\Asus\\Documents\\pretest_fmri\\Guess_fMRI\\part1_part2_lastrun.py',
+        originPath='C:\\Users\\Nemecz\\Documents\\Guess_fMRI\\part1_part2_lastrun.py',
         savePickle=True, saveWideText=True,
         dataFileName=dataDir + os.sep + filename, sortColumns='time'
     )
@@ -1163,7 +1163,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     # --- Initialize components for Routine "end_part2" ---
     end_part2_key = keyboard.Keyboard(deviceName='end_part2_key')
     end_part2_text = visual.TextStim(win=win, name='end_part2_text',
-        text='Sie haben den zweiten Teil des Experiments abgeschlossen!\n\nMachen Sie eine 5-minütige Pause, bevor Sie fortfahren.\n\nDrücken Sie eine Taste, um fortzufahren.',
+        text='Sie haben den zweiten Teil des Experiments abgeschlossen!\n\nDrücken Sie eine Taste, um fortzufahren.',
         font='Arial',
         pos=(0, 0), draggable=False, height=0.05, wrapWidth=None, ori=0.0, 
         color='white', colorSpace='rgb', opacity=None, 
