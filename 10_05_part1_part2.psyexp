@@ -5,10 +5,10 @@
     <Param val="ptb" valType="str" updates="None" name="Audio lib"/>
     <Param val="https://regensburg.sona-systems.com/webstudy_credit.aspx?experiment_id=1093&amp;credit_token=3ab017d6ceb04173ba128bd636423369&amp;survey_code=&quot; + expInfo[‘participant’]" valType="str" updates="None" name="Completed URL"/>
     <Param val="auto" valType="str" updates="None" name="Data file delimiter"/>
-    <Param val="u'data/Guess_%s_%s_%s' % (expInfo['PID'], expName, expInfo['date'])" valType="code" updates="None" name="Data filename"/>
+    <Param val="u'data/%s_%s_%s' % (expInfo['PID'], expName, expInfo['date'])" valType="code" updates="None" name="Data filename"/>
     <Param val="True" valType="bool" updates="None" name="Enable Escape"/>
     <Param val="Thank you for your patience." valType="str" updates="None" name="End Message"/>
-    <Param val="{'PID': '', 'Birthyear': '', 'Gender': '', 'Handedness': '', 'MRI': '1'}" valType="code" updates="None" name="Experiment info"/>
+    <Param val="{'PID': '', 'Age': '', 'Gender': '', 'Handedness': '', 'MRI': '1'}" valType="code" updates="None" name="Experiment info"/>
     <Param val="True" valType="bool" updates="None" name="Force stereo"/>
     <Param val="True" valType="bool" updates="None" name="Full-screen window"/>
     <Param val="" valType="str" updates="None" name="HTML path"/>
@@ -26,7 +26,7 @@
     <Param val="False" valType="bool" updates="None" name="Show mouse"/>
     <Param val="height" valType="str" updates="None" name="Units"/>
     <Param val="" valType="str" updates="None" name="Use version"/>
-    <Param val="[1440, 900]" valType="list" updates="None" name="Window size (pixels)"/>
+    <Param val="[1920, 1080]" valType="list" updates="None" name="Window size (pixels)"/>
     <Param val="none" valType="str" updates="None" name="backgroundFit"/>
     <Param val="" valType="str" updates="None" name="backgroundImg"/>
     <Param val="avg" valType="str" updates="None" name="blendMode"/>
@@ -127,8 +127,8 @@
       <CodeComponent name="experiment_setup" plugin="None">
         <Param val="" valType="extendedCode" updates="constant" name="Before Experiment"/>
         <Param val="" valType="extendedCode" updates="constant" name="Before JS Experiment"/>
-        <Param val="# import random for letter randomization&amp;#10;import random as rnd&amp;#10;&amp;#10;if expInfo[&quot;MRI&quot;] == &quot;1&quot;:&amp;#10;    from psychopy import parallel&amp;#10;    port = parallel.ParallelPort(address = 0x2FE8) &amp;#10;    pinNumber = 10 #Change to match the pin that is receiving the pulse value sent by your scanner. Set this to None to scan all pins&amp;#10;&amp;#10;all_keys = ['space', '1', '2', '3', '4', '5']&amp;#10;guess_made_key = &quot;2&quot;&amp;#10;no_guess_made_key = &quot;3&quot;&amp;#10;&amp;#10;guess_dur = 3&amp;#10;guess_resp_dur = 3&amp;#10;guess_delay_dur = 3&amp;#10;&amp;#10;cue_types = {}&amp;#10;target_types = {}&amp;#10;&amp;#10;succ_recall_key = &quot;3&quot;&amp;#10;letter_dur = 3&amp;#10;&amp;#10;run_counter = 1&amp;#10;&amp;#10;ncorrect = 0&amp;#10;correct_guess = 0&amp;#10;correct_read = 0&amp;#10;&amp;#10;num_trials = 40 # number of trials per run&amp;#10;if expInfo[&quot;PID&quot;] == &quot;pilot&quot; :&amp;#10;    num_trials = 2&amp;#10;" valType="extendedCode" updates="constant" name="Begin Experiment"/>
-        <Param val="import * as rnd from 'random';&amp;#10;if ((expInfo[&quot;MRI&quot;] === &quot;1&quot;)) {&amp;#10;    import {parallel} from 'psychopy';&amp;#10;    port = new parallel.ParallelPort({&quot;address&quot;: 12264});&amp;#10;    pinNumber = 10;&amp;#10;}&amp;#10;all_keys = [&quot;space&quot;, &quot;1&quot;, &quot;2&quot;, &quot;3&quot;, &quot;4&quot;, &quot;5&quot;];&amp;#10;guess_made_key = &quot;2&quot;;&amp;#10;no_guess_made_key = &quot;3&quot;;&amp;#10;guess_dur = 3;&amp;#10;guess_resp_dur = 3;&amp;#10;guess_delay_dur = 3;&amp;#10;cue_types = {};&amp;#10;target_types = {};&amp;#10;succ_recall_key = &quot;3&quot;;&amp;#10;letter_dur = 3;&amp;#10;run_counter = 1;&amp;#10;ncorrect = 0;&amp;#10;correct_guess = 0;&amp;#10;correct_read = 0;&amp;#10;num_trials = 40;&amp;#10;if ((expInfo[&quot;PID&quot;] === &quot;pilot&quot;)) {&amp;#10;    num_trials = 2;&amp;#10;}&amp;#10;" valType="extendedCode" updates="constant" name="Begin JS Experiment"/>
+        <Param val="# import random for letter randomization&amp;#10;import random as rnd&amp;#10;&amp;#10;if expInfo[&quot;MRI&quot;] == &quot;1&quot;:&amp;#10;    from psychopy import parallel&amp;#10;    port = parallel.ParallelPort(address = 0x2FE8) &amp;#10;    pinNumber = 10 #Change to match the pin that is receiving the pulse value sent by your scanner. Set this to None to scan all pins&amp;#10;&amp;#10;all_keys = ['space', '1', '2', '3', '4', '5']&amp;#10;guess_made_key = &quot;2&quot;&amp;#10;no_guess_made_key = &quot;3&quot;&amp;#10;&amp;#10;guess_dur = 3&amp;#10;guess_resp_dur = 3&amp;#10;guess_delay_dur = 3&amp;#10;&amp;#10;cue_types = {}&amp;#10;target_types = {}&amp;#10;&amp;#10;succ_recall_key = &quot;3&quot;&amp;#10;letter_dur = 2.5&amp;#10;&amp;#10;run_counter = 1&amp;#10;&amp;#10;num_trials = 40 # number of trials per run&amp;#10;if expInfo[&quot;PID&quot;] == &quot;pilot&quot; :&amp;#10;    num_trials = 2&amp;#10;" valType="extendedCode" updates="constant" name="Begin Experiment"/>
+        <Param val="import * as rnd from 'random';&amp;#10;if ((expInfo[&quot;MRI&quot;] === &quot;1&quot;)) {&amp;#10;    import {parallel} from 'psychopy';&amp;#10;    port = new parallel.ParallelPort({&quot;address&quot;: 12264});&amp;#10;    pinNumber = 10;&amp;#10;}&amp;#10;all_keys = [&quot;space&quot;, &quot;1&quot;, &quot;2&quot;, &quot;3&quot;, &quot;4&quot;, &quot;5&quot;];&amp;#10;guess_made_key = &quot;2&quot;;&amp;#10;no_guess_made_key = &quot;3&quot;;&amp;#10;guess_dur = 3;&amp;#10;guess_resp_dur = 3;&amp;#10;guess_delay_dur = 3;&amp;#10;cue_types = {};&amp;#10;target_types = {};&amp;#10;succ_recall_key = &quot;3&quot;;&amp;#10;letter_dur = 2.5;&amp;#10;run_counter = 1;&amp;#10;num_trials = 40;&amp;#10;if ((expInfo[&quot;PID&quot;] === &quot;pilot&quot;)) {&amp;#10;    num_trials = 2;&amp;#10;}&amp;#10;" valType="extendedCode" updates="constant" name="Begin JS Experiment"/>
         <Param val="" valType="extendedCode" updates="constant" name="Begin JS Routine"/>
         <Param val="" valType="extendedCode" updates="constant" name="Begin Routine"/>
         <Param val="Auto-&gt;JS" valType="str" updates="None" name="Code Type"/>
@@ -1944,7 +1944,7 @@
         <Param val="duration (s)" valType="str" updates="None" name="stopType"/>
         <Param val="1.5" valType="code" updates="constant" name="stopVal"/>
         <Param val="True" valType="bool" updates="None" name="syncScreenRefresh"/>
-        <Param val="1) Nein        2) Ja" valType="str" updates="constant" name="text"/>
+        <Param val="Können Sie sich an das Wortpaar erinnern?&amp;#10;&amp;#10;1) Nein        2) Ja" valType="str" updates="constant" name="text"/>
         <Param val="from exp settings" valType="str" updates="None" name="units"/>
         <Param val="" valType="code" updates="None" name="validator"/>
         <Param val="" valType="num" updates="constant" name="wrapWidth"/>
@@ -2009,15 +2009,15 @@
         <Param val="" valType="extendedCode" updates="constant" name="Before JS Experiment"/>
         <Param val="" valType="extendedCode" updates="constant" name="Begin Experiment"/>
         <Param val="" valType="extendedCode" updates="constant" name="Begin JS Experiment"/>
-        <Param val="var _pj;&amp;#10;function _pj_snippets(container) {&amp;#10;    function in_es6(left, right) {&amp;#10;        if (((right instanceof Array) || ((typeof right) === &quot;string&quot;))) {&amp;#10;            return (right.indexOf(left) &gt; (- 1));&amp;#10;        } else {&amp;#10;            if (((right instanceof Map) || (right instanceof Set) || (right instanceof WeakMap) || (right instanceof WeakSet))) {&amp;#10;                return right.has(left);&amp;#10;            } else {&amp;#10;                return (left in right);&amp;#10;            }&amp;#10;        }&amp;#10;    }&amp;#10;    container[&quot;in_es6&quot;] = in_es6;&amp;#10;    return container;&amp;#10;}&amp;#10;_pj = {};&amp;#10;_pj_snippets(_pj);&amp;#10;recall_select_text = &quot;&quot;;&amp;#10;random_letters = rnd.sample(&quot;abcdefghijklmnoprstuvz&quot;, {&quot;k&quot;: 3});&amp;#10;target_letter = this_target.slice((- 1))[0];&amp;#10;while (_pj.in_es6(target_letter, random_letters)) {&amp;#10;    random_letters = rnd.sample(&quot;abcdefghijklmnoprstuvz&quot;, {&quot;k&quot;: 3});&amp;#10;}&amp;#10;random_letters.push(target_letter);&amp;#10;letters = rnd.sample(random_letters, random_letters.length);&amp;#10;psychoJS.experiment.addData(&quot;letter_options&quot;, letters);&amp;#10;recall_select_text += ((&quot;1) &quot; + letters[0]) + &quot;        &quot;);&amp;#10;recall_select_text += ((&quot;2) &quot; + letters[1]) + &quot;        &quot;);&amp;#10;recall_select_text += ((&quot;3) &quot; + letters[2]) + &quot;        &quot;);&amp;#10;recall_select_text += (&quot;4) &quot; + letters[3]);&amp;#10;" valType="extendedCode" updates="constant" name="Begin JS Routine"/>
-        <Param val="recall_select_text = &quot;&quot;&amp;#10;&amp;#10;random_letters = rnd.sample(&quot;abcdefghijklmnoprstuvz&quot;, k=3)&amp;#10;target_letter = this_target[-1]&amp;#10;while target_letter in random_letters:&amp;#10;    random_letters = rnd.sample(&quot;abcdefghijklmnoprstuvz&quot;, k=3)&amp;#10;&amp;#10;&amp;#10;random_letters.append(target_letter)&amp;#10;&amp;#10;letters = rnd.sample(random_letters, len(random_letters))&amp;#10;thisExp.addData('letter_options', letters)&amp;#10;&amp;#10;recall_select_text += &quot;1) &quot; + letters[0] + &quot;        &quot;&amp;#10;recall_select_text += &quot;2) &quot; + letters[1] + &quot;        &quot;&amp;#10;recall_select_text += &quot;3) &quot; + letters[2] + &quot;        &quot;&amp;#10;recall_select_text += &quot;4) &quot; + letters[3] &amp;#10;" valType="extendedCode" updates="constant" name="Begin Routine"/>
+        <Param val="var _pj;&amp;#10;function _pj_snippets(container) {&amp;#10;    function in_es6(left, right) {&amp;#10;        if (((right instanceof Array) || ((typeof right) === &quot;string&quot;))) {&amp;#10;            return (right.indexOf(left) &gt; (- 1));&amp;#10;        } else {&amp;#10;            if (((right instanceof Map) || (right instanceof Set) || (right instanceof WeakMap) || (right instanceof WeakSet))) {&amp;#10;                return right.has(left);&amp;#10;            } else {&amp;#10;                return (left in right);&amp;#10;            }&amp;#10;        }&amp;#10;    }&amp;#10;    container[&quot;in_es6&quot;] = in_es6;&amp;#10;    return container;&amp;#10;}&amp;#10;_pj = {};&amp;#10;_pj_snippets(_pj);&amp;#10;recall_select_text = &quot;W\u00e4hlen Sie den letzten Buchstaben des Wortes mit einer Zahlentaste.\n&quot;;&amp;#10;random_letters = rnd.sample(&quot;abcdefghijklmnoprstuvz&quot;, {&quot;k&quot;: 3});&amp;#10;target_letter = this_target.slice((- 1))[0];&amp;#10;while (_pj.in_es6(target_letter, random_letters)) {&amp;#10;    random_letters = rnd.sample(&quot;abcdefghijklmnoprstuvz&quot;, {&quot;k&quot;: 3});&amp;#10;}&amp;#10;random_letters.push(target_letter);&amp;#10;letters = rnd.sample(random_letters, random_letters.length);&amp;#10;psychoJS.experiment.addData(&quot;letter_options&quot;, letters);&amp;#10;recall_select_text += ((&quot;1) &quot; + letters[0]) + &quot;        &quot;);&amp;#10;recall_select_text += ((&quot;2) &quot; + letters[1]) + &quot;        &quot;);&amp;#10;recall_select_text += ((&quot;3) &quot; + letters[2]) + &quot;        &quot;);&amp;#10;recall_select_text += (&quot;4) &quot; + letters[3]);&amp;#10;" valType="extendedCode" updates="constant" name="Begin JS Routine"/>
+        <Param val="recall_select_text = &quot;Wählen Sie den letzten Buchstaben des Wortes mit einer Zahlentaste.\n&quot;&amp;#10;&amp;#10;random_letters = rnd.sample(&quot;abcdefghijklmnoprstuvz&quot;, k=3)&amp;#10;target_letter = this_target[-1]&amp;#10;while target_letter in random_letters:&amp;#10;    random_letters = rnd.sample(&quot;abcdefghijklmnoprstuvz&quot;, k=3)&amp;#10;&amp;#10;&amp;#10;random_letters.append(target_letter)&amp;#10;&amp;#10;letters = rnd.sample(random_letters, len(random_letters))&amp;#10;thisExp.addData('letter_options', letters)&amp;#10;&amp;#10;recall_select_text += &quot;1) &quot; + letters[0] + &quot;        &quot;&amp;#10;recall_select_text += &quot;2) &quot; + letters[1] + &quot;        &quot;&amp;#10;recall_select_text += &quot;3) &quot; + letters[2] + &quot;        &quot;&amp;#10;recall_select_text += &quot;4) &quot; + letters[3] &amp;#10;" valType="extendedCode" updates="constant" name="Begin Routine"/>
         <Param val="Auto-&gt;JS" valType="str" updates="None" name="Code Type"/>
         <Param val="" valType="extendedCode" updates="constant" name="Each Frame"/>
         <Param val="" valType="extendedCode" updates="constant" name="Each JS Frame"/>
         <Param val="" valType="extendedCode" updates="constant" name="End Experiment"/>
         <Param val="" valType="extendedCode" updates="constant" name="End JS Experiment"/>
-        <Param val="this_choice = &quot;&quot;;&amp;#10;correct_choice = 0;&amp;#10;if ((skip_letters &lt;= 1)) {&amp;#10;    if ((recall_selection.keys.length &gt; 0)) {&amp;#10;        this_key = (Number.parseInt(recall_selection.keys[0]) - 2);&amp;#10;        this_choice = letters[this_key];&amp;#10;        if ((this_choice === target_letter)) {&amp;#10;            correct_choice = 1;&amp;#10;            ncorrect = (ncorrect + 1);&amp;#10;            if (((run_counter === 1) || (run_counter === 2))) {&amp;#10;                if ((cue_types[this_cue] === &quot;Read&quot;)) {&amp;#10;                    correct_read = (correct_read + 1);&amp;#10;                } else {&amp;#10;                    if ((cue_types[this_cue] === &quot;Guess&quot;)) {&amp;#10;                        correct_guess = (correct_guess + 1);&amp;#10;                    }&amp;#10;                }&amp;#10;            }&amp;#10;        }&amp;#10;    }&amp;#10;}&amp;#10;psychoJS.experiment.addData(&quot;correct_choice&quot;, correct_choice);&amp;#10;" valType="extendedCode" updates="constant" name="End JS Routine"/>
-        <Param val="this_choice = &quot;&quot;&amp;#10;correct_choice = 0&amp;#10;if skip_letters  &lt;= 1:&amp;#10;    if len(recall_selection.keys) &gt; 0:&amp;#10;        this_key = int(recall_selection.keys[0]) - 2&amp;#10;        this_choice = letters[this_key]&amp;#10;&amp;#10;        if this_choice == target_letter:&amp;#10;            correct_choice = 1&amp;#10;            ncorrect = ncorrect + 1&amp;#10;            if (run_counter == 1) or (run_counter == 2):&amp;#10;                if cue_types[this_cue] == &quot;Read&quot;:&amp;#10;                    correct_read = correct_read + 1&amp;#10;                elif cue_types[this_cue] == &quot;Guess&quot;:&amp;#10;                    correct_guess = correct_guess + 1&amp;#10;&amp;#10;thisExp.addData('correct_choice', correct_choice)" valType="extendedCode" updates="constant" name="End Routine"/>
+        <Param val="this_choice = &quot;&quot;;&amp;#10;correct_choice = 0;&amp;#10;if ((skip_letters &lt;= 1)) {&amp;#10;    if ((recall_selection.keys.length &gt; 0)) {&amp;#10;        this_key = (Number.parseInt(recall_selection.keys[0]) - 2);&amp;#10;        this_choice = letters[this_key];&amp;#10;        if ((this_choice === target_letter)) {&amp;#10;            correct_choice = 1;&amp;#10;        }&amp;#10;    }&amp;#10;}&amp;#10;psychoJS.experiment.addData(&quot;correct_choice&quot;, correct_choice);&amp;#10;" valType="extendedCode" updates="constant" name="End JS Routine"/>
+        <Param val="this_choice = &quot;&quot;&amp;#10;correct_choice = 0&amp;#10;if skip_letters  &lt;= 1:&amp;#10;    if len(recall_selection.keys) &gt; 0:&amp;#10;        this_key = int(recall_selection.keys[0]) - 2&amp;#10;        this_choice = letters[this_key]&amp;#10;&amp;#10;        if this_choice == target_letter:&amp;#10;            correct_choice = 1&amp;#10;&amp;#10;thisExp.addData('correct_choice', correct_choice)" valType="extendedCode" updates="constant" name="End Routine"/>
         <Param val="False" valType="bool" updates="None" name="disabled"/>
         <Param val="letter_choice" valType="code" updates="None" name="name"/>
       </CodeComponent>
@@ -2167,6 +2167,26 @@
         <Param val="" valType="code" updates="constant" name="stopVal"/>
         <Param val="False" valType="bool" updates="None" name="useWindowParams"/>
       </RoutineSettingsComponent>
+      <KeyboardComponent name="end_part2_key" plugin="None">
+        <Param val="'space', '1', '2','3','4','5'" valType="list" updates="constant" name="allowedKeys"/>
+        <Param val="" valType="str" updates="constant" name="correctAns"/>
+        <Param val="" valType="str" updates="None" name="deviceLabel"/>
+        <Param val="False" valType="bool" updates="None" name="disabled"/>
+        <Param val="True" valType="bool" updates="constant" name="discard previous"/>
+        <Param val="" valType="code" updates="None" name="durationEstim"/>
+        <Param val="True" valType="bool" updates="constant" name="forceEndRoutine"/>
+        <Param val="end_part2_key" valType="code" updates="None" name="name"/>
+        <Param val="press" valType="str" updates="constant" name="registerOn"/>
+        <Param val="True" valType="bool" updates="None" name="saveStartStop"/>
+        <Param val="" valType="code" updates="None" name="startEstim"/>
+        <Param val="time (s)" valType="str" updates="None" name="startType"/>
+        <Param val="0.0" valType="code" updates="None" name="startVal"/>
+        <Param val="duration (s)" valType="str" updates="None" name="stopType"/>
+        <Param val="" valType="code" updates="constant" name="stopVal"/>
+        <Param val="last key" valType="str" updates="constant" name="store"/>
+        <Param val="False" valType="bool" updates="constant" name="storeCorrect"/>
+        <Param val="True" valType="bool" updates="constant" name="syncScreenRefresh"/>
+      </KeyboardComponent>
       <TextComponent name="end_part2_text" plugin="None">
         <Param val="white" valType="color" updates="constant" name="color"/>
         <Param val="rgb" valType="str" updates="constant" name="colorSpace"/>
@@ -2187,30 +2207,13 @@
         <Param val="time (s)" valType="str" updates="None" name="startType"/>
         <Param val="0.0" valType="code" updates="None" name="startVal"/>
         <Param val="duration (s)" valType="str" updates="None" name="stopType"/>
-        <Param val="30" valType="code" updates="constant" name="stopVal"/>
+        <Param val="" valType="code" updates="constant" name="stopVal"/>
         <Param val="True" valType="bool" updates="None" name="syncScreenRefresh"/>
-        <Param val="Sie haben den zweiten Teil des Experiments abgeschlossen!" valType="str" updates="constant" name="text"/>
+        <Param val="Sie haben den zweiten Teil des Experiments abgeschlossen!&amp;#10;&amp;#10;Machen Sie eine 5-minütige Pause, bevor Sie fortfahren.&amp;#10;&amp;#10;Drücken Sie eine Taste, um fortzufahren." valType="str" updates="constant" name="text"/>
         <Param val="from exp settings" valType="str" updates="None" name="units"/>
         <Param val="" valType="code" updates="None" name="validator"/>
         <Param val="" valType="num" updates="constant" name="wrapWidth"/>
       </TextComponent>
-      <CodeComponent name="print_performance" plugin="None">
-        <Param val="" valType="extendedCode" updates="constant" name="Before Experiment"/>
-        <Param val="" valType="extendedCode" updates="constant" name="Before JS Experiment"/>
-        <Param val="" valType="extendedCode" updates="constant" name="Begin Experiment"/>
-        <Param val="" valType="extendedCode" updates="constant" name="Begin JS Experiment"/>
-        <Param val="console.log(&quot;Correctly selected: &quot;, ncorrect);&amp;#10;console.log(&quot;Correct pretested: &quot;, correct_guess);&amp;#10;console.log(&quot;Correct read: &quot;, correct_read);&amp;#10;" valType="extendedCode" updates="constant" name="Begin JS Routine"/>
-        <Param val="print(&quot;Correctly selected: &quot;, ncorrect)&amp;#10;print(&quot;Correct pretested: &quot;, correct_guess)&amp;#10;print(&quot;Correct read: &quot;, correct_read)" valType="extendedCode" updates="constant" name="Begin Routine"/>
-        <Param val="Auto-&gt;JS" valType="str" updates="None" name="Code Type"/>
-        <Param val="" valType="extendedCode" updates="constant" name="Each Frame"/>
-        <Param val="" valType="extendedCode" updates="constant" name="Each JS Frame"/>
-        <Param val="" valType="extendedCode" updates="constant" name="End Experiment"/>
-        <Param val="" valType="extendedCode" updates="constant" name="End JS Experiment"/>
-        <Param val="" valType="extendedCode" updates="constant" name="End JS Routine"/>
-        <Param val="" valType="extendedCode" updates="constant" name="End Routine"/>
-        <Param val="False" valType="bool" updates="None" name="disabled"/>
-        <Param val="print_performance" valType="code" updates="None" name="name"/>
-      </CodeComponent>
     </Routine>
     <Routine name="instructions_recall1">
       <RoutineSettingsComponent name="instructions_recall1" plugin="None">
@@ -2736,42 +2739,6 @@
         <Param val="" valType="code" updates="None" name="validator"/>
         <Param val="" valType="num" updates="constant" name="wrapWidth"/>
       </TextComponent>
-      <SoundComponent name="sound_1" plugin="None">
-        <Param val="" valType="str" updates="None" name="deviceLabel"/>
-        <Param val="False" valType="bool" updates="None" name="disabled"/>
-        <Param val="" valType="code" updates="None" name="durationEstim"/>
-        <Param val="True" valType="bool" updates="constant" name="hamming"/>
-        <Param val="sound_1" valType="code" updates="None" name="name"/>
-        <Param val="True" valType="bool" updates="None" name="saveStartStop"/>
-        <Param val="bell.wav" valType="str" updates="set every repeat" name="sound"/>
-        <Param val="-1" valType="code" updates="None" name="speakerIndex"/>
-        <Param val="" valType="code" updates="None" name="startEstim"/>
-        <Param val="time (s)" valType="str" updates="None" name="startType"/>
-        <Param val="0.0" valType="code" updates="None" name="startVal"/>
-        <Param val="duration (s)" valType="str" updates="None" name="stopType"/>
-        <Param val="1.2" valType="code" updates="constant" name="stopVal"/>
-        <Param val="True" valType="bool" updates="constant" name="stopWithRoutine"/>
-        <Param val="True" valType="bool" updates="constant" name="syncScreenRefresh"/>
-        <Param val="1" valType="num" updates="constant" name="volume"/>
-      </SoundComponent>
-      <SoundComponent name="sound_2" plugin="None">
-        <Param val="" valType="str" updates="None" name="deviceLabel"/>
-        <Param val="False" valType="bool" updates="None" name="disabled"/>
-        <Param val="" valType="code" updates="None" name="durationEstim"/>
-        <Param val="True" valType="bool" updates="constant" name="hamming"/>
-        <Param val="sound_2" valType="code" updates="None" name="name"/>
-        <Param val="True" valType="bool" updates="None" name="saveStartStop"/>
-        <Param val="end_call.wav" valType="str" updates="set every repeat" name="sound"/>
-        <Param val="-1" valType="code" updates="None" name="speakerIndex"/>
-        <Param val="" valType="code" updates="None" name="startEstim"/>
-        <Param val="time (s)" valType="str" updates="None" name="startType"/>
-        <Param val="10.0" valType="code" updates="None" name="startVal"/>
-        <Param val="duration (s)" valType="str" updates="None" name="stopType"/>
-        <Param val="1" valType="code" updates="constant" name="stopVal"/>
-        <Param val="True" valType="bool" updates="constant" name="stopWithRoutine"/>
-        <Param val="True" valType="bool" updates="constant" name="syncScreenRefresh"/>
-        <Param val="1" valType="num" updates="constant" name="volume"/>
-      </SoundComponent>
     </Routine>
     <Routine name="load_word_pairs">
       <RoutineSettingsComponent name="load_word_pairs" plugin="None">
@@ -2977,7 +2944,7 @@
     <LoopTerminator name="recall_practice"/>
     <LoopInitiator loopType="TrialHandler" name="recall_words_loop">
       <Param name="Selected rows" updates="None" val="" valType="str"/>
-      <Param name="conditions" updates="None" val="[{'cue': 'Fakt', 'target': 'Wissen'}, {'cue': 'Frieden', 'target': 'Harmonie'}, {'cue': 'Humor', 'target': 'Komödie'}, {'cue': 'Kante', 'target': 'Klinge'}, {'cue': 'Scheidung', 'target': 'Anwalt'}, {'cue': 'Service', 'target': 'Center'}, {'cue': 'Tradition', 'target': 'Erbe'}, {'cue': 'Vergangenheit', 'target': 'Zeit'}, {'cue': 'Vers', 'target': 'Kapitel'}, {'cue': 'Winter', 'target': 'Weiß'}, {'cue': 'Geburtstag', 'target': 'Kerzen'}, {'cue': 'Golf', 'target': 'Schwung'}, {'cue': 'Ostern', 'target': 'Sonntag'}, {'cue': 'Olympia', 'target': 'Medaille'}, {'cue': 'Safari', 'target': 'Elephant'}, {'cue': 'Eule', 'target': 'Augen'}, {'cue': 'Hai', 'target': 'Ozean'}, {'cue': 'Schnecke', 'target': 'Schleim'}, {'cue': 'Spinne', 'target': 'Beine'}, {'cue': 'Ziege', 'target': 'Bart'}, {'cue': 'Finger', 'target': 'Puppe'}, {'cue': 'Knie', 'target': 'Knöchel'}, {'cue': 'Nase', 'target': 'Atem'}, {'cue': 'Schulter', 'target': 'Schmerz'}, {'cue': 'Zunge', 'target': 'Sprache'}, {'cue': 'Chips', 'target': 'Salz'}, {'cue': 'Nudeln', 'target': 'Pizza'}, {'cue': 'Tee', 'target': 'Blätter'}, {'cue': 'Saft', 'target': 'Tomate'}, {'cue': 'Zimt', 'target': 'Rolle'}, {'cue': 'Bad', 'target': 'Dusche'}, {'cue': 'Club', 'target': 'Tanz'}, {'cue': 'Büro', 'target': 'Geschäft'}, {'cue': 'Garten', 'target': 'Zwerg'}, {'cue': 'Wüste', 'target': 'Sturm'}, {'cue': 'Keller', 'target': 'Flut'}, {'cue': 'Kino', 'target': 'Popcorn'}, {'cue': 'Küche', 'target': 'Tisch'}, {'cue': 'Raum', 'target': 'Wohnung'}, {'cue': 'Schule', 'target': 'Bücher'}, {'cue': 'Beutel', 'target': 'Sack'}, {'cue': 'Hemd', 'target': 'Rock'}, {'cue': 'Helm', 'target': 'Kappe'}, {'cue': 'Juwel', 'target': 'Gold'}, {'cue': 'Telefon', 'target': 'Nummer'}, {'cue': 'Postkarte', 'target': 'Nachricht'}, {'cue': 'Mappe', 'target': 'Ordner'}, {'cue': 'Radio', 'target': 'Sendung'}, {'cue': 'Schlüssel', 'target': 'Ring'}, {'cue': 'Schnorchel', 'target': 'Maske'}, {'cue': 'Schuh', 'target': 'Stiefel'}, {'cue': 'Shampoo', 'target': 'Seife'}, {'cue': 'Sitzgurt', 'target': 'Schutz'}, {'cue': 'Statue', 'target': 'Monument'}, {'cue': 'Foto', 'target': 'Album'}, {'cue': 'Teleskop', 'target': 'Himmel'}, {'cue': 'Teller', 'target': 'Gabel'}, {'cue': 'Zahnpasta', 'target': 'Gel'}, {'cue': 'Zeichnung', 'target': 'Farbe'}, {'cue': 'Zug', 'target': 'Bus'}, {'cue': 'Brise', 'target': 'Strand'}, {'cue': 'Rauch', 'target': 'Nebel'}, {'cue': 'Sumpf', 'target': 'Alligator'}, {'cue': 'Vulkan', 'target': 'Asche'}, {'cue': 'Berg', 'target': 'Tal'}, {'cue': 'Agent', 'target': 'Reise'}, {'cue': 'Akrobatin', 'target': 'Fliegen'}, {'cue': 'Anführer', 'target': 'Team'}, {'cue': 'Gast', 'target': 'Zimmer'}, {'cue': 'Geschwister', 'target': 'Eltern'}, {'cue': 'Professor', 'target': 'Student'}, {'cue': 'Publikum', 'target': 'Konzert'}, {'cue': 'Journalistin', 'target': 'Brille'}, {'cue': 'Handwerker', 'target': 'Hammer'}, {'cue': 'Vampir', 'target': 'Monster'}, {'cue': 'Klee', 'target': 'Glück'}, {'cue': 'Tanne', 'target': 'Hütte'}, {'cue': 'Rasen', 'target': 'Pflege'}, {'cue': 'Rebe', 'target': 'Herbst'}, {'cue': 'Rose', 'target': 'Duft'}]" valType="str"/>
+      <Param name="conditions" updates="None" val="[{'cue': 'Akrobatin', 'target': 'Seil'}, {'cue': 'Chips', 'target': 'Salz'}, {'cue': 'Definition', 'target': 'Begriff'}, {'cue': 'Experiment', 'target': 'Versuch'}, {'cue': 'Fakt', 'target': 'Wissen'}, {'cue': 'Leistung', 'target': 'Ehre'}, {'cue': 'Rauch', 'target': 'Nebel'}, {'cue': 'Scheidung', 'target': 'Anwalt'}, {'cue': 'Service', 'target': 'Kunde'}, {'cue': 'Shampoo', 'target': 'Seife'}, {'cue': 'Soldat', 'target': 'Kämpfer'}, {'cue': 'Zeichnung', 'target': 'Bleistift'}, {'cue': 'Anführer', 'target': 'Boss'}, {'cue': 'Beutel', 'target': 'Sack'}, {'cue': 'Gast', 'target': 'Zimmer'}, {'cue': 'Geburtstag', 'target': 'Kerze'}, {'cue': 'Geschwister', 'target': 'Eltern'}, {'cue': 'Golf', 'target': 'Loch'}, {'cue': 'Küche', 'target': 'Tisch'}, {'cue': 'Rasen', 'target': 'Pflege'}, {'cue': 'Safari', 'target': 'Ausflug'}, {'cue': 'Sitzgurt', 'target': 'Gesetz'}, {'cue': 'Vampir', 'target': 'Geist'}, {'cue': 'Vergangenheit', 'target': 'Erinnerungen'}, {'cue': 'Agent', 'target': 'Reise'}, {'cue': 'Brise', 'target': 'Luft'}, {'cue': 'Decke', 'target': 'Kissen'}, {'cue': 'Diskussion', 'target': 'Vorlesung'}, {'cue': 'Eingeweide', 'target': 'Organ'}, {'cue': 'Floh', 'target': 'Käfer'}, {'cue': 'Frieden', 'target': 'Harmonie'}, {'cue': 'Garage', 'target': 'Haus'}, {'cue': 'Gegenstand', 'target': 'Artikel'}, {'cue': 'Humor', 'target': 'Komödie'}, {'cue': 'Insel', 'target': 'Meer'}, {'cue': 'Karneval', 'target': 'Festival'}, {'cue': 'Mappe', 'target': 'Buch'}, {'cue': 'Publikum', 'target': 'Applaus'}, {'cue': 'Pumpe', 'target': 'Reifen'}, {'cue': 'Raum', 'target': 'Platz'}, {'cue': 'Schlüssel', 'target': 'Ring'}, {'cue': 'Statue', 'target': 'Monument'}, {'cue': 'Tänzer', 'target': 'Musik'}, {'cue': 'Teleskop', 'target': 'Mikroskop'}, {'cue': 'Teller', 'target': 'Gabel'}, {'cue': 'Tradition', 'target': 'Weihnachten'}, {'cue': 'Vers', 'target': 'Poesie'}, {'cue': 'Vogel', 'target': 'Feder'}, {'cue': 'Zug', 'target': 'Flugzeug'}, {'cue': 'Zunge', 'target': 'Backe'}, {'cue': 'Bad', 'target': 'Handtuch'}, {'cue': 'Bar', 'target': 'Alkohol'}, {'cue': 'Beweis', 'target': 'Gericht'}, {'cue': 'Blumen', 'target': 'Bouquet'}, {'cue': 'Flotte', 'target': 'Boot'}, {'cue': 'Häftling', 'target': 'Verurteilter'}, {'cue': 'Helm', 'target': 'Kopf'}, {'cue': 'Juwel', 'target': 'Gold'}, {'cue': 'Kastanien', 'target': 'Rösten'}, {'cue': 'Kante', 'target': 'Messer'}, {'cue': 'Kind', 'target': 'Junge'}, {'cue': 'Kino', 'target': 'Theater'}, {'cue': 'Klebstoff', 'target': 'Papier'}, {'cue': 'Königreich', 'target': 'Schloss'}, {'cue': 'Mauer', 'target': 'Straße'}, {'cue': 'Surfen', 'target': 'Strand'}, {'cue': 'Schauspielerin', 'target': 'Frau'}, {'cue': 'Schnorchel', 'target': 'Flossen'}, {'cue': 'Schuh', 'target': 'Stiefel'}, {'cue': 'Schwan', 'target': 'Taube'}, {'cue': 'Streifen', 'target': 'Shirt'}, {'cue': 'Tee', 'target': 'Blätter'}, {'cue': 'Traube', 'target': 'Rosine'}, {'cue': 'Wasserfall', 'target': 'Felsen'}, {'cue': 'Wein', 'target': 'Abendessen'}, {'cue': 'Winkel', 'target': 'Kurve'}, {'cue': 'Zahnpasta', 'target': 'Minze'}, {'cue': 'Zimt', 'target': 'Rolle'}, {'cue': 'Nudeln', 'target': 'Pizza'}, {'cue': 'Kamin', 'target': 'Ziegel'}]" valType="str"/>
       <Param name="conditionsFile" updates="None" val="cue_target_pairs.xlsx" valType="file"/>
       <Param name="endPoints" updates="None" val="[0, 1]" valType="num"/>
       <Param name="isTrials" updates="None" val="False" valType="bool"/>
@@ -3028,10 +2995,10 @@
       <Param name="random seed" updates="None" val="" valType="code"/>
     </LoopInitiator>
     <Routine name="setup_recall_trial"/>
+    <Routine name="iti_task"/>
     <Routine name="cued_recall"/>
     <Routine name="recall_response"/>
     <Routine name="recall_select"/>
-    <Routine name="iti_task"/>
     <LoopTerminator name="test_trials"/>
     <Routine name="blank"/>
     <Routine name="task_break"/>
