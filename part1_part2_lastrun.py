@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """
 This experiment was created using PsychoPy3 Experiment Builder (v2024.2.4),
-    on május 29, 2025, at 15:34
+    on május 29, 2025, at 22:56
 If you publish work using this script the most relevant publication is:
 
     Peirce J, Gray JR, Simpson S, MacAskill M, Höchenberger R, Sogo H, Kastman E, Lindeløv JK. (2019) 
@@ -917,9 +917,9 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         colorSpace='rgb', lineColor=[0.7255, -0.8431, -0.5294], fillColor=[0.7255, -0.8431, -0.5294],
         opacity=None, depth=-4.0, interpolate=True)
     # Run 'Begin Experiment' code from dist_code
-    startTime = core.getTime()
     fback_text = ""
     rt = ""
+    dt = 0
     
     # --- Initialize components for Routine "dist_feedback" ---
     dist_fback_text = visual.TextStim(win=win, name='dist_fback_text',
@@ -972,9 +972,9 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         colorSpace='rgb', lineColor=[0.7255, -0.8431, -0.5294], fillColor=[0.7255, -0.8431, -0.5294],
         opacity=None, depth=-4.0, interpolate=True)
     # Run 'Begin Experiment' code from dist_code
-    startTime = core.getTime()
     fback_text = ""
     rt = ""
+    dt = 0
     
     # --- Initialize components for Routine "instructions_recall1" ---
     recall_instructions1_text = visual.TextStim(win=win, name='recall_instructions1_text',
@@ -5918,6 +5918,8 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     if key_resp_dist_instr.keys != None:  # we had a response
         thisExp.addData('key_resp_dist_instr.rt', key_resp_dist_instr.rt)
         thisExp.addData('key_resp_dist_instr.duration', key_resp_dist_instr.duration)
+    # Run 'End Routine' code from dist_clock1
+    startTime = core.getTime()
     thisExp.nextEntry()
     # the Routine "distractor_instruction" was not non-slip safe, so reset the non-slip timer
     routineTimer.reset()
@@ -5972,7 +5974,8 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         distractorcircle.setPos(distractorPos)
         # Run 'Begin Routine' code from dist_code
         if core.getTime() - startTime >= 187:
-            dist_trials.finished = True
+            if dt == 1:
+                dist_trials.finished = True
         # store start times for dist_trial
         dist_trial.tStartRefresh = win.getFutureFlipTime(clock=globalClock)
         dist_trial.tStart = globalClock.getTime(format='float')
@@ -6224,6 +6227,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
             fback_text = fback_text + rt
         else:
             fback_text = "Sie haben den falschen Kopf gedrückt."
+        
         # the Routine "dist_trial" was not non-slip safe, so reset the non-slip timer
         routineTimer.reset()
         
@@ -6470,6 +6474,9 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     start_dist.tStop = globalClock.getTime(format='float')
     start_dist.tStopRefresh = tThisFlipGlobal
     thisExp.addData('start_dist.stopped', start_dist.tStop)
+    # Run 'End Routine' code from dist_clock2
+    startTime = core.getTime()
+    dt = 1
     # using non-slip timing so subtract the expected duration of this Routine (unless ended on request)
     if start_dist.maxDurationReached:
         routineTimer.addTime(-start_dist.maxDuration)
@@ -6529,7 +6536,8 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         distractorcircle.setPos(distractorPos)
         # Run 'Begin Routine' code from dist_code
         if core.getTime() - startTime >= 187:
-            dist_trials.finished = True
+            if dt == 1:
+                dist_trials.finished = True
         # store start times for dist_trial
         dist_trial.tStartRefresh = win.getFutureFlipTime(clock=globalClock)
         dist_trial.tStart = globalClock.getTime(format='float')
@@ -6781,6 +6789,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
             fback_text = fback_text + rt
         else:
             fback_text = "Sie haben den falschen Kopf gedrückt."
+        
         # the Routine "dist_trial" was not non-slip safe, so reset the non-slip timer
         routineTimer.reset()
         thisExp.nextEntry()

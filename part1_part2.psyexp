@@ -70,7 +70,7 @@
     <Param val="1000" valType="num" updates="None" name="plPupilRemoteTimeoutMs"/>
     <Param val="False" valType="bool" updates="None" name="plPupillometryOnly"/>
     <Param val="psychopy_iohub_surface" valType="str" updates="None" name="plSurfaceName"/>
-    <Param val="0" valType="code" updates="None" name="runMode"/>
+    <Param val="1" valType="code" updates="None" name="runMode"/>
     <Param val="False" valType="bool" updates="None" name="rush"/>
     <Param val="time" valType="str" updates="None" name="sortColumns"/>
     <Param val="" valType="str" updates="None" name="tbLicenseFile"/>
@@ -236,17 +236,17 @@
       <CodeComponent name="dist_code" plugin="None">
         <Param val="" valType="extendedCode" updates="constant" name="Before Experiment"/>
         <Param val="" valType="extendedCode" updates="constant" name="Before JS Experiment"/>
-        <Param val="startTime = core.getTime()&amp;#10;fback_text = &quot;&quot;&amp;#10;rt = &quot;&quot;" valType="extendedCode" updates="constant" name="Begin Experiment"/>
-        <Param val="startTime = core.getTime();&amp;#10;fback_text = &quot;&quot;;&amp;#10;rt = &quot;&quot;;&amp;#10;" valType="extendedCode" updates="constant" name="Begin JS Experiment"/>
-        <Param val="if (((core.getTime() - startTime) &gt;= 187)) {&amp;#10;    dist_trials.finished = true;&amp;#10;}&amp;#10;" valType="extendedCode" updates="constant" name="Begin JS Routine"/>
-        <Param val="if core.getTime() - startTime &gt;= 187:&amp;#10;    dist_trials.finished = True" valType="extendedCode" updates="constant" name="Begin Routine"/>
+        <Param val="fback_text = &quot;&quot;&amp;#10;rt = &quot;&quot;&amp;#10;dt = 0" valType="extendedCode" updates="constant" name="Begin Experiment"/>
+        <Param val="fback_text = &quot;&quot;;&amp;#10;rt = &quot;&quot;;&amp;#10;dt = 0;&amp;#10;" valType="extendedCode" updates="constant" name="Begin JS Experiment"/>
+        <Param val="if (((core.getTime() - startTime) &gt;= 187)) {&amp;#10;    if ((dt === 1)) {&amp;#10;        dist_trials.finished = true;&amp;#10;    }&amp;#10;}&amp;#10;" valType="extendedCode" updates="constant" name="Begin JS Routine"/>
+        <Param val="if core.getTime() - startTime &gt;= 187:&amp;#10;    if dt == 1:&amp;#10;        dist_trials.finished = True" valType="extendedCode" updates="constant" name="Begin Routine"/>
         <Param val="Auto-&gt;JS" valType="str" updates="None" name="Code Type"/>
         <Param val="" valType="extendedCode" updates="constant" name="Each Frame"/>
         <Param val="" valType="extendedCode" updates="constant" name="Each JS Frame"/>
         <Param val="" valType="extendedCode" updates="constant" name="End Experiment"/>
         <Param val="" valType="extendedCode" updates="constant" name="End JS Experiment"/>
         <Param val="/* Syntax Error: Fix Python code */" valType="extendedCode" updates="constant" name="End JS Routine"/>
-        <Param val="fback_text = &quot;&quot;&amp;#10;rt = &quot;&quot;&amp;#10;&amp;#10;if key_resp_gaze.corr == 1:&amp;#10;    rt = &quot;{:.2f} s&quot;.format(key_resp_gaze.rt)&amp;#10;    fback_text = &quot;Gut gemacht!\nReaktionszeit: &quot;&amp;#10;    fback_text = fback_text + rt&amp;#10;else:&amp;#10;    fback_text = &quot;Sie haben den falschen Kopf gedrückt.&quot;" valType="extendedCode" updates="constant" name="End Routine"/>
+        <Param val="fback_text = &quot;&quot;&amp;#10;rt = &quot;&quot;&amp;#10;&amp;#10;if key_resp_gaze.corr == 1:&amp;#10;    rt = &quot;{:.2f} s&quot;.format(key_resp_gaze.rt)&amp;#10;    fback_text = &quot;Gut gemacht!\nReaktionszeit: &quot;&amp;#10;    fback_text = fback_text + rt&amp;#10;else:&amp;#10;    fback_text = &quot;Sie haben den falschen Kopf gedrückt.&quot;&amp;#10;" valType="extendedCode" updates="constant" name="End Routine"/>
         <Param val="False" valType="bool" updates="None" name="disabled"/>
         <Param val="dist_code" valType="code" updates="None" name="name"/>
       </CodeComponent>
@@ -295,6 +295,23 @@
         <Param val="" valType="code" updates="None" name="validator"/>
         <Param val="" valType="num" updates="constant" name="wrapWidth"/>
       </TextComponent>
+      <CodeComponent name="dist_clock2" plugin="None">
+        <Param val="" valType="extendedCode" updates="constant" name="Before Experiment"/>
+        <Param val="" valType="extendedCode" updates="constant" name="Before JS Experiment"/>
+        <Param val="" valType="extendedCode" updates="constant" name="Begin Experiment"/>
+        <Param val="" valType="extendedCode" updates="constant" name="Begin JS Experiment"/>
+        <Param val="" valType="extendedCode" updates="constant" name="Begin JS Routine"/>
+        <Param val="" valType="extendedCode" updates="constant" name="Begin Routine"/>
+        <Param val="Auto-&gt;JS" valType="str" updates="None" name="Code Type"/>
+        <Param val="" valType="extendedCode" updates="constant" name="Each Frame"/>
+        <Param val="" valType="extendedCode" updates="constant" name="Each JS Frame"/>
+        <Param val="" valType="extendedCode" updates="constant" name="End Experiment"/>
+        <Param val="" valType="extendedCode" updates="constant" name="End JS Experiment"/>
+        <Param val="startTime = core.getTime();&amp;#10;dt = 1;&amp;#10;" valType="extendedCode" updates="constant" name="End JS Routine"/>
+        <Param val="startTime = core.getTime()&amp;#10;dt = 1" valType="extendedCode" updates="constant" name="End Routine"/>
+        <Param val="False" valType="bool" updates="None" name="disabled"/>
+        <Param val="dist_clock2" valType="code" updates="None" name="name"/>
+      </CodeComponent>
     </Routine>
     <Routine name="distractor_instruction">
       <RoutineSettingsComponent name="distractor_instruction" plugin="None">
@@ -360,6 +377,23 @@
         <Param val="False" valType="bool" updates="constant" name="storeCorrect"/>
         <Param val="True" valType="bool" updates="constant" name="syncScreenRefresh"/>
       </KeyboardComponent>
+      <CodeComponent name="dist_clock1" plugin="None">
+        <Param val="" valType="extendedCode" updates="constant" name="Before Experiment"/>
+        <Param val="" valType="extendedCode" updates="constant" name="Before JS Experiment"/>
+        <Param val="" valType="extendedCode" updates="constant" name="Begin Experiment"/>
+        <Param val="" valType="extendedCode" updates="constant" name="Begin JS Experiment"/>
+        <Param val="" valType="extendedCode" updates="constant" name="Begin JS Routine"/>
+        <Param val="" valType="extendedCode" updates="constant" name="Begin Routine"/>
+        <Param val="Auto-&gt;JS" valType="str" updates="None" name="Code Type"/>
+        <Param val="" valType="extendedCode" updates="constant" name="Each Frame"/>
+        <Param val="" valType="extendedCode" updates="constant" name="Each JS Frame"/>
+        <Param val="" valType="extendedCode" updates="constant" name="End Experiment"/>
+        <Param val="" valType="extendedCode" updates="constant" name="End JS Experiment"/>
+        <Param val="startTime = core.getTime();&amp;#10;" valType="extendedCode" updates="constant" name="End JS Routine"/>
+        <Param val="startTime = core.getTime()" valType="extendedCode" updates="constant" name="End Routine"/>
+        <Param val="False" valType="bool" updates="None" name="disabled"/>
+        <Param val="dist_clock1" valType="code" updates="None" name="name"/>
+      </CodeComponent>
     </Routine>
     <Routine name="welcome">
       <RoutineSettingsComponent name="welcome" plugin="None">
