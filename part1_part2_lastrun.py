@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """
 This experiment was created using PsychoPy3 Experiment Builder (v2024.2.4),
-    on május 29, 2025, at 22:56
+    on Mai 30, 2025, at 13:16
 If you publish work using this script the most relevant publication is:
 
     Peirce J, Gray JR, Simpson S, MacAskill M, Höchenberger R, Sogo H, Kastman E, Lindeløv JK. (2019) 
@@ -129,7 +129,7 @@ def setupData(expInfo, dataDir=None):
     thisExp = data.ExperimentHandler(
         name=expName, version='',
         extraInfo=expInfo, runtimeInfo=None,
-        originPath='C:\\Users\\Asus\\Documents\\pretest_fmri\\Guess_fMRI\\part1_part2_lastrun.py',
+        originPath='C:\\Users\\Nemecz\\Documents\\Guess_fMRI\\part1_part2_lastrun.py',
         savePickle=True, saveWideText=True,
         dataFileName=dataDir + os.sep + filename, sortColumns='time'
     )
@@ -5973,7 +5973,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         circle.setPos(circlePos)
         distractorcircle.setPos(distractorPos)
         # Run 'Begin Routine' code from dist_code
-        if core.getTime() - startTime >= 187:
+        if core.getTime() - startTime >= 150:
             if dt == 1:
                 dist_trials.finished = True
         # store start times for dist_trial
@@ -6535,7 +6535,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         circle.setPos(circlePos)
         distractorcircle.setPos(distractorPos)
         # Run 'Begin Routine' code from dist_code
-        if core.getTime() - startTime >= 187:
+        if core.getTime() - startTime >= 150:
             if dt == 1:
                 dist_trials.finished = True
         # store start times for dist_trial

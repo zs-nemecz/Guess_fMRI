@@ -70,7 +70,7 @@
     <Param val="1000" valType="num" updates="None" name="plPupilRemoteTimeoutMs"/>
     <Param val="False" valType="bool" updates="None" name="plPupillometryOnly"/>
     <Param val="psychopy_iohub_surface" valType="str" updates="None" name="plSurfaceName"/>
-    <Param val="1" valType="code" updates="None" name="runMode"/>
+    <Param val="0" valType="code" updates="None" name="runMode"/>
     <Param val="False" valType="bool" updates="None" name="rush"/>
     <Param val="time" valType="str" updates="None" name="sortColumns"/>
     <Param val="" valType="str" updates="None" name="tbLicenseFile"/>
@@ -238,8 +238,8 @@
         <Param val="" valType="extendedCode" updates="constant" name="Before JS Experiment"/>
         <Param val="fback_text = &quot;&quot;&amp;#10;rt = &quot;&quot;&amp;#10;dt = 0" valType="extendedCode" updates="constant" name="Begin Experiment"/>
         <Param val="fback_text = &quot;&quot;;&amp;#10;rt = &quot;&quot;;&amp;#10;dt = 0;&amp;#10;" valType="extendedCode" updates="constant" name="Begin JS Experiment"/>
-        <Param val="if (((core.getTime() - startTime) &gt;= 187)) {&amp;#10;    if ((dt === 1)) {&amp;#10;        dist_trials.finished = true;&amp;#10;    }&amp;#10;}&amp;#10;" valType="extendedCode" updates="constant" name="Begin JS Routine"/>
-        <Param val="if core.getTime() - startTime &gt;= 187:&amp;#10;    if dt == 1:&amp;#10;        dist_trials.finished = True" valType="extendedCode" updates="constant" name="Begin Routine"/>
+        <Param val="if (((core.getTime() - startTime) &gt;= 140)) {&amp;#10;    if ((dt === 1)) {&amp;#10;        dist_trials.finished = true;&amp;#10;    }&amp;#10;}&amp;#10;" valType="extendedCode" updates="constant" name="Begin JS Routine"/>
+        <Param val="if core.getTime() - startTime &gt;= 140:&amp;#10;    if dt == 1:&amp;#10;        dist_trials.finished = True" valType="extendedCode" updates="constant" name="Begin Routine"/>
         <Param val="Auto-&gt;JS" valType="str" updates="None" name="Code Type"/>
         <Param val="" valType="extendedCode" updates="constant" name="Each Frame"/>
         <Param val="" valType="extendedCode" updates="constant" name="Each JS Frame"/>
