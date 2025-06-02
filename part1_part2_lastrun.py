@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """
 This experiment was created using PsychoPy3 Experiment Builder (v2024.2.4),
-    on Mai 30, 2025, at 13:16
+    on Juni 02, 2025, at 15:13
 If you publish work using this script the most relevant publication is:
 
     Peirce J, Gray JR, Simpson S, MacAskill M, Höchenberger R, Sogo H, Kastman E, Lindeløv JK. (2019) 
@@ -5973,7 +5973,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         circle.setPos(circlePos)
         distractorcircle.setPos(distractorPos)
         # Run 'Begin Routine' code from dist_code
-        if core.getTime() - startTime >= 150:
+        if core.getTime() - startTime >= 140:
             if dt == 1:
                 dist_trials.finished = True
         # store start times for dist_trial
@@ -6535,7 +6535,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         circle.setPos(circlePos)
         distractorcircle.setPos(distractorPos)
         # Run 'Begin Routine' code from dist_code
-        if core.getTime() - startTime >= 150:
+        if core.getTime() - startTime >= 140:
             if dt == 1:
                 dist_trials.finished = True
         # store start times for dist_trial
