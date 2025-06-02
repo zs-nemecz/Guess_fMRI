@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """
 This experiment was created using PsychoPy3 Experiment Builder (v2024.2.4),
-    on Mai 30, 2025, at 14:00
+    on Juni 02, 2025, at 12:58
 If you publish work using this script the most relevant publication is:
 
     Peirce J, Gray JR, Simpson S, MacAskill M, Höchenberger R, Sogo H, Kastman E, Lindeløv JK. (2019) 
@@ -126,7 +126,7 @@ def setupData(expInfo, dataDir=None):
     thisExp = data.ExperimentHandler(
         name=expName, version='',
         extraInfo=expInfo, runtimeInfo=None,
-        originPath='C:\\Users\\Nemecz\\Documents\\Guess_fMRI\\part3_lastrun.py',
+        originPath='C:\\Users\\LocalAdmin\\Documents\\GUESS\\Guess_fMRI\\part3_lastrun.py',
         savePickle=True, saveWideText=True,
         dataFileName=dataDir + os.sep + filename, sortColumns='time'
     )
@@ -597,7 +597,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     
     # --- Initialize components for Routine "fieldmap" ---
     fm_text = visual.TextStim(win=win, name='fm_text',
-        text='Wir führen einen kurzen technischen Scan durch. Dies wird 3 Minuten dauern. Bitte halten Sie still.\n\n ',
+        text='Wir führen einen kurzen technischen Scan durch. Dies wird 3 Minuten dauern.\n\nSie können Ihre Augen für eine Weile schließen, aber schlafen Sie nicht ein. \n\nBitte halten Sie still.\n\n ',
         font='Arial',
         pos=(0, 0), draggable=False, height=0.05, wrapWidth=None, ori=0.0, 
         color='white', colorSpace='rgb', opacity=None, 
@@ -607,13 +607,20 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     
     # --- Initialize components for Routine "task_break" ---
     task_break_text = visual.TextStim(win=win, name='task_break_text',
-        text='Pause. Drücken Sie eine Taste, um fortzufahren.',
+        text='Drücken Sie eine Taste, um fortzufahren.',
         font='Arial',
         pos=(0, 0), draggable=False, height=0.05, wrapWidth=None, ori=0.0, 
         color='white', colorSpace='rgb', opacity=None, 
         languageStyle='LTR',
         depth=0.0);
     task_break_resp = keyboard.Keyboard(deviceName='task_break_resp')
+    feeback_text = visual.TextStim(win=win, name='feeback_text',
+        text='',
+        font='Arial',
+        pos=(0, 0), draggable=False, height=0.05, wrapWidth=None, ori=0.0, 
+        color='white', colorSpace='rgb', opacity=None, 
+        languageStyle='LTR',
+        depth=-3.0);
     
     # --- Initialize components for Routine "thanks" ---
     thanks_text = visual.TextStim(win=win, name='thanks_text',
@@ -3020,7 +3027,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
             # create an object to store info about Routine task_break
             task_break = data.Routine(
                 name='task_break',
-                components=[task_break_text, task_break_resp],
+                components=[task_break_text, task_break_resp, feeback_text],
             )
             task_break.status = NOT_STARTED
             continueRoutine = True
@@ -3033,7 +3040,19 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
             if 'all_keys' in globals():
                 all_keys = globals()['all_keys']
             # Run 'Begin Routine' code from increase_run_counter
-            print("Finished SM run ", run_counter)
+            sm_feedback_text = "{}/8 geschafft.".format(run_counter)
+            
+            if run_counter == 4:
+                praise_text = "Sie machen das großartig!\n" 
+                sm_feedback_text = praise_text + sm_feedback_text
+            elif run_counter == 7:
+                praise_text = "Gut gemacht! Nur noch eine Runde.\n" 
+                sm_feedback_text = praise_text + sm_feedback_text
+            elif (run_counter > 4) & (run_counter < 7):
+                praise_text = "Gut gemacht!\n" 
+                sm_feedback_text = praise_text + sm_feedback_text
+            
+            feeback_text.setText(sm_feedback_text)
             # store start times for task_break
             task_break.tStartRefresh = win.getFutureFlipTime(clock=globalClock)
             task_break.tStart = globalClock.getTime(format='float')
@@ -3073,7 +3092,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
                 # *task_break_text* updates
                 
                 # if task_break_text is starting this frame...
-                if task_break_text.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+                if task_break_text.status == NOT_STARTED and tThisFlip >= 4.0-frameTolerance:
                     # keep track of start time/frame for later
                     task_break_text.frameNStart = frameN  # exact frame index
                     task_break_text.tStart = t  # local t and not account for scr refresh
@@ -3094,7 +3113,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
                 waitOnFlip = False
                 
                 # if task_break_resp is starting this frame...
-                if task_break_resp.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+                if task_break_resp.status == NOT_STARTED and tThisFlip >= 4.0-frameTolerance:
                     # keep track of start time/frame for later
                     task_break_resp.frameNStart = frameN  # exact frame index
                     task_break_resp.tStart = t  # local t and not account for scr refresh
@@ -3125,6 +3144,40 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
                         task_break_resp.duration = _task_break_resp_allKeys[-1].duration
                         # a response ends the routine
                         continueRoutine = False
+                
+                # *feeback_text* updates
+                
+                # if feeback_text is starting this frame...
+                if feeback_text.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+                    # keep track of start time/frame for later
+                    feeback_text.frameNStart = frameN  # exact frame index
+                    feeback_text.tStart = t  # local t and not account for scr refresh
+                    feeback_text.tStartRefresh = tThisFlipGlobal  # on global time
+                    win.timeOnFlip(feeback_text, 'tStartRefresh')  # time at next scr refresh
+                    # add timestamp to datafile
+                    thisExp.timestampOnFlip(win, 'feeback_text.started')
+                    # update status
+                    feeback_text.status = STARTED
+                    feeback_text.setAutoDraw(True)
+                
+                # if feeback_text is active this frame...
+                if feeback_text.status == STARTED:
+                    # update params
+                    pass
+                
+                # if feeback_text is stopping this frame...
+                if feeback_text.status == STARTED:
+                    # is it time to stop? (based on global clock, using actual start)
+                    if tThisFlipGlobal > feeback_text.tStartRefresh + 4.0-frameTolerance:
+                        # keep track of stop time/frame for later
+                        feeback_text.tStop = t  # not accounting for scr refresh
+                        feeback_text.tStopRefresh = tThisFlipGlobal  # on global time
+                        feeback_text.frameNStop = frameN  # exact frame index
+                        # add timestamp to datafile
+                        thisExp.timestampOnFlip(win, 'feeback_text.stopped')
+                        # update status
+                        feeback_text.status = FINISHED
+                        feeback_text.setAutoDraw(False)
                 
                 # check for quit (typically the Esc key)
                 if defaultKeyboard.getKeys(keyList=["escape"]):
@@ -3212,7 +3265,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     
     # --- Run Routine "thanks" ---
     thanks.forceEnded = routineForceEnded = not continueRoutine
-    while continueRoutine and routineTimer.getTime() < 3.0:
+    while continueRoutine and routineTimer.getTime() < 10.0:
         # get current time
         t = routineTimer.getTime()
         tThisFlip = win.getFutureFlipTime(clock=routineTimer)
@@ -3243,7 +3296,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         # if thanks_text is stopping this frame...
         if thanks_text.status == STARTED:
             # is it time to stop? (based on global clock, using actual start)
-            if tThisFlipGlobal > thanks_text.tStartRefresh + 3.0-frameTolerance:
+            if tThisFlipGlobal > thanks_text.tStartRefresh + 10.0-frameTolerance:
                 # keep track of stop time/frame for later
                 thanks_text.tStop = t  # not accounting for scr refresh
                 thanks_text.tStopRefresh = tThisFlipGlobal  # on global time
@@ -3299,7 +3352,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     elif thanks.forceEnded:
         routineTimer.reset()
     else:
-        routineTimer.addTime(-3.000000)
+        routineTimer.addTime(-10.000000)
     thisExp.nextEntry()
     
     # mark experiment as finished
