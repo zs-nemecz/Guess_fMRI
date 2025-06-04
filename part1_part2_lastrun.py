@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """
 This experiment was created using PsychoPy3 Experiment Builder (v2024.2.4),
-    on Juni 02, 2025, at 15:13
+    on Juni 04, 2025, at 18:20
 If you publish work using this script the most relevant publication is:
 
     Peirce J, Gray JR, Simpson S, MacAskill M, Höchenberger R, Sogo H, Kastman E, Lindeløv JK. (2019) 
@@ -5927,7 +5927,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     # set up handler to look after randomisation of conditions etc
     dist_practice = data.TrialHandler2(
         name='dist_practice',
-        nReps=2.0, 
+        nReps=1.0, 
         method='random', 
         extraInfo=expInfo, 
         originPath=-1, 
@@ -6356,7 +6356,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
             routineTimer.addTime(-3.000000)
         thisExp.nextEntry()
         
-    # completed 2.0 repeats of 'dist_practice'
+    # completed 1.0 repeats of 'dist_practice'
     
     if thisSession is not None:
         # if running in a Session with a Liaison client, send data up to now
@@ -6393,7 +6393,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     
     # --- Run Routine "start_dist" ---
     start_dist.forceEnded = routineForceEnded = not continueRoutine
-    while continueRoutine and routineTimer.getTime() < 5.0:
+    while continueRoutine and routineTimer.getTime() < 3.0:
         # get current time
         t = routineTimer.getTime()
         tThisFlip = win.getFutureFlipTime(clock=routineTimer)
@@ -6424,7 +6424,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         # if start_dist_text is stopping this frame...
         if start_dist_text.status == STARTED:
             # is it time to stop? (based on global clock, using actual start)
-            if tThisFlipGlobal > start_dist_text.tStartRefresh + 5.0-frameTolerance:
+            if tThisFlipGlobal > start_dist_text.tStartRefresh + 3.0-frameTolerance:
                 # keep track of stop time/frame for later
                 start_dist_text.tStop = t  # not accounting for scr refresh
                 start_dist_text.tStopRefresh = tThisFlipGlobal  # on global time
@@ -6483,7 +6483,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     elif start_dist.forceEnded:
         routineTimer.reset()
     else:
-        routineTimer.addTime(-5.000000)
+        routineTimer.addTime(-3.000000)
     thisExp.nextEntry()
     
     # set up handler to look after randomisation of conditions etc
