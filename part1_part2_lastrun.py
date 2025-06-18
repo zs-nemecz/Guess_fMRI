@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """
 This experiment was created using PsychoPy3 Experiment Builder (v2024.2.4),
-    on Juni 06, 2025, at 13:15
+    on június 18, 2025, at 16:43
 If you publish work using this script the most relevant publication is:
 
     Peirce J, Gray JR, Simpson S, MacAskill M, Höchenberger R, Sogo H, Kastman E, Lindeløv JK. (2019) 
@@ -129,7 +129,7 @@ def setupData(expInfo, dataDir=None):
     thisExp = data.ExperimentHandler(
         name=expName, version='',
         extraInfo=expInfo, runtimeInfo=None,
-        originPath='C:\\Users\\Nemecz\\Documents\\Guess_fMRI\\part1_part2_lastrun.py',
+        originPath='C:\\Users\\Asus\\Documents\\pretest_fmri\\Guess_fMRI\\part1_part2_lastrun.py',
         savePickle=True, saveWideText=True,
         dataFileName=dataDir + os.sep + filename, sortColumns='time'
     )
@@ -883,6 +883,15 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         languageStyle='LTR',
         depth=0.0);
     key_resp_dist_instr = keyboard.Keyboard(deviceName='key_resp_dist_instr')
+    
+    # --- Initialize components for Routine "start_dist_prac" ---
+    start_dist_prac_text = visual.TextStim(win=win, name='start_dist_prac_text',
+        text='Jetzt beginnt die Übung. ',
+        font='Arial',
+        pos=(0, 0), draggable=False, height=0.05, wrapWidth=None, ori=0.0, 
+        color='white', colorSpace='rgb', opacity=None, 
+        languageStyle='LTR',
+        depth=0.0);
     
     # --- Initialize components for Routine "dist_trial" ---
     Smileycentral = visual.ImageStim(
@@ -5924,6 +5933,130 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     # the Routine "distractor_instruction" was not non-slip safe, so reset the non-slip timer
     routineTimer.reset()
     
+    # --- Prepare to start Routine "start_dist_prac" ---
+    # create an object to store info about Routine start_dist_prac
+    start_dist_prac = data.Routine(
+        name='start_dist_prac',
+        components=[start_dist_prac_text],
+    )
+    start_dist_prac.status = NOT_STARTED
+    continueRoutine = True
+    # update component parameters for each repeat
+    # Run 'Begin Routine' code from dist_pr_clock
+    startTime = core.getTime()
+    dt = 0
+    # store start times for start_dist_prac
+    start_dist_prac.tStartRefresh = win.getFutureFlipTime(clock=globalClock)
+    start_dist_prac.tStart = globalClock.getTime(format='float')
+    start_dist_prac.status = STARTED
+    thisExp.addData('start_dist_prac.started', start_dist_prac.tStart)
+    start_dist_prac.maxDuration = None
+    # keep track of which components have finished
+    start_dist_pracComponents = start_dist_prac.components
+    for thisComponent in start_dist_prac.components:
+        thisComponent.tStart = None
+        thisComponent.tStop = None
+        thisComponent.tStartRefresh = None
+        thisComponent.tStopRefresh = None
+        if hasattr(thisComponent, 'status'):
+            thisComponent.status = NOT_STARTED
+    # reset timers
+    t = 0
+    _timeToFirstFrame = win.getFutureFlipTime(clock="now")
+    frameN = -1
+    
+    # --- Run Routine "start_dist_prac" ---
+    start_dist_prac.forceEnded = routineForceEnded = not continueRoutine
+    while continueRoutine and routineTimer.getTime() < 2.0:
+        # get current time
+        t = routineTimer.getTime()
+        tThisFlip = win.getFutureFlipTime(clock=routineTimer)
+        tThisFlipGlobal = win.getFutureFlipTime(clock=None)
+        frameN = frameN + 1  # number of completed frames (so 0 is the first frame)
+        # update/draw components on each frame
+        
+        # *start_dist_prac_text* updates
+        
+        # if start_dist_prac_text is starting this frame...
+        if start_dist_prac_text.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+            # keep track of start time/frame for later
+            start_dist_prac_text.frameNStart = frameN  # exact frame index
+            start_dist_prac_text.tStart = t  # local t and not account for scr refresh
+            start_dist_prac_text.tStartRefresh = tThisFlipGlobal  # on global time
+            win.timeOnFlip(start_dist_prac_text, 'tStartRefresh')  # time at next scr refresh
+            # add timestamp to datafile
+            thisExp.timestampOnFlip(win, 'start_dist_prac_text.started')
+            # update status
+            start_dist_prac_text.status = STARTED
+            start_dist_prac_text.setAutoDraw(True)
+        
+        # if start_dist_prac_text is active this frame...
+        if start_dist_prac_text.status == STARTED:
+            # update params
+            pass
+        
+        # if start_dist_prac_text is stopping this frame...
+        if start_dist_prac_text.status == STARTED:
+            # is it time to stop? (based on global clock, using actual start)
+            if tThisFlipGlobal > start_dist_prac_text.tStartRefresh + 2.0-frameTolerance:
+                # keep track of stop time/frame for later
+                start_dist_prac_text.tStop = t  # not accounting for scr refresh
+                start_dist_prac_text.tStopRefresh = tThisFlipGlobal  # on global time
+                start_dist_prac_text.frameNStop = frameN  # exact frame index
+                # add timestamp to datafile
+                thisExp.timestampOnFlip(win, 'start_dist_prac_text.stopped')
+                # update status
+                start_dist_prac_text.status = FINISHED
+                start_dist_prac_text.setAutoDraw(False)
+        
+        # check for quit (typically the Esc key)
+        if defaultKeyboard.getKeys(keyList=["escape"]):
+            thisExp.status = FINISHED
+        if thisExp.status == FINISHED or endExpNow:
+            endExperiment(thisExp, win=win)
+            return
+        # pause experiment here if requested
+        if thisExp.status == PAUSED:
+            pauseExperiment(
+                thisExp=thisExp, 
+                win=win, 
+                timers=[routineTimer], 
+                playbackComponents=[]
+            )
+            # skip the frame we paused on
+            continue
+        
+        # check if all components have finished
+        if not continueRoutine:  # a component has requested a forced-end of Routine
+            start_dist_prac.forceEnded = routineForceEnded = True
+            break
+        continueRoutine = False  # will revert to True if at least one component still running
+        for thisComponent in start_dist_prac.components:
+            if hasattr(thisComponent, "status") and thisComponent.status != FINISHED:
+                continueRoutine = True
+                break  # at least one component has not yet finished
+        
+        # refresh the screen
+        if continueRoutine:  # don't flip if this routine is over or we'll get a blank screen
+            win.flip()
+    
+    # --- Ending Routine "start_dist_prac" ---
+    for thisComponent in start_dist_prac.components:
+        if hasattr(thisComponent, "setAutoDraw"):
+            thisComponent.setAutoDraw(False)
+    # store stop times for start_dist_prac
+    start_dist_prac.tStop = globalClock.getTime(format='float')
+    start_dist_prac.tStopRefresh = tThisFlipGlobal
+    thisExp.addData('start_dist_prac.stopped', start_dist_prac.tStop)
+    # using non-slip timing so subtract the expected duration of this Routine (unless ended on request)
+    if start_dist_prac.maxDurationReached:
+        routineTimer.addTime(-start_dist_prac.maxDuration)
+    elif start_dist_prac.forceEnded:
+        routineTimer.reset()
+    else:
+        routineTimer.addTime(-2.000000)
+    thisExp.nextEntry()
+    
     # set up handler to look after randomisation of conditions etc
     dist_practice = data.TrialHandler2(
         name='dist_practice',
@@ -5972,10 +6105,6 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         Smiley.setImage(Smiley_file)
         circle.setPos(circlePos)
         distractorcircle.setPos(distractorPos)
-        # Run 'Begin Routine' code from dist_code
-        if core.getTime() - startTime >= 140:
-            if dt == 1:
-                dist_trials.finished = True
         # store start times for dist_trial
         dist_trial.tStartRefresh = win.getFutureFlipTime(clock=globalClock)
         dist_trial.tStart = globalClock.getTime(format='float')
@@ -6163,6 +6292,12 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
                     # update status
                     distractorcircle.status = FINISHED
                     distractorcircle.setAutoDraw(False)
+            # Run 'Each Frame' code from dist_code
+            if core.getTime() - startTime >= 60:
+                if dt == 1:
+                    dist_trials.finished = True
+                elif dt == 0:
+                    dist_practice.finished = True
             
             # check for quit (typically the Esc key)
             if defaultKeyboard.getKeys(keyList=["escape"]):
@@ -6474,8 +6609,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     start_dist.tStop = globalClock.getTime(format='float')
     start_dist.tStopRefresh = tThisFlipGlobal
     thisExp.addData('start_dist.stopped', start_dist.tStop)
-    # Run 'End Routine' code from dist_clock2
-    startTime = core.getTime()
+    # Run 'End Routine' code from set_dt
     dt = 1
     # using non-slip timing so subtract the expected duration of this Routine (unless ended on request)
     if start_dist.maxDurationReached:
@@ -6534,10 +6668,6 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         Smiley.setImage(Smiley_file)
         circle.setPos(circlePos)
         distractorcircle.setPos(distractorPos)
-        # Run 'Begin Routine' code from dist_code
-        if core.getTime() - startTime >= 140:
-            if dt == 1:
-                dist_trials.finished = True
         # store start times for dist_trial
         dist_trial.tStartRefresh = win.getFutureFlipTime(clock=globalClock)
         dist_trial.tStart = globalClock.getTime(format='float')
@@ -6725,6 +6855,12 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
                     # update status
                     distractorcircle.status = FINISHED
                     distractorcircle.setAutoDraw(False)
+            # Run 'Each Frame' code from dist_code
+            if core.getTime() - startTime >= 60:
+                if dt == 1:
+                    dist_trials.finished = True
+                elif dt == 0:
+                    dist_practice.finished = True
             
             # check for quit (typically the Esc key)
             if defaultKeyboard.getKeys(keyList=["escape"]):
@@ -8116,8 +8252,9 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         
                 if this_choice == target_letter:
                     correct_choice = 1
-                    ncorrect = ncorrect + 1
                     if (run_counter == 1) or (run_counter == 2):
+                        ncorrect = ncorrect + 1
+                        
                         if cue_types[this_cue] == "Read":
                             correct_read = correct_read + 1
                         elif cue_types[this_cue] == "Guess":
@@ -10319,8 +10456,9 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
             
                     if this_choice == target_letter:
                         correct_choice = 1
-                        ncorrect = ncorrect + 1
                         if (run_counter == 1) or (run_counter == 2):
+                            ncorrect = ncorrect + 1
+                            
                             if cue_types[this_cue] == "Read":
                                 correct_read = correct_read + 1
                             elif cue_types[this_cue] == "Guess":
