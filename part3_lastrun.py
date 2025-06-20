@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """
 This experiment was created using PsychoPy3 Experiment Builder (v2024.2.4),
-    on Juni 18, 2025, at 19:52
+    on Juni 20, 2025, at 12:01
 If you publish work using this script the most relevant publication is:
 
     Peirce J, Gray JR, Simpson S, MacAskill M, Höchenberger R, Sogo H, Kastman E, Lindeløv JK. (2019) 
@@ -260,6 +260,12 @@ def setupDevices(expInfo, thisExp, win):
         deviceManager.addDevice(
             deviceClass='keyboard', deviceName='defaultKeyboard', backend='iohub'
         )
+    if deviceManager.getDevice('key_resp__welcome') is None:
+        # initialise key_resp__welcome
+        key_resp__welcome = deviceManager.addDevice(
+            deviceClass='keyboard',
+            deviceName='key_resp__welcome',
+        )
     if deviceManager.getDevice('key_resp') is None:
         # initialise key_resp
         key_resp = deviceManager.addDevice(
@@ -457,6 +463,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         num_trials = 4
     
     
+    key_resp__welcome = keyboard.Keyboard(deviceName='key_resp__welcome')
     
     # --- Initialize components for Routine "scout" ---
     scout_text = visual.TextStim(win=win, name='scout_text',
@@ -663,11 +670,15 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     # create an object to store info about Routine welcome
     welcome = data.Routine(
         name='welcome',
-        components=[welcome_text],
+        components=[welcome_text, key_resp__welcome],
     )
     welcome.status = NOT_STARTED
     continueRoutine = True
     # update component parameters for each repeat
+    # create starting attributes for key_resp__welcome
+    key_resp__welcome.keys = []
+    key_resp__welcome.rt = []
+    _key_resp__welcome_allKeys = []
     # store start times for welcome
     welcome.tStartRefresh = win.getFutureFlipTime(clock=globalClock)
     welcome.tStart = globalClock.getTime(format='float')
@@ -690,7 +701,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     
     # --- Run Routine "welcome" ---
     welcome.forceEnded = routineForceEnded = not continueRoutine
-    while continueRoutine and routineTimer.getTime() < 3.0:
+    while continueRoutine:
         # get current time
         t = routineTimer.getTime()
         tThisFlip = win.getFutureFlipTime(clock=routineTimer)
@@ -718,19 +729,33 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
             # update params
             pass
         
-        # if welcome_text is stopping this frame...
-        if welcome_text.status == STARTED:
-            # is it time to stop? (based on global clock, using actual start)
-            if tThisFlipGlobal > welcome_text.tStartRefresh + 3.0-frameTolerance:
-                # keep track of stop time/frame for later
-                welcome_text.tStop = t  # not accounting for scr refresh
-                welcome_text.tStopRefresh = tThisFlipGlobal  # on global time
-                welcome_text.frameNStop = frameN  # exact frame index
-                # add timestamp to datafile
-                thisExp.timestampOnFlip(win, 'welcome_text.stopped')
-                # update status
-                welcome_text.status = FINISHED
-                welcome_text.setAutoDraw(False)
+        # *key_resp__welcome* updates
+        waitOnFlip = False
+        
+        # if key_resp__welcome is starting this frame...
+        if key_resp__welcome.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+            # keep track of start time/frame for later
+            key_resp__welcome.frameNStart = frameN  # exact frame index
+            key_resp__welcome.tStart = t  # local t and not account for scr refresh
+            key_resp__welcome.tStartRefresh = tThisFlipGlobal  # on global time
+            win.timeOnFlip(key_resp__welcome, 'tStartRefresh')  # time at next scr refresh
+            # add timestamp to datafile
+            thisExp.timestampOnFlip(win, 'key_resp__welcome.started')
+            # update status
+            key_resp__welcome.status = STARTED
+            # keyboard checking is just starting
+            waitOnFlip = True
+            win.callOnFlip(key_resp__welcome.clock.reset)  # t=0 on next screen flip
+            win.callOnFlip(key_resp__welcome.clearEvents, eventType='keyboard')  # clear events on next screen flip
+        if key_resp__welcome.status == STARTED and not waitOnFlip:
+            theseKeys = key_resp__welcome.getKeys(keyList=['space'], ignoreKeys=["escape"], waitRelease=False)
+            _key_resp__welcome_allKeys.extend(theseKeys)
+            if len(_key_resp__welcome_allKeys):
+                key_resp__welcome.keys = _key_resp__welcome_allKeys[-1].name  # just the last key pressed
+                key_resp__welcome.rt = _key_resp__welcome_allKeys[-1].rt
+                key_resp__welcome.duration = _key_resp__welcome_allKeys[-1].duration
+                # a response ends the routine
+                continueRoutine = False
         
         # check for quit (typically the Esc key)
         if defaultKeyboard.getKeys(keyList=["escape"]):
@@ -771,14 +796,16 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     welcome.tStop = globalClock.getTime(format='float')
     welcome.tStopRefresh = tThisFlipGlobal
     thisExp.addData('welcome.stopped', welcome.tStop)
-    # using non-slip timing so subtract the expected duration of this Routine (unless ended on request)
-    if welcome.maxDurationReached:
-        routineTimer.addTime(-welcome.maxDuration)
-    elif welcome.forceEnded:
-        routineTimer.reset()
-    else:
-        routineTimer.addTime(-3.000000)
+    # check responses
+    if key_resp__welcome.keys in ['', [], None]:  # No response was made
+        key_resp__welcome.keys = None
+    thisExp.addData('key_resp__welcome.keys',key_resp__welcome.keys)
+    if key_resp__welcome.keys != None:  # we had a response
+        thisExp.addData('key_resp__welcome.rt', key_resp__welcome.rt)
+        thisExp.addData('key_resp__welcome.duration', key_resp__welcome.duration)
     thisExp.nextEntry()
+    # the Routine "welcome" was not non-slip safe, so reset the non-slip timer
+    routineTimer.reset()
     
     # --- Prepare to start Routine "scout" ---
     # create an object to store info about Routine scout
