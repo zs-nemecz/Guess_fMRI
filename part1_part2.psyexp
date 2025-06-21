@@ -241,8 +241,8 @@
         <Param val="" valType="extendedCode" updates="constant" name="Begin JS Routine"/>
         <Param val="" valType="extendedCode" updates="constant" name="Begin Routine"/>
         <Param val="Auto-&gt;JS" valType="str" updates="None" name="Code Type"/>
-        <Param val="if core.getTime() - startTime &gt;= 140:&amp;#10;    if dt == 1:&amp;#10;        dist_trials.finished = True&amp;#10;    elif dt == 0:&amp;#10;        dist_practice.finished = True" valType="extendedCode" updates="constant" name="Each Frame"/>
-        <Param val="if (((core.getTime() - startTime) &gt;= 140)) {&amp;#10;    if ((dt === 1)) {&amp;#10;        dist_trials.finished = true;&amp;#10;    } else {&amp;#10;        if ((dt === 0)) {&amp;#10;            dist_practice.finished = true;&amp;#10;        }&amp;#10;    }&amp;#10;}&amp;#10;" valType="extendedCode" updates="constant" name="Each JS Frame"/>
+        <Param val="if core.getTime() - startTime &gt;= 60:&amp;#10;    if dt == 1:&amp;#10;        dist_trials.finished = True&amp;#10;    elif dt == 0:&amp;#10;        dist_practice.finished = True" valType="extendedCode" updates="constant" name="Each Frame"/>
+        <Param val="if (((core.getTime() - startTime) &gt;= 60)) {&amp;#10;    if ((dt === 1)) {&amp;#10;        dist_trials.finished = true;&amp;#10;    } else {&amp;#10;        if ((dt === 0)) {&amp;#10;            dist_practice.finished = true;&amp;#10;        }&amp;#10;    }&amp;#10;}&amp;#10;" valType="extendedCode" updates="constant" name="Each JS Frame"/>
         <Param val="" valType="extendedCode" updates="constant" name="End Experiment"/>
         <Param val="" valType="extendedCode" updates="constant" name="End JS Experiment"/>
         <Param val="/* Syntax Error: Fix Python code */" valType="extendedCode" updates="constant" name="End JS Routine"/>
