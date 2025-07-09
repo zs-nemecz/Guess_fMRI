@@ -1,0 +1,101 @@
+16.4158 	INFO 	Loaded monitor calibration from ['2025_03_24 13:01']
+16.6708 	EXP 	Created window1 = Window(allowGUI=False, allowStencil=False, autoLog=True, backendConf=UNKNOWN, backgroundFit=<method-wrapper '__getattribute__' of attributeSetter object at 0x000001E2D063E670>, backgroundImage=<method-wrapper '__getattribute__' of attributeSetter object at 0x000001E2D063E610>, bitsMode=UNKNOWN, blendMode='avg', bpc=(8, 8, 8), color=array([0, 0, 0]), colorSpace='rgb', depthBits=8, fullscr=True, gamma=None, gammaErrorPolicy='raise', infoMsg=UNKNOWN, lms=UNKNOWN, monitor=<psychopy.monitors.calibTools.Monitor object at 0x000001E2D0709A30>, multiSample=False, name='window1', numSamples=2, pos=[0.0, 0.0], screen=1, size=array([1024,  768]), stencilBits=0, stereo=False, title='PsychoPy', units='height', useFBO=True, useRetina=False, viewOri=0.0, viewPos=None, viewScale=None, waitBlanking=True, winType='pyglet')
+16.6709 	EXP 	window1: backgroundImage = ''
+16.6709 	EXP 	window1: backgroundFit = 'none'
+16.7357 	EXP 	window1: Attempting to measure frame rate of screen (1) ...
+16.7358 	EXP 	window1: recordFrameIntervals = False
+16.9295 	EXP 	window1: recordFrameIntervals = True
+17.1130 	EXP 	Screen (1) actual frame rate measured at 60.01Hz
+17.1131 	EXP 	window1: recordFrameIntervals = False
+19.8617 	INFO 	keyboard.Keyboard is using iohub backend.
+19.8618 	INFO 	keyboard.Keyboard is using iohub backend.
+19.8618 	INFO 	keyboard.Keyboard is using iohub backend.
+19.8618 	INFO 	keyboard.Keyboard is using iohub backend.
+19.8619 	INFO 	keyboard.Keyboard is using iohub backend.
+19.8619 	INFO 	keyboard.Keyboard is using iohub backend.
+19.8619 	INFO 	keyboard.Keyboard is using iohub backend.
+19.8619 	EXP 	part0: status = STARTED
+19.9656 	EXP 	Created welcome_text = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=0.0, draggable=False, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.05000000000000001, italic=False, languageStyle='LTR', name='welcome_text', opacity=1, ori=0.0, pos=array([0., 0.]), rgb=UNKNOWN, text=str(...), units='height', win=Window(...), wrapWidth=1)
+20.0309 	EXP 	Created hand_image = ImageStim(__class__=<class 'psychopy.visual.image.ImageStim'>, anchor=('center', 'center'), autoLog=True, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=0.0, draggable=False, flipHoriz=False, flipVert=False, image='right_hand_silhouette.png', interpolate=True, mask=None, maskParams=None, name='hand_image', opacity=1, ori=0.0, pos=array([ 0.  , -0.25]), size=array([0.5, 0.5]), texRes=128.0, units='height', win=Window(...))
+20.0467 	EXP 	Created hand_intro_text = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-2.0, draggable=False, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.04, italic=False, languageStyle='LTR', name='hand_intro_text', opacity=1, ori=0.0, pos=array([0.  , 0.23]), rgb=UNKNOWN, text=str(...), units='height', win=Window(...), wrapWidth=1)
+20.0501 	EXP 	Created instruction = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=0.0, draggable=False, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.05000000000000001, italic=False, languageStyle='LTR', name='instruction', opacity=1, ori=0.0, pos=array([0. , 0.2]), rgb=UNKNOWN, text='Drücken Sie diese Tasten:', units='height', win=Window(...), wrapWidth=1)
+20.0509 	EXP 	Created button_text = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-1.0, draggable=False, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.05, italic=False, languageStyle='LTR', name='button_text', opacity=1, ori=0.0, pos=array([0., 0.]), rgb=UNKNOWN, text='', units='height', win=Window(...), wrapWidth=1)
+20.0618 	EXP 	Created select_video_text = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=0.0, draggable=False, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.05000000000000001, italic=False, languageStyle='LTR', name='select_video_text', opacity=1, ori=0.0, pos=array([0., 0.]), rgb=UNKNOWN, text=str(...), units='height', win=Window(...), wrapWidth=1)
+20.0965 	EXP 	Created video_text = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-1.0, draggable=False, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.05000000000000001, italic=False, languageStyle='LTR', name='video_text', opacity=1, ori=0.0, pos=array([0., 0.]), rgb=UNKNOWN, text=str(...), units='height', win=Window(...), wrapWidth=1)
+20.1008 	EXP 	Created end_text = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=0.0, draggable=False, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.05000000000000001, italic=False, languageStyle='LTR', name='end_text', opacity=1, ori=0.0, pos=array([0., 0.]), rgb=UNKNOWN, text=str(...), units='height', win=Window(...), wrapWidth=1)
+0.0033 	EXP 	movie: autoLog = True
+0.0122 	INFO 	Keyboard events cleared
+0.0118 	EXP 	welcome_text: autoDraw = True
+6.5117 	DATA 	Keypress: space
+6.5171 	INFO 	Keyboard events cleared
+6.5164 	EXP 	welcome_text: autoDraw = False
+6.5164 	EXP 	hand_image: autoDraw = True
+6.5164 	EXP 	hand_intro_text: autoDraw = True
+13.0261 	EXP 	Imported button_practice.xlsx as conditions, 4 conditions, 2 params
+13.0271 	EXP 	New trial (rep=0, index=0): <Trial 0 (0 in rep 0) data={'this_button': 2, 'correct_button': 3, 'thisN': 0, 'thisTrialN': 0, 'thisRepN': 0}>
+13.0346 	DATA 	Keypress: 2
+13.0392 	INFO 	Keyboard events cleared
+13.0385 	EXP 	hand_image: autoDraw = False
+13.0385 	EXP 	hand_intro_text: autoDraw = False
+13.0385 	EXP 	button_text: height = 0.05000000000000001
+13.0385 	EXP 	button_text: height = 0.05000000000000001
+13.0385 	EXP 	button_text: height = 0.05000000000000001
+13.0385 	EXP 	button_text: text = 2
+13.0385 	EXP 	instruction: autoDraw = True
+13.0385 	EXP 	button_text: autoDraw = True
+14.6645 	EXP 	New trial (rep=0, index=1): <Trial 1 (1 in rep 0) data={'this_button': 4, 'correct_button': 5, 'thisN': 1, 'thisTrialN': 1, 'thisRepN': 0}>
+14.6716 	DATA 	Keypress: 3
+14.6799 	INFO 	Keyboard events cleared
+14.6793 	EXP 	instruction: autoDraw = False
+14.6793 	EXP 	button_text: autoDraw = False
+14.6793 	EXP 	button_text: height = 0.05000000000000001
+14.6793 	EXP 	button_text: height = 0.05000000000000001
+14.6793 	EXP 	button_text: height = 0.05000000000000001
+14.6793 	EXP 	button_text: text = 4
+14.6793 	EXP 	instruction: autoDraw = True
+14.6793 	EXP 	button_text: autoDraw = True
+15.6809 	EXP 	New trial (rep=0, index=2): <Trial 2 (2 in rep 0) data={'this_button': 3, 'correct_button': 4, 'thisN': 2, 'thisTrialN': 2, 'thisRepN': 0}>
+15.6875 	DATA 	Keypress: 5
+15.6946 	INFO 	Keyboard events cleared
+15.6940 	EXP 	instruction: autoDraw = False
+15.6940 	EXP 	button_text: autoDraw = False
+15.6940 	EXP 	button_text: height = 0.05000000000000001
+15.6940 	EXP 	button_text: height = 0.05000000000000001
+15.6940 	EXP 	button_text: height = 0.05000000000000001
+15.6940 	EXP 	button_text: text = 3
+15.6940 	EXP 	instruction: autoDraw = True
+15.6940 	EXP 	button_text: autoDraw = True
+16.5960 	EXP 	New trial (rep=0, index=3): <Trial 3 (3 in rep 0) data={'this_button': 1, 'correct_button': 2, 'thisN': 3, 'thisTrialN': 3, 'thisRepN': 0}>
+16.6019 	DATA 	Keypress: 4
+16.6132 	INFO 	Keyboard events cleared
+16.6126 	EXP 	instruction: autoDraw = False
+16.6126 	EXP 	button_text: autoDraw = False
+16.6126 	EXP 	button_text: height = 0.05000000000000001
+16.6126 	EXP 	button_text: height = 0.05000000000000001
+16.6126 	EXP 	button_text: height = 0.05000000000000001
+16.6126 	EXP 	button_text: text = 1
+16.6126 	EXP 	instruction: autoDraw = True
+16.6126 	EXP 	button_text: autoDraw = True
+17.3691 	DATA 	Keypress: 2
+17.3797 	INFO 	Keyboard events cleared
+17.3791 	EXP 	instruction: autoDraw = False
+17.3791 	EXP 	button_text: autoDraw = False
+17.3791 	EXP 	select_video_text: autoDraw = True
+32.3416 	DATA 	Keypress: 4
+32.3417 	DATA 	Keypress: 5
+32.3443 	INFO 	Keyboard events cleared
+32.3440 	EXP 	select_video_text: autoDraw = False
+32.3440 	EXP 	video_text: autoDraw = True
+37.1181 	EXP 	movie: autoDraw = True
+37.3611 	EXP 	video_text: autoDraw = False
+620.6322 	DATA 	Keypress: space
+620.6384 	INFO 	Keyboard events cleared
+620.6377 	EXP 	movie: autoDraw = False
+620.6377 	EXP 	video_text: autoDraw = False
+620.6377 	EXP 	end_text: autoDraw = True
+625.5636 	DATA 	Keypress: escape
+625.7431 	EXP 	part0: status = STOPPED
+625.7604 	EXP 	end_text: autoDraw = False
+625.7606 	EXP 	part0: status = STOPPED
+625.7688 	INFO 	saved data to 'C:\\Users\\Nemecz\\Documents\\Guess_fMRI\\data/Guess_4954_part0_2025-07-09_18h11.00.691.csv'
+625.7708 	INFO 	saved data to C:\Users\Nemecz\Documents\Guess_fMRI\data/Guess_4954_part0_2025-07-09_18h11.00.691.psydat
